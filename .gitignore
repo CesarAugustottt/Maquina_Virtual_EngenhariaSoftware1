@@ -1,0 +1,12 @@
+# Ignorar a pasta onde os executáveis são gerados
+bin/
+
+# Ignorar arquivos objeto (temporários da compilação)
+*.o
+
+# Ignorar arquivos de backup ou temporários de editores
+*~
+*.swp
+
+# Ignorar o arquivo de configuração do sistema de build (se houver)
+.qmake.stash
