@@ -3,5 +3,7 @@
 
 //prototipo da função fatorial
 int calcularFatorial(int n);
+//protoripo da fibonacci
+int calcularFibonacci(int n);
 
 #endif
