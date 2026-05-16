@@ -4,10 +4,76 @@
 #include <vector> 
 #include <string>
 
-//Mostrar que as classes existem, antes de implementa-las
-class System;
-class Flow;
+//Esqueleto
+//Classe System
+class System{
+    private:
+        std::string name;
+        double value;
+    public:
+        //construtor
+        System();
+        System(std::string name, double value);
+        virtual ~System();
+        //setters e gettres
+        void setName(std::string name);
+        std::string getName()const;
+        void setValue(double value);
+        double getValue()const;
+        //construtor copia
+        System(const System& sys);
+        System& operator=(const System& sys);
+};
 
+//Class Flow
+class Flow{
+    private:
+        std::string name;
+        System* source;
+        System* target;
+    public:
+        Flow();
+        Flow(std::string name, System* source, System* target);
+        virtual ~Flow();
+        virtual double execute()=0; //metodo virtual puro
+        //getters e setters
+        void setName(std::string name);
+        std::string getName()const;
+        void setSource(System* source);
+        System* getSource()const;
+        void setTarget(System* target);
+        System* getTarget()const;
+        //construtor copia
+        Flow(const Flow& flow);
+        //atribuição pelo operador =
+        Flow& operator=(const Flow& flow);
+};
+
+//Class ExponentialFlow
+class ExponentialFlow: public Flow{
+    public:
+        ExponentialFlow(std::string name, System* source, System* target);
+        virtual ~ExponentialFlow();
+        double execute() override;
+};
+
+//Class LogicFlow
+class LogisticFlow: public Flow{
+    public:
+        LogisticFlow(std::string name, System* source, System* target);
+        virtual ~LogisticFlow();
+        double execute() override;
+};
+
+//Class ComplexFlow
+class ComplexFlow: public Flow{
+    public:
+        ComplexFlow(std::string name, System* source, System* target);
+        virtual ~ComplexFlow();
+        double execute() override;
+};
+
+//Classe MOdel
 class Model{
     private:
         std::string name;
