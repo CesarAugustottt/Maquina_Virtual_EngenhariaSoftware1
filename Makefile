@@ -12,18 +12,22 @@ TEST_DIR = test
 #Camkinho completo para o executável
 TARGET = $(BIN_DIR)/main.exe
 #Caminho completo para o arquivo do objeto
-OBJ = $(BIN_DIR)/main.o
+OBJS = $(BIN_DIR)/main.o $(BIN_DIR)/mySim.o
 
 #roda o all para gerar executavel
 all: $(TARGET)
 
 #para criar o executavel precisa do arquivo objeto
-$(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET)
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(TARGET)
 
-#para criar o bin .o precisa do .cpp
-$(OBJ): $(SRC_DIR)/main.cpp
-	$(CC) $(CFLAGS) -c $(SRC_DIR)/main.cpp -o $(OBJ)
+#Regra para comoilar main.o
+$(BIN_DIR)/main.o: $(SRC_DIR)/main.cpp
+	$(CC) $(CFLAGS) -c $(SRC_DIR)/main.cpp -o $(BIN_DIR)/main.o
+
+#REGRA COMPILAR mySim.o
+$(BIN_DIR)/mySim.o: $(SRC_DIR)/mySim.cpp
+	$(CC) $(CFLAGS) -c $(SRC_DIR)/mySim.cpp -o $(BIN_DIR)/mySim.o
 
 #limpar os binarios ao digitar make clean
 clean:
