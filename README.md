@@ -17,7 +17,7 @@ Este projeto consiste no desenvolvimento de uma maquina virtual em C++ aplicando
 * `test/`: Testes funcionais e regressivos.
 * `doc/`: Documentação técnica.
 
-## 🛠️ Como Compilar e Executar
+## Como Compilar e Executar
 ###Compilação geral
 Para compilar todo o projeto:
 ```bash
