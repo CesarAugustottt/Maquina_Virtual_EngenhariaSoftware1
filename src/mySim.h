@@ -60,9 +60,12 @@ class ExponentialFlow: public Flow{
 //Class LogicFlow
 class LogisticFlow: public Flow{
     public:
+        LogisticFlow();
         LogisticFlow(std::string name, System* source, System* target);
         virtual ~LogisticFlow();
         double execute() override;
+        LogisticFlow(const LogisticFlow& flow);
+        LogisticFlow& operator=(const LogisticFlow& flow);
 };
 
 //Class ComplexFlow
