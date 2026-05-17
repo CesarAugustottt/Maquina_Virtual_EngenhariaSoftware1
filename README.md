@@ -1,9 +1,10 @@
 # API do simulador de Sistemas Dinâmicos
 
+**Nome:** César Augusto Tiago Totô  
+**Matrícula:** 24.1.4038  
+
 **Nome:** Luiz Fernando Modesto Freitas Rezende  
 **Matrícula:** 24.2.4038  
-**Nome:** César Augusto Tiago Totô
-**Matrícula:** 24.1.4038
 
 ## Descrição do Projeto
 Este projeto consiste em uma API para um simulador de Sistemas Dinâmicos, baseado na linguagem de modelagem de J. W. Forrester. Nele, os sistemas atuam como variáveis numéricas diretas que armazenam quantidades de matéria ou energia. A interação é feita por fluxos, que transferem esses recursos de um sistema de origem para um de destino.
