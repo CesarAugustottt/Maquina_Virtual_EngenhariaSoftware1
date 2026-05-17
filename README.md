@@ -20,7 +20,6 @@ Este projeto consiste em uma API para um simulador de Sistemas Dinâmicos, basea
 * `doc/`: Documentação técnica.
 
 ## Como Compilar e Executar
-###Compilação geral
 Para compilar todo o projeto:
 ```bash
 make all
