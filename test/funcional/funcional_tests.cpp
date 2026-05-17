@@ -14,18 +14,20 @@ void exponentialFuncionalTest(){
 
     m.execute(0, 100, 1);
 
-    assert(pop1.getValue() < 36.6033 && pop1.getValue() > 36.6031);
-    assert(pop2.getValue() < 63.3969 && pop2.getValue() > 63.3967);
+    assert(pop1.getValue() < 36.6033 && pop1.getValue() > 36.6031); //erro de 0,0001
+    assert(pop2.getValue() < 63.3969 && pop2.getValue() > 63.3967); //erro de 0,0001
 }
 
 void complexFuncionalTest(){
     Model m;
-    System q1("q1", 100.0); 
+    //Criar sistemas
+    System q1("Q1", 100.0); 
     System q2("Q2", 0.0);
     System q3("Q3", 100.0);
     System q4("Q4", 0.0);
     System q5("Q5", 0.0);
 
+    //Criar fluxos
     ComplexFlow f("f", &q1, &q2);  
     ComplexFlow g("g", &q1, &q3);
     ComplexFlow r("r", &q2, &q5);  
@@ -42,9 +44,9 @@ void complexFuncionalTest(){
     m.execute(0, 100, 1);
 
     // Valores finais esperados pelo Vensim
-    assert(abs(q1.getValue() - 31.8513) <= 0.0001);
-    assert(abs(q2.getValue() - 18.4003) <= 0.0001);
-    assert(abs(q3.getValue() - 77.1143) <= 0.0001);
-    assert(abs(q4.getValue() - 56.1728) <= 0.0001);
-    assert(abs(q5.getValue() - 16.4612) <= 0.0001);
+    assert(fabs(q1.getValue() - 31.8513) <= 0.0001); 
+    assert(fabs(q2.getValue() - 18.4003) <= 0.0001);
+    assert(fabs(q3.getValue() - 77.1143) <= 0.0001);
+    assert(fabs(q4.getValue() - 56.1728) <= 0.0001);
+    assert(fabs(q5.getValue() - 16.4612) <= 0.0001);
 }
