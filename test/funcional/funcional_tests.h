@@ -8,7 +8,8 @@
 #include "../../src/ExponentialFlow.h"
 #include "../../src/ComplexFlow.h"
 
-#include<cassert>
+#include<cassert> //para a função assert
+#include<cmath> //Para a função fabs()
 
 //assinatura das funções:
 void exponentialFuncionalTest();
