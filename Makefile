@@ -13,7 +13,7 @@ TEST_DIR = test
 TARGET = $(BIN_DIR)/main.exe
 
 # Caminho completo para os arquivos objeto modularizados
-OBJS = $(BIN_DIR)/main.o $(BIN_DIR)/Flow.o $(BIN_DIR)/LogisticFlow.o $(BIN_DIR)/ExponentialFlow.o $(BIN_DIR)/Model.o $(BIN_DIR)/System.o
+OBJS = $(BIN_DIR)/main.o $(BIN_DIR)/Flow.o $(BIN_DIR)/LogisticFlow.o $(BIN_DIR)/ExponentialFlow.o $(BIN_DIR)/ComplexFlow.o $(BIN_DIR)/Model.o $(BIN_DIR)/System.o
 
 # roda o all para gerar executavel
 all: $(TARGET)
