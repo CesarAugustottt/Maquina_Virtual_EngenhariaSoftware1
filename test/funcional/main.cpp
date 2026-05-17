@@ -7,6 +7,9 @@ int main(){
     //chamar função teste exponencial
     exponentialFuncionalTest();
 
+    //Chamr função complexa
+    complexFuncionalTest();
+
     std::cout <<"TODOS OS TESTES PASSARAM!!" << std::endl;
     return 0;
 }
