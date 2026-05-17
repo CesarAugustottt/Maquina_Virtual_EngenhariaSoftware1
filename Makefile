@@ -9,30 +9,23 @@ BIN_DIR = bin
 #define a pasta test
 TEST_DIR = test
 
-#Camkinho completo para o executável
+#Caminho completo para o executável
 TARGET = $(BIN_DIR)/main.exe
-#Caminho completo para o arquivo do objeto
-OBJS = $(BIN_DIR)/main.o $(BIN_DIR)/mySim.o
+
+#Caminho completo para os arquivos objeto modularizados
+OBJS = $(BIN_DIR)/main.o $(BIN_DIR)/Flow.o $(BIN_DIR)/LogisticFlow.o $(BIN_DIR)/Model.o $(BIN_DIR)/System.o
 
 #roda o all para gerar executavel
 all: $(TARGET)
 
-#para criar o executavel precisa do arquivo objeto
+#para criar o executavel precisa dos arquivos objeto (Linkagem)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(TARGET)
 
-#Regra para comoilar main.o
-$(BIN_DIR)/main.o: $(SRC_DIR)/main.cpp
-	$(CC) $(CFLAGS) -c $(SRC_DIR)/main.cpp -o $(BIN_DIR)/main.o
-
-#REGRA COMPILAR mySim.o
-$(BIN_DIR)/mySim.o: $(SRC_DIR)/mySim.cpp
-	$(CC) $(CFLAGS) -c $(SRC_DIR)/mySim.cpp -o $(BIN_DIR)/mySim.o
+#Regra genérica (Pattern Rule) para compilar qualquer .cpp em .o correspondente
+$(BIN_DIR)/%.o: $(SRC_DIR)/%.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
 #limpar os binarios ao digitar make clean
 clean:
 	rm -f $(BIN_DIR)/*.o $(BIN_DIR)/*.exe
-	
-#regra para compilar teste funcional (teste regressivo)
-testeRegressivo: $(SRC_DIR)/bib.cpp $(TEST_DIR)/main.cpp
-	$(CC) $(CFLAGS) $(SRC_DIR)/bib.cpp $(TEST_DIR)/main.cpp -o $(BIN_DIR)/testeRegressivo.exe
