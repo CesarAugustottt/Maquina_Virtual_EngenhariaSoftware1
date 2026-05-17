@@ -12,7 +12,7 @@ public:
     // Destrutor virtual
     virtual ~ComplexFlow();
 
-    // Sobrescrita do execute
+    // Sobrescrita do metodo execute
     virtual double execute() override;
 
     // Construtor de copia
