@@ -41,4 +41,4 @@ O projeto segue um padrão rigoroso de ramificações para garantir a estabilida
 1.  **master:** Código estável e pronto para produção (versão final).
 2.  **staging:** Ambiente de pré-produção para testes finais.
 3.  **develop:** Integração de novas funcionalidades que já passaram nos testes de regressão.
-4.  **feat-:** Ramos temporários para desenvolvimento de funcionalidades específicas (ex: `feat-fatorial`, `feat-fibonacci`).
+4.  **feat-:** Ramos temporários para desenvolvimento de funcionalidades específicas
