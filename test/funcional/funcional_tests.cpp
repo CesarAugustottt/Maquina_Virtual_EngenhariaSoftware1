@@ -14,8 +14,30 @@ void exponentialFuncionalTest(){
 
     m.execute(0, 100, 1);
 
+    // Valores finais esperados pelo Vensim
     assert(pop1.getValue() < 36.6033 && pop1.getValue() > 36.6031); //erro de 0,0001
     assert(pop2.getValue() < 63.3969 && pop2.getValue() > 63.3967); //erro de 0,0001
+}
+
+void logisticalFuncionalTest(){
+    Model m;
+    // Valores iniciais de acordo com o Vensim
+    System p1("p1", 100.0); 
+    System p2("p2", 10.0); 
+
+    // O fluxo logistico conecta p1 a p2
+    LogisticFlow f1("logistica", &p1, &p2);
+
+    // Adiciona elementos ao modelo
+    m.add(&p1);
+    m.add(&p2);
+    m.add(&f1);
+
+    m.execute(0, 100, 1);
+
+    // Valores finais esperados pelo Vensim
+    assert(fabs(p1.getValue() - 88.2167) <= 0.0001);
+    assert(fabs(p2.getValue() - 21.7833) <= 0.0001);
 }
 
 void complexFuncionalTest(){

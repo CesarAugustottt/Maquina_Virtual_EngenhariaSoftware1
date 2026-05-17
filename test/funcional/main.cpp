@@ -7,6 +7,9 @@ int main(){
     //chamar função teste exponencial
     exponentialFuncionalTest();
 
+    //chamar função teste logistico
+    logisticalFuncionalTest();
+
     //Chamr função complexa
     complexFuncionalTest();
 
