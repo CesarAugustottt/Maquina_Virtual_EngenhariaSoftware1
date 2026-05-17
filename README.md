@@ -1,18 +1,20 @@
-# Maquina_Virtual_EngenhariaSoftware1
+# API do simulador de Sistemas Dinâmicos
+
+**Nome:** Luiz Fernando Modesto Freitas Rezende  
+**Matrícula:** 24.2.4038  
+**Nome:** César Augusto Tiago Totô
+**Matrícula:** 24.1.4038
 
 ## Descrição do Projeto
-Este projeto consiste no desenvolvimento de uma maquina virtual em C++ aplicando conceitos fundamentais de Engenharia de Software, como **Ciclo de Vida do Projeto**, **Modelo de desenvolvimento**, **Arquitetura de Software**, **TDD (Test Driven Development)** e **Testes de Integração Contínua**.
+Este projeto consiste em uma API para um simulador de Sistemas Dinâmicos, baseado na linguagem de modelagem de J. W. Forrester. Nele, os sistemas atuam como variáveis numéricas diretas que armazenam quantidades de matéria ou energia. A interação é feita por fluxos, que transferem esses recursos de um sistema de origem para um de destino.
 
 ## Tecnologias Utilizadas
 * Linguagem C++
 * Compilador G++ / Make
-* Framework de Testes (TDD)
 * Git e GitHub (GitFlow)
-* Freamework Qt (interface futura)
 
 ## Estrutura do Repositório
-* `src/`: Código fonte (.cpp) com as implementações das funcionalidades.
-* `include/`: Cabeçalhos (.hpp)
+* `src/`: Código fonte (.cpp) com as implementações das funcionalidades e cabeçalhos (.h).
 * `bin/`: Binários e executáveis.
 * `test/`: Testes funcionais e regressivos.
 * `doc/`: Documentação técnica.
@@ -21,18 +23,12 @@ Este projeto consiste no desenvolvimento de uma maquina virtual em C++ aplicando
 ###Compilação geral
 Para compilar todo o projeto:
 ```bash
-make
-```
-
-###Teste de Regressão (TDD)
-Para compilar e rodar os testes funcionais:
-```bash
-make testeRegressivo
+make all
 ```
 
 Para rodar os testes funcionais:
 ```bash
-./bin/testeRegressivo.exe
+./bin/funcional_tests.exe
 ```
 
 ## Fluxo de Desenvolvimento
