@@ -15,8 +15,8 @@ void exponentialFuncionalTest(){
     m.execute(0, 100, 1);
 
     // Valores finais esperados pelo Vensim
-    assert(pop1.getValue() < 36.6033 && pop1.getValue() > 36.6031); //erro de 0,0001
-    assert(pop2.getValue() < 63.3969 && pop2.getValue() > 63.3967); //erro de 0,0001
+    assert(round(fabs(pop1.getValue() - 36.6032) * 10000) == 0);
+    assert(round(fabs(pop2.getValue() - 63.3968) * 10000) == 0);
 }
 
 void logisticalFuncionalTest(){
@@ -36,8 +36,8 @@ void logisticalFuncionalTest(){
     m.execute(0, 100, 1);
 
     // Valores finais esperados pelo Vensim
-    assert(fabs(p1.getValue() - 88.2167) <= 0.0001);
-    assert(fabs(p2.getValue() - 21.7833) <= 0.0001);
+    assert(round(fabs(p1.getValue() - 88.2167) * 10000) == 0);
+    assert(round(fabs(p2.getValue() - 21.7833) * 10000) == 0);
 }
 
 void complexFuncionalTest(){
@@ -66,9 +66,9 @@ void complexFuncionalTest(){
     m.execute(0, 100, 1);
 
     // Valores finais esperados pelo Vensim
-    assert(fabs(q1.getValue() - 31.8513) <= 0.0001); 
-    assert(fabs(q2.getValue() - 18.4003) <= 0.0001);
-    assert(fabs(q3.getValue() - 77.1143) <= 0.0001);
-    assert(fabs(q4.getValue() - 56.1728) <= 0.0001);
-    assert(fabs(q5.getValue() - 16.4612) <= 0.0001);
+    assert(round(fabs(q1.getValue() - 31.8513) * 10000) == 0); 
+    assert(round(fabs(q2.getValue() - 18.4003) * 10000) == 0);
+    assert(round(fabs(q3.getValue() - 77.1143) * 10000) == 0);
+    assert(round(fabs(q4.getValue() - 56.1728) * 10000) == 0);
+    assert(round(fabs(q5.getValue() - 16.4612) * 10000) == 0);
 }
