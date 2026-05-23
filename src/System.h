@@ -20,6 +20,7 @@ public:
     void setValue(double value);
     double getValue() const;
 
+private:
     // Construtor de copia e Operador de atribuicao
     System(const System& sys);
     System& operator=(const System& sys);
