@@ -1,0 +1,163 @@
+\hypertarget{classLogisticFlow}{}\doxysection{Logistic\+Flow Class Reference}
+\label{classLogisticFlow}\index{LogisticFlow@{LogisticFlow}}
+
+
+{\ttfamily \#include $<$Logistic\+Flow.\+h$>$}
+
+
+
+Inheritance diagram for Logistic\+Flow\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classLogisticFlow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Logistic\+Flow\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classLogisticFlow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogisticFlow_ab0f7906cfe1a27e18a4f558124e53ee0}{Logistic\+Flow}} ()
+\item 
+\mbox{\hyperlink{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}{Logistic\+Flow}} (std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}})
+\item 
+virtual \mbox{\hyperlink{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}{$\sim$\+Logistic\+Flow}} ()
+\item 
+double \mbox{\hyperlink{classLogisticFlow_ae0d2de87d6dbb8cfc2af6db5cd22e884}{execute}} () override
+\item 
+\mbox{\hyperlink{classLogisticFlow_a8b195e7752074c8a7f44c8e50f97c955}{Logistic\+Flow}} (const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&flow)
+\item 
+\mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \& \mbox{\hyperlink{classLogisticFlow_ac3dca15396c96ca30dfec725ef732931}{operator=}} (const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&flow)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 5 of file Logistic\+Flow.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLogisticFlow_ab0f7906cfe1a27e18a4f558124e53ee0}\label{classLogisticFlow_ab0f7906cfe1a27e18a4f558124e53ee0}} 
+\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Logistic\+Flow\+::\+Logistic\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Logistic\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3 :\mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}()\{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}\label{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}} 
+\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Logistic\+Flow\+::\+Logistic\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file Logistic\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6     : \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}(\mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}}, \mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}, \mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}})\{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}\label{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}} 
+\index{LogisticFlow@{LogisticFlow}!````~LogisticFlow@{$\sim$LogisticFlow}}
+\index{````~LogisticFlow@{$\sim$LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogisticFlow()}{~LogisticFlow()}}
+{\footnotesize\ttfamily Logistic\+Flow\+::$\sim$\+Logistic\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 8 of file Logistic\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 \{\} \textcolor{comment}{//devido ao virtual da classe mae, o \string~Flow sera chamdo em seguida}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogisticFlow_a8b195e7752074c8a7f44c8e50f97c955}\label{classLogisticFlow_a8b195e7752074c8a7f44c8e50f97c955}} 
+\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Logistic\+Flow\+::\+Logistic\+Flow (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&}]{flow }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file Logistic\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19     : \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}(flow)\{\} \textcolor{comment}{//chamar o contrutor de copia da base}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLogisticFlow_ae0d2de87d6dbb8cfc2af6db5cd22e884}\label{classLogisticFlow_ae0d2de87d6dbb8cfc2af6db5cd22e884}} 
+\index{LogisticFlow@{LogisticFlow}!execute@{execute}}
+\index{execute@{execute}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily double Logistic\+Flow\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
+
+
+
+Definition at line 10 of file Logistic\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                             \{}
+\DoxyCodeLine{11     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classFlow_aff8a0f8ca8dc50d37c92ab7556e172b5}{getTarget}}()==\textcolor{keyword}{nullptr})\{ \textcolor{comment}{//se não tiver sitesma de destino}}
+\DoxyCodeLine{12         \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{13     \}}
+\DoxyCodeLine{14     \textcolor{keywordtype}{double} valueTarget = \mbox{\hyperlink{classFlow_aff8a0f8ca8dc50d37c92ab7556e172b5}{getTarget}}()-\/>\mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}();}
+\DoxyCodeLine{15     \textcolor{keywordflow}{return} 0.01 * valueTarget * (1 -\/ valueTarget/70);}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLogisticFlow_ac3dca15396c96ca30dfec725ef732931}\label{classLogisticFlow_ac3dca15396c96ca30dfec725ef732931}} 
+\index{LogisticFlow@{LogisticFlow}!operator=@{operator=}}
+\index{operator=@{operator=}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \& Logistic\+Flow\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&}]{flow }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file Logistic\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                                              \{}
+\DoxyCodeLine{22     \textcolor{keywordflow}{if} (\&flow != \textcolor{keyword}{this})\{ \textcolor{comment}{//se for diferente, faz a atribuição}}
+\DoxyCodeLine{23         \mbox{\hyperlink{classFlow_a6d7fa924063215269af2d61b7425cc22}{Flow::operator=}}(flow); \textcolor{comment}{//chama o operador = da base para a atribuição}}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{//retorna o conteúdo}}
+\DoxyCodeLine{26 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{LogisticFlow_8h}{Logistic\+Flow.\+h}}\item 
+src/\mbox{\hyperlink{LogisticFlow_8cpp}{Logistic\+Flow.\+cpp}}\end{DoxyCompactItemize}

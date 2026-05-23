@@ -1,0 +1,413 @@
+\hypertarget{classModel}{}\doxysection{Model Class Reference}
+\label{classModel}\index{Model@{Model}}
+
+
+{\ttfamily \#include $<$Model.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModel_ae3b375de5f6df4faf74a95d64748e048}{Model}} ()
+\item 
+\mbox{\hyperlink{classModel_a43c4c7a5d72958b3928047378f796283}{Model}} (std\+::string \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}}, double \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}})
+\item 
+virtual \mbox{\hyperlink{classModel_ad6ebd2062a0b823db841a0b88baac4c0}{$\sim$\+Model}} ()
+\item 
+void \mbox{\hyperlink{classModel_abb0d3cd8ee551b27da8ea0d6d2d1af13}{execute}} (double start, double final, double increment)
+\item 
+void \mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys)
+\item 
+void \mbox{\hyperlink{classModel_ab69613bde0ace81c92bbf519660ccb2c}{add}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow)
+\item 
+void \mbox{\hyperlink{classModel_acff68ba0ea92948c29e9a26a4de33f92}{remove}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys)
+\item 
+void \mbox{\hyperlink{classModel_a7b41df04211b99c65d5255c09ddc8e71}{remove}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow)
+\item 
+void \mbox{\hyperlink{classModel_a833b855481cf748352c92db5e0192337}{set\+Name}} (std\+::string \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}})
+\item 
+std\+::string \mbox{\hyperlink{classModel_ad98a14258e1e21e529b8df8ac930dc3e}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classModel_a9fa1fe4a85ebc007e645de4a16a9a6ae}{set\+Time}} (double \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}})
+\item 
+double \mbox{\hyperlink{classModel_a06d9f606f122597dc5426811f765987a}{get\+Time}} () const
+\item 
+void \mbox{\hyperlink{classModel_a4e7adee1c2d46b5d0dd46ae26898dacb}{increment\+Time}} (double increment)
+\item 
+\mbox{\hyperlink{classModel_a427a805ff8293a1a55ec9e1e98900405}{Model}} (const \mbox{\hyperlink{classModel}{Model}} \&model)
+\item 
+\mbox{\hyperlink{classModel}{Model}} \& \mbox{\hyperlink{classModel_a146cfadc1fe3e5e86837e3fccef35dcf}{operator=}} (const \mbox{\hyperlink{classModel}{Model}} \&model)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}}
+\item 
+double \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classSystem}{System}} $\ast$ $>$ \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classFlow}{Flow}} $\ast$ $>$ \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 10 of file Model.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classModel_ae3b375de5f6df4faf74a95d64748e048}\label{classModel_ae3b375de5f6df4faf74a95d64748e048}} 
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3             \{}
+\DoxyCodeLine{4     this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{5     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = 0.0;}
+\DoxyCodeLine{6 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_a43c4c7a5d72958b3928047378f796283}\label{classModel_a43c4c7a5d72958b3928047378f796283}} 
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{time }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 : \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}}(\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}}), \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}}(\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}})\{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_ad6ebd2062a0b823db841a0b88baac4c0}\label{classModel_ad6ebd2062a0b823db841a0b88baac4c0}} 
+\index{Model@{Model}!````~Model@{$\sim$Model}}
+\index{````~Model@{$\sim$Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{$\sim$Model()}{~Model()}}
+{\footnotesize\ttfamily Model\+::$\sim$\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 10 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10              \{}
+\DoxyCodeLine{11     \textcolor{comment}{//limpar os apenas os vetires, sem destruir os sistemas e fluxos}}
+\DoxyCodeLine{12     \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.clear();}
+\DoxyCodeLine{13     \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.clear();}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_a427a805ff8293a1a55ec9e1e98900405}\label{classModel_a427a805ff8293a1a55ec9e1e98900405}} 
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModel}{Model}} \&}]{model }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                                \{}
+\DoxyCodeLine{94     this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}} = model.\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}};}
+\DoxyCodeLine{95     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = model.\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}};}
+\DoxyCodeLine{96     this-\/>\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}} = model.\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}; \textcolor{comment}{//copia os ponterios}}
+\DoxyCodeLine{97     this-\/>\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}} = model.\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}};}
+\DoxyCodeLine{98 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classModel_ab69613bde0ace81c92bbf519660ccb2c}\label{classModel_ab69613bde0ace81c92bbf519660ccb2c}} 
+\index{Model@{Model}!add@{add}}
+\index{add@{add}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                          \{}
+\DoxyCodeLine{48     \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.push\_back(flow);}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_ad7e1460343a74a56fe20f417c1852eee}\label{classModel_ad7e1460343a74a56fe20f417c1852eee}} 
+\index{Model@{Model}!add@{add}}
+\index{add@{add}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                           \{}
+\DoxyCodeLine{44     \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.push\_back(sys);}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_abb0d3cd8ee551b27da8ea0d6d2d1af13}\label{classModel_abb0d3cd8ee551b27da8ea0d6d2d1af13}} 
+\index{Model@{Model}!execute@{execute}}
+\index{execute@{execute}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Model\+::execute (\begin{DoxyParamCaption}\item[{double}]{start,  }\item[{double}]{final,  }\item[{double}]{increment }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                                                              \{}
+\DoxyCodeLine{17     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = start;}
+\DoxyCodeLine{18     \textcolor{keywordflow}{while}(this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} < end)\{}
+\DoxyCodeLine{19         std::vector<double>valueFlow; \textcolor{comment}{//vetor com os valores de cada fluxo}}
+\DoxyCodeLine{20         \textcolor{comment}{//calcular a equação de cada fluxo}}
+\DoxyCodeLine{21         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} f : \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}})\{}
+\DoxyCodeLine{22             valueFlow.push\_back(f-\/>execute());}
+\DoxyCodeLine{23         \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25         \textcolor{comment}{//atualizar os sistemas com valores novos}}
+\DoxyCodeLine{26         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i< \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.size(); i++)\{}
+\DoxyCodeLine{27             \mbox{\hyperlink{classSystem}{System}}* source = \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}[i]-\/>getSource();}
+\DoxyCodeLine{28             \mbox{\hyperlink{classSystem}{System}}* target = \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}[i]-\/>getTarget();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30             \textcolor{comment}{//realizar o fluxo}}
+\DoxyCodeLine{31             \textcolor{keywordflow}{if}(source)\{ \textcolor{comment}{//diminui o valor da origem}}
+\DoxyCodeLine{32                 source-\/>\mbox{\hyperlink{classSystem_a5343de0a45485edd88bc87f338fe9a19}{setValue}}(source-\/>\mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}() -\/ valueFlow[i]);}
+\DoxyCodeLine{33             \}}
+\DoxyCodeLine{34             \textcolor{keywordflow}{if}(target)\{\textcolor{comment}{//aumenta valor do destino}}
+\DoxyCodeLine{35                 target-\/>\mbox{\hyperlink{classSystem_a5343de0a45485edd88bc87f338fe9a19}{setValue}}(target-\/>\mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}() + valueFlow[i]);}
+\DoxyCodeLine{36             \}}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38         \textcolor{comment}{//incrementar o tempo (time)}}
+\DoxyCodeLine{39         this-\/>\mbox{\hyperlink{classModel_a4e7adee1c2d46b5d0dd46ae26898dacb}{incrementTime}}(increment);}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_ad98a14258e1e21e529b8df8ac930dc3e}\label{classModel_ad98a14258e1e21e529b8df8ac930dc3e}} 
+\index{Model@{Model}!getName@{getName}}
+\index{getName@{getName}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Model\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 76 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                              \{}
+\DoxyCodeLine{77     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}};}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_a06d9f606f122597dc5426811f765987a}\label{classModel_a06d9f606f122597dc5426811f765987a}} 
+\index{Model@{Model}!getTime@{getTime}}
+\index{getTime@{getTime}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily double Model\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 84 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84                           \{}
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}};}
+\DoxyCodeLine{86 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_a4e7adee1c2d46b5d0dd46ae26898dacb}\label{classModel_a4e7adee1c2d46b5d0dd46ae26898dacb}} 
+\index{Model@{Model}!incrementTime@{incrementTime}}
+\index{incrementTime@{incrementTime}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{incrementTime()}{incrementTime()}}
+{\footnotesize\ttfamily void Model\+::increment\+Time (\begin{DoxyParamCaption}\item[{double}]{increment }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                                          \{}
+\DoxyCodeLine{89     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} += increment;}
+\DoxyCodeLine{90 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_a146cfadc1fe3e5e86837e3fccef35dcf}\label{classModel_a146cfadc1fe3e5e86837e3fccef35dcf}} 
+\index{Model@{Model}!operator=@{operator=}}
+\index{operator=@{operator=}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModel}{Model}} \& Model\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModel}{Model}} \&}]{model }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101                                          \{}
+\DoxyCodeLine{102     \textcolor{keywordflow}{if} (\&model != \textcolor{keyword}{this})\{}
+\DoxyCodeLine{103         this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}} = model.\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}};}
+\DoxyCodeLine{104         this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = model.\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}};}
+\DoxyCodeLine{105         this-\/>\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}} = model.\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}};}
+\DoxyCodeLine{106         this-\/>\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}} = model.\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}};}
+\DoxyCodeLine{107     \}}
+\DoxyCodeLine{108     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{//retorna o modelo}}
+\DoxyCodeLine{109 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_a7b41df04211b99c65d5255c09ddc8e71}\label{classModel_a7b41df04211b99c65d5255c09ddc8e71}} 
+\index{Model@{Model}!remove@{remove}}
+\index{remove@{remove}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                             \{}
+\DoxyCodeLine{62     \textcolor{comment}{//deve procurar o ponteiro flow no vetor}}
+\DoxyCodeLine{63     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.begin(), \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.end(), flow);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \textcolor{comment}{//se ele for diferente do fim o ponteiro foi encontrado e deve remover}}
+\DoxyCodeLine{66     \textcolor{comment}{//se for igual ao fim é uma posição inválida.}}
+\DoxyCodeLine{67     \textcolor{keywordflow}{if}(it != \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.end())\{}
+\DoxyCodeLine{68         \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.erase(it); \textcolor{comment}{//remove o fluxo do vetor.}}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_acff68ba0ea92948c29e9a26a4de33f92}\label{classModel_acff68ba0ea92948c29e9a26a4de33f92}} 
+\index{Model@{Model}!remove@{remove}}
+\index{remove@{remove}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                              \{}
+\DoxyCodeLine{52     \textcolor{comment}{//deve procurar o ponteiro sys no vetor}}
+\DoxyCodeLine{53     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.begin(), \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.end(), sys);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{comment}{//se ele for diferente do fim o ponteiro foi encontrado e deve remover}}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if}(it != \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.end())\{}
+\DoxyCodeLine{57         \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.erase(it); \textcolor{comment}{//remove  o sistema do vetor.}}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_a833b855481cf748352c92db5e0192337}\label{classModel_a833b855481cf748352c92db5e0192337}} 
+\index{Model@{Model}!setName@{setName}}
+\index{setName@{setName}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                  \{}
+\DoxyCodeLine{73     this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}} = \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}};}
+\DoxyCodeLine{74 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_a9fa1fe4a85ebc007e645de4a16a9a6ae}\label{classModel_a9fa1fe4a85ebc007e645de4a16a9a6ae}} 
+\index{Model@{Model}!setTime@{setTime}}
+\index{setTime@{setTime}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void Model\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})}
+
+
+
+Definition at line 80 of file Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                               \{}
+\DoxyCodeLine{81     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}};}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classModel_a508721af4b8ed362217dff0c6732d8dc}\label{classModel_a508721af4b8ed362217dff0c6732d8dc}} 
+\index{Model@{Model}!flows@{flows}}
+\index{flows@{flows}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{flows}{flows}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classFlow}{Flow}}$\ast$$>$ Model\+::flows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file Model.\+h.
+
+\mbox{\Hypertarget{classModel_a90fe59cc0709dd732cf5f180064db6fe}\label{classModel_a90fe59cc0709dd732cf5f180064db6fe}} 
+\index{Model@{Model}!name@{name}}
+\index{name@{name}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Model\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 12 of file Model.\+h.
+
+\mbox{\Hypertarget{classModel_a706374e5cb9ad9949996cfbd9538cead}\label{classModel_a706374e5cb9ad9949996cfbd9538cead}} 
+\index{Model@{Model}!systems@{systems}}
+\index{systems@{systems}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{systems}{systems}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classSystem}{System}}$\ast$$>$ Model\+::systems\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Model.\+h.
+
+\mbox{\Hypertarget{classModel_ac08e6be5375c12b4f09dfd3e88552e46}\label{classModel_ac08e6be5375c12b4f09dfd3e88552e46}} 
+\index{Model@{Model}!time@{time}}
+\index{time@{time}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily double Model\+::time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file Model.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Model_8h}{Model.\+h}}\item 
+src/\mbox{\hyperlink{Model_8cpp}{Model.\+cpp}}\end{DoxyCompactItemize}
