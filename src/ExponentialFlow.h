@@ -13,6 +13,7 @@ public:
     virtual ~ExponentialFlow();
     // Sobrescrita do execute
     virtual double execute() override;
+private:
     // Construtor de copia
     ExponentialFlow(const ExponentialFlow& flow);
     // Operador de atribuicao

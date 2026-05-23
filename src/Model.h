@@ -35,7 +35,8 @@ class Model{
         double getTime()const;
         //mettodo para incrementaro tempo
         void incrementTime (double increment);
-        
+
+    private:
         //construtor de copia (forma canonica)
         Model(const Model& model);
         //operador igual de atribuição (forma canonica)

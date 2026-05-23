@@ -20,6 +20,7 @@ class Flow{
         System* getSource()const;
         void setTarget(System* target);
         System* getTarget()const;
+    private:
         //construtor copia
         Flow(const Flow& flow);
         //atribuição pelo operador =

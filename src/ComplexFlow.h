@@ -15,6 +15,7 @@ public:
     // Sobrescrita do metodo execute
     virtual double execute() override;
 
+private:
     // Construtor de copia
     ComplexFlow(const ComplexFlow& flow);
     // Operador de atribuicao
