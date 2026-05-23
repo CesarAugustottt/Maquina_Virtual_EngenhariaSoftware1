@@ -8,7 +8,6 @@ class LogisticFlow: public Flow{
         LogisticFlow(std::string name, System* source, System* target);
         virtual ~LogisticFlow();
         double execute() override;
-    private:
         LogisticFlow(const LogisticFlow& flow);
         LogisticFlow& operator=(const LogisticFlow& flow);
 };
