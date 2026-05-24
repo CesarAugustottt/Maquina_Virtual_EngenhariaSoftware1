@@ -2,29 +2,34 @@
 \label{classSystem}\index{System@{System}}
 
 
+This Class represents a system in the General Systems Theory implemented in this code.  
+
+
+
+
 {\ttfamily \#include $<$System.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classSystem_ae317936c9bcf1374d61745572e0f2f8a}{System}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystem_ad8467f90704511e02657dca73fe38f82}{System}} (std\+::string \mbox{\hyperlink{classSystem_af3995745f52d4359f628ddd67de5121f}{name}}, double \mbox{\hyperlink{classSystem_a879687b1125ef20757c2a61345fedd00}{value}})
-\item 
+\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classSystem_a3be70bb338e3f062f821173fd15680d0}{$\sim$\+System}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystem_a29dd9ba3320e94630a999f1334519692}{set\+Name}} (std\+::string \mbox{\hyperlink{classSystem_af3995745f52d4359f628ddd67de5121f}{name}})
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSystem_a30116b105d876ff2b445c0c7d99816bb}{get\+Name}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystem_a5343de0a45485edd88bc87f338fe9a19}{set\+Value}} (double \mbox{\hyperlink{classSystem_a879687b1125ef20757c2a61345fedd00}{value}})
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{get\+Value}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystem_a9dd6c24612a98e55eaf1ec971bc44f4a}{System}} (const \mbox{\hyperlink{classSystem}{System}} \&sys)
-\item 
+\begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystem}{System}} \& \mbox{\hyperlink{classSystem_a9baec86de531db675fe23edaa74d6e4a}{operator=}} (const \mbox{\hyperlink{classSystem}{System}} \&sys)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,9 +40,9 @@ double \mbox{\hyperlink{classSystem_a879687b1125ef20757c2a61345fedd00}{value}}
 
 
 \doxysubsection{Detailed Description}
+This Class represents a system in the General Systems Theory implemented in this code. 
 
-
-Definition at line 6 of file System.\+h.
+Definition at line 9 of file System.\+h.
 
 
 
@@ -49,6 +54,16 @@ Definition at line 6 of file System.\+h.
 {\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+This is the default constructor for the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classSystem}{System}} -\/ a \mbox{\hyperlink{classSystem}{System}} Class object. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
 
 Definition at line 3 of file System.\+cpp.
 
@@ -68,6 +83,20 @@ Definition at line 3 of file System.\+cpp.
 
 
 
+This is the parameterized constructor for the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the \mbox{\hyperlink{classSystem}{System}}. \\
+\hline
+{\em value} & the initial value of the \mbox{\hyperlink{classSystem}{System}}. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
 Definition at line 8 of file System.\+cpp.
 
 
@@ -80,6 +109,10 @@ Definition at line 8 of file System.\+cpp.
 \index{````~System@{$\sim$System}!System@{System}}
 \doxysubsubsection{\texorpdfstring{$\sim$System()}{~System()}}
 {\footnotesize\ttfamily System\+::$\sim$\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is the default destructor for the \mbox{\hyperlink{classSystem}{System}} Class. 
 
 
 
@@ -97,6 +130,18 @@ Definition at line 10 of file System.\+cpp.
 {\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSystem}{System}} \&}]{sys }\end{DoxyParamCaption})}
 
 
+
+This is the copy constructor for the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em sys} & the system that is going to be cloned. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
 
 Definition at line 28 of file System.\+cpp.
 
@@ -119,6 +164,16 @@ Definition at line 28 of file System.\+cpp.
 
 
 
+Returns the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+string -\/ the content name attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
 Definition at line 16 of file System.\+cpp.
 
 
@@ -136,6 +191,16 @@ Definition at line 16 of file System.\+cpp.
 
 
 
+Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+double -\/ the content value attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
 Definition at line 24 of file System.\+cpp.
 
 
@@ -152,6 +217,21 @@ Definition at line 24 of file System.\+cpp.
 {\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}} \& System\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSystem}{System}} \&}]{sys }\end{DoxyParamCaption})}
 
 
+
+This is the overloaded assignment operator for the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em sys} & the system that is going to be cloned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classSystem}{System}}\& -\/ a reference to the updated \mbox{\hyperlink{classSystem}{System}} Class object. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
 
 Definition at line 33 of file System.\+cpp.
 
@@ -175,6 +255,18 @@ Definition at line 33 of file System.\+cpp.
 
 
 
+Sets the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em name} & which will be set to the current system. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
 Definition at line 12 of file System.\+cpp.
 
 
@@ -191,6 +283,18 @@ Definition at line 12 of file System.\+cpp.
 {\footnotesize\ttfamily void System\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
 
 
+
+Sets the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em value} & which will be set to the current system. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
 
 Definition at line 20 of file System.\+cpp.
 
@@ -210,9 +314,9 @@ Definition at line 20 of file System.\+cpp.
 \doxysubsubsection{\texorpdfstring{name}{name}}
 {\footnotesize\ttfamily std\+::string System\+::name\hspace{0.3cm}{\ttfamily [private]}}
 
+This attribute contains a name for the system. 
 
-
-Definition at line 8 of file System.\+h.
+Definition at line 12 of file System.\+h.
 
 \mbox{\Hypertarget{classSystem_a879687b1125ef20757c2a61345fedd00}\label{classSystem_a879687b1125ef20757c2a61345fedd00}} 
 \index{System@{System}!value@{value}}
@@ -220,9 +324,9 @@ Definition at line 8 of file System.\+h.
 \doxysubsubsection{\texorpdfstring{value}{value}}
 {\footnotesize\ttfamily double System\+::value\hspace{0.3cm}{\ttfamily [private]}}
 
+This attribute contains the actual value of the system. 
 
-
-Definition at line 9 of file System.\+h.
+Definition at line 14 of file System.\+h.
 
 
 

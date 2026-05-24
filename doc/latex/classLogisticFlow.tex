@@ -2,11 +2,17 @@
 \label{classLogisticFlow}\index{LogisticFlow@{LogisticFlow}}
 
 
+This class represents a logistic flow, which is a subclass of \mbox{\hyperlink{classFlow}{Flow}}.  
+
+
+
+
 {\ttfamily \#include $<$Logistic\+Flow.\+h$>$}
 
 
 
-Inheritance diagram for Logistic\+Flow\+:\nopagebreak
+Inheritance diagram for Logistic\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +21,8 @@ Inheritance diagram for Logistic\+Flow\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Logistic\+Flow\+:\nopagebreak
+Collaboration diagram for Logistic\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,23 +33,28 @@ Collaboration diagram for Logistic\+Flow\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classLogisticFlow_ab0f7906cfe1a27e18a4f558124e53ee0}{Logistic\+Flow}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}{Logistic\+Flow}} (std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}})
-\item 
+\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}{$\sim$\+Logistic\+Flow}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classLogisticFlow_ae0d2de87d6dbb8cfc2af6db5cd22e884}{execute}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Executes the specific logistic equation for this flow. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classLogisticFlow_a8b195e7752074c8a7f44c8e50f97c955}{Logistic\+Flow}} (const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&flow)
-\item 
+\begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \& \mbox{\hyperlink{classLogisticFlow_ac3dca15396c96ca30dfec725ef732931}{operator=}} (const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&flow)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+This class represents a logistic flow, which is a subclass of \mbox{\hyperlink{classFlow}{Flow}}. 
 
 
-Definition at line 5 of file Logistic\+Flow.\+h.
+\begin{DoxyItemize}
+\item It implements the execute method using a logistic equation for resource transfer. 
+\end{DoxyItemize}
+
+Definition at line 9 of file Logistic\+Flow.\+h.
 
 
 
@@ -52,6 +64,10 @@ Definition at line 5 of file Logistic\+Flow.\+h.
 \index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
 \doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Logistic\+Flow\+::\+Logistic\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This is the default constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. 
 
 
 
@@ -70,6 +86,22 @@ Definition at line 3 of file Logistic\+Flow.\+cpp.
 
 
 
+This is the parameterized constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}}. \\
+\hline
+{\em source} & pointer to the source \mbox{\hyperlink{classSystem}{System}}. \\
+\hline
+{\em target} & pointer to the target \mbox{\hyperlink{classSystem}{System}}. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
 Definition at line 5 of file Logistic\+Flow.\+cpp.
 
 
@@ -82,6 +114,10 @@ Definition at line 5 of file Logistic\+Flow.\+cpp.
 \index{````~LogisticFlow@{$\sim$LogisticFlow}!LogisticFlow@{LogisticFlow}}
 \doxysubsubsection{\texorpdfstring{$\sim$LogisticFlow()}{~LogisticFlow()}}
 {\footnotesize\ttfamily Logistic\+Flow\+::$\sim$\+Logistic\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is the default destructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. 
 
 
 
@@ -100,6 +136,18 @@ Definition at line 8 of file Logistic\+Flow.\+cpp.
 
 
 
+This is the copy constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em flow} & the logistic flow that is going to be cloned. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
 Definition at line 18 of file Logistic\+Flow.\+cpp.
 
 
@@ -117,6 +165,16 @@ Definition at line 18 of file Logistic\+Flow.\+cpp.
 {\footnotesize\ttfamily double Logistic\+Flow\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+Executes the specific logistic equation for this flow. 
+
+
+\begin{DoxyItemize}
+\item Overrides the pure virtual method from the \mbox{\hyperlink{classFlow}{Flow}} class. \begin{DoxyReturn}{Returns}
+double -\/ the calculated value based on the logistic equation. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
 
 Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
 
@@ -142,6 +200,21 @@ Definition at line 10 of file Logistic\+Flow.\+cpp.
 {\footnotesize\ttfamily \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \& Logistic\+Flow\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&}]{flow }\end{DoxyParamCaption})}
 
 
+
+This is the overloaded assignment operator for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em flow} & the logistic flow that is going to be cloned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}}\& -\/ a reference to the updated \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class object. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
 
 Definition at line 21 of file Logistic\+Flow.\+cpp.
 
