@@ -2,11 +2,17 @@
 \label{classComplexFlow}\index{ComplexFlow@{ComplexFlow}}
 
 
+This Class represents a complex flow in the General Systems Theory implemented in this code.  
+
+
+
+
 {\ttfamily \#include $<$Complex\+Flow.\+h$>$}
 
 
 
-Inheritance diagram for Complex\+Flow\+:\nopagebreak
+Inheritance diagram for Complex\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +21,8 @@ Inheritance diagram for Complex\+Flow\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Complex\+Flow\+:\nopagebreak
+Collaboration diagram for Complex\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,23 +33,23 @@ Collaboration diagram for Complex\+Flow\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classComplexFlow_a5842ce02ac6229830dbe8895b61891cf}{Complex\+Flow}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classComplexFlow_a9b286c4ec26c6d4e7fd39de285e02817}{Complex\+Flow}} (std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}})
-\item 
+\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classComplexFlow_a3ea63b4de8f10baefdbb71c52986cd74}{$\sim$\+Complex\+Flow}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{classComplexFlow_a744cb3029e9335038f3f8c1da6daea4d}{execute}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Executes the complex equation to calculate the flow\textquotesingle{}s value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classComplexFlow_a6fb57c177ace7dd5d33a326101dc754c}{Complex\+Flow}} (const \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \&flow)
-\item 
+\begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \& \mbox{\hyperlink{classComplexFlow_a4b7d7263094e0e829bd87a0d6c815304}{operator=}} (const \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \&flow)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+This Class represents a complex flow in the General Systems Theory implemented in this code. 
 
-
-Definition at line 6 of file Complex\+Flow.\+h.
+Definition at line 9 of file Complex\+Flow.\+h.
 
 
 
@@ -53,6 +60,13 @@ Definition at line 6 of file Complex\+Flow.\+h.
 \doxysubsubsection{\texorpdfstring{ComplexFlow()}{ComplexFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Complex\+Flow\+::\+Complex\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+This is the default constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} -\/ a \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class object. 
+\end{DoxyReturn}
 
 
 Definition at line 4 of file Complex\+Flow.\+cpp.
@@ -70,6 +84,19 @@ Definition at line 4 of file Complex\+Flow.\+cpp.
 
 
 
+This is the parameterized constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}}. \\
+\hline
+{\em source} & a pointer to the source \mbox{\hyperlink{classSystem}{System}}. \\
+\hline
+{\em target} & a pointer to the target \mbox{\hyperlink{classSystem}{System}}. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 7 of file Complex\+Flow.\+cpp.
 
 
@@ -82,6 +109,10 @@ Definition at line 7 of file Complex\+Flow.\+cpp.
 \index{````~ComplexFlow@{$\sim$ComplexFlow}!ComplexFlow@{ComplexFlow}}
 \doxysubsubsection{\texorpdfstring{$\sim$ComplexFlow()}{~ComplexFlow()}}
 {\footnotesize\ttfamily Complex\+Flow\+::$\sim$\+Complex\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is the default destructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. 
 
 
 
@@ -100,6 +131,15 @@ Definition at line 10 of file Complex\+Flow.\+cpp.
 
 
 
+This is the copy constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flow} & the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} that is going to be cloned. \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 21 of file Complex\+Flow.\+cpp.
 
 
@@ -116,6 +156,13 @@ Definition at line 21 of file Complex\+Flow.\+cpp.
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
 {\footnotesize\ttfamily double Complex\+Flow\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Executes the complex equation to calculate the flow\textquotesingle{}s value. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ the calculated value for the transfer. 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
@@ -140,6 +187,18 @@ Definition at line 13 of file Complex\+Flow.\+cpp.
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \& Complex\+Flow\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \&}]{flow }\end{DoxyParamCaption})}
 
+
+
+This is the overloaded assignment operator for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flow} & the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} that is going to be cloned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classComplexFlow}{Complex\+Flow}}\& -\/ a reference to the updated \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class object. 
+\end{DoxyReturn}
 
 
 Definition at line 24 of file Complex\+Flow.\+cpp.

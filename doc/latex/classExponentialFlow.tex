@@ -2,11 +2,17 @@
 \label{classExponentialFlow}\index{ExponentialFlow@{ExponentialFlow}}
 
 
+This Class represents an exponential flow in the General Systems Theory implemented in this code.  
+
+
+
+
 {\ttfamily \#include $<$Exponential\+Flow.\+h$>$}
 
 
 
-Inheritance diagram for Exponential\+Flow\+:\nopagebreak
+Inheritance diagram for Exponential\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +21,8 @@ Inheritance diagram for Exponential\+Flow\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Exponential\+Flow\+:\nopagebreak
+Collaboration diagram for Exponential\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,23 +33,23 @@ Collaboration diagram for Exponential\+Flow\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classExponentialFlow_a1f981db78e6635fd9837648960d8dc8d}{Exponential\+Flow}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classExponentialFlow_a0243d42e46c8a4a9f831b6623d31d4a3}{Exponential\+Flow}} (std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}})
-\item 
+\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classExponentialFlow_a47f85f24c8a74a00b025541e3ed950eb}{$\sim$\+Exponential\+Flow}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{classExponentialFlow_aafb074830c5c18138913cb10da3b8782}{execute}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Executes the exponential equation to calculate the flow\textquotesingle{}s value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classExponentialFlow_a0a0fa7490d3c69ea7e32fa8f31410b86}{Exponential\+Flow}} (const \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \&flow)
-\item 
+\begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \& \mbox{\hyperlink{classExponentialFlow_af9903c1a715409270d83c24e7f23a15d}{operator=}} (const \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \&flow)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+This Class represents an exponential flow in the General Systems Theory implemented in this code. 
 
-
-Definition at line 6 of file Exponential\+Flow.\+h.
+Definition at line 9 of file Exponential\+Flow.\+h.
 
 
 
@@ -54,6 +61,16 @@ Definition at line 6 of file Exponential\+Flow.\+h.
 {\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+This is the default constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} -\/ an \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class object. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
 
 Definition at line 4 of file Exponential\+Flow.\+cpp.
 
@@ -70,6 +87,22 @@ Definition at line 4 of file Exponential\+Flow.\+cpp.
 
 
 
+This is the parameterized constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}}. \\
+\hline
+{\em source} & a pointer to the source \mbox{\hyperlink{classSystem}{System}}. \\
+\hline
+{\em target} & a pointer to the target \mbox{\hyperlink{classSystem}{System}}. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
 Definition at line 7 of file Exponential\+Flow.\+cpp.
 
 
@@ -82,6 +115,10 @@ Definition at line 7 of file Exponential\+Flow.\+cpp.
 \index{````~ExponentialFlow@{$\sim$ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
 \doxysubsubsection{\texorpdfstring{$\sim$ExponentialFlow()}{~ExponentialFlow()}}
 {\footnotesize\ttfamily Exponential\+Flow\+::$\sim$\+Exponential\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is the default destructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. 
 
 
 
@@ -100,6 +137,18 @@ Definition at line 10 of file Exponential\+Flow.\+cpp.
 
 
 
+This is the copy constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em flow} & the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} that is going to be cloned. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
 Definition at line 21 of file Exponential\+Flow.\+cpp.
 
 
@@ -117,6 +166,16 @@ Definition at line 21 of file Exponential\+Flow.\+cpp.
 {\footnotesize\ttfamily double Exponential\+Flow\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+Executes the exponential equation to calculate the flow\textquotesingle{}s value. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+double -\/ the calculated value for the transfer. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
 
 Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
 
@@ -141,6 +200,21 @@ Definition at line 13 of file Exponential\+Flow.\+cpp.
 {\footnotesize\ttfamily \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \& Exponential\+Flow\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \&}]{flow }\end{DoxyParamCaption})}
 
 
+
+This is the overloaded assignment operator for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em flow} & the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} that is going to be cloned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}}\& -\/ a reference to the updated \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class object. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
 
 Definition at line 24 of file Exponential\+Flow.\+cpp.
 
