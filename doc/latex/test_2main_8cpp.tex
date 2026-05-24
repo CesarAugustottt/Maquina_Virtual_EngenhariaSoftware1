@@ -1,0 +1,60 @@
+\hypertarget{test_2main_8cpp}{}\doxysection{test/main.cpp File Reference}
+\label{test_2main_8cpp}\index{test/main.cpp@{test/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include \char`\"{}../src/bib.\+hpp\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{test_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5            \{}
+\DoxyCodeLine{6     std::cout << \textcolor{stringliteral}{"{}Iniciando testes funcionais..."{}} << std::endl;}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8     \textcolor{comment}{//cenarios de teste para o calculo do Fatorial}}
+\DoxyCodeLine{9     assert(calcularFatorial(0) == 1);}
+\DoxyCodeLine{10     assert(calcularFatorial(1) == 1);}
+\DoxyCodeLine{11     assert(calcularFatorial(5) == 120);}
+\DoxyCodeLine{12     assert(calcularFatorial(10) == 3628800);}
+\DoxyCodeLine{13     }
+\DoxyCodeLine{14     }
+\DoxyCodeLine{15     \textcolor{comment}{//cenarios de teste para o calculo do fibonacci}}
+\DoxyCodeLine{16     assert(calcularFibonacci(1) == 1);}
+\DoxyCodeLine{17     assert(calcularFibonacci(2) == 1);}
+\DoxyCodeLine{18     assert(calcularFibonacci(3) == 2);}
+\DoxyCodeLine{19     assert(calcularFibonacci(4) == 3);}
+\DoxyCodeLine{20     assert(calcularFibonacci(5) == 5);}
+\DoxyCodeLine{21     assert(calcularFibonacci(6) == 8);}
+\DoxyCodeLine{22     assert(calcularFibonacci(7) == 13);}
+\DoxyCodeLine{23     assert(calcularFibonacci(8) == 21);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     std::cout << \textcolor{stringliteral}{"{}Sucesso! Todos os cenários de teste foram aprovados."{}} << std::endl;}
+\DoxyCodeLine{27     }
+\DoxyCodeLine{28     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}

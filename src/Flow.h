@@ -5,7 +5,7 @@
 
 
 /*!
- * @brief This class represents a flow in the General System Theory implemented in this code.
+ * @brief This class represents a flow in the General Systems Theory implemented in this code.
  * * It connects a source system to a target system and defines the equation for resource transfer.
  */
 class Flow{

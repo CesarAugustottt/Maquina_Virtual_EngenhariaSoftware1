@@ -1,5 +1,5 @@
 <map id="LogisticFlow" name="LogisticFlow">
-<area shape="rect" id="node1" title="This class represents a logistic flow, which is a subclass of Flow." alt="" coords="5,185,108,212"/>
-<area shape="rect" id="node2" href="$classFlow.html" title="This class represents a flow in the General System Theory implemented in this code." alt="" coords="30,109,83,136"/>
+<area shape="rect" id="node1" title="This class represents a logistic flow in the General Systems Theory implemented in this code." alt="" coords="5,185,108,212"/>
+<area shape="rect" id="node2" href="$classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code." alt="" coords="30,109,83,136"/>
 <area shape="rect" id="node3" href="$classSystem.html" title="This Class represents a system in the General Systems Theory implemented in this code." alt="" coords="21,5,92,32"/>
 </map>
