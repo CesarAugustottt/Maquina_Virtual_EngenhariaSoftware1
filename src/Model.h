@@ -8,7 +8,7 @@
 #include<algorithm>
 
 /*!
- * @brief This class represents a model in the General System Theory implemented in this code.
+ * @brief This class represents a model in the General Systems Theory implemented in this code.
  * * It acts as a container for systems and flows, controlling the execution of the simulation.
  */
 

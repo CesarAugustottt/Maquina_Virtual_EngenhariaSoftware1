@@ -3,7 +3,7 @@
 #include"Flow.h"
 
 /*!
- * @brief This class represents a logistic flow, which is a subclass of Flow.
+ * @brief This class represents a logistic flow in the General Systems Theory implemented in this code.
  * * It implements the execute method using a logistic equation for resource transfer.
  */
 class LogisticFlow: public Flow{
