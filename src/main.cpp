@@ -1,12 +1,5 @@
-#include <iostream>
-
+#ifndef TEST_MODE
 int main() {
-    std::cout << "========================================" << std::endl;
-    std::cout << "Maquina VirtuaL" << std::endl;
-    std::cout << "========================================" << std::endl;
-    
-    //Codigo teste...
-    //mais funcionalidades...
-    
     return 0;
 }
+#endif
