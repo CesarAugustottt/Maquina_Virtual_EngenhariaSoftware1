@@ -2,11 +2,9 @@
 #define FUNCIONAL_TESTS_H
 
 #include "../../src/Model.h"
-#include "../../src/System.h"
-#include "../../src/Flow.h"
-#include "../../src/LogisticFlow.h"
-#include "../../src/ExponentialFlow.h"
-#include "../../src/ComplexFlow.h"
+#include "LogisticFlow.h"
+#include "ExponentialFlow.h"
+#include "ComplexFlow.h"
 
 #include<cassert> //para a função assert
 #include<cmath> //Para a função fabs()

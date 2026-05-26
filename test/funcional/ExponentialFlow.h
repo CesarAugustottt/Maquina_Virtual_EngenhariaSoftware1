@@ -1,7 +1,7 @@
 #ifndef EXPONENTIALFLOW_H
 #define EXPONENTIALFLOW_H
 
-#include "Flow.h"
+#include  "../../src/Flow.h"
 
 /*!
  * @brief This Class represents an exponential flow in the General Systems Theory implemented in this code.

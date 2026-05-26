@@ -1,7 +1,7 @@
 #ifndef COMPLEXFLOW_H
 #define COMPLEXFLOW_H
 
-#include "Flow.h"
+#include "../../src/Flow.h"
 
 /*!
  * @brief This Class represents a complex flow in the General Systems Theory implemented in this code.

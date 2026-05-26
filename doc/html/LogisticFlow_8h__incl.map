@@ -1,6 +1,6 @@
-<map id="src/LogisticFlow.h" name="src/LogisticFlow.h">
-<area shape="rect" id="node1" title=" " alt="" coords="17,5,154,32"/>
-<area shape="rect" id="node2" href="$Flow_8h.html" title=" " alt="" coords="53,80,117,107"/>
-<area shape="rect" id="node3" href="$System_8h.html" title=" " alt="" coords="5,155,88,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="56,229,115,256"/>
+<map id="test/funcional/LogisticFlow.h" name="test/funcional/LogisticFlow.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,212,32"/>
+<area shape="rect" id="node2" href="$Flow_8h.html" title=" " alt="" coords="53,80,164,107"/>
+<area shape="rect" id="node3" href="$System_8h.html" title=" " alt="" coords="29,155,111,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="79,229,138,256"/>
 </map>
