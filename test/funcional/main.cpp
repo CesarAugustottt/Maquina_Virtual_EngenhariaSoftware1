@@ -1,5 +1,4 @@
 #include "funcional_tests.h"
-#include<iostream>
 
 int main(){
     std::cout <<"INICIANDO TESTES FUNCIONAIS" << std::endl;
