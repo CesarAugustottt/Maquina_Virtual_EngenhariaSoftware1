@@ -1,6 +1,6 @@
 #ifndef LOGISTICFLOW_H
 #define LOGISTICFLOW_H
-#include"Flow.h"
+#include "../../src/Flow.h"
 
 /*!
  * @brief This class represents a logistic flow in the General Systems Theory implemented in this code.
