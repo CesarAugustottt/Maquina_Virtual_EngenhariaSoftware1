@@ -1,7 +1,5 @@
 <map id="test/funcional/LogisticFlow.h" name="test/funcional/LogisticFlow.h">
-<area shape="rect" id="node1" title=" " alt="" coords="199,5,405,32"/>
-<area shape="rect" id="node2" href="$funcional__tests_8h.html" title=" " alt="" coords="104,80,279,121"/>
-<area shape="rect" id="node5" href="$LogisticFlow_8cpp.html" title=" " alt="" coords="303,87,525,114"/>
-<area shape="rect" id="node3" href="$funcional__tests_8cpp.html" title=" " alt="" coords="5,169,180,211"/>
-<area shape="rect" id="node4" href="$test_2funcional_2main_8cpp.html" title=" " alt="" coords="204,177,379,203"/>
+<area shape="rect" id="node1" title=" " alt="" coords="102,5,309,32"/>
+<area shape="rect" id="node2" href="$flows_8cpp.html" title=" " alt="" coords="5,80,181,107"/>
+<area shape="rect" id="node3" href="$LogisticFlow_8cpp.html" title=" " alt="" coords="206,80,429,107"/>
 </map>

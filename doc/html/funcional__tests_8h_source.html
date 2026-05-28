@@ -73,28 +73,34 @@ $(function() {
 <a href="funcional__tests_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FUNCIONAL_TESTS_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define FUNCIONAL_TESTS_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../../src/Model.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="LogisticFlow_8h.html">LogisticFlow.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ExponentialFlow_8h.html">ExponentialFlow.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ComplexFlow_8h.html">ComplexFlow.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include&lt;cassert&gt;</span> <span class="comment">//para a função assert</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include&lt;cmath&gt;</span> <span class="comment">//Para a função fabs()</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include&lt;cassert&gt;</span> <span class="comment">//para a função assert</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include&lt;cmath&gt;</span> <span class="comment">//Para a função fabs()</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//assinatura das funções:</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="funcional__tests_8h.html#a2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="funcional__tests_8h.html#a60914db64bde71b56d69320797266c29">logisticalFuncionalTest</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="funcional__tests_8h.html#a943dfe0c597a01c9760c140715fed527">complexFuncionalTest</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aComplexFlow_8h_html"><div class="ttname"><a href="ComplexFlow_8h.html">ComplexFlow.h</a></div></div>
-<div class="ttc" id="aExponentialFlow_8h_html"><div class="ttname"><a href="ExponentialFlow_8h.html">ExponentialFlow.h</a></div></div>
-<div class="ttc" id="aLogisticFlow_8h_html"><div class="ttname"><a href="LogisticFlow_8h.html">LogisticFlow.h</a></div></div>
-<div class="ttc" id="afuncional__tests_8h_html_a2c448ffaffdff4b03c825a01dffa6f27"><div class="ttname"><a href="funcional__tests_8h.html#a2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a></div><div class="ttdeci">void exponentialFuncionalTest()</div><div class="ttdoc">Functional tests header.</div><div class="ttdef"><b>Definition:</b> <a href="funcional__tests_8cpp_source.html#l00003">funcional_tests.cpp:3</a></div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Fábricas para criação oculta dos fluxos (Padrão de Encapsulamento)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span><a class="code" href="classFlow.html">Flow</a>* <a class="code" href="funcional__tests_8h.html#a92acf4d3964c828d4a83c8e8ef770092">createExponentialFlow</a>(std::string name, <a class="code" href="classSystem.html">System</a>* source, <a class="code" href="classSystem.html">System</a>* target);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="classFlow.html">Flow</a>* <a class="code" href="funcional__tests_8h.html#af8ba6be0bcdf082483696ce956b93ae3">createLogisticFlow</a>(std::string name, <a class="code" href="classSystem.html">System</a>* source, <a class="code" href="classSystem.html">System</a>* target);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="classFlow.html">Flow</a>* <a class="code" href="funcional__tests_8h.html#a5ce461f7b760845fd7dcdb81eec4cd90">createComplexFlow</a>(std::string name, <a class="code" href="classSystem.html">System</a>* source, <a class="code" href="classSystem.html">System</a>* target);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//assinatura das funções:</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="funcional__tests_8h.html#a2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="funcional__tests_8h.html#a60914db64bde71b56d69320797266c29">logisticalFuncionalTest</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="funcional__tests_8h.html#a943dfe0c597a01c9760c140715fed527">complexFuncionalTest</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassFlow_html"><div class="ttname"><a href="classFlow.html">Flow</a></div><div class="ttdoc">This class represents a flow in the General Systems Theory implemented in this code.</div><div class="ttdef"><b>Definition:</b> <a href="Flow_8h_source.html#l00011">Flow.h:11</a></div></div>
+<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdoc">This Class represents a system in the General Systems Theory implemented in this code.</div><div class="ttdef"><b>Definition:</b> <a href="System_8h_source.html#l00009">System.h:9</a></div></div>
+<div class="ttc" id="afuncional__tests_8h_html_a2c448ffaffdff4b03c825a01dffa6f27"><div class="ttname"><a href="funcional__tests_8h.html#a2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a></div><div class="ttdeci">void exponentialFuncionalTest()</div><div class="ttdef"><b>Definition:</b> <a href="funcional__tests_8cpp_source.html#l00003">funcional_tests.cpp:3</a></div></div>
+<div class="ttc" id="afuncional__tests_8h_html_a5ce461f7b760845fd7dcdb81eec4cd90"><div class="ttname"><a href="funcional__tests_8h.html#a5ce461f7b760845fd7dcdb81eec4cd90">createComplexFlow</a></div><div class="ttdeci">Flow * createComplexFlow(std::string name, System *source, System *target)</div><div class="ttdef"><b>Definition:</b> <a href="flows_8cpp_source.html#l00014">flows.cpp:14</a></div></div>
 <div class="ttc" id="afuncional__tests_8h_html_a60914db64bde71b56d69320797266c29"><div class="ttname"><a href="funcional__tests_8h.html#a60914db64bde71b56d69320797266c29">logisticalFuncionalTest</a></div><div class="ttdeci">void logisticalFuncionalTest()</div><div class="ttdef"><b>Definition:</b> <a href="funcional__tests_8cpp_source.html#l00022">funcional_tests.cpp:22</a></div></div>
+<div class="ttc" id="afuncional__tests_8h_html_a92acf4d3964c828d4a83c8e8ef770092"><div class="ttname"><a href="funcional__tests_8h.html#a92acf4d3964c828d4a83c8e8ef770092">createExponentialFlow</a></div><div class="ttdeci">Flow * createExponentialFlow(std::string name, System *source, System *target)</div><div class="ttdoc">Functional tests header.</div><div class="ttdef"><b>Definition:</b> <a href="flows_8cpp_source.html#l00006">flows.cpp:6</a></div></div>
 <div class="ttc" id="afuncional__tests_8h_html_a943dfe0c597a01c9760c140715fed527"><div class="ttname"><a href="funcional__tests_8h.html#a943dfe0c597a01c9760c140715fed527">complexFuncionalTest</a></div><div class="ttdeci">void complexFuncionalTest()</div><div class="ttdef"><b>Definition:</b> <a href="funcional__tests_8cpp_source.html#l00043">funcional_tests.cpp:43</a></div></div>
+<div class="ttc" id="afuncional__tests_8h_html_af8ba6be0bcdf082483696ce956b93ae3"><div class="ttname"><a href="funcional__tests_8h.html#af8ba6be0bcdf082483696ce956b93ae3">createLogisticFlow</a></div><div class="ttdeci">Flow * createLogisticFlow(std::string name, System *source, System *target)</div><div class="ttdef"><b>Definition:</b> <a href="flows_8cpp_source.html#l00010">flows.cpp:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

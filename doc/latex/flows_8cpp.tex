@@ -1,0 +1,83 @@
+\hypertarget{flows_8cpp}{}\doxysection{test/funcional/flows.cpp File Reference}
+\label{flows_8cpp}\index{test/funcional/flows.cpp@{test/funcional/flows.cpp}}
+{\ttfamily \#include \char`\"{}funcional\+\_\+tests.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Exponential\+Flow.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Logistic\+Flow.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Complex\+Flow.\+h\char`\"{}}\newline
+Include dependency graph for flows.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{flows_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFlow}{Flow}} $\ast$ \mbox{\hyperlink{flows_8cpp_a92acf4d3964c828d4a83c8e8ef770092}{create\+Exponential\+Flow}} (std\+::string name, \mbox{\hyperlink{classSystem}{System}} $\ast$source, \mbox{\hyperlink{classSystem}{System}} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Functional tests header. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFlow}{Flow}} $\ast$ \mbox{\hyperlink{flows_8cpp_af8ba6be0bcdf082483696ce956b93ae3}{create\+Logistic\+Flow}} (std\+::string name, \mbox{\hyperlink{classSystem}{System}} $\ast$source, \mbox{\hyperlink{classSystem}{System}} $\ast$target)
+\item 
+\mbox{\hyperlink{classFlow}{Flow}} $\ast$ \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{create\+Complex\+Flow}} (std\+::string name, \mbox{\hyperlink{classSystem}{System}} $\ast$source, \mbox{\hyperlink{classSystem}{System}} $\ast$target)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}\label{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}} 
+\index{flows.cpp@{flows.cpp}!createComplexFlow@{createComplexFlow}}
+\index{createComplexFlow@{createComplexFlow}!flows.cpp@{flows.cpp}}
+\doxysubsubsection{\texorpdfstring{createComplexFlow()}{createComplexFlow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFlow}{Flow}}$\ast$ create\+Complex\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+Factory function prototype to create a \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} instance hiddenly. 
+
+Definition at line 14 of file flows.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14                                                                         \{}
+\DoxyCodeLine{15     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classComplexFlow}{ComplexFlow}}(name, source, target);}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{flows_8cpp_a92acf4d3964c828d4a83c8e8ef770092}\label{flows_8cpp_a92acf4d3964c828d4a83c8e8ef770092}} 
+\index{flows.cpp@{flows.cpp}!createExponentialFlow@{createExponentialFlow}}
+\index{createExponentialFlow@{createExponentialFlow}!flows.cpp@{flows.cpp}}
+\doxysubsubsection{\texorpdfstring{createExponentialFlow()}{createExponentialFlow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFlow}{Flow}}$\ast$ create\+Exponential\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Functional tests header. 
+
+Prototypes for the funcional tests of the simulation framework. This file declares the test cases responsible for validating the dynamics between the \mbox{\hyperlink{classModel}{Model}}, \mbox{\hyperlink{classSystem}{System}}, and \mbox{\hyperlink{classFlow}{Flow}}.
+
+Factory function prototype to create an \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} instance hiddenly. 
+
+Definition at line 6 of file flows.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6                                                                             \{}
+\DoxyCodeLine{7     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classExponentialFlow}{ExponentialFlow}}(name, source, target);}
+\DoxyCodeLine{8 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{flows_8cpp_af8ba6be0bcdf082483696ce956b93ae3}\label{flows_8cpp_af8ba6be0bcdf082483696ce956b93ae3}} 
+\index{flows.cpp@{flows.cpp}!createLogisticFlow@{createLogisticFlow}}
+\index{createLogisticFlow@{createLogisticFlow}!flows.cpp@{flows.cpp}}
+\doxysubsubsection{\texorpdfstring{createLogisticFlow()}{createLogisticFlow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFlow}{Flow}}$\ast$ create\+Logistic\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})}
+
+Factory function prototype to create a \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} instance hiddenly. 
+
+Definition at line 10 of file flows.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                                                          \{}
+\DoxyCodeLine{11     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classLogisticFlow}{LogisticFlow}}(name, source, target);}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
