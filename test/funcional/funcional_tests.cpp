@@ -5,12 +5,12 @@ void exponentialFuncionalTest(){
     System pop1("pop1", 100.0);
     System pop2("pop2", 0.0);
 
-    ExponentialFlow f1 ("exponencial", &pop1, &pop2); //conectar os sistemas
+    Flow* f1 = createExponentialFlow("exponencial", &pop1, &pop2); //conectar os sistemas
 
     //adicionar elementos ao modelo
     m.add(&pop1);
     m.add(&pop2);
-    m.add(&f1);
+    m.add(f1);
 
     m.execute(0, 100, 1);
 
@@ -26,12 +26,12 @@ void logisticalFuncionalTest(){
     System p2("p2", 10.0); 
 
     // O fluxo logistico conecta p1 a p2
-    LogisticFlow f1("logistica", &p1, &p2);
+    Flow* f1 = createLogisticFlow("logistica", &p1, &p2);
 
     // Adiciona elementos ao modelo
     m.add(&p1);
     m.add(&p2);
-    m.add(&f1);
+    m.add(f1);
 
     m.execute(0, 100, 1);
 
@@ -50,17 +50,17 @@ void complexFuncionalTest(){
     System q5("Q5", 0.0);
 
     //Criar fluxos
-    ComplexFlow f("f", &q1, &q2);  
-    ComplexFlow g("g", &q1, &q3);
-    ComplexFlow r("r", &q2, &q5);  
-    ComplexFlow t("t", &q2, &q3);
-    ComplexFlow u("u", &q3, &q4);  
-    ComplexFlow v("v", &q4, &q1);
+    Flow* f = createComplexFlow("f", &q1, &q2);  
+    Flow* g = createComplexFlow("g", &q1, &q3);
+    Flow* r = createComplexFlow("r", &q2, &q5);  
+    Flow* t = createComplexFlow("t", &q2, &q3);
+    Flow* u = createComplexFlow("u", &q3, &q4);  
+    Flow* v = createComplexFlow("v", &q4, &q1);
 
     //Adicionar sistemas
     m.add(&q1); m.add(&q2); m.add(&q3); m.add(&q4); m.add(&q5);
     //adicionar fluxos
-    m.add(&f); m.add(&g); m.add(&r); m.add(&t); m.add(&u); m.add(&v);
+    m.add(f); m.add(g); m.add(r); m.add(t); m.add(u); m.add(v);
 
     //executar
     m.execute(0, 100, 1);

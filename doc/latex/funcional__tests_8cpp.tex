@@ -1,7 +1,8 @@
 \hypertarget{funcional__tests_8cpp}{}\doxysection{test/funcional/funcional\+\_\+tests.cpp File Reference}
 \label{funcional__tests_8cpp}\index{test/funcional/funcional\_tests.cpp@{test/funcional/funcional\_tests.cpp}}
 {\ttfamily \#include \char`\"{}funcional\+\_\+tests.\+h\char`\"{}}\newline
-Include dependency graph for funcional\+\_\+tests.\+cpp\+:\nopagebreak
+Include dependency graph for funcional\+\_\+tests.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,7 +13,7 @@ Include dependency graph for funcional\+\_\+tests.\+cpp\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27}{exponential\+Funcional\+Test}} ()
-\begin{DoxyCompactList}\small\item\em Functional tests header. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29}{logistical\+Funcional\+Test}} ()
 \item 
 void \mbox{\hyperlink{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527}{complex\+Funcional\+Test}} ()
@@ -42,17 +43,17 @@ Definition at line 43 of file funcional\+\_\+tests.\+cpp.
 \DoxyCodeLine{50     \mbox{\hyperlink{classSystem}{System}} q5(\textcolor{stringliteral}{"{}Q5"{}}, 0.0);}
 \DoxyCodeLine{51 }
 \DoxyCodeLine{52     \textcolor{comment}{//Criar fluxos}}
-\DoxyCodeLine{53     \mbox{\hyperlink{classComplexFlow}{ComplexFlow}} f(\textcolor{stringliteral}{"{}f"{}}, \&q1, \&q2);  }
-\DoxyCodeLine{54     \mbox{\hyperlink{classComplexFlow}{ComplexFlow}} g(\textcolor{stringliteral}{"{}g"{}}, \&q1, \&q3);}
-\DoxyCodeLine{55     \mbox{\hyperlink{classComplexFlow}{ComplexFlow}} r(\textcolor{stringliteral}{"{}r"{}}, \&q2, \&q5);  }
-\DoxyCodeLine{56     \mbox{\hyperlink{classComplexFlow}{ComplexFlow}} t(\textcolor{stringliteral}{"{}t"{}}, \&q2, \&q3);}
-\DoxyCodeLine{57     \mbox{\hyperlink{classComplexFlow}{ComplexFlow}} u(\textcolor{stringliteral}{"{}u"{}}, \&q3, \&q4);  }
-\DoxyCodeLine{58     \mbox{\hyperlink{classComplexFlow}{ComplexFlow}} v(\textcolor{stringliteral}{"{}v"{}}, \&q4, \&q1);}
+\DoxyCodeLine{53     \mbox{\hyperlink{classFlow}{Flow}}* f = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}f"{}}, \&q1, \&q2);  }
+\DoxyCodeLine{54     \mbox{\hyperlink{classFlow}{Flow}}* g = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}g"{}}, \&q1, \&q3);}
+\DoxyCodeLine{55     \mbox{\hyperlink{classFlow}{Flow}}* r = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}r"{}}, \&q2, \&q5);  }
+\DoxyCodeLine{56     \mbox{\hyperlink{classFlow}{Flow}}* t = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}t"{}}, \&q2, \&q3);}
+\DoxyCodeLine{57     \mbox{\hyperlink{classFlow}{Flow}}* u = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}u"{}}, \&q3, \&q4);  }
+\DoxyCodeLine{58     \mbox{\hyperlink{classFlow}{Flow}}* v = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}v"{}}, \&q4, \&q1);}
 \DoxyCodeLine{59 }
 \DoxyCodeLine{60     \textcolor{comment}{//Adicionar sistemas}}
 \DoxyCodeLine{61     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&q1); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&q2); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&q3); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&q4); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&q5);}
 \DoxyCodeLine{62     \textcolor{comment}{//adicionar fluxos}}
-\DoxyCodeLine{63     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&f); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&g); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&r); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&t); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&u); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&v);}
+\DoxyCodeLine{63     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(f); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(g); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(r); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(t); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(u); m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(v);}
 \DoxyCodeLine{64 }
 \DoxyCodeLine{65     \textcolor{comment}{//executar}}
 \DoxyCodeLine{66     m.\mbox{\hyperlink{classModel_abb0d3cd8ee551b27da8ea0d6d2d1af13}{execute}}(0, 100, 1);}
@@ -72,12 +73,6 @@ Definition at line 43 of file funcional\+\_\+tests.\+cpp.
 \doxysubsubsection{\texorpdfstring{exponentialFuncionalTest()}{exponentialFuncionalTest()}}
 {\footnotesize\ttfamily void exponential\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Functional tests header. 
-
-Prototypes for the funcional tests of the simulation framework. This file declares the test cases responsible for validating the dynamics between the \mbox{\hyperlink{classModel}{Model}}, \mbox{\hyperlink{classSystem}{System}}, and \mbox{\hyperlink{classFlow}{Flow}}.
-
 Function prototype for the exponential flow functional test. 
 
 Definition at line 3 of file funcional\+\_\+tests.\+cpp.
@@ -89,12 +84,12 @@ Definition at line 3 of file funcional\+\_\+tests.\+cpp.
 \DoxyCodeLine{5     \mbox{\hyperlink{classSystem}{System}} pop1(\textcolor{stringliteral}{"{}pop1"{}}, 100.0);}
 \DoxyCodeLine{6     \mbox{\hyperlink{classSystem}{System}} pop2(\textcolor{stringliteral}{"{}pop2"{}}, 0.0);}
 \DoxyCodeLine{7 }
-\DoxyCodeLine{8     \mbox{\hyperlink{classExponentialFlow}{ExponentialFlow}} f1 (\textcolor{stringliteral}{"{}exponencial"{}}, \&pop1, \&pop2); \textcolor{comment}{//conectar os sistemas}}
+\DoxyCodeLine{8     \mbox{\hyperlink{classFlow}{Flow}}* f1 = \mbox{\hyperlink{flows_8cpp_a92acf4d3964c828d4a83c8e8ef770092}{createExponentialFlow}}(\textcolor{stringliteral}{"{}exponencial"{}}, \&pop1, \&pop2); \textcolor{comment}{//conectar os sistemas}}
 \DoxyCodeLine{9 }
 \DoxyCodeLine{10     \textcolor{comment}{//adicionar elementos ao modelo}}
 \DoxyCodeLine{11     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&pop1);}
 \DoxyCodeLine{12     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&pop2);}
-\DoxyCodeLine{13     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&f1);}
+\DoxyCodeLine{13     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(f1);}
 \DoxyCodeLine{14 }
 \DoxyCodeLine{15     m.\mbox{\hyperlink{classModel_abb0d3cd8ee551b27da8ea0d6d2d1af13}{execute}}(0, 100, 1);}
 \DoxyCodeLine{16 }
@@ -123,12 +118,12 @@ Definition at line 22 of file funcional\+\_\+tests.\+cpp.
 \DoxyCodeLine{26     \mbox{\hyperlink{classSystem}{System}} p2(\textcolor{stringliteral}{"{}p2"{}}, 10.0); }
 \DoxyCodeLine{27 }
 \DoxyCodeLine{28     \textcolor{comment}{// O fluxo logistico conecta p1 a p2}}
-\DoxyCodeLine{29     \mbox{\hyperlink{classLogisticFlow}{LogisticFlow}} f1(\textcolor{stringliteral}{"{}logistica"{}}, \&p1, \&p2);}
+\DoxyCodeLine{29     \mbox{\hyperlink{classFlow}{Flow}}* f1 = \mbox{\hyperlink{flows_8cpp_af8ba6be0bcdf082483696ce956b93ae3}{createLogisticFlow}}(\textcolor{stringliteral}{"{}logistica"{}}, \&p1, \&p2);}
 \DoxyCodeLine{30 }
 \DoxyCodeLine{31     \textcolor{comment}{// Adiciona elementos ao modelo}}
 \DoxyCodeLine{32     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&p1);}
 \DoxyCodeLine{33     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&p2);}
-\DoxyCodeLine{34     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(\&f1);}
+\DoxyCodeLine{34     m.\mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}}(f1);}
 \DoxyCodeLine{35 }
 \DoxyCodeLine{36     m.\mbox{\hyperlink{classModel_abb0d3cd8ee551b27da8ea0d6d2d1af13}{execute}}(0, 100, 1);}
 \DoxyCodeLine{37 }
