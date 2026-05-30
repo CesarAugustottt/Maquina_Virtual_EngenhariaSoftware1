@@ -13,7 +13,7 @@ protected:
 public:
     // Construtores e Destrutor
     /*!
-     * @brief This is the default constructor for the System Class.
+     * @brief This is the default constructor for the SystemImpl Class.
      */
     SystemImpl();
     /*!
