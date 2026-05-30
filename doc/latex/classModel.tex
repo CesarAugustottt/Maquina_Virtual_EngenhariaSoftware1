@@ -2,16 +2,12 @@
 \label{classModel}\index{Model@{Model}}
 
 
-This class represents the interface of a model in the General Systems Theory implemented in this code.  
-
-
-
-
 {\ttfamily \#include $<$Model.\+h$>$}
 
 
 
-Inheritance diagram for Model\+:\nopagebreak
+Inheritance diagram for Model\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,37 +19,32 @@ Inheritance diagram for Model\+:\nopagebreak
 \item 
 virtual \mbox{\hyperlink{classModel_af032d8433c87a0a3a431faf6563a1f03}{$\sim$\+Model}} ()
 \begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_a99b14b1ec90fde965573721cbda60269}{execute}} (double start, double final, double increment)=0
+virtual void \mbox{\hyperlink{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}{execute}} (double, double, double)=0
 \begin{DoxyCompactList}\small\item\em Executes the simulation by updating systems based on the flows equations over a period of time. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys)=0
+virtual void \mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$)=0
 \begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_ab7df81041f62f049cfc6e4d50dcaf721}{add}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow)=0
+virtual void \mbox{\hyperlink{classModel_ac1e19f5fcc4ced9defbfe2847a26ff33}{add}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$)=0
 \begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_adbd9179086a62368503bc04baae0b5ae}{remove}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys)=0
+virtual void \mbox{\hyperlink{classModel_ac1884d0df43bd3eaa98fb2493b1eadbd}{remove}} (\mbox{\hyperlink{classSystem}{System}} $\ast$)=0
 \begin{DoxyCompactList}\small\item\em Removes a \mbox{\hyperlink{classSystem}{System}} pointer from the internal container of the model. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_a8af2e0747cdca00538d4ddf339621582}{remove}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow)=0
+virtual void \mbox{\hyperlink{classModel_a9dfb3ab85127622aa9d9db591ee63454}{remove}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$)=0
 \begin{DoxyCompactList}\small\item\em Removes a \mbox{\hyperlink{classFlow}{Flow}} pointer from the internal container of the model. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_ab01f68499cf9c680d64d07c7160b4cf7}{set\+Name}} (std\+::string name)=0
+virtual void \mbox{\hyperlink{classModel_a0418ba1c3f1016a13a2cbb4c1be5e43b}{set\+Name}} (std\+::string)=0
 \begin{DoxyCompactList}\small\item\em Sets the name attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
 virtual std\+::string \mbox{\hyperlink{classModel_a17e89ca8d15af46d074423a47d3c6802}{get\+Name}} () const =0
 \begin{DoxyCompactList}\small\item\em Returns the name attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_ab89eff21392ee4e7f58da939238acc7c}{set\+Time}} (double time)=0
+virtual void \mbox{\hyperlink{classModel_a210839e2d275d6821a8beac249470beb}{set\+Time}} (double)=0
 \begin{DoxyCompactList}\small\item\em Sets the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{classModel_a41569269c162962571a791c0fe737bca}{get\+Time}} () const =0
 \begin{DoxyCompactList}\small\item\em Returns the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_adc78826b46538af6cc18fb41c138a017}{increment\+Time}} (double increment)=0
+virtual void \mbox{\hyperlink{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}{increment\+Time}} (double)=0
 \begin{DoxyCompactList}\small\item\em Increments the simulation time by a specific value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This class represents the interface of a model in the General Systems Theory implemented in this code. 
 
 
-\begin{DoxyItemize}
-\item It acts as a container for systems and flows, controlling the execution of the simulation. 
-\end{DoxyItemize}
-
-Definition at line 13 of file Model.\+h.
+Definition at line 12 of file Model.\+h.
 
 
 
@@ -70,21 +61,21 @@ This is the default destructor for the \mbox{\hyperlink{classModel}{Model}} Clas
 
 
 
-Definition at line 18 of file Model.\+h.
+Definition at line 17 of file Model.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{18 \{\}}
+\DoxyCodeLine{17 \{\}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classModel_ab7df81041f62f049cfc6e4d50dcaf721}\label{classModel_ab7df81041f62f049cfc6e4d50dcaf721}} 
+\mbox{\Hypertarget{classModel_ac1e19f5fcc4ced9defbfe2847a26ff33}\label{classModel_ac1e19f5fcc4ced9defbfe2847a26ff33}} 
 \index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -102,11 +93,11 @@ Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of t
 
 Implemented in \mbox{\hyperlink{classModelImpl_a3e8843e5353f40ab30afcf19b4f13a67}{Model\+Impl}}.
 
-\mbox{\Hypertarget{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}\label{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}} 
+\mbox{\Hypertarget{classModel_a70362afdd9db6268b4adaedfeddb2935}\label{classModel_a70362afdd9db6268b4adaedfeddb2935}} 
 \index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -124,11 +115,11 @@ Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container 
 
 Implemented in \mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{Model\+Impl}}.
 
-\mbox{\Hypertarget{classModel_a99b14b1ec90fde965573721cbda60269}\label{classModel_a99b14b1ec90fde965573721cbda60269}} 
+\mbox{\Hypertarget{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}\label{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}} 
 \index{Model@{Model}!execute@{execute}}
 \index{execute@{execute}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily virtual void Model\+::execute (\begin{DoxyParamCaption}\item[{double}]{start,  }\item[{double}]{final,  }\item[{double}]{increment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::execute (\begin{DoxyParamCaption}\item[{double}]{,  }\item[{double}]{,  }\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -190,11 +181,11 @@ double -\/ the content time attribute.
 
 Implemented in \mbox{\hyperlink{classModelImpl_a9233d23b2fa19917f314cf286749a924}{Model\+Impl}}.
 
-\mbox{\Hypertarget{classModel_adc78826b46538af6cc18fb41c138a017}\label{classModel_adc78826b46538af6cc18fb41c138a017}} 
+\mbox{\Hypertarget{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}\label{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}} 
 \index{Model@{Model}!incrementTime@{incrementTime}}
 \index{incrementTime@{incrementTime}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{incrementTime()}{incrementTime()}}
-{\footnotesize\ttfamily virtual void Model\+::increment\+Time (\begin{DoxyParamCaption}\item[{double}]{increment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::increment\+Time (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -212,11 +203,11 @@ Increments the simulation time by a specific value.
 
 Implemented in \mbox{\hyperlink{classModelImpl_a2b96592e72a176881c9ac01b85dc9158}{Model\+Impl}}.
 
-\mbox{\Hypertarget{classModel_a8af2e0747cdca00538d4ddf339621582}\label{classModel_a8af2e0747cdca00538d4ddf339621582}} 
+\mbox{\Hypertarget{classModel_a9dfb3ab85127622aa9d9db591ee63454}\label{classModel_a9dfb3ab85127622aa9d9db591ee63454}} 
 \index{Model@{Model}!remove@{remove}}
 \index{remove@{remove}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -234,11 +225,11 @@ Removes a \mbox{\hyperlink{classFlow}{Flow}} pointer from the internal container
 
 Implemented in \mbox{\hyperlink{classModelImpl_af03872fad7d17184098442d7a2030440}{Model\+Impl}}.
 
-\mbox{\Hypertarget{classModel_adbd9179086a62368503bc04baae0b5ae}\label{classModel_adbd9179086a62368503bc04baae0b5ae}} 
+\mbox{\Hypertarget{classModel_ac1884d0df43bd3eaa98fb2493b1eadbd}\label{classModel_ac1884d0df43bd3eaa98fb2493b1eadbd}} 
 \index{Model@{Model}!remove@{remove}}
 \index{remove@{remove}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -256,11 +247,11 @@ Removes a \mbox{\hyperlink{classSystem}{System}} pointer from the internal conta
 
 Implemented in \mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{Model\+Impl}}.
 
-\mbox{\Hypertarget{classModel_ab01f68499cf9c680d64d07c7160b4cf7}\label{classModel_ab01f68499cf9c680d64d07c7160b4cf7}} 
+\mbox{\Hypertarget{classModel_a0418ba1c3f1016a13a2cbb4c1be5e43b}\label{classModel_a0418ba1c3f1016a13a2cbb4c1be5e43b}} 
 \index{Model@{Model}!setName@{setName}}
 \index{setName@{setName}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily virtual void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -278,11 +269,11 @@ Sets the name attribute in the \mbox{\hyperlink{classModel}{Model}} Class.
 
 Implemented in \mbox{\hyperlink{classModelImpl_a4c11009a6eed8fabce6c6c3a584a53b8}{Model\+Impl}}.
 
-\mbox{\Hypertarget{classModel_ab89eff21392ee4e7f58da939238acc7c}\label{classModel_ab89eff21392ee4e7f58da939238acc7c}} 
+\mbox{\Hypertarget{classModel_a210839e2d275d6821a8beac249470beb}\label{classModel_a210839e2d275d6821a8beac249470beb}} 
 \index{Model@{Model}!setTime@{setTime}}
 \index{setTime@{setTime}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
-{\footnotesize\ttfamily virtual void Model\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
