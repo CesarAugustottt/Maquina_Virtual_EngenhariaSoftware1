@@ -1,12 +1,12 @@
 #ifndef EXPONENTIALFLOW_H
 #define EXPONENTIALFLOW_H
 
-#include  "../../src/Flow.h"
+#include  "../../src/FlowImpl.h"
 
 /*!
  * @brief This Class represents an exponential flow in the General Systems Theory implemented in this code.
  */
-class ExponentialFlow : public Flow {
+class ExponentialFlow : public FlowImpl {
 public:
     // Construtor padrao
     /*!

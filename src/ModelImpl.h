@@ -6,6 +6,10 @@
 #include <string>
 #include <algorithm>
 
+/*!
+ * @brief This class represents the concrete implementation of a Model.
+ */
+
 class ModelImpl : public Model {
 protected:
     /*! This attribute contains a name for the model. */

@@ -1,4 +1,5 @@
 <map id="ComplexFlow" name="ComplexFlow">
-<area shape="rect" id="node1" title="This Class represents a complex flow in the General Systems Theory implemented in this code." alt="" coords="5,80,116,107"/>
-<area shape="rect" id="node2" href="$classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code." alt="" coords="34,5,87,32"/>
+<area shape="rect" id="node1" title="This Class represents a complex flow in the General Systems Theory implemented in this code." alt="" coords="5,155,116,181"/>
+<area shape="rect" id="node2" href="$classFlowImpl.html" title="This class represents the concrete implementation of a Flow." alt="" coords="19,80,102,107"/>
+<area shape="rect" id="node3" href="$classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code." alt="" coords="34,5,87,32"/>
 </map>

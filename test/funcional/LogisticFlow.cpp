@@ -1,9 +1,9 @@
 #include"LogisticFlow.h"
 
-LogisticFlow::LogisticFlow():Flow(){}
+LogisticFlow::LogisticFlow():FlowImpl(){}
 
 LogisticFlow::LogisticFlow(std::string name, System* source, System* target)
-    : Flow(name, source, target){}
+    : FlowImpl(name, source, target){}
 
 LogisticFlow::~LogisticFlow(){} //devido ao virtual da classe mae, o ~Flow sera chamdo em seguida
 
@@ -16,11 +16,11 @@ double LogisticFlow::execute(){
 }
 //constrtor de copia
 LogisticFlow::LogisticFlow(const LogisticFlow& flow)
-    : Flow(flow){} //chamar o contrutor de copia da base
+    : FlowImpl(flow){} //chamar o contrutor de copia da base
 //atribuição por =
 LogisticFlow& LogisticFlow::operator=(const LogisticFlow& flow){
     if (&flow != this){ //se for diferente, faz a atribuição
-        Flow::operator=(flow); //chama o operador = da base para a atribuição
+        FlowImpl::operator=(flow); //chama o operador = da base para a atribuição
     }
     return *this; //retorna o conteúdo
 }

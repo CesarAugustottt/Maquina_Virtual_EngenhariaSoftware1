@@ -1,12 +1,12 @@
 #ifndef LOGISTICFLOW_H
 #define LOGISTICFLOW_H
-#include "../../src/Flow.h"
+#include "../../src/FlowImpl.h"
 
 /*!
  * @brief This class represents a logistic flow in the General Systems Theory implemented in this code.
  * * It implements the execute method using a logistic equation for resource transfer.
  */
-class LogisticFlow: public Flow{
+class LogisticFlow: public FlowImpl{
     public:
         // construtor e destrutor 
         /*!

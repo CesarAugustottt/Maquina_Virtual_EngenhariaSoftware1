@@ -1,11 +1,11 @@
 #include "ExponentialFlow.h"
 
 // Invoca o construtor padrão da classe base
-ExponentialFlow::ExponentialFlow() : Flow() {}
+ExponentialFlow::ExponentialFlow() : FlowImpl() {}
 
 // Repassa os parametros para o construtor da classe base
 ExponentialFlow::ExponentialFlow(std::string name, System* source, System* target) 
-    : Flow(name, source, target) {}
+    : FlowImpl(name, source, target) {}
 
 ExponentialFlow::~ExponentialFlow() {} // Vazio pelo mesmo motivo da base
 
@@ -18,7 +18,7 @@ double ExponentialFlow::execute() {
 }
 
 // Invoca o construtor de copia da classe base
-ExponentialFlow::ExponentialFlow(const ExponentialFlow& flow) : Flow(flow) {}
+ExponentialFlow::ExponentialFlow(const ExponentialFlow& flow) : FlowImpl(flow) {}
 
 // Operador de atribuicao
 ExponentialFlow& ExponentialFlow::operator=(const ExponentialFlow& flow) {
@@ -27,7 +27,7 @@ ExponentialFlow& ExponentialFlow::operator=(const ExponentialFlow& flow) {
     }
     
     // Chama o operador de atribuicao da classe base para copiar name, source e target
-    Flow::operator=(flow); 
+    FlowImpl::operator=(flow); 
     
     return *this;
 }

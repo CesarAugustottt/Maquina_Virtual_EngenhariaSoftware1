@@ -11,7 +11,8 @@ This Class represents a complex flow in the General Systems Theory implemented i
 
 
 
-Inheritance diagram for Complex\+Flow\+:\nopagebreak
+Inheritance diagram for Complex\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,11 +21,12 @@ Inheritance diagram for Complex\+Flow\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Complex\+Flow\+:\nopagebreak
+Collaboration diagram for Complex\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=163pt]{classComplexFlow__coll__graph}
+\includegraphics[width=192pt]{classComplexFlow__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -32,7 +34,7 @@ Collaboration diagram for Complex\+Flow\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classComplexFlow_a5842ce02ac6229830dbe8895b61891cf}{Complex\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classComplexFlow_a9b286c4ec26c6d4e7fd39de285e02817}{Complex\+Flow}} (std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}})
+\mbox{\hyperlink{classComplexFlow_a9b286c4ec26c6d4e7fd39de285e02817}{Complex\+Flow}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}})
 \begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classComplexFlow_a3ea63b4de8f10baefdbb71c52986cd74}{$\sim$\+Complex\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
@@ -42,6 +44,7 @@ virtual double \mbox{\hyperlink{classComplexFlow_a744cb3029e9335038f3f8c1da6daea
 \begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \& \mbox{\hyperlink{classComplexFlow_a4b7d7263094e0e829bd87a0d6c815304}{operator=}} (const \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \&flow)
 \begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -71,7 +74,7 @@ Definition at line 4 of file Complex\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{4 : \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}() \{\}}
+\DoxyCodeLine{4 : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}() \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classComplexFlow_a9b286c4ec26c6d4e7fd39de285e02817}\label{classComplexFlow_a9b286c4ec26c6d4e7fd39de285e02817}} 
@@ -99,7 +102,7 @@ Definition at line 7 of file Complex\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{8     : \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}(\mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}}, \mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}, \mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}}) \{\}}
+\DoxyCodeLine{8     : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}(\mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}, \mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}, \mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}}) \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classComplexFlow_a3ea63b4de8f10baefdbb71c52986cd74}\label{classComplexFlow_a3ea63b4de8f10baefdbb71c52986cd74}} 
@@ -142,7 +145,7 @@ Definition at line 21 of file Complex\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{21 : \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}(flow) \{\}}
+\DoxyCodeLine{21 : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}(flow) \{\}}
 
 \end{DoxyCode}
 
@@ -163,7 +166,7 @@ double -\/ the calculated value for the transfer.
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
+Implements \mbox{\hyperlink{classFlowImpl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
 
 
 
@@ -172,8 +175,8 @@ Definition at line 13 of file Complex\+Flow.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{13                             \{}
-\DoxyCodeLine{14     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classFlow_a1f3858f90d141807377c2640fb5dd0fc}{getSource}}() != \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{// se tiver sistema de origem}}
-\DoxyCodeLine{15         \textcolor{keywordflow}{return} 0.01 * this-\/>\mbox{\hyperlink{classFlow_a1f3858f90d141807377c2640fb5dd0fc}{getSource}}()-\/>\mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}(); }
+\DoxyCodeLine{14     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classFlowImpl_a54940323059d2c4158f4146080841f32}{getSource}}() != \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{// se tiver sistema de origem}}
+\DoxyCodeLine{15         \textcolor{keywordflow}{return} 0.01 * this-\/>\mbox{\hyperlink{classFlowImpl_a54940323059d2c4158f4146080841f32}{getSource}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(); }
 \DoxyCodeLine{16     \}}
 \DoxyCodeLine{17     \textcolor{keywordflow}{return} 0.0;}
 \DoxyCodeLine{18 \}}
@@ -205,7 +208,7 @@ Definition at line 24 of file Complex\+Flow.\+cpp.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{24                                                            \{}
 \DoxyCodeLine{25     \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \&flow) \{ \textcolor{comment}{// se for diferente, faz a atribuicao}}
-\DoxyCodeLine{26         \mbox{\hyperlink{classFlow_a6d7fa924063215269af2d61b7425cc22}{Flow::operator=}}(flow); \textcolor{comment}{// chama o operador = da base para copiar name, source e target}}
+\DoxyCodeLine{26         \mbox{\hyperlink{classFlowImpl_a856d066683cf70a957004c507c08b4fd}{FlowImpl::operator=}}(flow); \textcolor{comment}{// chama o operador = da base para copiar name, source e target}}
 \DoxyCodeLine{27     \}}
 \DoxyCodeLine{28     }
 \DoxyCodeLine{29     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{// retorna o conteudo}}

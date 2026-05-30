@@ -4,6 +4,10 @@
 #include "System.h"
 #include <string>
 
+/*!
+ * @brief This class represents the concrete implementation of a Flow.
+ */
+
 class FlowImpl: public Flow{
 protected:
     /*! This attribute contains a name for the flow. */
