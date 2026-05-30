@@ -1,15 +1,14 @@
 #ifndef MODEL_H
 #define MODEL_H
 
-#include "System.h"
-#include "Flow.h"
 #include <string>
 
 /*!
  * @brief This class represents a model in the General Systems Theory implemented in this code.
  * * It acts as a container for systems and flows, controlling the execution of the simulation.
  */
-
+class Flow;
+class System;
 class Model {
 public:
     /*!
