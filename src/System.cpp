@@ -1,36 +1,36 @@
-#include "System.h"
+#include "SystemImpl.h"
 
-System::System() {
+SystemImpl::SystemImpl() {
     this->name = "";
     this->value = 0.0;
 }
 
-System::System(std::string name, double value) : name(name), value(value) {}
+SystemImpl::SystemImpl(std::string name, double value) : name(name), value(value) {}
 
-System::~System() {}
+SystemImpl::~SystemImpl() {}
 
-void System::setName(std::string name) {
+void SystemImpl::setName(std::string name) {
     this->name = name;
 }
 
-std::string System::getName() const {
+std::string SystemImpl::getName() const {
     return this->name;
 }
 
-void System::setValue(double value) {
+void SystemImpl::setValue(double value) {
     this->value = value;
 }
 
-double System::getValue() const {
+double SystemImpl::getValue() const {
     return this->value;
 }
 
-System::System(const System& sys) {
+SystemImpl::SystemImpl(const SystemImpl& sys) {
     this->name = sys.name;
     this->value = sys.value;
 }
 
-System& System::operator=(const System& sys) {
+SystemImpl& SystemImpl::operator=(const SystemImpl& sys) {
     if (&sys == this) {
         return *this;
     }
