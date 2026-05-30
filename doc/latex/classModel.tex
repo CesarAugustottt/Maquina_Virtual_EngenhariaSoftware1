@@ -2,128 +2,67 @@
 \label{classModel}\index{Model@{Model}}
 
 
-This class represents a model in the General Systems Theory implemented in this code.  
+This class represents the interface of a model in the General Systems Theory implemented in this code.  
 
 
 
 
 {\ttfamily \#include $<$Model.\+h$>$}
 
+
+
+Inheritance diagram for Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classModel__inherit__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classModel_ae3b375de5f6df4faf74a95d64748e048}{Model}} ()
-\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classModel_a43c4c7a5d72958b3928047378f796283}{Model}} (std\+::string \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}}, double \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}})
-\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classModel_ad6ebd2062a0b823db841a0b88baac4c0}{$\sim$\+Model}} ()
+virtual \mbox{\hyperlink{classModel_af032d8433c87a0a3a431faf6563a1f03}{$\sim$\+Model}} ()
 \begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_abb0d3cd8ee551b27da8ea0d6d2d1af13}{execute}} (double start, double final, double increment)
+virtual void \mbox{\hyperlink{classModel_a99b14b1ec90fde965573721cbda60269}{execute}} (double start, double final, double increment)=0
 \begin{DoxyCompactList}\small\item\em Executes the simulation by updating systems based on the flows equations over a period of time. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_ad7e1460343a74a56fe20f417c1852eee}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys)
+virtual void \mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys)=0
 \begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_ab69613bde0ace81c92bbf519660ccb2c}{add}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow)
+virtual void \mbox{\hyperlink{classModel_ab7df81041f62f049cfc6e4d50dcaf721}{add}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow)=0
 \begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_acff68ba0ea92948c29e9a26a4de33f92}{remove}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys)
+virtual void \mbox{\hyperlink{classModel_adbd9179086a62368503bc04baae0b5ae}{remove}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys)=0
 \begin{DoxyCompactList}\small\item\em Removes a \mbox{\hyperlink{classSystem}{System}} pointer from the internal container of the model. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_a7b41df04211b99c65d5255c09ddc8e71}{remove}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow)
+virtual void \mbox{\hyperlink{classModel_a8af2e0747cdca00538d4ddf339621582}{remove}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow)=0
 \begin{DoxyCompactList}\small\item\em Removes a \mbox{\hyperlink{classFlow}{Flow}} pointer from the internal container of the model. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_a833b855481cf748352c92db5e0192337}{set\+Name}} (std\+::string \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}})
+virtual void \mbox{\hyperlink{classModel_ab01f68499cf9c680d64d07c7160b4cf7}{set\+Name}} (std\+::string name)=0
 \begin{DoxyCompactList}\small\item\em Sets the name attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classModel_ad98a14258e1e21e529b8df8ac930dc3e}{get\+Name}} () const
+virtual std\+::string \mbox{\hyperlink{classModel_a17e89ca8d15af46d074423a47d3c6802}{get\+Name}} () const =0
 \begin{DoxyCompactList}\small\item\em Returns the name attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_a9fa1fe4a85ebc007e645de4a16a9a6ae}{set\+Time}} (double \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}})
+virtual void \mbox{\hyperlink{classModel_ab89eff21392ee4e7f58da939238acc7c}{set\+Time}} (double time)=0
 \begin{DoxyCompactList}\small\item\em Sets the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classModel_a06d9f606f122597dc5426811f765987a}{get\+Time}} () const
+virtual double \mbox{\hyperlink{classModel_a41569269c162962571a791c0fe737bca}{get\+Time}} () const =0
 \begin{DoxyCompactList}\small\item\em Returns the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModel_a4e7adee1c2d46b5d0dd46ae26898dacb}{increment\+Time}} (double increment)
-\begin{DoxyCompactList}\small\item\em Increments the simulation time by a specific value. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classModel_a427a805ff8293a1a55ec9e1e98900405}{Model}} (const \mbox{\hyperlink{classModel}{Model}} \&model)
-\begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classModel}{Model}} \& \mbox{\hyperlink{classModel_a146cfadc1fe3e5e86837e3fccef35dcf}{operator=}} (const \mbox{\hyperlink{classModel}{Model}} \&model)
-\begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-std\+::string \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}}
-\item 
-double \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}}
-\item 
-std\+::vector$<$ \mbox{\hyperlink{classSystem}{System}} $\ast$ $>$ \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}
-\item 
-std\+::vector$<$ \mbox{\hyperlink{classFlow}{Flow}} $\ast$ $>$ \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}
-\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{classModel_adc78826b46538af6cc18fb41c138a017}{increment\+Time}} (double increment)=0
+\begin{DoxyCompactList}\small\item\em Increments the simulation time by a specific value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This class represents a model in the General Systems Theory implemented in this code. 
+This class represents the interface of a model in the General Systems Theory implemented in this code. 
 
 
 \begin{DoxyItemize}
 \item It acts as a container for systems and flows, controlling the execution of the simulation. 
 \end{DoxyItemize}
 
-Definition at line 15 of file Model.\+h.
+Definition at line 13 of file Model.\+h.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classModel_ae3b375de5f6df4faf74a95d64748e048}\label{classModel_ae3b375de5f6df4faf74a95d64748e048}} 
-\index{Model@{Model}!Model@{Model}}
-\index{Model@{Model}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-This is the default constructor for the \mbox{\hyperlink{classModel}{Model}} Class. 
-
-
-
-Definition at line 3 of file Model.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{3             \{}
-\DoxyCodeLine{4     this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}} = \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{5     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = 0.0;}
-\DoxyCodeLine{6 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_a43c4c7a5d72958b3928047378f796283}\label{classModel_a43c4c7a5d72958b3928047378f796283}} 
-\index{Model@{Model}!Model@{Model}}
-\index{Model@{Model}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{time }\end{DoxyParamCaption})}
-
-
-
-This is the parameterized constructor for the \mbox{\hyperlink{classModel}{Model}} Class. 
-
-
-\begin{DoxyItemize}
-\item 
-\begin{DoxyParams}{Parameters}
-{\em name} & the name of the \mbox{\hyperlink{classModel}{Model}}. \\
-\hline
-{\em time} & the initial time of the simulation. \\
-\hline
-\end{DoxyParams}
-
-\end{DoxyItemize}
-
-Definition at line 8 of file Model.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{8 : \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}}(\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}}), \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}}(\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}})\{\}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_ad6ebd2062a0b823db841a0b88baac4c0}\label{classModel_ad6ebd2062a0b823db841a0b88baac4c0}} 
+\mbox{\Hypertarget{classModel_af032d8433c87a0a3a431faf6563a1f03}\label{classModel_af032d8433c87a0a3a431faf6563a1f03}} 
 \index{Model@{Model}!````~Model@{$\sim$Model}}
 \index{````~Model@{$\sim$Model}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{$\sim$Model()}{~Model()}}
-{\footnotesize\ttfamily Model\+::$\sim$\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual Model\+::$\sim$\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -131,57 +70,21 @@ This is the default destructor for the \mbox{\hyperlink{classModel}{Model}} Clas
 
 
 
-Definition at line 10 of file Model.\+cpp.
+Definition at line 18 of file Model.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{10              \{}
-\DoxyCodeLine{11     \textcolor{comment}{//limpar os apenas os vetires, sem destruir os sistemas e fluxos}}
-\DoxyCodeLine{12     \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.clear();}
-\DoxyCodeLine{13     \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.clear();}
-\DoxyCodeLine{14 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_a427a805ff8293a1a55ec9e1e98900405}\label{classModel_a427a805ff8293a1a55ec9e1e98900405}} 
-\index{Model@{Model}!Model@{Model}}
-\index{Model@{Model}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModel}{Model}} \&}]{model }\end{DoxyParamCaption})}
-
-
-
-This is the copy constructor for the \mbox{\hyperlink{classModel}{Model}} Class. 
-
-
-\begin{DoxyItemize}
-\item 
-\begin{DoxyParams}{Parameters}
-{\em model} & the model that is going to be cloned. \\
-\hline
-\end{DoxyParams}
-
-\end{DoxyItemize}
-
-Definition at line 93 of file Model.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{93                                \{}
-\DoxyCodeLine{94     this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}} = model.\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}};}
-\DoxyCodeLine{95     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = model.\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}};}
-\DoxyCodeLine{96     this-\/>\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}} = model.\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}; \textcolor{comment}{//copia os ponterios}}
-\DoxyCodeLine{97     this-\/>\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}} = model.\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}};}
-\DoxyCodeLine{98 \}}
+\DoxyCodeLine{18 \{\}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classModel_ab69613bde0ace81c92bbf519660ccb2c}\label{classModel_ab69613bde0ace81c92bbf519660ccb2c}} 
+\mbox{\Hypertarget{classModel_ab7df81041f62f049cfc6e4d50dcaf721}\label{classModel_ab7df81041f62f049cfc6e4d50dcaf721}} 
 \index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -197,20 +100,13 @@ Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of t
 
 \end{DoxyItemize}
 
-Definition at line 47 of file Model.\+cpp.
+Implemented in \mbox{\hyperlink{classModelImpl_a3e8843e5353f40ab30afcf19b4f13a67}{Model\+Impl}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{47                          \{}
-\DoxyCodeLine{48     \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.push\_back(flow);}
-\DoxyCodeLine{49 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_ad7e1460343a74a56fe20f417c1852eee}\label{classModel_ad7e1460343a74a56fe20f417c1852eee}} 
+\mbox{\Hypertarget{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}\label{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}} 
 \index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -226,20 +122,13 @@ Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container 
 
 \end{DoxyItemize}
 
-Definition at line 43 of file Model.\+cpp.
+Implemented in \mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{Model\+Impl}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{43                           \{}
-\DoxyCodeLine{44     \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.push\_back(sys);}
-\DoxyCodeLine{45 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_abb0d3cd8ee551b27da8ea0d6d2d1af13}\label{classModel_abb0d3cd8ee551b27da8ea0d6d2d1af13}} 
+\mbox{\Hypertarget{classModel_a99b14b1ec90fde965573721cbda60269}\label{classModel_a99b14b1ec90fde965573721cbda60269}} 
 \index{Model@{Model}!execute@{execute}}
 \index{execute@{execute}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily void Model\+::execute (\begin{DoxyParamCaption}\item[{double}]{start,  }\item[{double}]{final,  }\item[{double}]{increment }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Model\+::execute (\begin{DoxyParamCaption}\item[{double}]{start,  }\item[{double}]{final,  }\item[{double}]{increment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -259,43 +148,13 @@ Executes the simulation by updating systems based on the flows equations over a 
 
 \end{DoxyItemize}
 
-Definition at line 16 of file Model.\+cpp.
+Implemented in \mbox{\hyperlink{classModelImpl_a3b060fc6802d9d6040ab8af1a9186631}{Model\+Impl}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{16                                                              \{}
-\DoxyCodeLine{17     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = start;}
-\DoxyCodeLine{18     \textcolor{keywordflow}{while}(this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} < end)\{}
-\DoxyCodeLine{19         std::vector<double>valueFlow; \textcolor{comment}{//vetor com os valores de cada fluxo}}
-\DoxyCodeLine{20         \textcolor{comment}{//calcular a equação de cada fluxo}}
-\DoxyCodeLine{21         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} f : \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}})\{}
-\DoxyCodeLine{22             valueFlow.push\_back(f-\/>execute());}
-\DoxyCodeLine{23         \}}
-\DoxyCodeLine{24 }
-\DoxyCodeLine{25         \textcolor{comment}{//atualizar os sistemas com valores novos}}
-\DoxyCodeLine{26         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i< \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.size(); i++)\{}
-\DoxyCodeLine{27             \mbox{\hyperlink{classSystem}{System}}* source = \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}[i]-\/>getSource();}
-\DoxyCodeLine{28             \mbox{\hyperlink{classSystem}{System}}* target = \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}[i]-\/>getTarget();}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30             \textcolor{comment}{//realizar o fluxo}}
-\DoxyCodeLine{31             \textcolor{keywordflow}{if}(source)\{ \textcolor{comment}{//diminui o valor da origem}}
-\DoxyCodeLine{32                 source-\/>\mbox{\hyperlink{classSystem_a5343de0a45485edd88bc87f338fe9a19}{setValue}}(source-\/>\mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}() -\/ valueFlow[i]);}
-\DoxyCodeLine{33             \}}
-\DoxyCodeLine{34             \textcolor{keywordflow}{if}(target)\{\textcolor{comment}{//aumenta valor do destino}}
-\DoxyCodeLine{35                 target-\/>\mbox{\hyperlink{classSystem_a5343de0a45485edd88bc87f338fe9a19}{setValue}}(target-\/>\mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}() + valueFlow[i]);}
-\DoxyCodeLine{36             \}}
-\DoxyCodeLine{37         \}}
-\DoxyCodeLine{38         \textcolor{comment}{//incrementar o tempo (time)}}
-\DoxyCodeLine{39         this-\/>\mbox{\hyperlink{classModel_a4e7adee1c2d46b5d0dd46ae26898dacb}{incrementTime}}(increment);}
-\DoxyCodeLine{40     \}}
-\DoxyCodeLine{41 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_ad98a14258e1e21e529b8df8ac930dc3e}\label{classModel_ad98a14258e1e21e529b8df8ac930dc3e}} 
+\mbox{\Hypertarget{classModel_a17e89ca8d15af46d074423a47d3c6802}\label{classModel_a17e89ca8d15af46d074423a47d3c6802}} 
 \index{Model@{Model}!getName@{getName}}
 \index{getName@{getName}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily std\+::string Model\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily virtual std\+::string Model\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -309,20 +168,13 @@ string -\/ the content name attribute.
 
 \end{DoxyItemize}
 
-Definition at line 76 of file Model.\+cpp.
+Implemented in \mbox{\hyperlink{classModelImpl_a6d6ef8f72413650749d9ca9850226a6b}{Model\+Impl}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{76                              \{}
-\DoxyCodeLine{77     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}};}
-\DoxyCodeLine{78 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_a06d9f606f122597dc5426811f765987a}\label{classModel_a06d9f606f122597dc5426811f765987a}} 
+\mbox{\Hypertarget{classModel_a41569269c162962571a791c0fe737bca}\label{classModel_a41569269c162962571a791c0fe737bca}} 
 \index{Model@{Model}!getTime@{getTime}}
 \index{getTime@{getTime}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
-{\footnotesize\ttfamily double Model\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily virtual double Model\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -336,20 +188,13 @@ double -\/ the content time attribute.
 
 \end{DoxyItemize}
 
-Definition at line 84 of file Model.\+cpp.
+Implemented in \mbox{\hyperlink{classModelImpl_a9233d23b2fa19917f314cf286749a924}{Model\+Impl}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{84                           \{}
-\DoxyCodeLine{85     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}};}
-\DoxyCodeLine{86 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_a4e7adee1c2d46b5d0dd46ae26898dacb}\label{classModel_a4e7adee1c2d46b5d0dd46ae26898dacb}} 
+\mbox{\Hypertarget{classModel_adc78826b46538af6cc18fb41c138a017}\label{classModel_adc78826b46538af6cc18fb41c138a017}} 
 \index{Model@{Model}!incrementTime@{incrementTime}}
 \index{incrementTime@{incrementTime}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{incrementTime()}{incrementTime()}}
-{\footnotesize\ttfamily void Model\+::increment\+Time (\begin{DoxyParamCaption}\item[{double}]{increment }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Model\+::increment\+Time (\begin{DoxyParamCaption}\item[{double}]{increment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -365,58 +210,13 @@ Increments the simulation time by a specific value.
 
 \end{DoxyItemize}
 
-Definition at line 88 of file Model.\+cpp.
+Implemented in \mbox{\hyperlink{classModelImpl_a2b96592e72a176881c9ac01b85dc9158}{Model\+Impl}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{88                                          \{}
-\DoxyCodeLine{89     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} += increment;}
-\DoxyCodeLine{90 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_a146cfadc1fe3e5e86837e3fccef35dcf}\label{classModel_a146cfadc1fe3e5e86837e3fccef35dcf}} 
-\index{Model@{Model}!operator=@{operator=}}
-\index{operator=@{operator=}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classModel}{Model}} \& Model\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModel}{Model}} \&}]{model }\end{DoxyParamCaption})}
-
-
-
-This is the overloaded assignment operator for the \mbox{\hyperlink{classModel}{Model}} Class. 
-
-
-\begin{DoxyItemize}
-\item 
-\begin{DoxyParams}{Parameters}
-{\em model} & the model that is going to be cloned. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{classModel}{Model}}\& -\/ a reference to the updated \mbox{\hyperlink{classModel}{Model}} Class object. 
-\end{DoxyReturn}
-
-\end{DoxyItemize}
-
-Definition at line 101 of file Model.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{101                                          \{}
-\DoxyCodeLine{102     \textcolor{keywordflow}{if} (\&model != \textcolor{keyword}{this})\{}
-\DoxyCodeLine{103         this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}} = model.\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}};}
-\DoxyCodeLine{104         this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = model.\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}};}
-\DoxyCodeLine{105         this-\/>\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}} = model.\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}};}
-\DoxyCodeLine{106         this-\/>\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}} = model.\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}};}
-\DoxyCodeLine{107     \}}
-\DoxyCodeLine{108     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{//retorna o modelo}}
-\DoxyCodeLine{109 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_a7b41df04211b99c65d5255c09ddc8e71}\label{classModel_a7b41df04211b99c65d5255c09ddc8e71}} 
+\mbox{\Hypertarget{classModel_a8af2e0747cdca00538d4ddf339621582}\label{classModel_a8af2e0747cdca00538d4ddf339621582}} 
 \index{Model@{Model}!remove@{remove}}
 \index{remove@{remove}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -432,27 +232,13 @@ Removes a \mbox{\hyperlink{classFlow}{Flow}} pointer from the internal container
 
 \end{DoxyItemize}
 
-Definition at line 61 of file Model.\+cpp.
+Implemented in \mbox{\hyperlink{classModelImpl_af03872fad7d17184098442d7a2030440}{Model\+Impl}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{61                             \{}
-\DoxyCodeLine{62     \textcolor{comment}{//deve procurar o ponteiro flow no vetor}}
-\DoxyCodeLine{63     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.begin(), \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.end(), flow);}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65     \textcolor{comment}{//se ele for diferente do fim o ponteiro foi encontrado e deve remover}}
-\DoxyCodeLine{66     \textcolor{comment}{//se for igual ao fim é uma posição inválida.}}
-\DoxyCodeLine{67     \textcolor{keywordflow}{if}(it != \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.end())\{}
-\DoxyCodeLine{68         \mbox{\hyperlink{classModel_a508721af4b8ed362217dff0c6732d8dc}{flows}}.erase(it); \textcolor{comment}{//remove o fluxo do vetor.}}
-\DoxyCodeLine{69     \}}
-\DoxyCodeLine{70 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_acff68ba0ea92948c29e9a26a4de33f92}\label{classModel_acff68ba0ea92948c29e9a26a4de33f92}} 
+\mbox{\Hypertarget{classModel_adbd9179086a62368503bc04baae0b5ae}\label{classModel_adbd9179086a62368503bc04baae0b5ae}} 
 \index{Model@{Model}!remove@{remove}}
 \index{remove@{remove}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Model\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -468,26 +254,13 @@ Removes a \mbox{\hyperlink{classSystem}{System}} pointer from the internal conta
 
 \end{DoxyItemize}
 
-Definition at line 51 of file Model.\+cpp.
+Implemented in \mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{Model\+Impl}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{51                              \{}
-\DoxyCodeLine{52     \textcolor{comment}{//deve procurar o ponteiro sys no vetor}}
-\DoxyCodeLine{53     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.begin(), \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.end(), sys);}
-\DoxyCodeLine{54 }
-\DoxyCodeLine{55     \textcolor{comment}{//se ele for diferente do fim o ponteiro foi encontrado e deve remover}}
-\DoxyCodeLine{56     \textcolor{keywordflow}{if}(it != \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.end())\{}
-\DoxyCodeLine{57         \mbox{\hyperlink{classModel_a706374e5cb9ad9949996cfbd9538cead}{systems}}.erase(it); \textcolor{comment}{//remove  o sistema do vetor.}}
-\DoxyCodeLine{58     \}}
-\DoxyCodeLine{59 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_a833b855481cf748352c92db5e0192337}\label{classModel_a833b855481cf748352c92db5e0192337}} 
+\mbox{\Hypertarget{classModel_ab01f68499cf9c680d64d07c7160b4cf7}\label{classModel_ab01f68499cf9c680d64d07c7160b4cf7}} 
 \index{Model@{Model}!setName@{setName}}
 \index{setName@{setName}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -503,20 +276,13 @@ Sets the name attribute in the \mbox{\hyperlink{classModel}{Model}} Class.
 
 \end{DoxyItemize}
 
-Definition at line 72 of file Model.\+cpp.
+Implemented in \mbox{\hyperlink{classModelImpl_a4c11009a6eed8fabce6c6c3a584a53b8}{Model\+Impl}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{72                                  \{}
-\DoxyCodeLine{73     this-\/>\mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}} = \mbox{\hyperlink{classModel_a90fe59cc0709dd732cf5f180064db6fe}{name}};}
-\DoxyCodeLine{74 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classModel_a9fa1fe4a85ebc007e645de4a16a9a6ae}\label{classModel_a9fa1fe4a85ebc007e645de4a16a9a6ae}} 
+\mbox{\Hypertarget{classModel_ab89eff21392ee4e7f58da939238acc7c}\label{classModel_ab89eff21392ee4e7f58da939238acc7c}} 
 \index{Model@{Model}!setTime@{setTime}}
 \index{setTime@{setTime}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
-{\footnotesize\ttfamily void Model\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Model\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -532,61 +298,10 @@ Sets the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class.
 
 \end{DoxyItemize}
 
-Definition at line 80 of file Model.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{80                               \{}
-\DoxyCodeLine{81     this-\/>\mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}} = \mbox{\hyperlink{classModel_ac08e6be5375c12b4f09dfd3e88552e46}{time}};}
-\DoxyCodeLine{82 \}}
-
-\end{DoxyCode}
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classModel_a508721af4b8ed362217dff0c6732d8dc}\label{classModel_a508721af4b8ed362217dff0c6732d8dc}} 
-\index{Model@{Model}!flows@{flows}}
-\index{flows@{flows}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{flows}{flows}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classFlow}{Flow}}$\ast$$>$ Model\+::flows\hspace{0.3cm}{\ttfamily [private]}}
-
-This vector contains pointers to all flows registered in the model. 
-
-Definition at line 24 of file Model.\+h.
-
-\mbox{\Hypertarget{classModel_a90fe59cc0709dd732cf5f180064db6fe}\label{classModel_a90fe59cc0709dd732cf5f180064db6fe}} 
-\index{Model@{Model}!name@{name}}
-\index{name@{name}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily std\+::string Model\+::name\hspace{0.3cm}{\ttfamily [private]}}
-
-This attribute contains a name for the model. 
-
-Definition at line 18 of file Model.\+h.
-
-\mbox{\Hypertarget{classModel_a706374e5cb9ad9949996cfbd9538cead}\label{classModel_a706374e5cb9ad9949996cfbd9538cead}} 
-\index{Model@{Model}!systems@{systems}}
-\index{systems@{systems}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{systems}{systems}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classSystem}{System}}$\ast$$>$ Model\+::systems\hspace{0.3cm}{\ttfamily [private]}}
-
-This vector contains pointers to all systems registered in the model. 
-
-Definition at line 22 of file Model.\+h.
-
-\mbox{\Hypertarget{classModel_ac08e6be5375c12b4f09dfd3e88552e46}\label{classModel_ac08e6be5375c12b4f09dfd3e88552e46}} 
-\index{Model@{Model}!time@{time}}
-\index{time@{time}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{time}{time}}
-{\footnotesize\ttfamily double Model\+::time\hspace{0.3cm}{\ttfamily [private]}}
-
-This attribute contains the current time of the simulation. 
-
-Definition at line 20 of file Model.\+h.
+Implemented in \mbox{\hyperlink{classModelImpl_a1071f515e45c86e9295b193b7d28cc98}{Model\+Impl}}.
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{Model_8h}{Model.\+h}}\item 
-src/\mbox{\hyperlink{Model_8cpp}{Model.\+cpp}}\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{Model_8h}{Model.\+h}}\end{DoxyCompactItemize}

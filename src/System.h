@@ -3,7 +3,7 @@
 #include <string>
 
 /*!
- * @brief This Class represents a system in the General Systems Theory implemented in this code.
+ * @brief This Class represents the interface of a system in the General Systems Theory implemented in this code.
  */
 class System {
 public:

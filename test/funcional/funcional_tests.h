@@ -1,9 +1,12 @@
 #ifndef FUNCIONAL_TESTS_H
 #define FUNCIONAL_TESTS_H
 #include "../../src/Model.h"
+#include "../../src/System.h"
+#include "../../src/Flow.h"
 
 #include<cassert> //para a função assert
 #include<cmath> //Para a função fabs()
+#include<iostream>
 
 //! Functional tests header
 /**

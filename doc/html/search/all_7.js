@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['main_30',['main',['../test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp_31',['main.cpp',['../src_2main_8cpp.html',1,'(Global Namespace)'],['../test_2funcional_2main_8cpp.html',1,'(Global Namespace)']]],
-  ['model_32',['Model',['../classModel.html',1,'Model'],['../classModel.html#ae3b375de5f6df4faf74a95d64748e048',1,'Model::Model()'],['../classModel.html#a43c4c7a5d72958b3928047378f796283',1,'Model::Model(std::string name, double time)'],['../classModel.html#a427a805ff8293a1a55ec9e1e98900405',1,'Model::Model(const Model &amp;model)']]],
-  ['model_2ecpp_33',['Model.cpp',['../Model_8cpp.html',1,'']]],
-  ['model_2eh_34',['Model.h',['../Model_8h.html',1,'']]]
+  ['main_32',['main',['../test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp_33',['main.cpp',['../src_2main_8cpp.html',1,'(Global Namespace)'],['../test_2funcional_2main_8cpp.html',1,'(Global Namespace)']]],
+  ['model_34',['Model',['../classModel.html',1,'']]],
+  ['model_2ecpp_35',['Model.cpp',['../Model_8cpp.html',1,'']]],
+  ['model_2eh_36',['Model.h',['../Model_8h.html',1,'']]],
+  ['modelimpl_37',['ModelImpl',['../classModelImpl.html',1,'ModelImpl'],['../classModelImpl.html#a081505846c37ce9928f2176d77db4bc8',1,'ModelImpl::ModelImpl()'],['../classModelImpl.html#abece455e5562804c96db3b952e3d2c48',1,'ModelImpl::ModelImpl(std::string name, double time)'],['../classModelImpl.html#a027c2618c0645601df6287193db1ae1c',1,'ModelImpl::ModelImpl(const ModelImpl &amp;model)']]],
+  ['modelimpl_2eh_38',['ModelImpl.h',['../ModelImpl_8h.html',1,'']]]
 ];

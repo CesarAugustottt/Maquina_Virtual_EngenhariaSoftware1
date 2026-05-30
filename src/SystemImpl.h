@@ -4,6 +4,10 @@
 #include "System.h" //interface
 #include <string>
 
+/*!
+ * @brief This class represents the concrete implementation of a System.
+ */
+
 class SystemImpl : public System {
 protected:
     /*! This attribute contains a name for the system. */

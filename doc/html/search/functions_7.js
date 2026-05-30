@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_97',['main',['../test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['model_98',['Model',['../classModel.html#ae3b375de5f6df4faf74a95d64748e048',1,'Model::Model()'],['../classModel.html#a43c4c7a5d72958b3928047378f796283',1,'Model::Model(std::string name, double time)'],['../classModel.html#a427a805ff8293a1a55ec9e1e98900405',1,'Model::Model(const Model &amp;model)']]]
+  ['main_112',['main',['../test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['modelimpl_113',['ModelImpl',['../classModelImpl.html#a081505846c37ce9928f2176d77db4bc8',1,'ModelImpl::ModelImpl()'],['../classModelImpl.html#abece455e5562804c96db3b952e3d2c48',1,'ModelImpl::ModelImpl(std::string name, double time)'],['../classModelImpl.html#a027c2618c0645601df6287193db1ae1c',1,'ModelImpl::ModelImpl(const ModelImpl &amp;model)']]]
 ];

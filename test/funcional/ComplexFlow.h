@@ -1,12 +1,12 @@
 #ifndef COMPLEXFLOW_H
 #define COMPLEXFLOW_H
 
-#include "../../src/Flow.h"
+#include "../../src/FlowImpl.h"
 
 /*!
  * @brief This Class represents a complex flow in the General Systems Theory implemented in this code.
  */
-class ComplexFlow : public Flow {
+class ComplexFlow : public FlowImpl {
 public:
     // Construtor padrao
     /*!

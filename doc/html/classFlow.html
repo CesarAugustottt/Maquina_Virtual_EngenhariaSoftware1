@@ -64,14 +64,13 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classFlow-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Flow Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This class represents a flow in the General Systems Theory implemented in this code.  
+<p>This class represents the interface of a flow in General Systems Theory as implemented in this code.  
  <a href="classFlow.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Flow_8h_source.html">Flow.h</a>&gt;</code></p>
@@ -80,160 +79,51 @@ Inheritance diagram for Flow:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFlow__inherit__graph.png" border="0" usemap="#aFlow_inherit__map" alt="Inheritance graph"/></div>
 <map name="aFlow_inherit__map" id="aFlow_inherit__map">
-<area shape="rect" title="This class represents a flow in the General Systems Theory implemented in this code." alt="" coords="179,5,233,32"/>
-<area shape="rect" href="classComplexFlow.html" title="This Class represents a complex flow in the General Systems Theory implemented in this code." alt="" coords="5,80,116,107"/>
-<area shape="rect" href="classExponentialFlow.html" title="This Class represents an exponential flow in the General Systems Theory implemented in this code." alt="" coords="141,80,271,107"/>
-<area shape="rect" href="classLogisticFlow.html" title="This class represents a logistic flow in the General Systems Theory implemented in this code." alt="" coords="296,80,399,107"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Flow:</div>
-<div class="dyncontent">
-<div class="center"><img src="classFlow__coll__graph.png" border="0" usemap="#aFlow_coll__map" alt="Collaboration graph"/></div>
-<map name="aFlow_coll__map" id="aFlow_coll__map">
-<area shape="rect" title="This class represents a flow in the General Systems Theory implemented in this code." alt="" coords="14,109,67,136"/>
-<area shape="rect" href="classSystem.html" title="This Class represents a system in the General Systems Theory implemented in this code." alt="" coords="5,5,76,32"/>
+<area shape="rect" title="This class represents the interface of a flow in General Systems Theory as implemented in this code." alt="" coords="179,5,233,32"/>
+<area shape="rect" href="classFlowImpl.html" title="This class represents the concrete implementation of a Flow." alt="" coords="165,80,247,107"/>
+<area shape="rect" href="classComplexFlow.html" title="This Class represents a complex flow in the General Systems Theory implemented in this code." alt="" coords="5,155,116,181"/>
+<area shape="rect" href="classExponentialFlow.html" title="This Class represents an exponential flow in the General Systems Theory implemented in this code." alt="" coords="141,155,271,181"/>
+<area shape="rect" href="classLogisticFlow.html" title="This class represents a logistic flow in the General Systems Theory implemented in this code." alt="" coords="296,155,399,181"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac9975e144e606242748197798e87dd32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#ac9975e144e606242748197798e87dd32">Flow</a> ()</td></tr>
-<tr class="memdesc:ac9975e144e606242748197798e87dd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default constructor for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#ac9975e144e606242748197798e87dd32">More...</a><br /></td></tr>
-<tr class="separator:ac9975e144e606242748197798e87dd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72fd67818c323382b0aaa2ab4ee4fe82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a72fd67818c323382b0aaa2ab4ee4fe82">Flow</a> (std::string <a class="el" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>, <a class="el" href="classSystem.html">System</a> *<a class="el" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a>, <a class="el" href="classSystem.html">System</a> *<a class="el" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a>)</td></tr>
-<tr class="memdesc:a72fd67818c323382b0aaa2ab4ee4fe82"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the parameterized constructor for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a72fd67818c323382b0aaa2ab4ee4fe82">More...</a><br /></td></tr>
-<tr class="separator:a72fd67818c323382b0aaa2ab4ee4fe82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5991efa6e8cf88c4ef2125cc727db333"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a5991efa6e8cf88c4ef2125cc727db333">~Flow</a> ()</td></tr>
-<tr class="memdesc:a5991efa6e8cf88c4ef2125cc727db333"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default destructor for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a5991efa6e8cf88c4ef2125cc727db333">More...</a><br /></td></tr>
-<tr class="separator:a5991efa6e8cf88c4ef2125cc727db333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a325d284a50ca3274b126b21f5c39b9af"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a325d284a50ca3274b126b21f5c39b9af">~Flow</a> ()</td></tr>
+<tr class="memdesc:a325d284a50ca3274b126b21f5c39b9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default destructor for the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a325d284a50ca3274b126b21f5c39b9af">More...</a><br /></td></tr>
+<tr class="separator:a325d284a50ca3274b126b21f5c39b9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619be0b590c78202127bc6ac7fb04029"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a619be0b590c78202127bc6ac7fb04029">execute</a> ()=0</td></tr>
 <tr class="memdesc:a619be0b590c78202127bc6ac7fb04029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method to execute the flow equation.  <a href="classFlow.html#a619be0b590c78202127bc6ac7fb04029">More...</a><br /></td></tr>
 <tr class="separator:a619be0b590c78202127bc6ac7fb04029"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafb4bf7f22f0df6237aadb2deefdb34c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#aafb4bf7f22f0df6237aadb2deefdb34c">setName</a> (std::string <a class="el" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>)</td></tr>
-<tr class="memdesc:aafb4bf7f22f0df6237aadb2deefdb34c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name attribute in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#aafb4bf7f22f0df6237aadb2deefdb34c">More...</a><br /></td></tr>
-<tr class="separator:aafb4bf7f22f0df6237aadb2deefdb34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadd3a8ab712a2063461d917a867eedc4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#aadd3a8ab712a2063461d917a867eedc4">getName</a> () const</td></tr>
-<tr class="memdesc:aadd3a8ab712a2063461d917a867eedc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name attribute in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#aadd3a8ab712a2063461d917a867eedc4">More...</a><br /></td></tr>
-<tr class="separator:aadd3a8ab712a2063461d917a867eedc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a250fc53158862fc0db77b323a33e48a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a250fc53158862fc0db77b323a33e48a3">setSource</a> (<a class="el" href="classSystem.html">System</a> *<a class="el" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a>)</td></tr>
-<tr class="memdesc:a250fc53158862fc0db77b323a33e48a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the source system pointer in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a250fc53158862fc0db77b323a33e48a3">More...</a><br /></td></tr>
-<tr class="separator:a250fc53158862fc0db77b323a33e48a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f3858f90d141807377c2640fb5dd0fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a1f3858f90d141807377c2640fb5dd0fc">getSource</a> () const</td></tr>
-<tr class="memdesc:a1f3858f90d141807377c2640fb5dd0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the source system pointer in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a1f3858f90d141807377c2640fb5dd0fc">More...</a><br /></td></tr>
-<tr class="separator:a1f3858f90d141807377c2640fb5dd0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab69903880174e5bcdc0d815b5de7b3e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#ab69903880174e5bcdc0d815b5de7b3e0">setTarget</a> (<a class="el" href="classSystem.html">System</a> *<a class="el" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a>)</td></tr>
-<tr class="memdesc:ab69903880174e5bcdc0d815b5de7b3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the target system pointer in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#ab69903880174e5bcdc0d815b5de7b3e0">More...</a><br /></td></tr>
-<tr class="separator:ab69903880174e5bcdc0d815b5de7b3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff8a0f8ca8dc50d37c92ab7556e172b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#aff8a0f8ca8dc50d37c92ab7556e172b5">getTarget</a> () const</td></tr>
-<tr class="memdesc:aff8a0f8ca8dc50d37c92ab7556e172b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target system pointer in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#aff8a0f8ca8dc50d37c92ab7556e172b5">More...</a><br /></td></tr>
-<tr class="separator:aff8a0f8ca8dc50d37c92ab7556e172b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27af85e46a53aa5ff8c8016f012b0c24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a27af85e46a53aa5ff8c8016f012b0c24">Flow</a> (const <a class="el" href="classFlow.html">Flow</a> &amp;flow)</td></tr>
-<tr class="memdesc:a27af85e46a53aa5ff8c8016f012b0c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the copy constructor for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a27af85e46a53aa5ff8c8016f012b0c24">More...</a><br /></td></tr>
-<tr class="separator:a27af85e46a53aa5ff8c8016f012b0c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d7fa924063215269af2d61b7425cc22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFlow.html">Flow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a6d7fa924063215269af2d61b7425cc22">operator=</a> (const <a class="el" href="classFlow.html">Flow</a> &amp;flow)</td></tr>
-<tr class="memdesc:a6d7fa924063215269af2d61b7425cc22"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the overloaded assignment operator for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a6d7fa924063215269af2d61b7425cc22">More...</a><br /></td></tr>
-<tr class="separator:a6d7fa924063215269af2d61b7425cc22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a687d8bbbb87d6c1965e272768167dcac"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a></td></tr>
-<tr class="separator:a687d8bbbb87d6c1965e272768167dcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a963ca162995d112f0f30322e2bb9de63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a></td></tr>
-<tr class="separator:a963ca162995d112f0f30322e2bb9de63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87be88d9bae4e927b29205faabeaf387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a></td></tr>
-<tr class="separator:a87be88d9bae4e927b29205faabeaf387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80346b11c95c20a009278eb78f8f9653"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a80346b11c95c20a009278eb78f8f9653">setName</a> (std::string)=0</td></tr>
+<tr class="memdesc:a80346b11c95c20a009278eb78f8f9653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name attribute in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a80346b11c95c20a009278eb78f8f9653">More...</a><br /></td></tr>
+<tr class="separator:a80346b11c95c20a009278eb78f8f9653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d0340d844ab2d275222938234e44169"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a2d0340d844ab2d275222938234e44169">getName</a> () const =0</td></tr>
+<tr class="memdesc:a2d0340d844ab2d275222938234e44169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name attribute in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a2d0340d844ab2d275222938234e44169">More...</a><br /></td></tr>
+<tr class="separator:a2d0340d844ab2d275222938234e44169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca17cd54e042c1c1ccf73597e7f188e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a1ca17cd54e042c1c1ccf73597e7f188e">setSource</a> (<a class="el" href="classSystem.html">System</a> *)=0</td></tr>
+<tr class="memdesc:a1ca17cd54e042c1c1ccf73597e7f188e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the source system pointer in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a1ca17cd54e042c1c1ccf73597e7f188e">More...</a><br /></td></tr>
+<tr class="separator:a1ca17cd54e042c1c1ccf73597e7f188e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff381195663a5028494e3de9c6194f2c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#aff381195663a5028494e3de9c6194f2c">getSource</a> () const =0</td></tr>
+<tr class="memdesc:aff381195663a5028494e3de9c6194f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the source system pointer in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class.  <a href="classFlow.html#aff381195663a5028494e3de9c6194f2c">More...</a><br /></td></tr>
+<tr class="separator:aff381195663a5028494e3de9c6194f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a6d9503f9fd5afb978dd07346fa7e0d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a0a6d9503f9fd5afb978dd07346fa7e0d">setTarget</a> (<a class="el" href="classSystem.html">System</a> *)=0</td></tr>
+<tr class="memdesc:a0a6d9503f9fd5afb978dd07346fa7e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the target system pointer in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a0a6d9503f9fd5afb978dd07346fa7e0d">More...</a><br /></td></tr>
+<tr class="separator:a0a6d9503f9fd5afb978dd07346fa7e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81aeceffcb2b425af124c3b0d1962786"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlow.html#a81aeceffcb2b425af124c3b0d1962786">getTarget</a> () const =0</td></tr>
+<tr class="memdesc:a81aeceffcb2b425af124c3b0d1962786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the target system pointer in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class.  <a href="classFlow.html#a81aeceffcb2b425af124c3b0d1962786">More...</a><br /></td></tr>
+<tr class="separator:a81aeceffcb2b425af124c3b0d1962786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class represents a flow in the General Systems Theory implemented in this code. </p>
+<div class="textblock"><p>This class represents the interface of a flow in General Systems Theory as implemented in this code. </p>
 <ul>
 <li>It connects a source system to a target system and defines the equation for resource transfer. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Flow_8h_source.html#l00011">11</a> of file <a class="el" href="Flow_8h_source.html">Flow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Flow_8h_source.html#l00013">13</a> of file <a class="el" href="Flow_8h_source.html">Flow.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac9975e144e606242748197798e87dd32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9975e144e606242748197798e87dd32">&#9670;&nbsp;</a></span>Flow() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Flow::Flow </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the default constructor for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
-
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00003">3</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;          {</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>= <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a>= <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a>= <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
-<div class="ttc" id="aclassFlow_html_a687d8bbbb87d6c1965e272768167dcac"><div class="ttname"><a href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">Flow::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="Flow_8h_source.html#l00014">Flow.h:14</a></div></div>
-<div class="ttc" id="aclassFlow_html_a87be88d9bae4e927b29205faabeaf387"><div class="ttname"><a href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">Flow::target</a></div><div class="ttdeci">System * target</div><div class="ttdef"><b>Definition:</b> <a href="Flow_8h_source.html#l00018">Flow.h:18</a></div></div>
-<div class="ttc" id="aclassFlow_html_a963ca162995d112f0f30322e2bb9de63"><div class="ttname"><a href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">Flow::source</a></div><div class="ttdeci">System * source</div><div class="ttdef"><b>Definition:</b> <a href="Flow_8h_source.html#l00016">Flow.h:16</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a72fd67818c323382b0aaa2ab4ee4fe82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72fd67818c323382b0aaa2ab4ee4fe82">&#9670;&nbsp;</a></span>Flow() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Flow::Flow </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
-          <td class="paramname"><em>source</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
-          <td class="paramname"><em>target</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the parameterized constructor for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>the name of the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a>. </td></tr>
-    <tr><td class="paramname">source</td><td>pointer to the source <a class="el" href="classSystem.html" title="This Class represents a system in the General Systems Theory implemented in this code.">System</a>. </td></tr>
-    <tr><td class="paramname">target</td><td>pointer to the target <a class="el" href="classSystem.html" title="This Class represents a system in the General Systems Theory implemented in this code.">System</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-</li>
-</ul>
-
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00009">9</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                                        : <a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>(<a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>), </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a>(<a class="code" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a>), <a class="code" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a>(<a class="code" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a>){}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a5991efa6e8cf88c4ef2125cc727db333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5991efa6e8cf88c4ef2125cc727db333">&#9670;&nbsp;</a></span>~Flow()</h2>
+<a id="a325d284a50ca3274b126b21f5c39b9af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a325d284a50ca3274b126b21f5c39b9af">&#9670;&nbsp;</a></span>~Flow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,7 +132,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Flow::~Flow </td>
+          <td class="memname">virtual Flow::~Flow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -250,51 +140,15 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>This is the default destructor for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
+<p>This is the default destructor for the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class. </p>
 
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00012">12</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{} <span class="comment">//fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles</span></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a27af85e46a53aa5ff8c8016f012b0c24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27af85e46a53aa5ff8c8016f012b0c24">&#9670;&nbsp;</a></span>Flow() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Flow::Flow </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classFlow.html">Flow</a> &amp;&#160;</td>
-          <td class="paramname"><em>flow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the copy constructor for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">flow</td><td>the flow that is going to be cloned. </td></tr>
-  </table>
-  </dd>
-</dl>
-</li>
-</ul>
-
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00038">38</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                          {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a> = flow.<a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a> = flow.<a class="code" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a> = flow.<a class="code" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Flow_8h_source.html#l00018">18</a> of file <a class="el" href="Flow_8h_source.html">Flow.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -328,152 +182,134 @@ Private Attributes</h2></td></tr>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classLogisticFlow.html#ae0d2de87d6dbb8cfc2af6db5cd22e884">LogisticFlow</a>, <a class="el" href="classExponentialFlow.html#aafb074830c5c18138913cb10da3b8782">ExponentialFlow</a>, and <a class="el" href="classComplexFlow.html#a744cb3029e9335038f3f8c1da6daea4d">ComplexFlow</a>.</p>
+<p>Implemented in <a class="el" href="classFlowImpl.html#a88d14f759988f1dcf393b83a93aea1f1">FlowImpl</a>, <a class="el" href="classLogisticFlow.html#ae0d2de87d6dbb8cfc2af6db5cd22e884">LogisticFlow</a>, <a class="el" href="classExponentialFlow.html#aafb074830c5c18138913cb10da3b8782">ExponentialFlow</a>, and <a class="el" href="classComplexFlow.html#a744cb3029e9335038f3f8c1da6daea4d">ComplexFlow</a>.</p>
 
 </div>
 </div>
-<a id="aadd3a8ab712a2063461d917a867eedc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadd3a8ab712a2063461d917a867eedc4">&#9670;&nbsp;</a></span>getName()</h2>
+<a id="a2d0340d844ab2d275222938234e44169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d0340d844ab2d275222938234e44169">&#9670;&nbsp;</a></span>getName()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Flow::getName </td>
+          <td class="memname">virtual std::string Flow::getName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Returns the name attribute in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
+<p>Returns the name attribute in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class. </p>
 <ul>
 <li><dl class="section return"><dt>Returns</dt><dd>string - the content name attribute. </dd></dl>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00019">19</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                            {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-</div><!-- fragment -->
+<p>Implemented in <a class="el" href="classFlowImpl.html#a634867e0e9acb4febd3753041824c83b">FlowImpl</a>.</p>
+
 </div>
 </div>
-<a id="a1f3858f90d141807377c2640fb5dd0fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f3858f90d141807377c2640fb5dd0fc">&#9670;&nbsp;</a></span>getSource()</h2>
+<a id="aff381195663a5028494e3de9c6194f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff381195663a5028494e3de9c6194f2c">&#9670;&nbsp;</a></span>getSource()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSystem.html">System</a> * Flow::getSource </td>
+          <td class="memname">virtual <a class="el" href="classSystem.html">System</a>* Flow::getSource </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Returns the source system pointer in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
+<p>Returns the source system pointer in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class. </p>
 <ul>
 <li><dl class="section return"><dt>Returns</dt><dd>System* - pointer to the source system. </dd></dl>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00026">26</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-</div><!-- fragment -->
+<p>Implemented in <a class="el" href="classFlowImpl.html#a54940323059d2c4158f4146080841f32">FlowImpl</a>.</p>
+
 </div>
 </div>
-<a id="aff8a0f8ca8dc50d37c92ab7556e172b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff8a0f8ca8dc50d37c92ab7556e172b5">&#9670;&nbsp;</a></span>getTarget()</h2>
+<a id="a81aeceffcb2b425af124c3b0d1962786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81aeceffcb2b425af124c3b0d1962786">&#9670;&nbsp;</a></span>getTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSystem.html">System</a> * Flow::getTarget </td>
+          <td class="memname">virtual <a class="el" href="classSystem.html">System</a>* Flow::getTarget </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Returns the target system pointer in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
+<p>Returns the target system pointer in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class. </p>
 <ul>
 <li><dl class="section return"><dt>Returns</dt><dd>System* - pointer to the target system. </dd></dl>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00033">33</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                            {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-</div><!-- fragment -->
+<p>Implemented in <a class="el" href="classFlowImpl.html#ab07923bc230308cd949f627a92901bca">FlowImpl</a>.</p>
+
 </div>
 </div>
-<a id="a6d7fa924063215269af2d61b7425cc22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d7fa924063215269af2d61b7425cc22">&#9670;&nbsp;</a></span>operator=()</h2>
+<a id="a80346b11c95c20a009278eb78f8f9653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80346b11c95c20a009278eb78f8f9653">&#9670;&nbsp;</a></span>setName()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classFlow.html">Flow</a> &amp; Flow::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classFlow.html">Flow</a> &amp;&#160;</td>
-          <td class="paramname"><em>flow</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the overloaded assignment operator for the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">flow</td><td>the flow that is going to be cloned. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a>&amp; - a reference to the updated <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class object. </dd></dl>
-</li>
-</ul>
-
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00045">45</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                     {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span>(&amp;flow == <span class="keyword">this</span>){</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>; <span class="comment">//são iguais</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a> = flow.<a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a> = flow.<a class="code" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a> = flow.<a class="code" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aafb4bf7f22f0df6237aadb2deefdb34c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafb4bf7f22f0df6237aadb2deefdb34c">&#9670;&nbsp;</a></span>setName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Flow::setName </td>
+          <td class="memname">virtual void Flow::setName </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the name attribute in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
+<p>Sets the name attribute in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class. </p>
 <ul>
 <li><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -484,30 +320,35 @@ Private Attributes</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00016">16</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    this-&gt;<a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a> = <a class="code" href="classFlow.html#a687d8bbbb87d6c1965e272768167dcac">name</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-</div><!-- fragment -->
+<p>Implemented in <a class="el" href="classFlowImpl.html#afc88dcb77c5fc71eb5ed8f9e18837530">FlowImpl</a>.</p>
+
 </div>
 </div>
-<a id="a250fc53158862fc0db77b323a33e48a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a250fc53158862fc0db77b323a33e48a3">&#9670;&nbsp;</a></span>setSource()</h2>
+<a id="a1ca17cd54e042c1c1ccf73597e7f188e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ca17cd54e042c1c1ccf73597e7f188e">&#9670;&nbsp;</a></span>setSource()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Flow::setSource </td>
+          <td class="memname">virtual void Flow::setSource </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
-          <td class="paramname"><em>source</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the source system pointer in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
+<p>Sets the source system pointer in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class. </p>
 <ul>
 <li><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -518,30 +359,35 @@ Private Attributes</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00023">23</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                  {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    this-&gt;source = <a class="code" href="classFlow.html#a963ca162995d112f0f30322e2bb9de63">source</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-</div><!-- fragment -->
+<p>Implemented in <a class="el" href="classFlowImpl.html#a2690ee44103e90261b91635955122a5d">FlowImpl</a>.</p>
+
 </div>
 </div>
-<a id="ab69903880174e5bcdc0d815b5de7b3e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab69903880174e5bcdc0d815b5de7b3e0">&#9670;&nbsp;</a></span>setTarget()</h2>
+<a id="a0a6d9503f9fd5afb978dd07346fa7e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6d9503f9fd5afb978dd07346fa7e0d">&#9670;&nbsp;</a></span>setTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Flow::setTarget </td>
+          <td class="memname">virtual void Flow::setTarget </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
-          <td class="paramname"><em>target</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the target system pointer in the <a class="el" href="classFlow.html" title="This class represents a flow in the General Systems Theory implemented in this code.">Flow</a> Class. </p>
+<p>Sets the target system pointer in the <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> Class. </p>
 <ul>
 <li><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -552,92 +398,12 @@ Private Attributes</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Flow_8cpp_source.html#l00030">30</a> of file <a class="el" href="Flow_8cpp_source.html">Flow.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                  {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    this-&gt;target= <a class="code" href="classFlow.html#a87be88d9bae4e927b29205faabeaf387">target</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a687d8bbbb87d6c1965e272768167dcac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a687d8bbbb87d6c1965e272768167dcac">&#9670;&nbsp;</a></span>name</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Flow::name</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This attribute contains a name for the flow. </p>
-
-<p class="definition">Definition at line <a class="el" href="Flow_8h_source.html#l00014">14</a> of file <a class="el" href="Flow_8h_source.html">Flow.h</a>.</p>
+<p>Implemented in <a class="el" href="classFlowImpl.html#a530b964da04c326f25a5a150497e4046">FlowImpl</a>.</p>
 
 </div>
 </div>
-<a id="a963ca162995d112f0f30322e2bb9de63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a963ca162995d112f0f30322e2bb9de63">&#9670;&nbsp;</a></span>source</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSystem.html">System</a>* Flow::source</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This pointer points to the source <a class="el" href="classSystem.html" title="This Class represents a system in the General Systems Theory implemented in this code.">System</a> of the flow. </p>
-
-<p class="definition">Definition at line <a class="el" href="Flow_8h_source.html#l00016">16</a> of file <a class="el" href="Flow_8h_source.html">Flow.h</a>.</p>
-
-</div>
-</div>
-<a id="a87be88d9bae4e927b29205faabeaf387"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87be88d9bae4e927b29205faabeaf387">&#9670;&nbsp;</a></span>target</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSystem.html">System</a>* Flow::target</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This pointer points to the target <a class="el" href="classSystem.html" title="This Class represents a system in the General Systems Theory implemented in this code.">System</a> of the flow. </p>
-
-<p class="definition">Definition at line <a class="el" href="Flow_8h_source.html#l00018">18</a> of file <a class="el" href="Flow_8h_source.html">Flow.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="Flow_8h_source.html">Flow.h</a></li>
-<li>src/<a class="el" href="Flow_8cpp_source.html">Flow.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

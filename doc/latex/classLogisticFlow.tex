@@ -11,7 +11,8 @@ This class represents a logistic flow in the General Systems Theory implemented 
 
 
 
-Inheritance diagram for Logistic\+Flow\+:\nopagebreak
+Inheritance diagram for Logistic\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,11 +21,12 @@ Inheritance diagram for Logistic\+Flow\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Logistic\+Flow\+:\nopagebreak
+Collaboration diagram for Logistic\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=157pt]{classLogisticFlow__coll__graph}
+\includegraphics[width=192pt]{classLogisticFlow__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -32,7 +34,7 @@ Collaboration diagram for Logistic\+Flow\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classLogisticFlow_ab0f7906cfe1a27e18a4f558124e53ee0}{Logistic\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}{Logistic\+Flow}} (std\+::string \mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}})
+\mbox{\hyperlink{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}{Logistic\+Flow}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}})
 \begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}{$\sim$\+Logistic\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
@@ -42,6 +44,7 @@ double \mbox{\hyperlink{classLogisticFlow_ae0d2de87d6dbb8cfc2af6db5cd22e884}{exe
 \begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \& \mbox{\hyperlink{classLogisticFlow_ac3dca15396c96ca30dfec725ef732931}{operator=}} (const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&flow)
 \begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -73,7 +76,7 @@ Definition at line 3 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{3 :\mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}()\{\}}
+\DoxyCodeLine{3 :\mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}()\{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}\label{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}} 
@@ -104,7 +107,7 @@ Definition at line 5 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{6     : \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}(\mbox{\hyperlink{classFlow_a687d8bbbb87d6c1965e272768167dcac}{name}}, \mbox{\hyperlink{classFlow_a963ca162995d112f0f30322e2bb9de63}{source}}, \mbox{\hyperlink{classFlow_a87be88d9bae4e927b29205faabeaf387}{target}})\{\}}
+\DoxyCodeLine{6     : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}(\mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}, \mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}, \mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}})\{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}\label{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}} 
@@ -150,7 +153,7 @@ Definition at line 18 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{19     : \mbox{\hyperlink{classFlow_ac9975e144e606242748197798e87dd32}{Flow}}(flow)\{\} \textcolor{comment}{//chamar o contrutor de copia da base}}
+\DoxyCodeLine{19     : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}(flow)\{\} \textcolor{comment}{//chamar o contrutor de copia da base}}
 
 \end{DoxyCode}
 
@@ -174,7 +177,7 @@ double -\/ the calculated value based on the logistic equation.
 
 \end{DoxyItemize}
 
-Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
+Implements \mbox{\hyperlink{classFlowImpl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
 
 
 
@@ -183,10 +186,10 @@ Definition at line 10 of file Logistic\+Flow.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{10                             \{}
-\DoxyCodeLine{11     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classFlow_aff8a0f8ca8dc50d37c92ab7556e172b5}{getTarget}}()==\textcolor{keyword}{nullptr})\{ \textcolor{comment}{//se não tiver sitesma de destino}}
+\DoxyCodeLine{11     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classFlowImpl_ab07923bc230308cd949f627a92901bca}{getTarget}}()==\textcolor{keyword}{nullptr})\{ \textcolor{comment}{//se não tiver sitesma de destino}}
 \DoxyCodeLine{12         \textcolor{keywordflow}{return} 0.0;}
 \DoxyCodeLine{13     \}}
-\DoxyCodeLine{14     \textcolor{keywordtype}{double} valueTarget = \mbox{\hyperlink{classFlow_aff8a0f8ca8dc50d37c92ab7556e172b5}{getTarget}}()-\/>\mbox{\hyperlink{classSystem_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}();}
+\DoxyCodeLine{14     \textcolor{keywordtype}{double} valueTarget = \mbox{\hyperlink{classFlowImpl_ab07923bc230308cd949f627a92901bca}{getTarget}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}();}
 \DoxyCodeLine{15     \textcolor{keywordflow}{return} 0.01 * valueTarget * (1 -\/ valueTarget/70);}
 \DoxyCodeLine{16 \}}
 
@@ -220,7 +223,7 @@ Definition at line 21 of file Logistic\+Flow.\+cpp.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{21                                                              \{}
 \DoxyCodeLine{22     \textcolor{keywordflow}{if} (\&flow != \textcolor{keyword}{this})\{ \textcolor{comment}{//se for diferente, faz a atribuição}}
-\DoxyCodeLine{23         \mbox{\hyperlink{classFlow_a6d7fa924063215269af2d61b7425cc22}{Flow::operator=}}(flow); \textcolor{comment}{//chama o operador = da base para a atribuição}}
+\DoxyCodeLine{23         \mbox{\hyperlink{classFlowImpl_a856d066683cf70a957004c507c08b4fd}{FlowImpl::operator=}}(flow); \textcolor{comment}{//chama o operador = da base para a atribuição}}
 \DoxyCodeLine{24     \}}
 \DoxyCodeLine{25     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{//retorna o conteúdo}}
 \DoxyCodeLine{26 \}}

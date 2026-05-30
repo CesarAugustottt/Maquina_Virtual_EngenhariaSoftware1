@@ -1,6 +1,7 @@
 <map id="test/funcional/ExponentialFlow.h" name="test/funcional/ExponentialFlow.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,197,47"/>
-<area shape="rect" id="node2" href="$Flow_8h.html" title=" " alt="" coords="46,95,157,121"/>
-<area shape="rect" id="node3" href="$System_8h.html" title=" " alt="" coords="21,169,104,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="72,244,131,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="11,5,203,47"/>
+<area shape="rect" id="node2" href="$FlowImpl_8h.html" title=" " alt="" coords="36,95,177,121"/>
+<area shape="rect" id="node3" href="$Flow_8h.html" title=" " alt="" coords="5,169,69,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="77,244,136,271"/>
+<area shape="rect" id="node5" href="$System_8h.html" title=" " alt="" coords="144,169,227,196"/>
 </map>
