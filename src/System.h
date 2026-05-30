@@ -17,7 +17,7 @@ public:
      * @brief Sets the name attribute in the System Class.
      * * @param name which will be set to the current system.
      */
-    virtual void setName(std::string name) = 0;
+    virtual void setName(std::string) = 0;
     /*!
      * @brief Returns the name attribute in the System Class.
      * * @return string - the content name attribute.
@@ -27,7 +27,7 @@ public:
      * @brief Sets the value attribute in the System Class.
      * * @param value which will be set to the current system.
      */
-    virtual void setValue(double value) = 0;
+    virtual void setValue(double) = 0;
     /*!
      * @brief Returns the value attribute in the System Class.
      * * @return double - the content value attribute.

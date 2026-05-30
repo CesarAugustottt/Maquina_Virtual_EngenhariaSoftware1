@@ -1,48 +1,48 @@
-#include "Flow.h"
+#include "FlowImpl.h"
 
-Flow::Flow(){
+FlowImpl::FlowImpl(){
     this->name= "";
     this->source= nullptr;
     this->target= nullptr;
 }
 
-Flow::Flow(std::string name, System* source, System* target): name(name), 
+FlowImpl::FlowImpl(std::string name, System* source, System* target): name(name), 
     source(source), target(target){}
 
-Flow::~Flow(){} //fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles
+FlowImpl::~FlowImpl(){} //fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles
 
 //metodo execute é virtual puro.
 
-void Flow::setName(std::string name){
+void FlowImpl::setName(std::string name){
     this->name = name;
 }
-std::string Flow::getName()const{
+std::string FlowImpl::getName()const{
     return this->name;
 }
 
-void Flow::setSource(System* source){
+void FlowImpl::setSource(System* source){
     this->source = source;
 }
-System* Flow::getSource()const{
+System* FlowImpl::getSource()const{
     return this->source;
 }
 
-void Flow::setTarget(System* target){
+void FlowImpl::setTarget(System* target){
     this->target= target;
 }
-System* Flow::getTarget()const{
+System* FlowImpl::getTarget()const{
     return this->target;
 }
 
 //construtor de copia
-Flow::Flow(const Flow& flow){
+FlowImpl::FlowImpl(const FlowImpl& flow){
     this->name = flow.name;
     this->source = flow.source;
     this->target = flow.target;
 }
 
 //Atribuição por =
-Flow& Flow::operator=(const Flow& flow){
+FlowImpl& FlowImpl::operator=(const FlowImpl& flow){
     if(&flow == this){
         return *this; //são iguais
     }
