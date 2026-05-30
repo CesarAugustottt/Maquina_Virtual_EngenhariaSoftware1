@@ -6,8 +6,7 @@
 {\ttfamily \#include $<$cassert$>$}\newline
 {\ttfamily \#include $<$cmath$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
-Include dependency graph for funcional\+\_\+tests.\+h\+:
-\nopagebreak
+Include dependency graph for funcional\+\_\+tests.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -47,42 +46,45 @@ void \mbox{\hyperlink{funcional__tests_8h_a943dfe0c597a01c9760c140715fed527}{com
 
 Function prototype for the complex flows functional tests. 
 
-Definition at line 47 of file funcional\+\_\+tests.\+cpp.
+Definition at line 57 of file funcional\+\_\+tests.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{47                            \{}
-\DoxyCodeLine{48     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModelImpl}{ModelImpl}}();}
-\DoxyCodeLine{49     \textcolor{comment}{//Criar sistemas}}
-\DoxyCodeLine{50     \mbox{\hyperlink{classSystem}{System}}* q1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q1"{}}, 100.0); }
-\DoxyCodeLine{51     \mbox{\hyperlink{classSystem}{System}}* q2 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q2"{}}, 0.0);}
-\DoxyCodeLine{52     \mbox{\hyperlink{classSystem}{System}}* q3 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q3"{}}, 100.0);}
-\DoxyCodeLine{53     \mbox{\hyperlink{classSystem}{System}}* q4 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q4"{}}, 0.0);}
-\DoxyCodeLine{54     \mbox{\hyperlink{classSystem}{System}}* q5 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q5"{}}, 0.0);}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56     \textcolor{comment}{//Criar fluxos}}
-\DoxyCodeLine{57     \mbox{\hyperlink{classFlow}{Flow}}* f = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}f"{}}, q1, q2);  }
-\DoxyCodeLine{58     \mbox{\hyperlink{classFlow}{Flow}}* g = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}g"{}}, q1, q3);}
-\DoxyCodeLine{59     \mbox{\hyperlink{classFlow}{Flow}}* r = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}r"{}}, q2, q5);  }
-\DoxyCodeLine{60     \mbox{\hyperlink{classFlow}{Flow}}* t = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}t"{}}, q2, q3);}
-\DoxyCodeLine{61     \mbox{\hyperlink{classFlow}{Flow}}* u = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}u"{}}, q3, q4);  }
-\DoxyCodeLine{62     \mbox{\hyperlink{classFlow}{Flow}}* v = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}v"{}}, q4, q1);}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{64     \textcolor{comment}{//Adicionar sistemas}}
-\DoxyCodeLine{65     m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(q1); m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(q2); m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(q3); m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(q4); m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(q5);}
-\DoxyCodeLine{66     \textcolor{comment}{//adicionar fluxos}}
-\DoxyCodeLine{67     m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(f); m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(g); m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(r); m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(t); m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(u); m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(v);}
-\DoxyCodeLine{68 }
-\DoxyCodeLine{69     \textcolor{comment}{//executar}}
-\DoxyCodeLine{70     m-\/>\mbox{\hyperlink{classModel_a99b14b1ec90fde965573721cbda60269}{execute}}(0, 100, 1);}
-\DoxyCodeLine{71 }
-\DoxyCodeLine{72     \textcolor{comment}{// Valores finais esperados pelo Vensim}}
-\DoxyCodeLine{73     assert(round(fabs(q1-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 31.8513) * 10000) == 0); }
-\DoxyCodeLine{74     assert(round(fabs(q2-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 18.4003) * 10000) == 0);}
-\DoxyCodeLine{75     assert(round(fabs(q3-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 77.1143) * 10000) == 0);}
-\DoxyCodeLine{76     assert(round(fabs(q4-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 56.1728) * 10000) == 0);}
-\DoxyCodeLine{77     assert(round(fabs(q5-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 16.4612) * 10000) == 0);}
-\DoxyCodeLine{78 \}}
+\DoxyCodeLine{57                            \{}
+\DoxyCodeLine{58     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModelImpl}{ModelImpl}}();}
+\DoxyCodeLine{59     \textcolor{comment}{//Criar sistemas}}
+\DoxyCodeLine{60     \mbox{\hyperlink{classSystem}{System}}* q1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q1"{}}, 100.0); }
+\DoxyCodeLine{61     \mbox{\hyperlink{classSystem}{System}}* q2 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q2"{}}, 0.0);}
+\DoxyCodeLine{62     \mbox{\hyperlink{classSystem}{System}}* q3 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q3"{}}, 100.0);}
+\DoxyCodeLine{63     \mbox{\hyperlink{classSystem}{System}}* q4 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q4"{}}, 0.0);}
+\DoxyCodeLine{64     \mbox{\hyperlink{classSystem}{System}}* q5 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q5"{}}, 0.0);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{comment}{//Criar fluxos}}
+\DoxyCodeLine{67     \mbox{\hyperlink{classFlow}{Flow}}* f = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}f"{}}, q1, q2);  }
+\DoxyCodeLine{68     \mbox{\hyperlink{classFlow}{Flow}}* g = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}g"{}}, q1, q3);}
+\DoxyCodeLine{69     \mbox{\hyperlink{classFlow}{Flow}}* r = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}r"{}}, q2, q5);  }
+\DoxyCodeLine{70     \mbox{\hyperlink{classFlow}{Flow}}* t = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}t"{}}, q2, q3);}
+\DoxyCodeLine{71     \mbox{\hyperlink{classFlow}{Flow}}* u = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}u"{}}, q3, q4);  }
+\DoxyCodeLine{72     \mbox{\hyperlink{classFlow}{Flow}}* v = \mbox{\hyperlink{flows_8cpp_a5ce461f7b760845fd7dcdb81eec4cd90}{createComplexFlow}}(\textcolor{stringliteral}{"{}v"{}}, q4, q1);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{comment}{//Adicionar sistemas}}
+\DoxyCodeLine{75     m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(q1); m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(q2); m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(q3); m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(q4); m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(q5);}
+\DoxyCodeLine{76     \textcolor{comment}{//adicionar fluxos}}
+\DoxyCodeLine{77     m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(f); m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(g); m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(r); m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(t); m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(u); m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(v);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{comment}{//executar}}
+\DoxyCodeLine{80     m-\/>\mbox{\hyperlink{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}{execute}}(0, 100, 1);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{comment}{// Valores finais esperados pelo Vensim}}
+\DoxyCodeLine{83     assert(round(fabs(q1-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 31.8513) * 10000) == 0); }
+\DoxyCodeLine{84     assert(round(fabs(q2-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 18.4003) * 10000) == 0);}
+\DoxyCodeLine{85     assert(round(fabs(q3-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 77.1143) * 10000) == 0);}
+\DoxyCodeLine{86     assert(round(fabs(q4-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 56.1728) * 10000) == 0);}
+\DoxyCodeLine{87     assert(round(fabs(q5-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 16.4612) * 10000) == 0);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{keyword}{delete} q1; \textcolor{keyword}{delete} q2; \textcolor{keyword}{delete} q3; \textcolor{keyword}{delete} q4; \textcolor{keyword}{delete} q5;}
+\DoxyCodeLine{90     \textcolor{keyword}{delete} f; \textcolor{keyword}{delete} g; \textcolor{keyword}{delete} r; \textcolor{keyword}{delete} t; \textcolor{keyword}{delete} u; \textcolor{keyword}{delete} v;}
+\DoxyCodeLine{91 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{funcional__tests_8h_a5ce461f7b760845fd7dcdb81eec4cd90}\label{funcional__tests_8h_a5ce461f7b760845fd7dcdb81eec4cd90}} 
@@ -162,16 +164,21 @@ Definition at line 7 of file funcional\+\_\+tests.\+cpp.
 \DoxyCodeLine{12     \mbox{\hyperlink{classFlow}{Flow}}* f1 = \mbox{\hyperlink{flows_8cpp_a92acf4d3964c828d4a83c8e8ef770092}{createExponentialFlow}}(\textcolor{stringliteral}{"{}exponencial"{}}, pop1, pop2);}
 \DoxyCodeLine{13 }
 \DoxyCodeLine{14     \textcolor{comment}{//adicionar elementos ao modelo}}
-\DoxyCodeLine{15     m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(pop1);}
-\DoxyCodeLine{16     m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(pop2);}
-\DoxyCodeLine{17     m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(f1);}
+\DoxyCodeLine{15     m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(pop1);}
+\DoxyCodeLine{16     m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(pop2);}
+\DoxyCodeLine{17     m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(f1);}
 \DoxyCodeLine{18 }
-\DoxyCodeLine{19     m-\/>\mbox{\hyperlink{classModel_a99b14b1ec90fde965573721cbda60269}{execute}}(0, 100, 1);}
+\DoxyCodeLine{19     m-\/>\mbox{\hyperlink{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}{execute}}(0, 100, 1);}
 \DoxyCodeLine{20 }
 \DoxyCodeLine{21     \textcolor{comment}{// Valores finais esperados pelo Vensim}}
 \DoxyCodeLine{22     assert(round(fabs(pop1-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 36.6032) * 10000) == 0);}
 \DoxyCodeLine{23     assert(round(fabs(pop2-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 63.3968) * 10000) == 0);}
-\DoxyCodeLine{24 \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{delete} pop1;}
+\DoxyCodeLine{26     \textcolor{keyword}{delete} pop2;}
+\DoxyCodeLine{27     \textcolor{keyword}{delete} f1;}
+\DoxyCodeLine{28     \textcolor{keyword}{delete} m;}
+\DoxyCodeLine{29 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{funcional__tests_8h_a60914db64bde71b56d69320797266c29}\label{funcional__tests_8h_a60914db64bde71b56d69320797266c29}} 
@@ -182,29 +189,34 @@ Definition at line 7 of file funcional\+\_\+tests.\+cpp.
 
 Function prototype for the logistical flow functional test. 
 
-Definition at line 26 of file funcional\+\_\+tests.\+cpp.
+Definition at line 31 of file funcional\+\_\+tests.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{26                               \{}
-\DoxyCodeLine{27     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModelImpl}{ModelImpl}}();}
-\DoxyCodeLine{28     \textcolor{comment}{// Valores iniciais de acordo com o Vensim}}
-\DoxyCodeLine{29     \mbox{\hyperlink{classSystem}{System}}* p1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}p1"{}}, 100.0); }
-\DoxyCodeLine{30     \mbox{\hyperlink{classSystem}{System}}* p2 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}p2"{}}, 10.0); }
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32     \textcolor{comment}{// O fluxo logistico conecta p1 a p2}}
-\DoxyCodeLine{33     \mbox{\hyperlink{classFlow}{Flow}}* f1 = \mbox{\hyperlink{flows_8cpp_af8ba6be0bcdf082483696ce956b93ae3}{createLogisticFlow}}(\textcolor{stringliteral}{"{}logistica"{}}, p1, p2);}
-\DoxyCodeLine{34 }
-\DoxyCodeLine{35     \textcolor{comment}{// Adiciona elementos ao modelo}}
-\DoxyCodeLine{36     m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(p1);}
-\DoxyCodeLine{37     m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(p2);}
-\DoxyCodeLine{38     m-\/>\mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{add}}(f1);}
+\DoxyCodeLine{31                               \{}
+\DoxyCodeLine{32     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModelImpl}{ModelImpl}}();}
+\DoxyCodeLine{33     \textcolor{comment}{// Valores iniciais de acordo com o Vensim}}
+\DoxyCodeLine{34     \mbox{\hyperlink{classSystem}{System}}* p1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}p1"{}}, 100.0); }
+\DoxyCodeLine{35     \mbox{\hyperlink{classSystem}{System}}* p2 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\textcolor{stringliteral}{"{}p2"{}}, 10.0); }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{comment}{// O fluxo logistico conecta p1 a p2}}
+\DoxyCodeLine{38     \mbox{\hyperlink{classFlow}{Flow}}* f1 = \mbox{\hyperlink{flows_8cpp_af8ba6be0bcdf082483696ce956b93ae3}{createLogisticFlow}}(\textcolor{stringliteral}{"{}logistica"{}}, p1, p2);}
 \DoxyCodeLine{39 }
-\DoxyCodeLine{40     m-\/>\mbox{\hyperlink{classModel_a99b14b1ec90fde965573721cbda60269}{execute}}(0, 100, 1);}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{42     \textcolor{comment}{// Valores finais esperados pelo Vensim}}
-\DoxyCodeLine{43     assert(round(fabs(p1-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 88.2167) * 10000) == 0);}
-\DoxyCodeLine{44     assert(round(fabs(p2-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 21.7833) * 10000) == 0);}
-\DoxyCodeLine{45 \}}
+\DoxyCodeLine{40     \textcolor{comment}{// Adiciona elementos ao modelo}}
+\DoxyCodeLine{41     m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(p1);}
+\DoxyCodeLine{42     m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(p2);}
+\DoxyCodeLine{43     m-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(f1);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     m-\/>\mbox{\hyperlink{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}{execute}}(0, 100, 1);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{comment}{// Valores finais esperados pelo Vensim}}
+\DoxyCodeLine{48     assert(round(fabs(p1-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 88.2167) * 10000) == 0);}
+\DoxyCodeLine{49     assert(round(fabs(p2-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 21.7833) * 10000) == 0);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keyword}{delete} p1;}
+\DoxyCodeLine{52     \textcolor{keyword}{delete} p2;}
+\DoxyCodeLine{53     \textcolor{keyword}{delete} f1;}
+\DoxyCodeLine{54     \textcolor{keyword}{delete} m;}
+\DoxyCodeLine{55 \}}
 
 \end{DoxyCode}

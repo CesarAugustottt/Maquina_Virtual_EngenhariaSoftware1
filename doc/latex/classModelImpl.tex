@@ -71,12 +71,17 @@ std\+::vector$<$ \mbox{\hyperlink{classSystem}{System}} $\ast$ $>$ \mbox{\hyperl
 \item 
 std\+::vector$<$ \mbox{\hyperlink{classFlow}{Flow}} $\ast$ $>$ \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classModelImpl_a686d152cfd45e63b5bc3db6f327fdaeb}{Unit\+\_\+\+Model}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This class represents the concrete implementation of a \mbox{\hyperlink{classModel}{Model}}. 
 
-Definition at line 13 of file Model\+Impl.\+h.
+Definition at line 16 of file Model\+Impl.\+h.
 
 
 
@@ -190,7 +195,7 @@ Definition at line 89 of file Model.\+cpp.
 \index{ModelImpl@{ModelImpl}!add@{add}}
 \index{add@{add}!ModelImpl@{ModelImpl}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Model\+Impl\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Model\+Impl\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -206,7 +211,7 @@ Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of t
 
 \end{DoxyItemize}
 
-Implements \mbox{\hyperlink{classModel_ab7df81041f62f049cfc6e4d50dcaf721}{Model}}.
+Implements \mbox{\hyperlink{classModel_ac1e19f5fcc4ced9defbfe2847a26ff33}{Model}}.
 
 
 
@@ -223,7 +228,7 @@ Definition at line 45 of file Model.\+cpp.
 \index{ModelImpl@{ModelImpl}!add@{add}}
 \index{add@{add}!ModelImpl@{ModelImpl}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Model\+Impl\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Model\+Impl\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -239,7 +244,7 @@ Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container 
 
 \end{DoxyItemize}
 
-Implements \mbox{\hyperlink{classModel_a94c8319fa87ab9f33a4ac2b362837e5d}{Model}}.
+Implements \mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{Model}}.
 
 
 
@@ -256,7 +261,7 @@ Definition at line 41 of file Model.\+cpp.
 \index{ModelImpl@{ModelImpl}!execute@{execute}}
 \index{execute@{execute}!ModelImpl@{ModelImpl}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily void Model\+Impl\+::execute (\begin{DoxyParamCaption}\item[{double}]{start,  }\item[{double}]{final,  }\item[{double}]{increment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Model\+Impl\+::execute (\begin{DoxyParamCaption}\item[{double}]{,  }\item[{double}]{,  }\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -276,7 +281,7 @@ Executes the simulation by updating systems based on the flows equations over a 
 
 \end{DoxyItemize}
 
-Implements \mbox{\hyperlink{classModel_a99b14b1ec90fde965573721cbda60269}{Model}}.
+Implements \mbox{\hyperlink{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}{Model}}.
 
 
 
@@ -376,7 +381,7 @@ Definition at line 80 of file Model.\+cpp.
 \index{ModelImpl@{ModelImpl}!incrementTime@{incrementTime}}
 \index{incrementTime@{incrementTime}!ModelImpl@{ModelImpl}}
 \doxysubsubsection{\texorpdfstring{incrementTime()}{incrementTime()}}
-{\footnotesize\ttfamily void Model\+Impl\+::increment\+Time (\begin{DoxyParamCaption}\item[{double}]{increment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Model\+Impl\+::increment\+Time (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -392,7 +397,7 @@ Increments the simulation time by a specific value.
 
 \end{DoxyItemize}
 
-Implements \mbox{\hyperlink{classModel_adc78826b46538af6cc18fb41c138a017}{Model}}.
+Implements \mbox{\hyperlink{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}{Model}}.
 
 
 
@@ -447,7 +452,7 @@ Definition at line 97 of file Model.\+cpp.
 \index{ModelImpl@{ModelImpl}!remove@{remove}}
 \index{remove@{remove}!ModelImpl@{ModelImpl}}
 \doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Model\+Impl\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Model\+Impl\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -463,7 +468,7 @@ Removes a \mbox{\hyperlink{classFlow}{Flow}} pointer from the internal container
 
 \end{DoxyItemize}
 
-Implements \mbox{\hyperlink{classModel_a8af2e0747cdca00538d4ddf339621582}{Model}}.
+Implements \mbox{\hyperlink{classModel_a9dfb3ab85127622aa9d9db591ee63454}{Model}}.
 
 
 
@@ -486,7 +491,7 @@ Definition at line 58 of file Model.\+cpp.
 \index{ModelImpl@{ModelImpl}!remove@{remove}}
 \index{remove@{remove}!ModelImpl@{ModelImpl}}
 \doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Model\+Impl\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Model\+Impl\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -502,7 +507,7 @@ Removes a \mbox{\hyperlink{classSystem}{System}} pointer from the internal conta
 
 \end{DoxyItemize}
 
-Implements \mbox{\hyperlink{classModel_adbd9179086a62368503bc04baae0b5ae}{Model}}.
+Implements \mbox{\hyperlink{classModel_ac1884d0df43bd3eaa98fb2493b1eadbd}{Model}}.
 
 
 
@@ -524,7 +529,7 @@ Definition at line 49 of file Model.\+cpp.
 \index{ModelImpl@{ModelImpl}!setName@{setName}}
 \index{setName@{setName}!ModelImpl@{ModelImpl}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
-{\footnotesize\ttfamily void Model\+Impl\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Model\+Impl\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -540,7 +545,7 @@ Sets the name attribute in the \mbox{\hyperlink{classModel}{Model}} Class.
 
 \end{DoxyItemize}
 
-Implements \mbox{\hyperlink{classModel_ab01f68499cf9c680d64d07c7160b4cf7}{Model}}.
+Implements \mbox{\hyperlink{classModel_a0418ba1c3f1016a13a2cbb4c1be5e43b}{Model}}.
 
 
 
@@ -557,7 +562,7 @@ Definition at line 68 of file Model.\+cpp.
 \index{ModelImpl@{ModelImpl}!setTime@{setTime}}
 \index{setTime@{setTime}!ModelImpl@{ModelImpl}}
 \doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
-{\footnotesize\ttfamily void Model\+Impl\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Model\+Impl\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -573,7 +578,7 @@ Sets the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class.
 
 \end{DoxyItemize}
 
-Implements \mbox{\hyperlink{classModel_ab89eff21392ee4e7f58da939238acc7c}{Model}}.
+Implements \mbox{\hyperlink{classModel_a210839e2d275d6821a8beac249470beb}{Model}}.
 
 
 
@@ -588,6 +593,19 @@ Definition at line 76 of file Model.\+cpp.
 \end{DoxyCode}
 
 
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classModelImpl_a686d152cfd45e63b5bc3db6f327fdaeb}\label{classModelImpl_a686d152cfd45e63b5bc3db6f327fdaeb}} 
+\index{ModelImpl@{ModelImpl}!Unit\_Model@{Unit\_Model}}
+\index{Unit\_Model@{Unit\_Model}!ModelImpl@{ModelImpl}}
+\doxysubsubsection{\texorpdfstring{Unit\_Model}{Unit\_Model}}
+{\footnotesize\ttfamily friend class Unit\+\_\+\+Model\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 64 of file Model\+Impl.\+h.
+
+
+
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}\label{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}} 
 \index{ModelImpl@{ModelImpl}!flows@{flows}}
@@ -597,7 +615,7 @@ Definition at line 76 of file Model.\+cpp.
 
 This vector contains pointers to all flows registered in the model. 
 
-Definition at line 22 of file Model\+Impl.\+h.
+Definition at line 25 of file Model\+Impl.\+h.
 
 \mbox{\Hypertarget{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}\label{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}} 
 \index{ModelImpl@{ModelImpl}!name@{name}}
@@ -607,7 +625,7 @@ Definition at line 22 of file Model\+Impl.\+h.
 
 This attribute contains a name for the model. 
 
-Definition at line 16 of file Model\+Impl.\+h.
+Definition at line 19 of file Model\+Impl.\+h.
 
 \mbox{\Hypertarget{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}\label{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}} 
 \index{ModelImpl@{ModelImpl}!systems@{systems}}
@@ -617,7 +635,7 @@ Definition at line 16 of file Model\+Impl.\+h.
 
 This vector contains pointers to all systems registered in the model. 
 
-Definition at line 20 of file Model\+Impl.\+h.
+Definition at line 23 of file Model\+Impl.\+h.
 
 \mbox{\Hypertarget{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}\label{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}} 
 \index{ModelImpl@{ModelImpl}!time@{time}}
@@ -627,7 +645,7 @@ Definition at line 20 of file Model\+Impl.\+h.
 
 This attribute contains the current time of the simulation. 
 
-Definition at line 18 of file Model\+Impl.\+h.
+Definition at line 21 of file Model\+Impl.\+h.
 
 
 

@@ -21,6 +21,11 @@ void exponentialFuncionalTest(){
     // Valores finais esperados pelo Vensim
     assert(round(fabs(pop1->getValue() - 36.6032) * 10000) == 0);
     assert(round(fabs(pop2->getValue() - 63.3968) * 10000) == 0);
+
+    delete pop1;
+    delete pop2;
+    delete f1;
+    delete m;
 }
 
 void logisticalFuncionalTest(){
@@ -42,6 +47,11 @@ void logisticalFuncionalTest(){
     // Valores finais esperados pelo Vensim
     assert(round(fabs(p1->getValue() - 88.2167) * 10000) == 0);
     assert(round(fabs(p2->getValue() - 21.7833) * 10000) == 0);
+
+    delete p1;
+    delete p2;
+    delete f1;
+    delete m;
 }
 
 void complexFuncionalTest(){
@@ -75,4 +85,7 @@ void complexFuncionalTest(){
     assert(round(fabs(q3->getValue() - 77.1143) * 10000) == 0);
     assert(round(fabs(q4->getValue() - 56.1728) * 10000) == 0);
     assert(round(fabs(q5->getValue() - 16.4612) * 10000) == 0);
+
+    delete q1; delete q2; delete q3; delete q4; delete q5;
+    delete f; delete g; delete r; delete t; delete u; delete v;
 }

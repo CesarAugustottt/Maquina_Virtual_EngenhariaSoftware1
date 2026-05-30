@@ -2,6 +2,9 @@
 #define MODELIMPL_H
 
 #include "Model.h"
+#include "System.h"
+#include "Flow.h"
+
 #include <vector>
 #include <string>
 #include <algorithm>
@@ -56,6 +59,9 @@ public:
     void setTime(double time) override;
     double getTime() const override;
     void incrementTime(double increment) override;
+
+    // Permite que a classe de teste faça testes unitário a cada método
+    friend class Unit_Model;
 };
 
 #endif
