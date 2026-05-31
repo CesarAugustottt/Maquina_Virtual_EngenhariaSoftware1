@@ -2,21 +2,21 @@
 #include "../../src/SystemImpl.h"
 #include <cassert>
 
-bool Unit_System::construtor_default(void) {
+bool Unit_System::defaultConstructor(void) {
     SystemImpl s1;
     assert(s1.name == "");
     assert(s1.value == 0.0);
     return true;
 }
 
-bool Unit_System::construtor(void) {
+bool Unit_System::constructor(void) {
     SystemImpl s2("Sys", 10.0);
     assert(s2.name == "Sys");
     assert(s2.value == 10.0);
     return true;
 }
 
-bool Unit_System::destrutor(void) {
+bool Unit_System::destructor(void) {
     SystemImpl* s = new SystemImpl();
     delete s;
     return true;
@@ -51,9 +51,9 @@ bool Unit_System::setValue(void) {
 }
 
 bool Unit_System::regressiveTest(void) {
-    assert(construtor_default());
-    assert(construtor());
-    assert(destrutor());
+    assert(defaultConstructor());
+    assert(constructor());
+    assert(destructor());
     assert(getName());
     assert(setName());
     assert(getValue());
