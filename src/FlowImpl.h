@@ -60,6 +60,9 @@ public:
      * @return FlowImpl& - a reference to the updated FlowImpl Class object.
      */
     FlowImpl& operator=(const FlowImpl& flow);
+
+    // Permite que a classe de teste faça testes unitário a cada método
+    friend class Unit_Flow;
 };
 
 #endif
