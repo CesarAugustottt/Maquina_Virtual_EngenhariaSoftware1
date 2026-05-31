@@ -37,16 +37,35 @@ bool Unit_System::setName(void) {
 }
 
 bool Unit_System::getValue(void) {
-    SystemImpl s;
-    s.value = 15.5;
-    assert(s.getValue() == 15.5);
+    SystemImpl s("Sys", 10.0);
+    assert(s.getValue() == 10.0);
     return true;
 }
 
 bool Unit_System::setValue(void) {
     SystemImpl s;
-    s.setValue(20.0);
-    assert(s.value == 20.0);
+    s.setValue(100.0);
+    assert(s.value == 100.0);
+    return true;
+}
+
+bool Unit_System::copyConstructor(void) {
+    SystemImpl original("Original", 10.0);
+    SystemImpl copy(original);
+
+    assert(copy.name == "Original");
+    assert(copy.value == 10.0);
+    return true;
+}
+
+bool Unit_System::assignmentOperator(void) {
+    SystemImpl original("Original", 10.0);
+    SystemImpl destination;
+
+    destination = original;
+
+    assert(destination.name == "Original");
+    assert(destination.value == 10.0);
     return true;
 }
 
@@ -58,5 +77,7 @@ bool Unit_System::regressiveTest(void) {
     assert(setName());
     assert(getValue());
     assert(setValue());
+    assert(copyConstructor());
+    assert(assignmentOperator());
     return true;
 }
