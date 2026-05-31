@@ -49,7 +49,18 @@ public:
      */
     static bool setValue(void);
 
-    //funcao chamada pela main
+    /*!
+     * @brief Tests the copy constructor of SystemImpl.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool copyConstructor(void);
+
+    /*!
+     * @brief Tests the assignment operator (=) of SystemImpl.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool assignmentOperator(void);
+
     /*!
      * @brief Runs all the unit tests for the System class (Regression Testing).
      * @return true if all tests pass, false otherwise.
