@@ -3,6 +3,6 @@
 <area shape="rect" id="node2" href="$classFlowImpl.html" title="This class represents the concrete implementation of a Flow." alt="" coords="107,81,189,108"/>
 <area shape="rect" id="node3" href="$classComplexFlow.html" title="This Class represents a complex flow in the General Systems Theory implemented in this code." alt="" coords="247,5,358,32"/>
 <area shape="rect" id="node4" href="$classExponentialFlow.html" title="This Class represents an exponential flow in the General Systems Theory implemented in this code." alt="" coords="237,56,368,83"/>
-<area shape="rect" id="node5" href="$classFlowTest.html" title=" " alt="" coords="263,107,342,133"/>
+<area shape="rect" id="node5" href="$classFlowTest.html" title="Class used exclusively to instantiate and test FlowImpl." alt="" coords="263,107,342,133"/>
 <area shape="rect" id="node6" href="$classLogisticFlow.html" title="This class represents a logistic flow in the General Systems Theory implemented in this code." alt="" coords="251,157,354,184"/>
 </map>

@@ -2,33 +2,38 @@
 \label{classUnit__System}\index{Unit\_System@{Unit\_System}}
 
 
+A class containing static unit tests for the \mbox{\hyperlink{classSystem}{System}} class.  
+
+
+
+
 {\ttfamily \#include $<$unit\+\_\+\+System.\+h$>$}
 
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static bool \mbox{\hyperlink{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}{default\+Constructor}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests the default constructor of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}{constructor}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests the parameterized constructor of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}{destructor}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests the destructor of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__System_a1aacfeca3281214115a6666b73ace27c}{get\+Name}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests the get\+Name method of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}{set\+Name}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests the set\+Name method of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__System_a24725e6baf31599fedba18d7f03455e5}{get\+Value}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests the get\+Value method of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}{set\+Value}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Tests the set\+Value method of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__System_a7b90ea8dc91977b75a136d7a383089c9}{regressive\+Test}} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs all the unit tests for the \mbox{\hyperlink{classSystem}{System}} class (Regression Testing). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+A class containing static unit tests for the \mbox{\hyperlink{classSystem}{System}} class. 
 
-
-Definition at line 4 of file unit\+\_\+\+System.\+h.
+Definition at line 8 of file unit\+\_\+\+System.\+h.
 
 
 
@@ -39,6 +44,13 @@ Definition at line 4 of file unit\+\_\+\+System.\+h.
 \doxysubsubsection{\texorpdfstring{constructor()}{constructor()}}
 {\footnotesize\ttfamily bool Unit\+\_\+\+System\+::constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Tests the parameterized constructor of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. 
+
+\begin{DoxyReturn}{Returns}
+true if the test passed, false otherwise. 
+\end{DoxyReturn}
 
 
 Definition at line 12 of file unit\+\_\+\+System.\+cpp.
@@ -61,6 +73,13 @@ Definition at line 12 of file unit\+\_\+\+System.\+cpp.
 
 
 
+Tests the default constructor of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. 
+
+\begin{DoxyReturn}{Returns}
+true if the test passed, false otherwise. 
+\end{DoxyReturn}
+
+
 Definition at line 5 of file unit\+\_\+\+System.\+cpp.
 
 
@@ -81,6 +100,13 @@ Definition at line 5 of file unit\+\_\+\+System.\+cpp.
 
 
 
+Tests the destructor of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. 
+
+\begin{DoxyReturn}{Returns}
+true if the test passed, false otherwise. 
+\end{DoxyReturn}
+
+
 Definition at line 19 of file unit\+\_\+\+System.\+cpp.
 
 
@@ -98,6 +124,13 @@ Definition at line 19 of file unit\+\_\+\+System.\+cpp.
 \doxysubsubsection{\texorpdfstring{getName()}{getName()}}
 {\footnotesize\ttfamily bool Unit\+\_\+\+System\+::get\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Tests the get\+Name method of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. 
+
+\begin{DoxyReturn}{Returns}
+true if the test passed, false otherwise. 
+\end{DoxyReturn}
 
 
 Definition at line 25 of file unit\+\_\+\+System.\+cpp.
@@ -120,6 +153,13 @@ Definition at line 25 of file unit\+\_\+\+System.\+cpp.
 
 
 
+Tests the get\+Value method of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. 
+
+\begin{DoxyReturn}{Returns}
+true if the test passed, false otherwise. 
+\end{DoxyReturn}
+
+
 Definition at line 39 of file unit\+\_\+\+System.\+cpp.
 
 
@@ -138,6 +178,13 @@ Definition at line 39 of file unit\+\_\+\+System.\+cpp.
 \doxysubsubsection{\texorpdfstring{regressiveTest()}{regressiveTest()}}
 {\footnotesize\ttfamily bool Unit\+\_\+\+System\+::regressive\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Runs all the unit tests for the \mbox{\hyperlink{classSystem}{System}} class (Regression Testing). 
+
+\begin{DoxyReturn}{Returns}
+true if all tests pass, false otherwise. 
+\end{DoxyReturn}
 
 
 Definition at line 53 of file unit\+\_\+\+System.\+cpp.
@@ -164,6 +211,13 @@ Definition at line 53 of file unit\+\_\+\+System.\+cpp.
 
 
 
+Tests the set\+Name method of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. 
+
+\begin{DoxyReturn}{Returns}
+true if the test passed, false otherwise. 
+\end{DoxyReturn}
+
+
 Definition at line 32 of file unit\+\_\+\+System.\+cpp.
 
 
@@ -182,6 +236,13 @@ Definition at line 32 of file unit\+\_\+\+System.\+cpp.
 \doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
 {\footnotesize\ttfamily bool Unit\+\_\+\+System\+::set\+Value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Tests the set\+Value method of \mbox{\hyperlink{classSystemImpl}{System\+Impl}}. 
+
+\begin{DoxyReturn}{Returns}
+true if the test passed, false otherwise. 
+\end{DoxyReturn}
 
 
 Definition at line 46 of file unit\+\_\+\+System.\+cpp.

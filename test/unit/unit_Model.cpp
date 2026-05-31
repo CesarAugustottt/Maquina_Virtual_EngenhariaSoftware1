@@ -1,4 +1,5 @@
-#include "Unit_Model.h"
+#include "unit_Model.h"
+#include "../../src/ModelImpl.h"
 #include "../../src/SystemImpl.h"
 #include "../funcional/ComplexFlow.h"
 #include <cassert>
