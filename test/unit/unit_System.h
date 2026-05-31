@@ -3,16 +3,15 @@
 
 class Unit_System {
 public:
-    static bool construtor_default(void);
-    static bool construtor(void);
-    static bool destrutor(void);
+    static bool defaultConstructor(void);
+    static bool constructor(void);
+    static bool destructor(void);
     
     static bool getName(void);
     static bool setName(void);
     static bool getValue(void);
     static bool setValue(void);
 
-    // Funcao chamada pela main
     static bool regressiveTest(void);
 };
 
