@@ -31,6 +31,11 @@ Para rodar os testes funcionais:
 ./bin/funcional_tests.exe
 ```
 
+Para rodar os testes unitários:
+```bash
+./bin/unit_tests.exe
+```
+
 ## Fluxo de Desenvolvimento
 O projeto segue um padrão rigoroso de ramificações para garantir a estabilidade e a qualidade do código:
 
