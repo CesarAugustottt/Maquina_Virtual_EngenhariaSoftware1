@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['remove_41',['remove',['../classModel.html#ac1884d0df43bd3eaa98fb2493b1eadbd',1,'Model::remove(System *)=0'],['../classModel.html#a9dfb3ab85127622aa9d9db591ee63454',1,'Model::remove(Flow *)=0'],['../classModelImpl.html#aa12b7df505b53eef62ae93e595905727',1,'ModelImpl::remove(System *sys) override'],['../classModelImpl.html#af03872fad7d17184098442d7a2030440',1,'ModelImpl::remove(Flow *flow) override']]]
+  ['operator_3d_52',['operator=',['../classFlowImpl.html#a856d066683cf70a957004c507c08b4fd',1,'FlowImpl::operator=()'],['../classModelImpl.html#a5c89b104c20013688809cfc0e1d12e10',1,'ModelImpl::operator=()'],['../classSystemImpl.html#aa90a45b567f1d915a6c2cadb578e3deb',1,'SystemImpl::operator=()'],['../classComplexFlow.html#a4b7d7263094e0e829bd87a0d6c815304',1,'ComplexFlow::operator=()'],['../classExponentialFlow.html#af9903c1a715409270d83c24e7f23a15d',1,'ExponentialFlow::operator=()'],['../classLogisticFlow.html#ac3dca15396c96ca30dfec725ef732931',1,'LogisticFlow::operator=()']]]
 ];

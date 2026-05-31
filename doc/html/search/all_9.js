@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_3d_40',['operator=',['../classFlowImpl.html#a856d066683cf70a957004c507c08b4fd',1,'FlowImpl::operator=()'],['../classModelImpl.html#a5c89b104c20013688809cfc0e1d12e10',1,'ModelImpl::operator=()'],['../classSystemImpl.html#aa90a45b567f1d915a6c2cadb578e3deb',1,'SystemImpl::operator=()'],['../classComplexFlow.html#a4b7d7263094e0e829bd87a0d6c815304',1,'ComplexFlow::operator=()'],['../classExponentialFlow.html#af9903c1a715409270d83c24e7f23a15d',1,'ExponentialFlow::operator=()'],['../classLogisticFlow.html#ac3dca15396c96ca30dfec725ef732931',1,'LogisticFlow::operator=()']]]
+  ['name_51',['name',['../classFlowImpl.html#afcc3f687245c4a6fa3d26ac386c8221b',1,'FlowImpl::name()'],['../classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b',1,'ModelImpl::name()'],['../classSystemImpl.html#aaf1f43ae8a49e3eec145459a22520fa5',1,'SystemImpl::name()']]]
 ];

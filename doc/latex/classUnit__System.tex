@@ -1,0 +1,204 @@
+\hypertarget{classUnit__System}{}\doxysection{Unit\+\_\+\+System Class Reference}
+\label{classUnit__System}\index{Unit\_System@{Unit\_System}}
+
+
+{\ttfamily \#include $<$unit\+\_\+\+System.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}{default\+Constructor}} (void)
+\item 
+static bool \mbox{\hyperlink{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}{constructor}} (void)
+\item 
+static bool \mbox{\hyperlink{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}{destructor}} (void)
+\item 
+static bool \mbox{\hyperlink{classUnit__System_a1aacfeca3281214115a6666b73ace27c}{get\+Name}} (void)
+\item 
+static bool \mbox{\hyperlink{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}{set\+Name}} (void)
+\item 
+static bool \mbox{\hyperlink{classUnit__System_a24725e6baf31599fedba18d7f03455e5}{get\+Value}} (void)
+\item 
+static bool \mbox{\hyperlink{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}{set\+Value}} (void)
+\item 
+static bool \mbox{\hyperlink{classUnit__System_a7b90ea8dc91977b75a136d7a383089c9}{regressive\+Test}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 4 of file unit\+\_\+\+System.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}\label{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}} 
+\index{Unit\_System@{Unit\_System}!constructor@{constructor}}
+\index{constructor@{constructor}!Unit\_System@{Unit\_System}}
+\doxysubsubsection{\texorpdfstring{constructor()}{constructor()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+System\+::constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 12 of file unit\+\_\+\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12                                   \{}
+\DoxyCodeLine{13     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s2(\textcolor{stringliteral}{"{}Sys"{}}, 10.0);}
+\DoxyCodeLine{14     assert(s2.name == \textcolor{stringliteral}{"{}Sys"{}});}
+\DoxyCodeLine{15     assert(s2.value == 10.0);}
+\DoxyCodeLine{16     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{17 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}\label{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}} 
+\index{Unit\_System@{Unit\_System}!defaultConstructor@{defaultConstructor}}
+\index{defaultConstructor@{defaultConstructor}!Unit\_System@{Unit\_System}}
+\doxysubsubsection{\texorpdfstring{defaultConstructor()}{defaultConstructor()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+System\+::default\+Constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 5 of file unit\+\_\+\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                                          \{}
+\DoxyCodeLine{6     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s1;}
+\DoxyCodeLine{7     assert(s1.\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}} == \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{8     assert(s1.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} == 0.0);}
+\DoxyCodeLine{9     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}\label{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}} 
+\index{Unit\_System@{Unit\_System}!destructor@{destructor}}
+\index{destructor@{destructor}!Unit\_System@{Unit\_System}}
+\doxysubsubsection{\texorpdfstring{destructor()}{destructor()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+System\+::destructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 19 of file unit\+\_\+\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                  \{}
+\DoxyCodeLine{20     \mbox{\hyperlink{classSystemImpl}{SystemImpl}}* s = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}();}
+\DoxyCodeLine{21     \textcolor{keyword}{delete} s;}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit__System_a1aacfeca3281214115a6666b73ace27c}\label{classUnit__System_a1aacfeca3281214115a6666b73ace27c}} 
+\index{Unit\_System@{Unit\_System}!getName@{getName}}
+\index{getName@{getName}!Unit\_System@{Unit\_System}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+System\+::get\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 25 of file unit\+\_\+\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                               \{}
+\DoxyCodeLine{26     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s;}
+\DoxyCodeLine{27     s.\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}} = \textcolor{stringliteral}{"{}TestName"{}};}
+\DoxyCodeLine{28     assert(s.\mbox{\hyperlink{classSystemImpl_a84260247eda0335a8700346abdc8f386}{getName}}() == \textcolor{stringliteral}{"{}TestName"{}});}
+\DoxyCodeLine{29     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit__System_a24725e6baf31599fedba18d7f03455e5}\label{classUnit__System_a24725e6baf31599fedba18d7f03455e5}} 
+\index{Unit\_System@{Unit\_System}!getValue@{getValue}}
+\index{getValue@{getValue}!Unit\_System@{Unit\_System}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+System\+::get\+Value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 39 of file unit\+\_\+\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                                \{}
+\DoxyCodeLine{40     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s;}
+\DoxyCodeLine{41     s.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} = 15.5;}
+\DoxyCodeLine{42     assert(s.\mbox{\hyperlink{classSystemImpl_aa21b5abc7021e73715c06449fea9e08f}{getValue}}() == 15.5);}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit__System_a7b90ea8dc91977b75a136d7a383089c9}\label{classUnit__System_a7b90ea8dc91977b75a136d7a383089c9}} 
+\index{Unit\_System@{Unit\_System}!regressiveTest@{regressiveTest}}
+\index{regressiveTest@{regressiveTest}!Unit\_System@{Unit\_System}}
+\doxysubsubsection{\texorpdfstring{regressiveTest()}{regressiveTest()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+System\+::regressive\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 53 of file unit\+\_\+\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53                                      \{}
+\DoxyCodeLine{54     assert(\mbox{\hyperlink{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}{defaultConstructor}}());}
+\DoxyCodeLine{55     assert(\mbox{\hyperlink{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}{constructor}}());}
+\DoxyCodeLine{56     assert(\mbox{\hyperlink{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}{destructor}}());}
+\DoxyCodeLine{57     assert(\mbox{\hyperlink{classUnit__System_a1aacfeca3281214115a6666b73ace27c}{getName}}());}
+\DoxyCodeLine{58     assert(\mbox{\hyperlink{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}{setName}}());}
+\DoxyCodeLine{59     assert(\mbox{\hyperlink{classUnit__System_a24725e6baf31599fedba18d7f03455e5}{getValue}}());}
+\DoxyCodeLine{60     assert(\mbox{\hyperlink{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}{setValue}}());}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}\label{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}} 
+\index{Unit\_System@{Unit\_System}!setName@{setName}}
+\index{setName@{setName}!Unit\_System@{Unit\_System}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+System\+::set\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 32 of file unit\+\_\+\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                               \{}
+\DoxyCodeLine{33     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s;}
+\DoxyCodeLine{34     s.\mbox{\hyperlink{classSystemImpl_a48a6e12f79d6711e9bb8f55dc0ef672a}{setName}}(\textcolor{stringliteral}{"{}NewName"{}});}
+\DoxyCodeLine{35     assert(s.\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}} == \textcolor{stringliteral}{"{}NewName"{}});}
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}\label{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}} 
+\index{Unit\_System@{Unit\_System}!setValue@{setValue}}
+\index{setValue@{setValue}!Unit\_System@{Unit\_System}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+System\+::set\+Value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 46 of file unit\+\_\+\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                \{}
+\DoxyCodeLine{47     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s;}
+\DoxyCodeLine{48     s.\mbox{\hyperlink{classSystemImpl_aebe4a9ca472120a97bb46c7138df8e65}{setValue}}(20.0);}
+\DoxyCodeLine{49     assert(s.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} == 20.0);}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+test/unit/\mbox{\hyperlink{unit__System_8h}{unit\+\_\+\+System.\+h}}\item 
+test/unit/\mbox{\hyperlink{unit__System_8cpp}{unit\+\_\+\+System.\+cpp}}\end{DoxyCompactItemize}

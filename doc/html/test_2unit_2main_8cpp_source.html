@@ -71,24 +71,35 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="test_2unit_2main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Unit__Model_8h.html">Unit_Model.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="test_2unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    4</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;INICIANDO TESTES UNITÁRIOS&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="comment">//TESTES REGRESSIVOS DE MODEL</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classUnit__Model.html#a37d435d1e63ba4f6025b551c4eabcb38">Unit_Model :: regressiveTest</a>();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Testes unitários de Model passaram com sucesso!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">//TESTES REGRESSIVOS DE SYSTM</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//TESTES REGRESSIVOS DE FLOW</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;TODOS OS TESTES PASSARAM COM SUCESSO!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="unit__System_8h.html">unit_System.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="unit__Flow_8h.html">unit_Flow.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="test_2unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    6</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;INICIANDO TESTES UNITARIOS&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">// TESTES REGRESSIVOS DE MODEL</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classUnit__Model.html#a37d435d1e63ba4f6025b551c4eabcb38">Unit_Model::regressiveTest</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Testes unitarios de Model passaram com sucesso!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// TESTES REGRESSIVOS DE SYSTEM</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classUnit__System.html#a7b90ea8dc91977b75a136d7a383089c9">Unit_System::regressiveTest</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Testes unitarios de System passaram com sucesso!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// TESTES REGRESSIVOS DE FLOW</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classUnit__Flow.html#a3fbb54e045e1a94ea032678fdbf92898">Unit_Flow::regressiveTest</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Testes unitarios de Flow passaram com sucesso!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;TODOS OS TESTES PASSARAM COM SUCESSO!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="ttc" id="aUnit__Model_8h_html"><div class="ttname"><a href="Unit__Model_8h.html">Unit_Model.h</a></div></div>
-<div class="ttc" id="aclassUnit__Model_html_a37d435d1e63ba4f6025b551c4eabcb38"><div class="ttname"><a href="classUnit__Model.html#a37d435d1e63ba4f6025b551c4eabcb38">Unit_Model::regressiveTest</a></div><div class="ttdeci">static bool regressiveTest(void)</div><div class="ttdef"><b>Definition:</b> <a href="Unit__Model_8cpp_source.html#l00165">Unit_Model.cpp:165</a></div></div>
+<div class="ttc" id="aclassUnit__Flow_html_a3fbb54e045e1a94ea032678fdbf92898"><div class="ttname"><a href="classUnit__Flow.html#a3fbb54e045e1a94ea032678fdbf92898">Unit_Flow::regressiveTest</a></div><div class="ttdeci">static bool regressiveTest(void)</div><div class="ttdef"><b>Definition:</b> <a href="unit__Flow_8cpp_source.html#l00110">unit_Flow.cpp:110</a></div></div>
+<div class="ttc" id="aclassUnit__Model_html_a37d435d1e63ba4f6025b551c4eabcb38"><div class="ttname"><a href="classUnit__Model.html#a37d435d1e63ba4f6025b551c4eabcb38">Unit_Model::regressiveTest</a></div><div class="ttdeci">static bool regressiveTest(void)</div><div class="ttdoc">Runs all the unit tests for the Model class (Regression Testing).</div><div class="ttdef"><b>Definition:</b> <a href="Unit__Model_8cpp_source.html#l00165">Unit_Model.cpp:165</a></div></div>
+<div class="ttc" id="aclassUnit__System_html_a7b90ea8dc91977b75a136d7a383089c9"><div class="ttname"><a href="classUnit__System.html#a7b90ea8dc91977b75a136d7a383089c9">Unit_System::regressiveTest</a></div><div class="ttdeci">static bool regressiveTest(void)</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00053">unit_System.cpp:53</a></div></div>
 <div class="ttc" id="atest_2funcional_2main_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="test_2funcional_2main_8cpp_source.html#l00003">main.cpp:3</a></div></div>
+<div class="ttc" id="aunit__Flow_8h_html"><div class="ttname"><a href="unit__Flow_8h.html">unit_Flow.h</a></div></div>
+<div class="ttc" id="aunit__System_8h_html"><div class="ttname"><a href="unit__System_8h.html">unit_System.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

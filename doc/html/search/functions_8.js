@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3d_115',['operator=',['../classFlowImpl.html#a856d066683cf70a957004c507c08b4fd',1,'FlowImpl::operator=()'],['../classModelImpl.html#a5c89b104c20013688809cfc0e1d12e10',1,'ModelImpl::operator=()'],['../classSystemImpl.html#aa90a45b567f1d915a6c2cadb578e3deb',1,'SystemImpl::operator=()'],['../classComplexFlow.html#a4b7d7263094e0e829bd87a0d6c815304',1,'ComplexFlow::operator=()'],['../classExponentialFlow.html#af9903c1a715409270d83c24e7f23a15d',1,'ExponentialFlow::operator=()'],['../classLogisticFlow.html#ac3dca15396c96ca30dfec725ef732931',1,'LogisticFlow::operator=()']]]
+  ['main_161',['main',['../test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../test_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../test_2unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp']]],
+  ['modelimpl_162',['ModelImpl',['../classModelImpl.html#a081505846c37ce9928f2176d77db4bc8',1,'ModelImpl::ModelImpl()'],['../classModelImpl.html#abece455e5562804c96db3b952e3d2c48',1,'ModelImpl::ModelImpl(std::string name, double time)'],['../classModelImpl.html#a027c2618c0645601df6287193db1ae1c',1,'ModelImpl::ModelImpl(const ModelImpl &amp;model)']]]
 ];
