@@ -3,12 +3,13 @@
 
 #include <string>
 
+class Flow;
+class System;
+
 /*!
  * @brief This class represents the interface of a model in the General Systems Theory implemented in this code.
  * * It acts as a container for systems and flows, controlling the execution of the simulation.
  */
-class Flow;
-class System;
 class Model {
 public:
     /*!

@@ -94,9 +94,12 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Construtor de copia e Operador de atribuicao</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span>    <a class="code" href="classSystemImpl.html#a6e8460199ac54949b08ecb315fce168b">SystemImpl</a>(<span class="keyword">const</span> <a class="code" href="classSystemImpl.html">SystemImpl</a>&amp; sys);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a>&amp; <a class="code" href="classSystemImpl.html#aa90a45b567f1d915a6c2cadb578e3deb">operator=</a>(<span class="keyword">const</span> <a class="code" href="classSystemImpl.html">SystemImpl</a>&amp; sys);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Permite que a classe de teste faça testes unitário a cada método</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classSystemImpl.html#a570c37a257d6d888145dec2cfc309e4b">   51</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classUnit__System.html">Unit_System</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aSystem_8h_html"><div class="ttname"><a href="System_8h.html">System.h</a></div></div>
 <div class="ttc" id="aclassSystemImpl_html"><div class="ttname"><a href="classSystemImpl.html">SystemImpl</a></div><div class="ttdoc">This class represents the concrete implementation of a System.</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8h_source.html#l00011">SystemImpl.h:11</a></div></div>
 <div class="ttc" id="aclassSystemImpl_html_a0cd451779458a7bd7c224a48ed163a9e"><div class="ttname"><a href="classSystemImpl.html#a0cd451779458a7bd7c224a48ed163a9e">SystemImpl::~SystemImpl</a></div><div class="ttdeci">virtual ~SystemImpl()</div><div class="ttdoc">destrutor</div><div class="ttdef"><b>Definition:</b> <a href="System_8cpp_source.html#l00010">System.cpp:10</a></div></div>
@@ -109,6 +112,7 @@ $(function() {
 <div class="ttc" id="aclassSystemImpl_html_ad068c75f35f48f312d0899d161ea7481"><div class="ttname"><a href="classSystemImpl.html#ad068c75f35f48f312d0899d161ea7481">SystemImpl::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8h_source.html#l00016">SystemImpl.h:16</a></div></div>
 <div class="ttc" id="aclassSystemImpl_html_aebe4a9ca472120a97bb46c7138df8e65"><div class="ttname"><a href="classSystemImpl.html#aebe4a9ca472120a97bb46c7138df8e65">SystemImpl::setValue</a></div><div class="ttdeci">void setValue(double value)</div><div class="ttdoc">Sets the value attribute in the System Class.</div><div class="ttdef"><b>Definition:</b> <a href="System_8cpp_source.html#l00020">System.cpp:20</a></div></div>
 <div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdoc">This Class represents the interface of a system in the General Systems Theory implemented in this cod...</div><div class="ttdef"><b>Definition:</b> <a href="System_8h_source.html#l00008">System.h:8</a></div></div>
+<div class="ttc" id="aclassUnit__System_html"><div class="ttname"><a href="classUnit__System.html">Unit_System</a></div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8h_source.html#l00004">unit_System.h:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['execute_8',['execute',['../classFlow.html#a619be0b590c78202127bc6ac7fb04029',1,'Flow::execute()'],['../classFlowImpl.html#a88d14f759988f1dcf393b83a93aea1f1',1,'FlowImpl::execute()'],['../classModel.html#a756ab116538d1c2f0bd9cd9487ac4f51',1,'Model::execute()'],['../classModelImpl.html#a3b060fc6802d9d6040ab8af1a9186631',1,'ModelImpl::execute()'],['../classComplexFlow.html#a744cb3029e9335038f3f8c1da6daea4d',1,'ComplexFlow::execute()'],['../classExponentialFlow.html#aafb074830c5c18138913cb10da3b8782',1,'ExponentialFlow::execute()'],['../classLogisticFlow.html#ae0d2de87d6dbb8cfc2af6db5cd22e884',1,'LogisticFlow::execute()']]],
-  ['exponentialflow_9',['ExponentialFlow',['../classExponentialFlow.html',1,'ExponentialFlow'],['../classExponentialFlow.html#a1f981db78e6635fd9837648960d8dc8d',1,'ExponentialFlow::ExponentialFlow()'],['../classExponentialFlow.html#a0243d42e46c8a4a9f831b6623d31d4a3',1,'ExponentialFlow::ExponentialFlow(std::string name, System *source, System *target)'],['../classExponentialFlow.html#a0a0fa7490d3c69ea7e32fa8f31410b86',1,'ExponentialFlow::ExponentialFlow(const ExponentialFlow &amp;flow)']]],
-  ['exponentialflow_2ecpp_10',['ExponentialFlow.cpp',['../ExponentialFlow_8cpp.html',1,'']]],
-  ['exponentialflow_2eh_11',['ExponentialFlow.h',['../ExponentialFlow_8h.html',1,'']]],
-  ['exponentialfuncionaltest_12',['exponentialFuncionalTest',['../funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcional_tests.cpp'],['../funcional__tests_8h.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcional_tests.cpp']]]
+  ['defaultconstructor_15',['defaultConstructor',['../classUnit__Flow.html#aa6fba875009ea2093fc95e45f6b35755',1,'Unit_Flow::defaultConstructor()'],['../classUnit__System.html#ade48b81ab3c3b1c0d1749e312c996ef7',1,'Unit_System::defaultConstructor()']]],
+  ['destructor_16',['destructor',['../classUnit__Flow.html#a7306d1e69397988bf17f0588d43f5d7e',1,'Unit_Flow::destructor()'],['../classUnit__System.html#a9b0749ca0f627f69c11d66e8654b14f5',1,'Unit_System::destructor()']]],
+  ['destrutor_17',['destrutor',['../classUnit__Model.html#a304100559ee1cc513b1f9cc05543f4f3',1,'Unit_Model']]]
 ];
