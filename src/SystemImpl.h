@@ -46,6 +46,9 @@ public:
      * @return SystemImpl& - a reference to the updated SystemImpl Class object.
      */
     SystemImpl& operator=(const SystemImpl& sys);
+
+    // Permite que a classe de teste faça testes unitário a cada método
+    friend class Unit_System;
 };
 
 #endif
