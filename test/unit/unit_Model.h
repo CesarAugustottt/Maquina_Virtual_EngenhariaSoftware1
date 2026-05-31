@@ -1,8 +1,6 @@
 #ifndef UNIT_MODEL_H
 #define UNIT_MODEL_H
 
-#include "../../src/ModelImpl.h"
-
 /*!
  * @brief A class containing static unit tests for the Model class.
  */

@@ -1,5 +1,5 @@
 <map id="FlowTest" name="FlowTest">
-<area shape="rect" id="node1" title=" " alt="" coords="7,155,86,181"/>
+<area shape="rect" id="node1" title="Class used exclusively to instantiate and test FlowImpl." alt="" coords="7,155,86,181"/>
 <area shape="rect" id="node2" href="$classFlowImpl.html" title="This class represents the concrete implementation of a Flow." alt="" coords="5,80,88,107"/>
 <area shape="rect" id="node3" href="$classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code." alt="" coords="20,5,73,32"/>
 </map>

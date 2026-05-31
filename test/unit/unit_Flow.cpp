@@ -3,6 +3,9 @@
 #include "../../src/SystemImpl.h"
 #include <cassert>
 
+/*!
+ * @brief Class used exclusively to instantiate and test FlowImpl.
+ */
 class FlowTest : public FlowImpl {
 public:
     FlowTest() : FlowImpl() {}
