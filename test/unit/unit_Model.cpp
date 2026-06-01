@@ -7,7 +7,7 @@
 #include<cmath>
 
 
-bool Unit_Model::construtor_default(void) {
+bool Unit_Model::defaultConstructor(void) {
     ModelImpl m1;
     assert(m1.name == "");
     assert(m1.time == 0.0);
@@ -17,7 +17,7 @@ bool Unit_Model::construtor_default(void) {
     return true;
 }
 
-bool Unit_Model::construtor(void) {
+bool Unit_Model::constructor(void) {
     ModelImpl m2("Modelo Dinamico", 10.0);
     assert(m2.name == "Modelo Dinamico");
     assert(m2.time == 10.0);
@@ -25,7 +25,7 @@ bool Unit_Model::construtor(void) {
     return true;
 }
 
-bool Unit_Model::destrutor(void){
+bool Unit_Model::destructor(void){
     ModelImpl* m = new ModelImpl();
     System* s1 = new SystemImpl();
     
@@ -68,16 +68,22 @@ bool Unit_Model::increment(void){
     return true;
 }
 
-bool Unit_Model::add(void) {
+bool Unit_Model::addSystem(void) {
     ModelImpl m;
     System* s1 = new SystemImpl("S1", 10.0);
-    System* s2 = new SystemImpl("S2", 0.0);
-    Flow* f = new ComplexFlow("F1", s1, s2);
 
     //adicionar sistema 
     m.add(s1);
     assert(m.systems.size() == 1);
     assert(m.systems[0] == s1);
+
+    delete s1;
+    return true;
+}
+
+bool Unit_Model::addFlow(void) {
+    ModelImpl m;
+    Flow* f = new ComplexFlow("F1", nullptr, nullptr);
 
     //adicionar fluxo
     m.add(f);
@@ -85,29 +91,32 @@ bool Unit_Model::add(void) {
     assert(m.flows[0] == f);
 
     delete f;
-    delete s1;
-    delete s2;
     return true;
 }
 
-bool Unit_Model::remove(void) {
+bool Unit_Model::removeSystem(void) {
     ModelImpl m;
     System* s1 = new SystemImpl("S1", 10.0);
-    System* s2 = new SystemImpl("S2", 0.0);
-    Flow* f = new ComplexFlow("F1", s1, s2);
 
     m.add(s1);
-    m.add(f);
 
     m.remove(s1);
     assert(m.systems.size() == 0);
+
+    delete s1;
+    return true;
+}
+
+bool Unit_Model::removeFlow(void) {
+    ModelImpl m;
+    Flow* f = new ComplexFlow("F1", nullptr, nullptr);
+
+    m.add(f);
 
     m.remove(f);
     assert(m.flows.size() == 0);
 
     delete f;
-    delete s1;
-    delete s2;
     return true;
 }
 
@@ -137,7 +146,7 @@ bool Unit_Model::setTime(void) {
     return true;
 }
 
-bool Unit_Model::construtorCopia(void) {
+bool Unit_Model::copyConstructor(void) {
     ModelImpl original("Original", 10.0);
     System* s = new SystemImpl("S1", 0.0);
     original.add(s);
@@ -153,7 +162,7 @@ bool Unit_Model::construtorCopia(void) {
     return true;
 }
 
-bool Unit_Model::atribuicao(void) {
+bool Unit_Model::assignmentOperator(void) {
     ModelImpl original("Original", 10.0);
     ModelImpl destino("Destino", 0.0);
 
@@ -165,19 +174,21 @@ bool Unit_Model::atribuicao(void) {
 
 bool Unit_Model::regressiveTest(void) {
     // Executa todasa as funções
-    assert(construtor_default());
-    assert(construtor());
-    assert(destrutor());
+    assert(defaultConstructor());
+    assert(constructor());
+    assert(destructor());
     assert(execute());
     assert(increment());
-    assert(add());
-    assert(remove());
+    assert(addSystem());
+    assert(addFlow());
+    assert(removeSystem());
+    assert(removeFlow());
     assert(getName());
     assert(setName());
     assert(getTime());
     assert(setTime());
-    assert(construtorCopia());
-    assert(atribuicao());
+    assert(copyConstructor());
+    assert(assignmentOperator());
     
     return true;
 }

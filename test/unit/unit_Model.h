@@ -11,19 +11,19 @@ public:
      * @brief Tests the default constructor of ModelImpl.
      * @return true if the test passed, false otherwise.
      */
-    static bool construtor_default(void);
+    static bool defaultConstructor(void); 
 
     /*!
      * @brief Tests the parameterized constructor of ModelImpl.
      * @return true if the test passed, false otherwise.
      */
-    static bool construtor(void);
+    static bool constructor(void);
 
     /*!
      * @brief Tests the destructor of ModelImpl.
      * @return true if the test passed, false otherwise.
      */
-    static bool destrutor(void);
+    static bool destructor(void);
 
     /*!
      * @brief Tests the execution method of ModelImpl.
@@ -38,16 +38,28 @@ public:
     static bool increment(void);
 
     /*!
-     * @brief Tests the addition of Systems and Flows into ModelImpl.
+     * @brief Tests the addition of Systems into ModelImpl.
      * @return true if the test passed, false otherwise.
      */
-    static bool add(void);
+    static bool addSystem(void);
 
     /*!
-     * @brief Tests the removal of Systems and Flows from ModelImpl.
+     * @brief Tests the addition of Flows into ModelImpl.
      * @return true if the test passed, false otherwise.
      */
-    static bool remove(void);
+    static bool addFlow(void);
+
+    /*!
+     * @brief Tests the removal of Systems from ModelImpl.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool removeSystem(void);
+
+    /*!
+     * @brief Tests the removal of Flows from ModelImpl.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool removeFlow(void);
 
     /*!
      * @brief Tests the getName method of ModelImpl.
@@ -77,13 +89,13 @@ public:
      * @brief Tests the assignment operator (=) of ModelImpl.
      * @return true if the test passed, false otherwise.
      */
-    static bool atribuicao(void);
+    static bool assignmentOperator(void);
 
     /*!
      * @brief Tests the copy constructor of ModelImpl.
      * @return true if the test passed, false otherwise.
      */
-    static bool construtorCopia(void);
+    static bool copyConstructor(void);
 
     //função global chamada pela main
     /*!
