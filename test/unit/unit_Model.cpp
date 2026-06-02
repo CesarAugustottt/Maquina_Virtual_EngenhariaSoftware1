@@ -44,9 +44,12 @@ bool Unit_Model::execute(void) {
 
     Flow* f = new ComplexFlow("Fluxo", s1, s2);
 
-    m.add(s1);
-    m.add(s2);
-    m.add(f);
+    //adicionar sistemas
+    m.systems.push_back(s1);
+    m.systems.push_back(s2);
+
+    //adicionar fluxos
+    m.flows.push_back(f);
 
     m.execute(0, 2, 1);
 
@@ -98,7 +101,7 @@ bool Unit_Model::removeSystem(void) {
     ModelImpl m;
     System* s1 = new SystemImpl("S1", 10.0);
 
-    m.add(s1);
+    m.systems.push_back(s1);
 
     m.remove(s1);
     assert(m.systems.size() == 0);
@@ -111,7 +114,7 @@ bool Unit_Model::removeFlow(void) {
     ModelImpl m;
     Flow* f = new ComplexFlow("F1", nullptr, nullptr);
 
-    m.add(f);
+    m.flows.push_back(f);
 
     m.remove(f);
     assert(m.flows.size() == 0);
@@ -149,7 +152,7 @@ bool Unit_Model::setTime(void) {
 bool Unit_Model::copyConstructor(void) {
     ModelImpl original("Original", 10.0);
     System* s = new SystemImpl("S1", 0.0);
-    original.add(s);
+    original.systems.push_back(s);
 
     // Invoca o construtor de cópia
     ModelImpl copia(original);
