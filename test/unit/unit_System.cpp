@@ -37,7 +37,8 @@ bool Unit_System::setName(void) {
 }
 
 bool Unit_System::getValue(void) {
-    SystemImpl s("Sys", 10.0);
+    SystemImpl s;
+    s.value = 10.0;
     assert(s.getValue() == 10.0);
     return true;
 }
@@ -50,18 +51,22 @@ bool Unit_System::setValue(void) {
 }
 
 bool Unit_System::copyConstructor(void) {
-    SystemImpl original("Original", 10.0);
+    SystemImpl original;
+    original.name = "Original";
+    original.value = 10.0;
+    
     SystemImpl copy(original);
-
     assert(copy.name == "Original");
     assert(copy.value == 10.0);
     return true;
 }
 
 bool Unit_System::assignmentOperator(void) {
-    SystemImpl original("Original", 10.0);
+    SystemImpl original;
+    original.name = "Original";
+    original.value = 10.0;
+    
     SystemImpl destination;
-
     destination = original;
 
     assert(destination.name == "Original");
