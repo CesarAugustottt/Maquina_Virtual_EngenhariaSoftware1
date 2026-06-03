@@ -7,7 +7,8 @@ var searchData=
   ['flowimpl_2eh_24',['FlowImpl.h',['../FlowImpl_8h.html',1,'']]],
   ['flows_25',['flows',['../classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea',1,'ModelImpl']]],
   ['flows_2ecpp_26',['flows.cpp',['../flows_8cpp.html',1,'']]],
-  ['flowtest_27',['FlowTest',['../classFlowTest.html',1,'FlowTest'],['../classFlowTest.html#a4883847a4fb99890633a21dad18636d6',1,'FlowTest::FlowTest()'],['../classFlowTest.html#ab223d0dcef21dac320ebb64130f576a1',1,'FlowTest::FlowTest(std::string name, System *source, System *target)']]],
-  ['funcional_5ftests_2ecpp_28',['funcional_tests.cpp',['../funcional__tests_8cpp.html',1,'']]],
-  ['funcional_5ftests_2eh_29',['funcional_tests.h',['../funcional__tests_8h.html',1,'']]]
+  ['flowtest_27',['FlowTest',['../classFlowTest.html',1,'FlowTest'],['../classFlowTest.html#ab223d0dcef21dac320ebb64130f576a1',1,'FlowTest::FlowTest(std::string name, System *source, System *target)'],['../classFlowTest.html#a4883847a4fb99890633a21dad18636d6',1,'FlowTest::FlowTest()']]],
+  ['flowtest2_28',['FlowTest2',['../classFlowTest2.html#a5221bef0c713ed9636dfbd6377df06c8',1,'FlowTest2::FlowTest2(std::string name, System *source, System *target)'],['../classFlowTest2.html#a47a5e253cc5ed5bcfc01a9219efe7802',1,'FlowTest2::FlowTest2()'],['../classFlowTest2.html',1,'FlowTest2']]],
+  ['funcional_5ftests_2ecpp_29',['funcional_tests.cpp',['../funcional__tests_8cpp.html',1,'']]],
+  ['funcional_5ftests_2eh_30',['funcional_tests.h',['../funcional__tests_8h.html',1,'']]]
 ];

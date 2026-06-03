@@ -29,10 +29,10 @@ public:
     ///destrutor
     virtual ~SystemImpl();
     // Setters e Getters
-    void setName(std::string name);
-    std::string getName() const;
-    void setValue(double value);
-    double getValue() const;
+    void setName(std::string name) override;
+    std::string getName() const override;
+    void setValue(double value) override;
+    double getValue() const override;
 
     // Construtor de copia e Operador de atribuicao
     /*!

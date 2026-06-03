@@ -36,7 +36,7 @@ Collaboration diagram for Logistic\+Flow\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}{$\sim$\+Logistic\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classLogisticFlow_ae0d2de87d6dbb8cfc2af6db5cd22e884}{execute}} () override
+virtual double \mbox{\hyperlink{classLogisticFlow_ae0d2de87d6dbb8cfc2af6db5cd22e884}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Executes the specific logistic equation for this flow. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classLogisticFlow_a8b195e7752074c8a7f44c8e50f97c955}{Logistic\+Flow}} (const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&flow)
 \begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
@@ -184,10 +184,10 @@ Definition at line 10 of file Logistic\+Flow.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{10                             \{}
-\DoxyCodeLine{11     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classFlowImpl_ab07923bc230308cd949f627a92901bca}{getTarget}}()==\textcolor{keyword}{nullptr})\{ \textcolor{comment}{//se não tiver sitesma de destino}}
+\DoxyCodeLine{11     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classFlowImpl_adb35e3574470e91207c631fda3cdc9bd}{getTarget}}()==\textcolor{keyword}{nullptr})\{ \textcolor{comment}{//se não tiver sitesma de destino}}
 \DoxyCodeLine{12         \textcolor{keywordflow}{return} 0.0;}
 \DoxyCodeLine{13     \}}
-\DoxyCodeLine{14     \textcolor{keywordtype}{double} valueTarget = \mbox{\hyperlink{classFlowImpl_ab07923bc230308cd949f627a92901bca}{getTarget}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}();}
+\DoxyCodeLine{14     \textcolor{keywordtype}{double} valueTarget = \mbox{\hyperlink{classFlowImpl_adb35e3574470e91207c631fda3cdc9bd}{getTarget}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}();}
 \DoxyCodeLine{15     \textcolor{keywordflow}{return} 0.01 * valueTarget * (1 -\/ valueTarget/70);}
 \DoxyCodeLine{16 \}}
 

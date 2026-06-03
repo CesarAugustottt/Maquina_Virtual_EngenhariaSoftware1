@@ -1,0 +1,385 @@
+\hypertarget{classFlowTest2}{}\doxysection{Flow\+Test2 Class Reference}
+\label{classFlowTest2}\index{FlowTest2@{FlowTest2}}
+
+
+Class used exclusively to instantiate and test \mbox{\hyperlink{classFlow}{Flow}}.  
+
+
+
+
+Inheritance diagram for Flow\+Test2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classFlowTest2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flow\+Test2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classFlowTest2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFlowTest2_a47a5e253cc5ed5bcfc01a9219efe7802}{Flow\+Test2}} ()
+\item 
+\mbox{\hyperlink{classFlowTest2_a5221bef0c713ed9636dfbd6377df06c8}{Flow\+Test2}} (std\+::string \mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}})
+\item 
+virtual \mbox{\hyperlink{classFlowTest2_a6fdaab7361fdf4ee8d470a7b4f4aedf6}{$\sim$\+Flow\+Test2}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{classFlowTest2_a59048238b62ffd20066f2fcaab5ec6f6}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name attribute in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFlowTest2_af7651c772946a3cea04bd94e926c692b}{set\+Name}} (std\+::string n) override
+\begin{DoxyCompactList}\small\item\em Sets the name attribute in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}{get\+Source}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the source system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFlowTest2_a5e9bb179ca12696a94d4cbc4ed66515f}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} $\ast$s) override
+\begin{DoxyCompactList}\small\item\em Sets the source system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlowTest2_a630aaabfa4820861a57d47e147ccd644}{get\+Target}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFlowTest2_af9d0cd1cc7c335d49459b526473beda7}{set\+Target}} (\mbox{\hyperlink{classSystem}{System}} $\ast$t) override
+\begin{DoxyCompactList}\small\item\em Sets the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classFlowTest2_a1a0a36de7f919f708cc50c4f1eedd835}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Pure virtual method to execute the flow equation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}
+\item 
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}
+\item 
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class used exclusively to instantiate and test \mbox{\hyperlink{classFlow}{Flow}}. 
+
+Definition at line 41 of file unit\+\_\+\+Model.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFlowTest2_a47a5e253cc5ed5bcfc01a9219efe7802}\label{classFlowTest2_a47a5e253cc5ed5bcfc01a9219efe7802}} 
+\index{FlowTest2@{FlowTest2}!FlowTest2@{FlowTest2}}
+\index{FlowTest2@{FlowTest2}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{FlowTest2()}{FlowTest2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Flow\+Test2\+::\+Flow\+Test2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 47 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                \{}
+\DoxyCodeLine{48         this-\/>\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}= \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{49         this-\/>\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}= \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{50         this-\/>\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}= \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{51     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFlowTest2_a5221bef0c713ed9636dfbd6377df06c8}\label{classFlowTest2_a5221bef0c713ed9636dfbd6377df06c8}} 
+\index{FlowTest2@{FlowTest2}!FlowTest2@{FlowTest2}}
+\index{FlowTest2@{FlowTest2}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{FlowTest2()}{FlowTest2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Flow\+Test2\+::\+Flow\+Test2 (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 53 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54         : \mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}(\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}), \mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}(\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}), \mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}(\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFlowTest2_a6fdaab7361fdf4ee8d470a7b4f4aedf6}\label{classFlowTest2_a6fdaab7361fdf4ee8d470a7b4f4aedf6}} 
+\index{FlowTest2@{FlowTest2}!````~FlowTest2@{$\sim$FlowTest2}}
+\index{````~FlowTest2@{$\sim$FlowTest2}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{$\sim$FlowTest2()}{~FlowTest2()}}
+{\footnotesize\ttfamily virtual Flow\+Test2\+::$\sim$\+Flow\+Test2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 55 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFlowTest2_a1a0a36de7f919f708cc50c4f1eedd835}\label{classFlowTest2_a1a0a36de7f919f708cc50c4f1eedd835}} 
+\index{FlowTest2@{FlowTest2}!execute@{execute}}
+\index{execute@{execute}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual double Flow\+Test2\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Pure virtual method to execute the flow equation. 
+
+
+\begin{DoxyItemize}
+\item Must be implemented by subclasses to define specific behaviors. \begin{DoxyReturn}{Returns}
+double -\/ the calculated value to be transferred between systems. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
+
+
+
+Definition at line 74 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74                                       \{ }
+\DoxyCodeLine{75         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}{getSource}}() != \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{// se tiver sistema de origem}}
+\DoxyCodeLine{76             \textcolor{keywordflow}{return} 0.01 * this-\/>\mbox{\hyperlink{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}{getSource}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(); }
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78         \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{79     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFlowTest2_a59048238b62ffd20066f2fcaab5ec6f6}\label{classFlowTest2_a59048238b62ffd20066f2fcaab5ec6f6}} 
+\index{FlowTest2@{FlowTest2}!getName@{getName}}
+\index{getName@{getName}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string Flow\+Test2\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name attribute in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+string -\/ the content name attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a2d0340d844ab2d275222938234e44169}{Flow}}.
+
+
+
+Definition at line 56 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                               \{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}};}
+\DoxyCodeLine{58     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}\label{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}} 
+\index{FlowTest2@{FlowTest2}!getSource@{getSource}}
+\index{getSource@{getSource}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classSystem}{System}}$\ast$ Flow\+Test2\+::get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the source system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+System$\ast$ -\/ pointer to the source system. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_aff381195663a5028494e3de9c6194f2c}{Flow}}.
+
+
+
+Definition at line 62 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62                                               \{}
+\DoxyCodeLine{63         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}};}
+\DoxyCodeLine{64     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFlowTest2_a630aaabfa4820861a57d47e147ccd644}\label{classFlowTest2_a630aaabfa4820861a57d47e147ccd644}} 
+\index{FlowTest2@{FlowTest2}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classSystem}{System}}$\ast$ Flow\+Test2\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+System$\ast$ -\/ pointer to the target system. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a81aeceffcb2b425af124c3b0d1962786}{Flow}}.
+
+
+
+Definition at line 68 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                               \{}
+\DoxyCodeLine{69         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}};}
+\DoxyCodeLine{70     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFlowTest2_af7651c772946a3cea04bd94e926c692b}\label{classFlowTest2_af7651c772946a3cea04bd94e926c692b}} 
+\index{FlowTest2@{FlowTest2}!setName@{setName}}
+\index{setName@{setName}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily virtual void Flow\+Test2\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the name attribute in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em name} & which will be set to the current flow. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a80346b11c95c20a009278eb78f8f9653}{Flow}}.
+
+
+
+Definition at line 59 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                               \{}
+\DoxyCodeLine{60         this-\/>\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}} = n;}
+\DoxyCodeLine{61     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFlowTest2_a5e9bb179ca12696a94d4cbc4ed66515f}\label{classFlowTest2_a5e9bb179ca12696a94d4cbc4ed66515f}} 
+\index{FlowTest2@{FlowTest2}!setSource@{setSource}}
+\index{setSource@{setSource}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
+{\footnotesize\ttfamily virtual void Flow\+Test2\+::set\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the source system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em source} & pointer to the system that will be the source. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a1ca17cd54e042c1c1ccf73597e7f188e}{Flow}}.
+
+
+
+Definition at line 65 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                                               \{}
+\DoxyCodeLine{66         this-\/>\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}} = s;}
+\DoxyCodeLine{67     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFlowTest2_af9d0cd1cc7c335d49459b526473beda7}\label{classFlowTest2_af9d0cd1cc7c335d49459b526473beda7}} 
+\index{FlowTest2@{FlowTest2}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
+{\footnotesize\ttfamily virtual void Flow\+Test2\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em target} & pointer to the system that will be the target. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a0a6d9503f9fd5afb978dd07346fa7e0d}{Flow}}.
+
+
+
+Definition at line 71 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71                                               \{}
+\DoxyCodeLine{72         this-\/>\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}} = t;}
+\DoxyCodeLine{73     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classFlowTest2_ad90e2c18210c34989d048835d2859c67}\label{classFlowTest2_ad90e2c18210c34989d048835d2859c67}} 
+\index{FlowTest2@{FlowTest2}!name@{name}}
+\index{name@{name}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Flow\+Test2\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 43 of file unit\+\_\+\+Model.\+cpp.
+
+\mbox{\Hypertarget{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}\label{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}} 
+\index{FlowTest2@{FlowTest2}!source@{source}}
+\index{source@{source}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}}$\ast$ Flow\+Test2\+::source\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 44 of file unit\+\_\+\+Model.\+cpp.
+
+\mbox{\Hypertarget{classFlowTest2_a4431cb98598d155297321677865c4361}\label{classFlowTest2_a4431cb98598d155297321677865c4361}} 
+\index{FlowTest2@{FlowTest2}!target@{target}}
+\index{target@{target}!FlowTest2@{FlowTest2}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}}$\ast$ Flow\+Test2\+::target\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 45 of file unit\+\_\+\+Model.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test/unit/\mbox{\hyperlink{unit__Model_8cpp}{unit\+\_\+\+Model.\+cpp}}\end{DoxyCompactItemize}

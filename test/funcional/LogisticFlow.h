@@ -33,7 +33,7 @@ class LogisticFlow: public FlowImpl{
          * * Overrides the pure virtual method from the Flow class.
          * @return double - the calculated value based on the logistic equation.
          */
-        double execute() override;
+        virtual double execute() override;
 
         //construtor copia
         /*!

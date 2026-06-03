@@ -1,4 +1,5 @@
 <map id="System" name="System">
-<area shape="rect" id="node1" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod..." alt="" coords="20,5,91,32"/>
+<area shape="rect" id="node1" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod..." alt="" coords="81,5,152,32"/>
 <area shape="rect" id="node2" href="$classSystemImpl.html" title="This class represents the concrete implementation of a System." alt="" coords="5,80,105,107"/>
+<area shape="rect" id="node3" href="$classSystemTest.html" title="Class used exclusively to instantiate and test System." alt="" coords="129,80,227,107"/>
 </map>
