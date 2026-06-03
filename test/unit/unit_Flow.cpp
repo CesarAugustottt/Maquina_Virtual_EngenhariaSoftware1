@@ -1,7 +1,18 @@
 #include "unit_Flow.h"
 #include "../../src/FlowImpl.h"
-#include "../../src/SystemImpl.h"
 #include <cassert>
+
+/*!
+ * @brief Mock Object to isolate Flow dependencies.
+ */
+class SystemMock : public System {
+public:
+    virtual ~SystemMock() {}
+    virtual std::string getName() const override { return ""; }
+    virtual void setName(std::string) override {}
+    virtual double getValue() const override { return 0.0; }
+    virtual void setValue(double) override {}
+};
 
 /*!
  * @brief Class used exclusively to instantiate and test FlowImpl.
@@ -23,8 +34,8 @@ bool Unit_Flow::defaultConstructor(void) {
 }
 
 bool Unit_Flow::constructor(void) {
-    SystemImpl s1("Src", 10.0);
-    SystemImpl s2("Tgt", 0.0);
+    SystemMock s1;
+    SystemMock s2;
     FlowTest f2("Fluxo", &s1, &s2);
     
     assert(f2.name == "Fluxo");
@@ -54,7 +65,7 @@ bool Unit_Flow::setName(void) {
 }
 
 bool Unit_Flow::getSource(void) {
-    SystemImpl s("Src", 10.0);
+    SystemMock s;
     FlowTest f;
     f.source = &s;
     assert(f.getSource() == &s);
@@ -62,7 +73,7 @@ bool Unit_Flow::getSource(void) {
 }
 
 bool Unit_Flow::setSource(void) {
-    SystemImpl s("Src", 10.0);
+    SystemMock s;
     FlowTest f;
     f.setSource(&s);
     assert(f.source == &s);
@@ -70,7 +81,7 @@ bool Unit_Flow::setSource(void) {
 }
 
 bool Unit_Flow::getTarget(void) {
-    SystemImpl s("Tgt", 5.0);
+    SystemMock s;
     FlowTest f;
     f.target = &s;
     assert(f.getTarget() == &s);
@@ -78,7 +89,7 @@ bool Unit_Flow::getTarget(void) {
 }
 
 bool Unit_Flow::setTarget(void) {
-    SystemImpl s("Tgt", 5.0);
+    SystemMock s;
     FlowTest f;
     f.setTarget(&s);
     assert(f.target == &s);
@@ -86,27 +97,33 @@ bool Unit_Flow::setTarget(void) {
 }
 
 bool Unit_Flow::copyConstructor(void) {
-    SystemImpl s1("S1", 10.0);
-    SystemImpl s2("S2", 0.0);
-    FlowTest original("Original", &s1, &s2);
+    SystemMock s1;
+    SystemMock s2;
+    FlowTest original;
+    original.name = "Original";
+    original.source = &s1;
+    original.target = &s2;
 
-    FlowTest copia(original);
-    assert(copia.name == "Original");
-    assert(copia.source == &s1);
-    assert(copia.target == &s2);
+    FlowTest copy(original);
+    assert(copy.name == "Original");
+    assert(copy.source == &s1);
+    assert(copy.target == &s2);
     return true;
 }
 
 bool Unit_Flow::assignmentOperator(void) {
-    SystemImpl s1("S1", 10.0);
-    SystemImpl s2("S2", 0.0);
-    FlowTest original("Original", &s1, &s2);
-    FlowTest destino;
+    SystemMock s1;
+    SystemMock s2;
+    FlowTest original;
+    original.name = "Original";
+    original.source = &s1;
+    original.target = &s2;
+    FlowTest destination;
 
-    destino = original;
-    assert(destino.name == "Original");
-    assert(destino.source == &s1);
-    assert(destino.target == &s2);
+    destination = original;
+    assert(destination.name == "Original");
+    assert(destination.source == &s1);
+    assert(destination.target == &s2);
     return true;
 }
 
