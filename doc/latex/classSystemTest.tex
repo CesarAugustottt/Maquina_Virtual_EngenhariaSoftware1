@@ -1,0 +1,268 @@
+\hypertarget{classSystemTest}{}\doxysection{System\+Test Class Reference}
+\label{classSystemTest}\index{SystemTest@{SystemTest}}
+
+
+Class used exclusively to instantiate and test \mbox{\hyperlink{classSystem}{System}}.  
+
+
+
+
+Inheritance diagram for System\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classSystemTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for System\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{classSystemTest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSystemTest_a1cdd51911f1e17fe46fb97dd269c4b1d}{System\+Test}} ()
+\item 
+\mbox{\hyperlink{classSystemTest_a1f9c3f4afb5eb45856d7c0232ef4e4e0}{System\+Test}} (std\+::string \mbox{\hyperlink{classSystemTest_a1965b14b05586a91e5df20f432eef519}{name}}, double \mbox{\hyperlink{classSystemTest_a4b02da8c1ab1c5c3f855175adaee3825}{value}})
+\item 
+virtual \mbox{\hyperlink{classSystemTest_a323db79082a04e3e95df394386936cfc}{$\sim$\+System\+Test}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{classSystemTest_a9aa7167713097761c6bb93cd0afad39b}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSystemTest_a595ea4cf8850b1d32074b762f67973ea}{set\+Name}} (std\+::string n) override
+\begin{DoxyCompactList}\small\item\em Sets the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classSystemTest_ada689815f31d9cf1380ef2f969a76c13}{get\+Value}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSystemTest_af1b933721e9bc7adf898dff1e4c9457d}{set\+Value}} (double v) override
+\begin{DoxyCompactList}\small\item\em Sets the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std \+::string \mbox{\hyperlink{classSystemTest_a1965b14b05586a91e5df20f432eef519}{name}}
+\item 
+double \mbox{\hyperlink{classSystemTest_a4b02da8c1ab1c5c3f855175adaee3825}{value}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class used exclusively to instantiate and test \mbox{\hyperlink{classSystem}{System}}. 
+
+Definition at line 11 of file unit\+\_\+\+Model.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSystemTest_a1cdd51911f1e17fe46fb97dd269c4b1d}\label{classSystemTest_a1cdd51911f1e17fe46fb97dd269c4b1d}} 
+\index{SystemTest@{SystemTest}!SystemTest@{SystemTest}}
+\index{SystemTest@{SystemTest}!SystemTest@{SystemTest}}
+\doxysubsubsection{\texorpdfstring{SystemTest()}{SystemTest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily System\+Test\+::\+System\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 16 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                  \{}
+\DoxyCodeLine{17         this-\/>\mbox{\hyperlink{classSystemTest_a1965b14b05586a91e5df20f432eef519}{name}} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{18         this-\/>\mbox{\hyperlink{classSystemTest_a4b02da8c1ab1c5c3f855175adaee3825}{value}} = 0.0;}
+\DoxyCodeLine{19     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSystemTest_a1f9c3f4afb5eb45856d7c0232ef4e4e0}\label{classSystemTest_a1f9c3f4afb5eb45856d7c0232ef4e4e0}} 
+\index{SystemTest@{SystemTest}!SystemTest@{SystemTest}}
+\index{SystemTest@{SystemTest}!SystemTest@{SystemTest}}
+\doxysubsubsection{\texorpdfstring{SystemTest()}{SystemTest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily System\+Test\+::\+System\+Test (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 20 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 : \mbox{\hyperlink{classSystemTest_a1965b14b05586a91e5df20f432eef519}{name}}(\mbox{\hyperlink{classSystemTest_a1965b14b05586a91e5df20f432eef519}{name}}), \mbox{\hyperlink{classSystemTest_a4b02da8c1ab1c5c3f855175adaee3825}{value}}(\mbox{\hyperlink{classSystemTest_a4b02da8c1ab1c5c3f855175adaee3825}{value}})\{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSystemTest_a323db79082a04e3e95df394386936cfc}\label{classSystemTest_a323db79082a04e3e95df394386936cfc}} 
+\index{SystemTest@{SystemTest}!````~SystemTest@{$\sim$SystemTest}}
+\index{````~SystemTest@{$\sim$SystemTest}!SystemTest@{SystemTest}}
+\doxysubsubsection{\texorpdfstring{$\sim$SystemTest()}{~SystemTest()}}
+{\footnotesize\ttfamily virtual System\+Test\+::$\sim$\+System\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 21 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSystemTest_a9aa7167713097761c6bb93cd0afad39b}\label{classSystemTest_a9aa7167713097761c6bb93cd0afad39b}} 
+\index{SystemTest@{SystemTest}!getName@{getName}}
+\index{getName@{getName}!SystemTest@{SystemTest}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string System\+Test\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+string -\/ the content name attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a3bc2509274e6c346e07b0bf1151378c5}{System}}.
+
+
+
+Definition at line 23 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                               \{}
+\DoxyCodeLine{24         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classSystemTest_a1965b14b05586a91e5df20f432eef519}{name}};}
+\DoxyCodeLine{25     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSystemTest_ada689815f31d9cf1380ef2f969a76c13}\label{classSystemTest_ada689815f31d9cf1380ef2f969a76c13}} 
+\index{SystemTest@{SystemTest}!getValue@{getValue}}
+\index{getValue@{getValue}!SystemTest@{SystemTest}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily virtual double System\+Test\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+double -\/ the content value attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{System}}.
+
+
+
+Definition at line 29 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                             \{}
+\DoxyCodeLine{30         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classSystemTest_a4b02da8c1ab1c5c3f855175adaee3825}{value}};}
+\DoxyCodeLine{31     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSystemTest_a595ea4cf8850b1d32074b762f67973ea}\label{classSystemTest_a595ea4cf8850b1d32074b762f67973ea}} 
+\index{SystemTest@{SystemTest}!setName@{setName}}
+\index{setName@{setName}!SystemTest@{SystemTest}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily virtual void System\+Test\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em name} & which will be set to the current system. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a9b91be893916f4cf8680ac56970950f1}{System}}.
+
+
+
+Definition at line 26 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26                                               \{}
+\DoxyCodeLine{27         this-\/>\mbox{\hyperlink{classSystemTest_a1965b14b05586a91e5df20f432eef519}{name}} = n;}
+\DoxyCodeLine{28     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSystemTest_af1b933721e9bc7adf898dff1e4c9457d}\label{classSystemTest_af1b933721e9bc7adf898dff1e4c9457d}} 
+\index{SystemTest@{SystemTest}!setValue@{setValue}}
+\index{setValue@{setValue}!SystemTest@{SystemTest}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily virtual void System\+Test\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em value} & which will be set to the current system. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{System}}.
+
+
+
+Definition at line 32 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                             \{}
+\DoxyCodeLine{33         this-\/>\mbox{\hyperlink{classSystemTest_a4b02da8c1ab1c5c3f855175adaee3825}{value}} = v;}
+\DoxyCodeLine{34     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSystemTest_a1965b14b05586a91e5df20f432eef519}\label{classSystemTest_a1965b14b05586a91e5df20f432eef519}} 
+\index{SystemTest@{SystemTest}!name@{name}}
+\index{name@{name}!SystemTest@{SystemTest}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std \+:: string System\+Test\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file unit\+\_\+\+Model.\+cpp.
+
+\mbox{\Hypertarget{classSystemTest_a4b02da8c1ab1c5c3f855175adaee3825}\label{classSystemTest_a4b02da8c1ab1c5c3f855175adaee3825}} 
+\index{SystemTest@{SystemTest}!value@{value}}
+\index{value@{value}!SystemTest@{SystemTest}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily double System\+Test\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file unit\+\_\+\+Model.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test/unit/\mbox{\hyperlink{unit__Model_8cpp}{unit\+\_\+\+Model.\+cpp}}\end{DoxyCompactItemize}

@@ -39,12 +39,12 @@ public:
     virtual double execute()=0; 
 
     //getters e setters
-    void setName(std::string name);
-    std::string getName()const;
-    void setSource(System* source);
-    System* getSource()const;
-    void setTarget(System* target);
-    System* getTarget()const;
+    void setName(std::string name) override;
+    std::string getName()const override;
+    void setSource(System* source) override;
+    System* getSource()const override;
+    void setTarget(System* target) override;
+    System* getTarget()const override;
 
     //construtor copia
     /*!
