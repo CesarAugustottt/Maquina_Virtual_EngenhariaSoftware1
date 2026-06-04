@@ -57,20 +57,22 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 61 of file unit\+\_\+\+System.\+cpp.
+Definition at line 64 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{61                                          \{}
-\DoxyCodeLine{62     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} original(\textcolor{stringliteral}{"{}Original"{}}, 10.0);}
-\DoxyCodeLine{63     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} destination;}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65     destination = original;}
-\DoxyCodeLine{66 }
-\DoxyCodeLine{67     assert(destination.\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}} == \textcolor{stringliteral}{"{}Original"{}});}
-\DoxyCodeLine{68     assert(destination.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} == 10.0);}
-\DoxyCodeLine{69     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{70 \}}
+\DoxyCodeLine{64                                          \{}
+\DoxyCodeLine{65     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} original;}
+\DoxyCodeLine{66     original.\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
+\DoxyCodeLine{67     original.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} = 10.0;}
+\DoxyCodeLine{68     }
+\DoxyCodeLine{69     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} destination;}
+\DoxyCodeLine{70     destination = original;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     assert(destination.\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}} == \textcolor{stringliteral}{"{}Original"{}});}
+\DoxyCodeLine{73     assert(destination.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} == 10.0);}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{75 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}\label{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}} 
@@ -115,18 +117,20 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 52 of file unit\+\_\+\+System.\+cpp.
+Definition at line 53 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{52                                       \{}
-\DoxyCodeLine{53     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} original(\textcolor{stringliteral}{"{}Original"{}}, 10.0);}
-\DoxyCodeLine{54     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} copy(original);}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56     assert(copy.name == \textcolor{stringliteral}{"{}Original"{}});}
-\DoxyCodeLine{57     assert(copy.value == 10.0);}
-\DoxyCodeLine{58     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{59 \}}
+\DoxyCodeLine{53                                       \{}
+\DoxyCodeLine{54     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} original;}
+\DoxyCodeLine{55     original.\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
+\DoxyCodeLine{56     original.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} = 10.0;}
+\DoxyCodeLine{57     }
+\DoxyCodeLine{58     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} copy(original);}
+\DoxyCodeLine{59     assert(copy.name == \textcolor{stringliteral}{"{}Original"{}});}
+\DoxyCodeLine{60     assert(copy.value == 10.0);}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{62 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}\label{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}} 
@@ -229,10 +233,11 @@ Definition at line 39 of file unit\+\_\+\+System.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{39                                \{}
-\DoxyCodeLine{40     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s(\textcolor{stringliteral}{"{}Sys"{}}, 10.0);}
-\DoxyCodeLine{41     assert(s.getValue() == 10.0);}
-\DoxyCodeLine{42     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{43 \}}
+\DoxyCodeLine{40     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s;}
+\DoxyCodeLine{41     s.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} = 10.0;}
+\DoxyCodeLine{42     assert(s.\mbox{\hyperlink{classSystemImpl_abd3ff91586d4474c0a747dc5dd6e0268}{getValue}}() == 10.0);}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{44 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_a7b90ea8dc91977b75a136d7a383089c9}\label{classUnit__System_a7b90ea8dc91977b75a136d7a383089c9}} 
@@ -250,22 +255,22 @@ true if all tests pass, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 72 of file unit\+\_\+\+System.\+cpp.
+Definition at line 77 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{72                                      \{}
-\DoxyCodeLine{73     assert(\mbox{\hyperlink{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}{defaultConstructor}}());}
-\DoxyCodeLine{74     assert(\mbox{\hyperlink{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}{constructor}}());}
-\DoxyCodeLine{75     assert(\mbox{\hyperlink{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}{destructor}}());}
-\DoxyCodeLine{76     assert(\mbox{\hyperlink{classUnit__System_a1aacfeca3281214115a6666b73ace27c}{getName}}());}
-\DoxyCodeLine{77     assert(\mbox{\hyperlink{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}{setName}}());}
-\DoxyCodeLine{78     assert(\mbox{\hyperlink{classUnit__System_a24725e6baf31599fedba18d7f03455e5}{getValue}}());}
-\DoxyCodeLine{79     assert(\mbox{\hyperlink{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}{setValue}}());}
-\DoxyCodeLine{80     assert(\mbox{\hyperlink{classUnit__System_a11c26aff1affb78e464b7957e036ad38}{copyConstructor}}());}
-\DoxyCodeLine{81     assert(\mbox{\hyperlink{classUnit__System_a5676eaa7f18e85f71260f0d90c0b31ce}{assignmentOperator}}());}
-\DoxyCodeLine{82     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{83 \}}
+\DoxyCodeLine{77                                      \{}
+\DoxyCodeLine{78     assert(\mbox{\hyperlink{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}{defaultConstructor}}());}
+\DoxyCodeLine{79     assert(\mbox{\hyperlink{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}{constructor}}());}
+\DoxyCodeLine{80     assert(\mbox{\hyperlink{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}{destructor}}());}
+\DoxyCodeLine{81     assert(\mbox{\hyperlink{classUnit__System_a1aacfeca3281214115a6666b73ace27c}{getName}}());}
+\DoxyCodeLine{82     assert(\mbox{\hyperlink{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}{setName}}());}
+\DoxyCodeLine{83     assert(\mbox{\hyperlink{classUnit__System_a24725e6baf31599fedba18d7f03455e5}{getValue}}());}
+\DoxyCodeLine{84     assert(\mbox{\hyperlink{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}{setValue}}());}
+\DoxyCodeLine{85     assert(\mbox{\hyperlink{classUnit__System_a11c26aff1affb78e464b7957e036ad38}{copyConstructor}}());}
+\DoxyCodeLine{86     assert(\mbox{\hyperlink{classUnit__System_a5676eaa7f18e85f71260f0d90c0b31ce}{assignmentOperator}}());}
+\DoxyCodeLine{87     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{88 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}\label{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}} 
@@ -310,16 +315,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 45 of file unit\+\_\+\+System.\+cpp.
+Definition at line 46 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{45                                \{}
-\DoxyCodeLine{46     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s;}
-\DoxyCodeLine{47     s.\mbox{\hyperlink{classSystemImpl_a3ebff8dd869e1fab281375d5c2ef8362}{setValue}}(100.0);}
-\DoxyCodeLine{48     assert(s.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} == 100.0);}
-\DoxyCodeLine{49     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{50 \}}
+\DoxyCodeLine{46                                \{}
+\DoxyCodeLine{47     \mbox{\hyperlink{classSystemImpl}{SystemImpl}} s;}
+\DoxyCodeLine{48     s.\mbox{\hyperlink{classSystemImpl_a3ebff8dd869e1fab281375d5c2ef8362}{setValue}}(100.0);}
+\DoxyCodeLine{49     assert(s.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} == 100.0);}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{51 \}}
 
 \end{DoxyCode}
 

@@ -91,8 +91,8 @@ bool Unit_Model::defaultConstructor(void) {
 }
 
 bool Unit_Model::constructor(void) {
-    ModelImpl m2("Modelo Dinamico", 10.0);
-    assert(m2.name == "Modelo Dinamico");
+    ModelImpl m2("Modelo", 10.0);
+    assert(m2.name == "Modelo");
     assert(m2.time == 10.0);
 
     return true;
@@ -111,7 +111,7 @@ bool Unit_Model::destructor(void){
 }
 
 bool Unit_Model::execute(void) {
-    ModelImpl m("Modelo Teste", 0.0);
+    ModelImpl m;
     System* s1 = new SystemTest("Origem", 100.0);
     System* s2 = new SystemTest("Destino", 0.0);
 
@@ -142,7 +142,8 @@ bool Unit_Model::execute(void) {
 }
 
 bool Unit_Model::increment(void){
-    ModelImpl m("Modelo", 5.0);
+    ModelImpl m;
+    m.time = 5.0;
     m.incrementTime(3);
     assert(m.time == 8.0);
     return true;
@@ -208,20 +209,22 @@ bool Unit_Model::removeFlow(void) {
 }
 
 bool Unit_Model::getName(void) {
-    ModelImpl m("Nome Teste", 0.0);
-    assert(m.getName() == "Nome Teste");
+    ModelImpl m;
+    m.name = "Modelo";
+    assert(m.getName() == "Modelo");
     return true;
 }
 
 bool Unit_Model::setName(void) {
     ModelImpl m;
-    m.setName("Nome Novo");
-    assert(m.name == "Nome Novo");
+    m.setName("Modelo");
+    assert(m.name == "Modelo");
     return true;
 }
 
 bool Unit_Model::getTime(void) {
-    ModelImpl m("Modelo", 20.0);
+    ModelImpl m;
+    m.time = 20.0;
     assert(m.getTime() == 20.0);
     return true;
 }
@@ -234,10 +237,12 @@ bool Unit_Model::setTime(void) {
 }
 
 bool Unit_Model::copyConstructor(void) {
-    ModelImpl original("Original", 10.0);
+    ModelImpl original;
+    original.name = "Original";
+    original.time = 10.0;
     System* s = new SystemTest("S1", 0.0);
 
-    //adiciona sistema
+    //adiciona sistema no modelo original
     original.systems.push_back(s);
 
     // Invoca o construtor de cópia
@@ -255,8 +260,13 @@ bool Unit_Model::copyConstructor(void) {
 }
 
 bool Unit_Model::assignmentOperator(void) {
-    ModelImpl original("Original", 10.0);
-    ModelImpl destino("Destino", 0.0);
+    ModelImpl original;
+    original.name = "Original";
+    original.time = 10.0;
+    
+    ModelImpl destino;
+    destino.name = "Destino";
+    destino.time = 0.0;
 
     destino = original;
     assert(destino.name == "Original");
