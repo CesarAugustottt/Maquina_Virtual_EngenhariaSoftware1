@@ -140,17 +140,19 @@ Static Public Member Functions</h2></td></tr>
 <p>Tests the assignment operator (=) of <a class="el" href="classSystemImpl.html" title="This class represents the concrete implementation of a System.">SystemImpl</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the test passed, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="unit__System_8cpp_source.html#l00061">61</a> of file <a class="el" href="unit__System_8cpp_source.html">unit_System.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                         {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> original(<span class="stringliteral">&quot;Original&quot;</span>, 10.0);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> destination;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    destination = original;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    assert(destination.<a class="code" href="classSystemImpl.html#aaf1f43ae8a49e3eec145459a22520fa5">name</a> == <span class="stringliteral">&quot;Original&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    assert(destination.<a class="code" href="classSystemImpl.html#ad068c75f35f48f312d0899d161ea7481">value</a> == 10.0);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="unit__System_8cpp_source.html#l00064">64</a> of file <a class="el" href="unit__System_8cpp_source.html">unit_System.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                         {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> original;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    original.<a class="code" href="classSystemImpl.html#aaf1f43ae8a49e3eec145459a22520fa5">name</a> = <span class="stringliteral">&quot;Original&quot;</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    original.<a class="code" href="classSystemImpl.html#ad068c75f35f48f312d0899d161ea7481">value</a> = 10.0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> destination;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    destination = original;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    assert(destination.<a class="code" href="classSystemImpl.html#aaf1f43ae8a49e3eec145459a22520fa5">name</a> == <span class="stringliteral">&quot;Original&quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    assert(destination.<a class="code" href="classSystemImpl.html#ad068c75f35f48f312d0899d161ea7481">value</a> == 10.0);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 <div class="ttc" id="aclassSystemImpl_html"><div class="ttname"><a href="classSystemImpl.html">SystemImpl</a></div><div class="ttdoc">This class represents the concrete implementation of a System.</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8h_source.html#l00011">SystemImpl.h:11</a></div></div>
 <div class="ttc" id="aclassSystemImpl_html_aaf1f43ae8a49e3eec145459a22520fa5"><div class="ttname"><a href="classSystemImpl.html#aaf1f43ae8a49e3eec145459a22520fa5">SystemImpl::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8h_source.html#l00014">SystemImpl.h:14</a></div></div>
 <div class="ttc" id="aclassSystemImpl_html_ad068c75f35f48f312d0899d161ea7481"><div class="ttname"><a href="classSystemImpl.html#ad068c75f35f48f312d0899d161ea7481">SystemImpl::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8h_source.html#l00016">SystemImpl.h:16</a></div></div>
@@ -221,15 +223,17 @@ Static Public Member Functions</h2></td></tr>
 <p>Tests the copy constructor of <a class="el" href="classSystemImpl.html" title="This class represents the concrete implementation of a System.">SystemImpl</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the test passed, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="unit__System_8cpp_source.html#l00052">52</a> of file <a class="el" href="unit__System_8cpp_source.html">unit_System.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                      {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> original(<span class="stringliteral">&quot;Original&quot;</span>, 10.0);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> copy(original);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    assert(copy.name == <span class="stringliteral">&quot;Original&quot;</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    assert(copy.value == 10.0);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="unit__System_8cpp_source.html#l00053">53</a> of file <a class="el" href="unit__System_8cpp_source.html">unit_System.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                      {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> original;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    original.<a class="code" href="classSystemImpl.html#aaf1f43ae8a49e3eec145459a22520fa5">name</a> = <span class="stringliteral">&quot;Original&quot;</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    original.<a class="code" href="classSystemImpl.html#ad068c75f35f48f312d0899d161ea7481">value</a> = 10.0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> copy(original);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    assert(copy.name == <span class="stringliteral">&quot;Original&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    assert(copy.value == 10.0);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -373,10 +377,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="unit__System_8cpp_source.html#l00039">39</a> of file <a class="el" href="unit__System_8cpp_source.html">unit_System.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                               {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> s(<span class="stringliteral">&quot;Sys&quot;</span>, 10.0);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    assert(s.getValue() == 10.0);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> s;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    s.<a class="code" href="classSystemImpl.html#ad068c75f35f48f312d0899d161ea7481">value</a> = 10.0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    assert(s.<a class="code" href="classSystemImpl.html#abd3ff91586d4474c0a747dc5dd6e0268">getValue</a>() == 10.0);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="aclassSystemImpl_html_abd3ff91586d4474c0a747dc5dd6e0268"><div class="ttname"><a href="classSystemImpl.html#abd3ff91586d4474c0a747dc5dd6e0268">SystemImpl::getValue</a></div><div class="ttdeci">double getValue() const override</div><div class="ttdoc">Returns the value attribute in the System Class.</div><div class="ttdef"><b>Definition:</b> <a href="System_8cpp_source.html#l00024">System.cpp:24</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -407,28 +413,28 @@ Static Public Member Functions</h2></td></tr>
 <p>Runs all the unit tests for the <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> class (Regression Testing). </p>
 <dl class="section return"><dt>Returns</dt><dd>true if all tests pass, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="unit__System_8cpp_source.html#l00072">72</a> of file <a class="el" href="unit__System_8cpp_source.html">unit_System.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                     {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    assert(<a class="code" href="classUnit__System.html#ade48b81ab3c3b1c0d1749e312c996ef7">defaultConstructor</a>());</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    assert(<a class="code" href="classUnit__System.html#ab9498fdc1dfbe0b74eafe0f1d94c511e">constructor</a>());</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    assert(<a class="code" href="classUnit__System.html#a9b0749ca0f627f69c11d66e8654b14f5">destructor</a>());</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    assert(<a class="code" href="classUnit__System.html#a1aacfeca3281214115a6666b73ace27c">getName</a>());</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    assert(<a class="code" href="classUnit__System.html#a4b7d1bb5edb70fabb2f9895c32d7e33d">setName</a>());</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    assert(<a class="code" href="classUnit__System.html#a24725e6baf31599fedba18d7f03455e5">getValue</a>());</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    assert(<a class="code" href="classUnit__System.html#aea16988b51ce63a388c5aa414a0fff4a">setValue</a>());</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    assert(<a class="code" href="classUnit__System.html#a11c26aff1affb78e464b7957e036ad38">copyConstructor</a>());</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    assert(<a class="code" href="classUnit__System.html#a5676eaa7f18e85f71260f0d90c0b31ce">assignmentOperator</a>());</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="ttc" id="aclassUnit__System_html_a11c26aff1affb78e464b7957e036ad38"><div class="ttname"><a href="classUnit__System.html#a11c26aff1affb78e464b7957e036ad38">Unit_System::copyConstructor</a></div><div class="ttdeci">static bool copyConstructor(void)</div><div class="ttdoc">Tests the copy constructor of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00052">unit_System.cpp:52</a></div></div>
+<p class="definition">Definition at line <a class="el" href="unit__System_8cpp_source.html#l00077">77</a> of file <a class="el" href="unit__System_8cpp_source.html">unit_System.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                     {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    assert(<a class="code" href="classUnit__System.html#ade48b81ab3c3b1c0d1749e312c996ef7">defaultConstructor</a>());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    assert(<a class="code" href="classUnit__System.html#ab9498fdc1dfbe0b74eafe0f1d94c511e">constructor</a>());</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    assert(<a class="code" href="classUnit__System.html#a9b0749ca0f627f69c11d66e8654b14f5">destructor</a>());</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    assert(<a class="code" href="classUnit__System.html#a1aacfeca3281214115a6666b73ace27c">getName</a>());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    assert(<a class="code" href="classUnit__System.html#a4b7d1bb5edb70fabb2f9895c32d7e33d">setName</a>());</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    assert(<a class="code" href="classUnit__System.html#a24725e6baf31599fedba18d7f03455e5">getValue</a>());</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    assert(<a class="code" href="classUnit__System.html#aea16988b51ce63a388c5aa414a0fff4a">setValue</a>());</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    assert(<a class="code" href="classUnit__System.html#a11c26aff1affb78e464b7957e036ad38">copyConstructor</a>());</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    assert(<a class="code" href="classUnit__System.html#a5676eaa7f18e85f71260f0d90c0b31ce">assignmentOperator</a>());</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="ttc" id="aclassUnit__System_html_a11c26aff1affb78e464b7957e036ad38"><div class="ttname"><a href="classUnit__System.html#a11c26aff1affb78e464b7957e036ad38">Unit_System::copyConstructor</a></div><div class="ttdeci">static bool copyConstructor(void)</div><div class="ttdoc">Tests the copy constructor of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00053">unit_System.cpp:53</a></div></div>
 <div class="ttc" id="aclassUnit__System_html_a1aacfeca3281214115a6666b73ace27c"><div class="ttname"><a href="classUnit__System.html#a1aacfeca3281214115a6666b73ace27c">Unit_System::getName</a></div><div class="ttdeci">static bool getName(void)</div><div class="ttdoc">Tests the getName method of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00025">unit_System.cpp:25</a></div></div>
 <div class="ttc" id="aclassUnit__System_html_a24725e6baf31599fedba18d7f03455e5"><div class="ttname"><a href="classUnit__System.html#a24725e6baf31599fedba18d7f03455e5">Unit_System::getValue</a></div><div class="ttdeci">static bool getValue(void)</div><div class="ttdoc">Tests the getValue method of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00039">unit_System.cpp:39</a></div></div>
 <div class="ttc" id="aclassUnit__System_html_a4b7d1bb5edb70fabb2f9895c32d7e33d"><div class="ttname"><a href="classUnit__System.html#a4b7d1bb5edb70fabb2f9895c32d7e33d">Unit_System::setName</a></div><div class="ttdeci">static bool setName(void)</div><div class="ttdoc">Tests the setName method of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00032">unit_System.cpp:32</a></div></div>
-<div class="ttc" id="aclassUnit__System_html_a5676eaa7f18e85f71260f0d90c0b31ce"><div class="ttname"><a href="classUnit__System.html#a5676eaa7f18e85f71260f0d90c0b31ce">Unit_System::assignmentOperator</a></div><div class="ttdeci">static bool assignmentOperator(void)</div><div class="ttdoc">Tests the assignment operator (=) of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00061">unit_System.cpp:61</a></div></div>
+<div class="ttc" id="aclassUnit__System_html_a5676eaa7f18e85f71260f0d90c0b31ce"><div class="ttname"><a href="classUnit__System.html#a5676eaa7f18e85f71260f0d90c0b31ce">Unit_System::assignmentOperator</a></div><div class="ttdeci">static bool assignmentOperator(void)</div><div class="ttdoc">Tests the assignment operator (=) of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00064">unit_System.cpp:64</a></div></div>
 <div class="ttc" id="aclassUnit__System_html_a9b0749ca0f627f69c11d66e8654b14f5"><div class="ttname"><a href="classUnit__System.html#a9b0749ca0f627f69c11d66e8654b14f5">Unit_System::destructor</a></div><div class="ttdeci">static bool destructor(void)</div><div class="ttdoc">Tests the destructor of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00019">unit_System.cpp:19</a></div></div>
 <div class="ttc" id="aclassUnit__System_html_ab9498fdc1dfbe0b74eafe0f1d94c511e"><div class="ttname"><a href="classUnit__System.html#ab9498fdc1dfbe0b74eafe0f1d94c511e">Unit_System::constructor</a></div><div class="ttdeci">static bool constructor(void)</div><div class="ttdoc">Tests the parameterized constructor of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00012">unit_System.cpp:12</a></div></div>
 <div class="ttc" id="aclassUnit__System_html_ade48b81ab3c3b1c0d1749e312c996ef7"><div class="ttname"><a href="classUnit__System.html#ade48b81ab3c3b1c0d1749e312c996ef7">Unit_System::defaultConstructor</a></div><div class="ttdeci">static bool defaultConstructor(void)</div><div class="ttdoc">Tests the default constructor of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00005">unit_System.cpp:5</a></div></div>
-<div class="ttc" id="aclassUnit__System_html_aea16988b51ce63a388c5aa414a0fff4a"><div class="ttname"><a href="classUnit__System.html#aea16988b51ce63a388c5aa414a0fff4a">Unit_System::setValue</a></div><div class="ttdeci">static bool setValue(void)</div><div class="ttdoc">Tests the setValue method of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00045">unit_System.cpp:45</a></div></div>
+<div class="ttc" id="aclassUnit__System_html_aea16988b51ce63a388c5aa414a0fff4a"><div class="ttname"><a href="classUnit__System.html#aea16988b51ce63a388c5aa414a0fff4a">Unit_System::setValue</a></div><div class="ttdeci">static bool setValue(void)</div><div class="ttdoc">Tests the setValue method of SystemImpl.</div><div class="ttdef"><b>Definition:</b> <a href="unit__System_8cpp_source.html#l00046">unit_System.cpp:46</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -497,13 +503,13 @@ Static Public Member Functions</h2></td></tr>
 <p>Tests the setValue method of <a class="el" href="classSystemImpl.html" title="This class represents the concrete implementation of a System.">SystemImpl</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the test passed, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="unit__System_8cpp_source.html#l00045">45</a> of file <a class="el" href="unit__System_8cpp_source.html">unit_System.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                               {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> s;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    s.<a class="code" href="classSystemImpl.html#a3ebff8dd869e1fab281375d5c2ef8362">setValue</a>(100.0);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    assert(s.<a class="code" href="classSystemImpl.html#ad068c75f35f48f312d0899d161ea7481">value</a> == 100.0);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="unit__System_8cpp_source.html#l00046">46</a> of file <a class="el" href="unit__System_8cpp_source.html">unit_System.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                               {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classSystemImpl.html">SystemImpl</a> s;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    s.<a class="code" href="classSystemImpl.html#a3ebff8dd869e1fab281375d5c2ef8362">setValue</a>(100.0);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    assert(s.<a class="code" href="classSystemImpl.html#ad068c75f35f48f312d0899d161ea7481">value</a> == 100.0);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="ttc" id="aclassSystemImpl_html_a3ebff8dd869e1fab281375d5c2ef8362"><div class="ttname"><a href="classSystemImpl.html#a3ebff8dd869e1fab281375d5c2ef8362">SystemImpl::setValue</a></div><div class="ttdeci">void setValue(double value) override</div><div class="ttdoc">Sets the value attribute in the System Class.</div><div class="ttdef"><b>Definition:</b> <a href="System_8cpp_source.html#l00020">System.cpp:20</a></div></div>
 </div><!-- fragment -->
 </div>

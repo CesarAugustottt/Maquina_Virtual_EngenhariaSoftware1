@@ -1,0 +1,4 @@
+<map id="SystemMock" name="SystemMock">
+<area shape="rect" id="node1" title="Mock Object to isolate Flow dependencies." alt="" coords="5,80,112,107"/>
+<area shape="rect" id="node2" href="$classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod..." alt="" coords="23,5,94,32"/>
+</map>

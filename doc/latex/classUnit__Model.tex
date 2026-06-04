@@ -69,24 +69,24 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 167 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 168 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{167                              \{}
-\DoxyCodeLine{168     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
-\DoxyCodeLine{169     \mbox{\hyperlink{classFlow}{Flow}}* f = \textcolor{keyword}{new} \mbox{\hyperlink{classFlowTest2}{FlowTest2}}(\textcolor{stringliteral}{"{}F1"{}}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{170 }
-\DoxyCodeLine{171     \textcolor{comment}{//adicionar fluxo}}
-\DoxyCodeLine{172     m.\mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{add}}(f);}
-\DoxyCodeLine{173     assert(m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.size() == 1);}
-\DoxyCodeLine{174     assert(m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}[0] == f);}
-\DoxyCodeLine{175 }
-\DoxyCodeLine{176     \textcolor{comment}{//liberar memoria}}
-\DoxyCodeLine{177     m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.clear();}
-\DoxyCodeLine{178     \textcolor{keyword}{delete} f;}
-\DoxyCodeLine{179     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{180 \}}
+\DoxyCodeLine{168                              \{}
+\DoxyCodeLine{169     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
+\DoxyCodeLine{170     \mbox{\hyperlink{classFlow}{Flow}}* f = \textcolor{keyword}{new} \mbox{\hyperlink{classFlowTest2}{FlowTest2}}(\textcolor{stringliteral}{"{}F1"{}}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172     \textcolor{comment}{//adicionar fluxo}}
+\DoxyCodeLine{173     m.\mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{add}}(f);}
+\DoxyCodeLine{174     assert(m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.size() == 1);}
+\DoxyCodeLine{175     assert(m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}[0] == f);}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177     \textcolor{comment}{//liberar memoria}}
+\DoxyCodeLine{178     m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.clear();}
+\DoxyCodeLine{179     \textcolor{keyword}{delete} f;}
+\DoxyCodeLine{180     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{181 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_a3a8101ec44c67e8f763d4ec338d3e7a6}\label{classUnit__Model_a3a8101ec44c67e8f763d4ec338d3e7a6}} 
@@ -104,25 +104,25 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 151 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 152 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{151                                \{}
-\DoxyCodeLine{152     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
-\DoxyCodeLine{153     \mbox{\hyperlink{classSystem}{System}}* s1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemTest}{SystemTest}}(\textcolor{stringliteral}{"{}S1"{}}, 10.0);}
-\DoxyCodeLine{154 }
-\DoxyCodeLine{155     \textcolor{comment}{//adicionar sistema }}
-\DoxyCodeLine{156     m.\mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{add}}(s1);}
-\DoxyCodeLine{157 }
-\DoxyCodeLine{158     assert(m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.size() == 1);}
-\DoxyCodeLine{159     assert(m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}[0] == s1);}
-\DoxyCodeLine{160 }
-\DoxyCodeLine{161     \textcolor{comment}{//liberar sistema}}
-\DoxyCodeLine{162     m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.clear();}
-\DoxyCodeLine{163     \textcolor{keyword}{delete} s1;}
-\DoxyCodeLine{164     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{165 \}}
+\DoxyCodeLine{152                                \{}
+\DoxyCodeLine{153     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
+\DoxyCodeLine{154     \mbox{\hyperlink{classSystem}{System}}* s1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemTest}{SystemTest}}(\textcolor{stringliteral}{"{}S1"{}}, 10.0);}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156     \textcolor{comment}{//adicionar sistema }}
+\DoxyCodeLine{157     m.\mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{add}}(s1);}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159     assert(m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.size() == 1);}
+\DoxyCodeLine{160     assert(m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}[0] == s1);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162     \textcolor{comment}{//liberar sistema}}
+\DoxyCodeLine{163     m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.clear();}
+\DoxyCodeLine{164     \textcolor{keyword}{delete} s1;}
+\DoxyCodeLine{165     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{166 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_a9a93110a11b313c4bea565fab97c5dd8}\label{classUnit__Model_a9a93110a11b313c4bea565fab97c5dd8}} 
@@ -140,19 +140,24 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 257 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 262 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{257                                         \{}
-\DoxyCodeLine{258     \mbox{\hyperlink{classModelImpl}{ModelImpl}} original(\textcolor{stringliteral}{"{}Original"{}}, 10.0);}
-\DoxyCodeLine{259     \mbox{\hyperlink{classModelImpl}{ModelImpl}} destino(\textcolor{stringliteral}{"{}Destino"{}}, 0.0);}
-\DoxyCodeLine{260 }
-\DoxyCodeLine{261     destino = original;}
-\DoxyCodeLine{262     assert(destino.name == \textcolor{stringliteral}{"{}Original"{}});}
-\DoxyCodeLine{263     assert(destino.time == 10.0);}
-\DoxyCodeLine{264     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{265 \}}
+\DoxyCodeLine{262                                         \{}
+\DoxyCodeLine{263     \mbox{\hyperlink{classModelImpl}{ModelImpl}} original;}
+\DoxyCodeLine{264     original.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
+\DoxyCodeLine{265     original.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = 10.0;}
+\DoxyCodeLine{266     }
+\DoxyCodeLine{267     \mbox{\hyperlink{classModelImpl}{ModelImpl}} destino;}
+\DoxyCodeLine{268     destino.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = \textcolor{stringliteral}{"{}Destino"{}};}
+\DoxyCodeLine{269     destino.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = 0.0;}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{271     destino = original;}
+\DoxyCodeLine{272     assert(destino.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} == \textcolor{stringliteral}{"{}Original"{}});}
+\DoxyCodeLine{273     assert(destino.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} == 10.0);}
+\DoxyCodeLine{274     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{275 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_a5fcee6bc2f0cfa13464b995470d0c122}\label{classUnit__Model_a5fcee6bc2f0cfa13464b995470d0c122}} 
@@ -175,8 +180,8 @@ Definition at line 93 of file unit\+\_\+\+Model.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{93                                  \{}
-\DoxyCodeLine{94     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m2(\textcolor{stringliteral}{"{}Modelo Dinamico"{}}, 10.0);}
-\DoxyCodeLine{95     assert(m2.name == \textcolor{stringliteral}{"{}Modelo Dinamico"{}});}
+\DoxyCodeLine{94     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m2(\textcolor{stringliteral}{"{}Modelo"{}}, 10.0);}
+\DoxyCodeLine{95     assert(m2.name == \textcolor{stringliteral}{"{}Modelo"{}});}
 \DoxyCodeLine{96     assert(m2.time == 10.0);}
 \DoxyCodeLine{97 }
 \DoxyCodeLine{98     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
@@ -198,30 +203,32 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 236 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 239 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{236                                      \{}
-\DoxyCodeLine{237     \mbox{\hyperlink{classModelImpl}{ModelImpl}} original(\textcolor{stringliteral}{"{}Original"{}}, 10.0);}
-\DoxyCodeLine{238     \mbox{\hyperlink{classSystem}{System}}* s = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemTest}{SystemTest}}(\textcolor{stringliteral}{"{}S1"{}}, 0.0);}
-\DoxyCodeLine{239 }
-\DoxyCodeLine{240     \textcolor{comment}{//adiciona sistema}}
-\DoxyCodeLine{241     original.systems.push\_back(s);}
-\DoxyCodeLine{242 }
-\DoxyCodeLine{243     \textcolor{comment}{// Invoca o construtor de cópia}}
-\DoxyCodeLine{244     \mbox{\hyperlink{classModelImpl}{ModelImpl}} copia(original);}
-\DoxyCodeLine{245     assert(copia.name == \textcolor{stringliteral}{"{}Original"{}});}
-\DoxyCodeLine{246     assert(copia.time == 10.0);}
-\DoxyCodeLine{247     assert(copia.systems.size() == 1); \textcolor{comment}{// verific se os vetores foram copiados}}
-\DoxyCodeLine{248     assert(copia.systems[0] == s);}
-\DoxyCodeLine{249 }
-\DoxyCodeLine{250     \textcolor{comment}{//liberar memoria}}
-\DoxyCodeLine{251     original.systems.clear();}
-\DoxyCodeLine{252     copia.systems.clear();}
-\DoxyCodeLine{253     \textcolor{keyword}{delete} s;}
-\DoxyCodeLine{254     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{255 \}}
+\DoxyCodeLine{239                                      \{}
+\DoxyCodeLine{240     \mbox{\hyperlink{classModelImpl}{ModelImpl}} original;}
+\DoxyCodeLine{241     original.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
+\DoxyCodeLine{242     original.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = 10.0;}
+\DoxyCodeLine{243     \mbox{\hyperlink{classSystem}{System}}* s = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemTest}{SystemTest}}(\textcolor{stringliteral}{"{}S1"{}}, 0.0);}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245     \textcolor{comment}{//adiciona sistema no modelo original}}
+\DoxyCodeLine{246     original.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.push\_back(s);}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248     \textcolor{comment}{// Invoca o construtor de cópia}}
+\DoxyCodeLine{249     \mbox{\hyperlink{classModelImpl}{ModelImpl}} copia(original);}
+\DoxyCodeLine{250     assert(copia.name == \textcolor{stringliteral}{"{}Original"{}});}
+\DoxyCodeLine{251     assert(copia.time == 10.0);}
+\DoxyCodeLine{252     assert(copia.systems.size() == 1); \textcolor{comment}{// verific se os vetores foram copiados}}
+\DoxyCodeLine{253     assert(copia.systems[0] == s);}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255     \textcolor{comment}{//liberar memoria}}
+\DoxyCodeLine{256     original.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.clear();}
+\DoxyCodeLine{257     copia.systems.clear();}
+\DoxyCodeLine{258     \textcolor{keyword}{delete} s;}
+\DoxyCodeLine{259     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{260 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_aa4dcf2425da0cd45050fdf051ec3ed5c}\label{classUnit__Model_aa4dcf2425da0cd45050fdf051ec3ed5c}} 
@@ -306,29 +313,29 @@ Definition at line 113 of file unit\+\_\+\+Model.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{113                              \{}
-\DoxyCodeLine{114     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m(\textcolor{stringliteral}{"{}Modelo Teste"{}}, 0.0);}
+\DoxyCodeLine{114     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
 \DoxyCodeLine{115     \mbox{\hyperlink{classSystem}{System}}* s1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemTest}{SystemTest}}(\textcolor{stringliteral}{"{}Origem"{}}, 100.0);}
 \DoxyCodeLine{116     \mbox{\hyperlink{classSystem}{System}}* s2 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemTest}{SystemTest}}(\textcolor{stringliteral}{"{}Destino"{}}, 0.0);}
 \DoxyCodeLine{117 }
 \DoxyCodeLine{118     \mbox{\hyperlink{classFlow}{Flow}}* f = \textcolor{keyword}{new} \mbox{\hyperlink{classFlowTest2}{FlowTest2}}(\textcolor{stringliteral}{"{}Fluxo"{}}, s1, s2);}
 \DoxyCodeLine{119 }
 \DoxyCodeLine{120     \textcolor{comment}{//adicionar sistemas}}
-\DoxyCodeLine{121     m.systems.push\_back(s1);}
-\DoxyCodeLine{122     m.systems.push\_back(s2);}
+\DoxyCodeLine{121     m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.push\_back(s1);}
+\DoxyCodeLine{122     m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.push\_back(s2);}
 \DoxyCodeLine{123 }
 \DoxyCodeLine{124     \textcolor{comment}{//adicionar fluxos}}
-\DoxyCodeLine{125     m.flows.push\_back(f);}
+\DoxyCodeLine{125     m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.push\_back(f);}
 \DoxyCodeLine{126 }
-\DoxyCodeLine{127     m.execute(0, 2, 1);}
+\DoxyCodeLine{127     m.\mbox{\hyperlink{classModelImpl_a3b060fc6802d9d6040ab8af1a9186631}{execute}}(0, 2, 1);}
 \DoxyCodeLine{128 }
-\DoxyCodeLine{129     assert(m.time == 2.0);}
+\DoxyCodeLine{129     assert(m.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} == 2.0);}
 \DoxyCodeLine{130 }
 \DoxyCodeLine{131     assert(round(fabs(s1-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 98.01) * 100) == 0);}
 \DoxyCodeLine{132     assert(round(fabs(s2-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ 1.99) * 100) == 0);}
 \DoxyCodeLine{133 }
 \DoxyCodeLine{134     \textcolor{comment}{//liberar memoria}}
-\DoxyCodeLine{135     m.systems.clear();}
-\DoxyCodeLine{136     m.flows.clear();}
+\DoxyCodeLine{135     m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.clear();}
+\DoxyCodeLine{136     m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.clear();}
 \DoxyCodeLine{137     \textcolor{keyword}{delete} f;}
 \DoxyCodeLine{138     \textcolor{keyword}{delete} s1;}
 \DoxyCodeLine{139     \textcolor{keyword}{delete} s2;}
@@ -352,15 +359,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 210 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 211 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{210                              \{}
-\DoxyCodeLine{211     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m(\textcolor{stringliteral}{"{}Nome Teste"{}}, 0.0);}
-\DoxyCodeLine{212     assert(m.getName() == \textcolor{stringliteral}{"{}Nome Teste"{}});}
-\DoxyCodeLine{213     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{214 \}}
+\DoxyCodeLine{211                              \{}
+\DoxyCodeLine{212     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
+\DoxyCodeLine{213     m.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = \textcolor{stringliteral}{"{}Modelo"{}};}
+\DoxyCodeLine{214     assert(m.\mbox{\hyperlink{classModelImpl_a6d6ef8f72413650749d9ca9850226a6b}{getName}}() == \textcolor{stringliteral}{"{}Modelo"{}});}
+\DoxyCodeLine{215     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{216 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_ae81002fc24ceed9938d692a86fe059ef}\label{classUnit__Model_ae81002fc24ceed9938d692a86fe059ef}} 
@@ -378,15 +386,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 223 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 225 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{223                              \{}
-\DoxyCodeLine{224     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m(\textcolor{stringliteral}{"{}Modelo"{}}, 20.0);}
-\DoxyCodeLine{225     assert(m.getTime() == 20.0);}
-\DoxyCodeLine{226     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{227 \}}
+\DoxyCodeLine{225                              \{}
+\DoxyCodeLine{226     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
+\DoxyCodeLine{227     m.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = 20.0;}
+\DoxyCodeLine{228     assert(m.\mbox{\hyperlink{classModelImpl_a9233d23b2fa19917f314cf286749a924}{getTime}}() == 20.0);}
+\DoxyCodeLine{229     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{230 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_ac17880701ee762c302d9eb453918458a}\label{classUnit__Model_ac17880701ee762c302d9eb453918458a}} 
@@ -409,11 +418,12 @@ Definition at line 144 of file unit\+\_\+\+Model.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{144                               \{}
-\DoxyCodeLine{145     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m(\textcolor{stringliteral}{"{}Modelo"{}}, 5.0);}
-\DoxyCodeLine{146     m.incrementTime(3);}
-\DoxyCodeLine{147     assert(m.time == 8.0);}
-\DoxyCodeLine{148     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{149 \}}
+\DoxyCodeLine{145     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
+\DoxyCodeLine{146     m.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = 5.0;}
+\DoxyCodeLine{147     m.\mbox{\hyperlink{classModelImpl_a2b96592e72a176881c9ac01b85dc9158}{incrementTime}}(3);}
+\DoxyCodeLine{148     assert(m.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} == 8.0);}
+\DoxyCodeLine{149     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{150 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_a37d435d1e63ba4f6025b551c4eabcb38}\label{classUnit__Model_a37d435d1e63ba4f6025b551c4eabcb38}} 
@@ -431,30 +441,30 @@ true if all tests pass, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 267 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 277 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{267                                     \{}
-\DoxyCodeLine{268     \textcolor{comment}{// Executa todasa as funções}}
-\DoxyCodeLine{269     assert(\mbox{\hyperlink{classUnit__Model_aa4dcf2425da0cd45050fdf051ec3ed5c}{defaultConstructor}}());}
-\DoxyCodeLine{270     assert(\mbox{\hyperlink{classUnit__Model_a5fcee6bc2f0cfa13464b995470d0c122}{constructor}}());}
-\DoxyCodeLine{271     assert(\mbox{\hyperlink{classUnit__Model_a69e7bf699e5728bdf00d77fec9ac8434}{destructor}}());}
-\DoxyCodeLine{272     assert(\mbox{\hyperlink{classUnit__Model_a82de58c0fac2f19b88c3b328bb3a5910}{execute}}());}
-\DoxyCodeLine{273     assert(\mbox{\hyperlink{classUnit__Model_ac17880701ee762c302d9eb453918458a}{increment}}());}
-\DoxyCodeLine{274     assert(\mbox{\hyperlink{classUnit__Model_a3a8101ec44c67e8f763d4ec338d3e7a6}{addSystem}}());}
-\DoxyCodeLine{275     assert(\mbox{\hyperlink{classUnit__Model_a417e06de5609ee1ed4dfb8824c0e590a}{addFlow}}());}
-\DoxyCodeLine{276     assert(\mbox{\hyperlink{classUnit__Model_ad024cdace0d05b359466d8ffc1a5c58d}{removeSystem}}());}
-\DoxyCodeLine{277     assert(\mbox{\hyperlink{classUnit__Model_aa3030ec43120f2675f7423be7b0d8b1c}{removeFlow}}());}
-\DoxyCodeLine{278     assert(\mbox{\hyperlink{classUnit__Model_ab787a7f4539fc8323c67779d250ff939}{getName}}());}
-\DoxyCodeLine{279     assert(\mbox{\hyperlink{classUnit__Model_ad543f6f01ecf9f009b64900d602fccc5}{setName}}());}
-\DoxyCodeLine{280     assert(\mbox{\hyperlink{classUnit__Model_ae81002fc24ceed9938d692a86fe059ef}{getTime}}());}
-\DoxyCodeLine{281     assert(\mbox{\hyperlink{classUnit__Model_ae4c09c75dcaccc7307513f6ec90da029}{setTime}}());}
-\DoxyCodeLine{282     assert(\mbox{\hyperlink{classUnit__Model_a065ddf92e59c89c503718b9a16ea30c6}{copyConstructor}}());}
-\DoxyCodeLine{283     assert(\mbox{\hyperlink{classUnit__Model_a9a93110a11b313c4bea565fab97c5dd8}{assignmentOperator}}());}
-\DoxyCodeLine{284     }
-\DoxyCodeLine{285     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{286 \}}
+\DoxyCodeLine{277                                     \{}
+\DoxyCodeLine{278     \textcolor{comment}{// Executa todasa as funções}}
+\DoxyCodeLine{279     assert(\mbox{\hyperlink{classUnit__Model_aa4dcf2425da0cd45050fdf051ec3ed5c}{defaultConstructor}}());}
+\DoxyCodeLine{280     assert(\mbox{\hyperlink{classUnit__Model_a5fcee6bc2f0cfa13464b995470d0c122}{constructor}}());}
+\DoxyCodeLine{281     assert(\mbox{\hyperlink{classUnit__Model_a69e7bf699e5728bdf00d77fec9ac8434}{destructor}}());}
+\DoxyCodeLine{282     assert(\mbox{\hyperlink{classUnit__Model_a82de58c0fac2f19b88c3b328bb3a5910}{execute}}());}
+\DoxyCodeLine{283     assert(\mbox{\hyperlink{classUnit__Model_ac17880701ee762c302d9eb453918458a}{increment}}());}
+\DoxyCodeLine{284     assert(\mbox{\hyperlink{classUnit__Model_a3a8101ec44c67e8f763d4ec338d3e7a6}{addSystem}}());}
+\DoxyCodeLine{285     assert(\mbox{\hyperlink{classUnit__Model_a417e06de5609ee1ed4dfb8824c0e590a}{addFlow}}());}
+\DoxyCodeLine{286     assert(\mbox{\hyperlink{classUnit__Model_ad024cdace0d05b359466d8ffc1a5c58d}{removeSystem}}());}
+\DoxyCodeLine{287     assert(\mbox{\hyperlink{classUnit__Model_aa3030ec43120f2675f7423be7b0d8b1c}{removeFlow}}());}
+\DoxyCodeLine{288     assert(\mbox{\hyperlink{classUnit__Model_ab787a7f4539fc8323c67779d250ff939}{getName}}());}
+\DoxyCodeLine{289     assert(\mbox{\hyperlink{classUnit__Model_ad543f6f01ecf9f009b64900d602fccc5}{setName}}());}
+\DoxyCodeLine{290     assert(\mbox{\hyperlink{classUnit__Model_ae81002fc24ceed9938d692a86fe059ef}{getTime}}());}
+\DoxyCodeLine{291     assert(\mbox{\hyperlink{classUnit__Model_ae4c09c75dcaccc7307513f6ec90da029}{setTime}}());}
+\DoxyCodeLine{292     assert(\mbox{\hyperlink{classUnit__Model_a065ddf92e59c89c503718b9a16ea30c6}{copyConstructor}}());}
+\DoxyCodeLine{293     assert(\mbox{\hyperlink{classUnit__Model_a9a93110a11b313c4bea565fab97c5dd8}{assignmentOperator}}());}
+\DoxyCodeLine{294     }
+\DoxyCodeLine{295     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{296 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_aa3030ec43120f2675f7423be7b0d8b1c}\label{classUnit__Model_aa3030ec43120f2675f7423be7b0d8b1c}} 
@@ -472,23 +482,23 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 196 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 197 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{196                                 \{}
-\DoxyCodeLine{197     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
-\DoxyCodeLine{198     \mbox{\hyperlink{classFlow}{Flow}}* f = \textcolor{keyword}{new} \mbox{\hyperlink{classFlowTest2}{FlowTest2}}(\textcolor{stringliteral}{"{}F1"{}}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{199 }
-\DoxyCodeLine{200     m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.push\_back(f);}
-\DoxyCodeLine{201 }
-\DoxyCodeLine{202     m.\mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{remove}}(f);}
-\DoxyCodeLine{203     assert(m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.size() == 0);}
-\DoxyCodeLine{204 }
-\DoxyCodeLine{205     \textcolor{comment}{//liberar memoria}}
-\DoxyCodeLine{206     \textcolor{keyword}{delete} f;}
-\DoxyCodeLine{207     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{208 \}}
+\DoxyCodeLine{197                                 \{}
+\DoxyCodeLine{198     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
+\DoxyCodeLine{199     \mbox{\hyperlink{classFlow}{Flow}}* f = \textcolor{keyword}{new} \mbox{\hyperlink{classFlowTest2}{FlowTest2}}(\textcolor{stringliteral}{"{}F1"{}}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201     m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.push\_back(f);}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203     m.\mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{remove}}(f);}
+\DoxyCodeLine{204     assert(m.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.size() == 0);}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206     \textcolor{comment}{//liberar memoria}}
+\DoxyCodeLine{207     \textcolor{keyword}{delete} f;}
+\DoxyCodeLine{208     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{209 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_ad024cdace0d05b359466d8ffc1a5c58d}\label{classUnit__Model_ad024cdace0d05b359466d8ffc1a5c58d}} 
@@ -506,23 +516,23 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 182 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 183 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{182                                   \{}
-\DoxyCodeLine{183     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
-\DoxyCodeLine{184     \mbox{\hyperlink{classSystem}{System}}* s1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemTest}{SystemTest}}(\textcolor{stringliteral}{"{}S1"{}}, 10.0);}
-\DoxyCodeLine{185 }
-\DoxyCodeLine{186     m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.push\_back(s1);}
-\DoxyCodeLine{187 }
-\DoxyCodeLine{188     m.\mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{remove}}(s1);}
-\DoxyCodeLine{189     assert(m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.size() == 0);}
-\DoxyCodeLine{190 }
-\DoxyCodeLine{191     \textcolor{comment}{//liberar memoria}}
-\DoxyCodeLine{192     \textcolor{keyword}{delete} s1;}
-\DoxyCodeLine{193     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{194 \}}
+\DoxyCodeLine{183                                   \{}
+\DoxyCodeLine{184     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
+\DoxyCodeLine{185     \mbox{\hyperlink{classSystem}{System}}* s1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemTest}{SystemTest}}(\textcolor{stringliteral}{"{}S1"{}}, 10.0);}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187     m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.push\_back(s1);}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189     m.\mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{remove}}(s1);}
+\DoxyCodeLine{190     assert(m.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.size() == 0);}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192     \textcolor{comment}{//liberar memoria}}
+\DoxyCodeLine{193     \textcolor{keyword}{delete} s1;}
+\DoxyCodeLine{194     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{195 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_ad543f6f01ecf9f009b64900d602fccc5}\label{classUnit__Model_ad543f6f01ecf9f009b64900d602fccc5}} 
@@ -540,16 +550,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 216 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 218 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{216                              \{}
-\DoxyCodeLine{217     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
-\DoxyCodeLine{218     m.\mbox{\hyperlink{classModelImpl_a4c11009a6eed8fabce6c6c3a584a53b8}{setName}}(\textcolor{stringliteral}{"{}Nome Novo"{}});}
-\DoxyCodeLine{219     assert(m.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} == \textcolor{stringliteral}{"{}Nome Novo"{}});}
-\DoxyCodeLine{220     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{221 \}}
+\DoxyCodeLine{218                              \{}
+\DoxyCodeLine{219     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
+\DoxyCodeLine{220     m.\mbox{\hyperlink{classModelImpl_a4c11009a6eed8fabce6c6c3a584a53b8}{setName}}(\textcolor{stringliteral}{"{}Modelo"{}});}
+\DoxyCodeLine{221     assert(m.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} == \textcolor{stringliteral}{"{}Modelo"{}});}
+\DoxyCodeLine{222     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{223 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Model_ae4c09c75dcaccc7307513f6ec90da029}\label{classUnit__Model_ae4c09c75dcaccc7307513f6ec90da029}} 
@@ -567,16 +577,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 229 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 232 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{229                              \{}
-\DoxyCodeLine{230     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
-\DoxyCodeLine{231     m.\mbox{\hyperlink{classModelImpl_a1071f515e45c86e9295b193b7d28cc98}{setTime}}(20.5);}
-\DoxyCodeLine{232     assert(m.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} == 20.5);}
-\DoxyCodeLine{233     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{234 \}}
+\DoxyCodeLine{232                              \{}
+\DoxyCodeLine{233     \mbox{\hyperlink{classModelImpl}{ModelImpl}} m;}
+\DoxyCodeLine{234     m.\mbox{\hyperlink{classModelImpl_a1071f515e45c86e9295b193b7d28cc98}{setTime}}(20.5);}
+\DoxyCodeLine{235     assert(m.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} == 20.5);}
+\DoxyCodeLine{236     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{237 \}}
 
 \end{DoxyCode}
 

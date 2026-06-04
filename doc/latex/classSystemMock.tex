@@ -1,0 +1,193 @@
+\hypertarget{classSystemMock}{}\doxysection{System\+Mock Class Reference}
+\label{classSystemMock}\index{SystemMock@{SystemMock}}
+
+
+Mock Object to isolate \mbox{\hyperlink{classFlow}{Flow}} dependencies.  
+
+
+
+
+Inheritance diagram for System\+Mock\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classSystemMock__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for System\+Mock\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classSystemMock__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classSystemMock_a92328f10dcc1676da9563e0aafaf812a}{$\sim$\+System\+Mock}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{classSystemMock_a79330ca9309e2275e2a1968111a12a54}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSystemMock_a7f81932640346a7cadefec41266eab2d}{set\+Name}} (std\+::string) override
+\begin{DoxyCompactList}\small\item\em Sets the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classSystemMock_a79e03cb3508b1eddd402b40cda25eccb}{get\+Value}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSystemMock_aa9f6bb2a24e6cc79580de1728b34c7dd}{set\+Value}} (double) override
+\begin{DoxyCompactList}\small\item\em Sets the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mock Object to isolate \mbox{\hyperlink{classFlow}{Flow}} dependencies. 
+
+Definition at line 8 of file unit\+\_\+\+Flow.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSystemMock_a92328f10dcc1676da9563e0aafaf812a}\label{classSystemMock_a92328f10dcc1676da9563e0aafaf812a}} 
+\index{SystemMock@{SystemMock}!````~SystemMock@{$\sim$SystemMock}}
+\index{````~SystemMock@{$\sim$SystemMock}!SystemMock@{SystemMock}}
+\doxysubsubsection{\texorpdfstring{$\sim$SystemMock()}{~SystemMock()}}
+{\footnotesize\ttfamily virtual System\+Mock\+::$\sim$\+System\+Mock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 10 of file unit\+\_\+\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSystemMock_a79330ca9309e2275e2a1968111a12a54}\label{classSystemMock_a79330ca9309e2275e2a1968111a12a54}} 
+\index{SystemMock@{SystemMock}!getName@{getName}}
+\index{getName@{getName}!SystemMock@{SystemMock}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string System\+Mock\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+string -\/ the content name attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a3bc2509274e6c346e07b0bf1151378c5}{System}}.
+
+
+
+Definition at line 11 of file unit\+\_\+\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \{ \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSystemMock_a79e03cb3508b1eddd402b40cda25eccb}\label{classSystemMock_a79e03cb3508b1eddd402b40cda25eccb}} 
+\index{SystemMock@{SystemMock}!getValue@{getValue}}
+\index{getValue@{getValue}!SystemMock@{SystemMock}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily virtual double System\+Mock\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+double -\/ the content value attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{System}}.
+
+
+
+Definition at line 13 of file unit\+\_\+\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{ \textcolor{keywordflow}{return} 0.0; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSystemMock_a7f81932640346a7cadefec41266eab2d}\label{classSystemMock_a7f81932640346a7cadefec41266eab2d}} 
+\index{SystemMock@{SystemMock}!setName@{setName}}
+\index{setName@{setName}!SystemMock@{SystemMock}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily virtual void System\+Mock\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em name} & which will be set to the current system. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a9b91be893916f4cf8680ac56970950f1}{System}}.
+
+
+
+Definition at line 12 of file unit\+\_\+\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSystemMock_aa9f6bb2a24e6cc79580de1728b34c7dd}\label{classSystemMock_aa9f6bb2a24e6cc79580de1728b34c7dd}} 
+\index{SystemMock@{SystemMock}!setValue@{setValue}}
+\index{setValue@{setValue}!SystemMock@{SystemMock}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily virtual void System\+Mock\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em value} & which will be set to the current system. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{System}}.
+
+
+
+Definition at line 14 of file unit\+\_\+\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14 \{\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test/unit/\mbox{\hyperlink{unit__Flow_8cpp}{unit\+\_\+\+Flow.\+cpp}}\end{DoxyCompactItemize}
