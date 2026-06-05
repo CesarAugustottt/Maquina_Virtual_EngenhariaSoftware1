@@ -97,6 +97,26 @@ public:
      */
     static bool copyConstructor(void);
 
+    //metodos da fabrica
+
+    /*!
+     * @brief Tests the static factory method createModel.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool createModel(void);
+
+    /*!
+     * @brief Tests the factory method createSystem.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool createSystem(void);
+
+    /*!
+     * @brief Tests the template factory method createFlow.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool creteFlow(void);
+
     //função global chamada pela main
     /*!
      * @brief Runs all the unit tests for the Model class (Regression Testing).

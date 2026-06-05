@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classModel-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Model Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -119,6 +120,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8f1c8d076bc82d40636a1ca0e581b92"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#ad8f1c8d076bc82d40636a1ca0e581b92">incrementTime</a> (double)=0</td></tr>
 <tr class="memdesc:ad8f1c8d076bc82d40636a1ca0e581b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the simulation time by a specific value.  <a href="classModel.html#ad8f1c8d076bc82d40636a1ca0e581b92">More...</a><br /></td></tr>
 <tr class="separator:ad8f1c8d076bc82d40636a1ca0e581b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9c63fb5e39bd2cb025255001907524"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#adf9c63fb5e39bd2cb025255001907524">createSystem</a> (std::string name=&quot;&quot;, double value=0.0)=0</td></tr>
+<tr class="memdesc:adf9c63fb5e39bd2cb025255001907524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method to create a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> inside this model.  <a href="classModel.html#adf9c63fb5e39bd2cb025255001907524">More...</a><br /></td></tr>
+<tr class="separator:adf9c63fb5e39bd2cb025255001907524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aec304b6a80e8371e3ed915cde8148e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7aec304b6a80e8371e3ed915cde8148e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFlow.html">Flow</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classModel.html#a7aec304b6a80e8371e3ed915cde8148e">createFlow</a> (std::string name=&quot;&quot;, <a class="el" href="classSystem.html">System</a> *source=nullptr, <a class="el" href="classSystem.html">System</a> *target=nullptr)</td></tr>
+<tr class="memdesc:a7aec304b6a80e8371e3ed915cde8148e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template factory method to create any type of <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> inside this model.  <a href="classModel.html#a7aec304b6a80e8371e3ed915cde8148e">More...</a><br /></td></tr>
+<tr class="separator:a7aec304b6a80e8371e3ed915cde8148e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:adf5cf7d33af8042c591725d2d41cafca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classModel.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#adf5cf7d33af8042c591725d2d41cafca">createModel</a> (std::string name=&quot;&quot;, double time=0.0)</td></tr>
+<tr class="memdesc:adf5cf7d33af8042c591725d2d41cafca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static method that acts as a factory to create a <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> instance.  <a href="classModel.html#adf5cf7d33af8042c591725d2d41cafca">More...</a><br /></td></tr>
+<tr class="separator:adf5cf7d33af8042c591725d2d41cafca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents the interface of a model in the General Systems Theory implemented in this code. </p>
@@ -234,6 +248,176 @@ Public Member Functions</h2></td></tr>
 </ul>
 
 <p>Implemented in <a class="el" href="classModelImpl.html#a4f2039580d1464b29593df95f3979998">ModelImpl</a>.</p>
+
+</div>
+</div>
+<a id="a7aec304b6a80e8371e3ed915cde8148e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aec304b6a80e8371e3ed915cde8148e">&#9670;&nbsp;</a></span>createFlow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFlow.html">Flow</a>* Model::createFlow </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
+          <td class="paramname"><em>source</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
+          <td class="paramname"><em>target</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Template factory method to create any type of <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> inside this model. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the concrete subclass of <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the flow. </td></tr>
+    <tr><td class="paramname">source</td><td>pointer to the source system. </td></tr>
+    <tr><td class="paramname">target</td><td>pointer to the target system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Flow* - pointer to the created flow. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00100">100</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                                                                              { <span class="comment">//metodo template não pode ser virtual</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="classFlow.html">Flow</a>* flow = <span class="keyword">new</span> T(name, source, target);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        this-&gt;<a class="code" href="classModel.html#a70362afdd9db6268b4adaedfeddb2935">add</a>(flow); <span class="comment">// Já adiciona automaticamente ao modelo</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> flow;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="ttc" id="aclassFlow_html"><div class="ttname"><a href="classFlow.html">Flow</a></div><div class="ttdoc">This class represents the interface of a flow in General Systems Theory as implemented in this code.</div><div class="ttdef"><b>Definition:</b> <a href="Flow_8h_source.html#l00013">Flow.h:13</a></div></div>
+<div class="ttc" id="aclassModel_html_a70362afdd9db6268b4adaedfeddb2935"><div class="ttname"><a href="classModel.html#a70362afdd9db6268b4adaedfeddb2935">Model::add</a></div><div class="ttdeci">virtual void add(System *)=0</div><div class="ttdoc">Adds a System pointer to the internal container of the model.</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adf5cf7d33af8042c591725d2d41cafca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf5cf7d33af8042c591725d2d41cafca">&#9670;&nbsp;</a></span>createModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classModel.html">Model</a> * Model::createModel </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static method that acts as a factory to create a <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the model. </td></tr>
+    <tr><td class="paramname">time</td><td>the initial time of the model. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Model* - pointer to the created model interface. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00110">110</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                                     {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classModelImpl.html">ModelImpl</a>(name, time);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="ttc" id="aclassModelImpl_html"><div class="ttname"><a href="classModelImpl.html">ModelImpl</a></div><div class="ttdoc">This class represents the concrete implementation of a Model.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8h_source.html#l00016">ModelImpl.h:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adf9c63fb5e39bd2cb025255001907524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9c63fb5e39bd2cb025255001907524">&#9670;&nbsp;</a></span>createSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classSystem.html">System</a>* Model::createSystem </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Factory method to create a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> inside this model. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the system. </td></tr>
+    <tr><td class="paramname">value</td><td>the initial value of the system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>System* - pointer to the created system. </dd></dl>
+
+<p>Implemented in <a class="el" href="classModelImpl.html#a033781acaa9c0c0ff60b719c916ea2be">ModelImpl</a>.</p>
 
 </div>
 </div>
@@ -555,8 +739,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Model_8h_source.html">Model.h</a></li>
+<li>src/<a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

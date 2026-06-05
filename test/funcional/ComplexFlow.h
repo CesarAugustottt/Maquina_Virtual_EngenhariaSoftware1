@@ -7,7 +7,7 @@
  * @brief This Class represents a complex flow in the General Systems Theory implemented in this code.
  */
 class ComplexFlow : public FlowImpl {
-public:
+protected:
     // Construtor padrao
     /*!
      * @brief This is the default constructor for the ComplexFlow Class.
@@ -22,18 +22,6 @@ public:
      * @param target a pointer to the target System.
      */
     ComplexFlow(std::string name, System* source, System* target);
-    // Destrutor virtual
-    /*!
-     * @brief This is the default destructor for the ComplexFlow Class.
-     */
-    virtual ~ComplexFlow();
-
-    // Sobrescrita do metodo execute
-    /*!
-     * @brief Executes the complex equation to calculate the flow's value.
-     * @return double - the calculated value for the transfer.
-     */
-    virtual double execute() override;
 
     // Construtor de copia
     /*!
@@ -48,6 +36,22 @@ public:
      * @return ComplexFlow& - a reference to the updated ComplexFlow Class object.
      */
     ComplexFlow& operator=(const ComplexFlow& flow);
+public:
+    // Destrutor virtual
+    /*!
+     * @brief This is the default destructor for the ComplexFlow Class.
+     */
+    virtual ~ComplexFlow();
+
+    // Sobrescrita do metodo execute
+    /*!
+     * @brief Executes the complex equation to calculate the flow's value.
+     * @return double - the calculated value for the transfer.
+     */
+    virtual double execute() override;
+
+    //permite que o template createFloe de Model instacie os fluxos
+    friend class Model;
 };
 
 #endif

@@ -24,7 +24,7 @@ protected:
     /*! This vector contains pointers to all flows registered in the model. */
     std::vector<Flow*> flows;
 
-public:
+    //Construtores protegidos, ninguem fora da fabrica pode usar os contrutores ou fazer copia.
     /*!
     * @brief This is the default constructor for the Model Class.
     */
@@ -35,7 +35,6 @@ public:
     * @param time the initial time of the simulation.
     */
     ModelImpl(std::string name, double time);
-    virtual ~ModelImpl();
 
     /*!
     * @brief This is the copy constructor for the Model Class.
@@ -49,6 +48,8 @@ public:
     */
     ModelImpl& operator=(const ModelImpl& model);
 
+public:
+    virtual ~ModelImpl();
     void execute(double start, double final, double increment) override;
     void add(System* sys) override;
     void add(Flow* flow) override;
@@ -60,8 +61,13 @@ public:
     double getTime() const override;
     void incrementTime(double increment) override;
 
-    // Permite que a classe de teste faça testes unitário a cada método
+    //Metodo da fabrica
+    System* createSystem(std::string name = "", double value = 0.0) override;
+
+    // Permite que a classe de teste faça testes unitario a cada metodo
     friend class Unit_Model;
+    // Permite que o metodo statico da fabrica acesse os construtores protegidos
+    friend class Model;
 };
 
 #endif

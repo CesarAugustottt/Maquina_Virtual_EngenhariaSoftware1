@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classModelImpl-members.html">List of all members</a>  </div>
@@ -97,20 +98,8 @@ Collaboration diagram for ModelImpl:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a081505846c37ce9928f2176d77db4bc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a081505846c37ce9928f2176d77db4bc8">ModelImpl</a> ()</td></tr>
-<tr class="memdesc:a081505846c37ce9928f2176d77db4bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModelImpl.html#a081505846c37ce9928f2176d77db4bc8">More...</a><br /></td></tr>
-<tr class="separator:a081505846c37ce9928f2176d77db4bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abece455e5562804c96db3b952e3d2c48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#abece455e5562804c96db3b952e3d2c48">ModelImpl</a> (std::string <a class="el" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>, double <a class="el" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>)</td></tr>
-<tr class="memdesc:abece455e5562804c96db3b952e3d2c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the parameterized constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModelImpl.html#abece455e5562804c96db3b952e3d2c48">More...</a><br /></td></tr>
-<tr class="separator:abece455e5562804c96db3b952e3d2c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a427f422a6d356b94afbe3937d6452a2b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a427f422a6d356b94afbe3937d6452a2b">~ModelImpl</a> ()</td></tr>
 <tr class="separator:a427f422a6d356b94afbe3937d6452a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a027c2618c0645601df6287193db1ae1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a027c2618c0645601df6287193db1ae1c">ModelImpl</a> (const <a class="el" href="classModelImpl.html">ModelImpl</a> &amp;model)</td></tr>
-<tr class="memdesc:a027c2618c0645601df6287193db1ae1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the copy constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModelImpl.html#a027c2618c0645601df6287193db1ae1c">More...</a><br /></td></tr>
-<tr class="separator:a027c2618c0645601df6287193db1ae1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c89b104c20013688809cfc0e1d12e10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classModelImpl.html">ModelImpl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a5c89b104c20013688809cfc0e1d12e10">operator=</a> (const <a class="el" href="classModelImpl.html">ModelImpl</a> &amp;model)</td></tr>
-<tr class="memdesc:a5c89b104c20013688809cfc0e1d12e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the overloaded assignment operator for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModelImpl.html#a5c89b104c20013688809cfc0e1d12e10">More...</a><br /></td></tr>
-<tr class="separator:a5c89b104c20013688809cfc0e1d12e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b060fc6802d9d6040ab8af1a9186631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a3b060fc6802d9d6040ab8af1a9186631">execute</a> (double start, double final, double increment) override</td></tr>
 <tr class="memdesc:a3b060fc6802d9d6040ab8af1a9186631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the simulation by updating systems based on the flows equations over a period of time.  <a href="classModelImpl.html#a3b060fc6802d9d6040ab8af1a9186631">More...</a><br /></td></tr>
 <tr class="separator:a3b060fc6802d9d6040ab8af1a9186631"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,10 +130,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2b96592e72a176881c9ac01b85dc9158"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a2b96592e72a176881c9ac01b85dc9158">incrementTime</a> (double increment) override</td></tr>
 <tr class="memdesc:a2b96592e72a176881c9ac01b85dc9158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the simulation time by a specific value.  <a href="classModelImpl.html#a2b96592e72a176881c9ac01b85dc9158">More...</a><br /></td></tr>
 <tr class="separator:a2b96592e72a176881c9ac01b85dc9158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033781acaa9c0c0ff60b719c916ea2be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a033781acaa9c0c0ff60b719c916ea2be">createSystem</a> (std::string <a class="el" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>=&quot;&quot;, double value=0.0) override</td></tr>
+<tr class="memdesc:a033781acaa9c0c0ff60b719c916ea2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method to create a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> inside this model.  <a href="classModelImpl.html#a033781acaa9c0c0ff60b719c916ea2be">More...</a><br /></td></tr>
+<tr class="separator:a033781acaa9c0c0ff60b719c916ea2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classModel.html">Model</a></td></tr>
 <tr class="memitem:af032d8433c87a0a3a431faf6563a1f03 inherit pub_methods_classModel"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#af032d8433c87a0a3a431faf6563a1f03">~Model</a> ()</td></tr>
 <tr class="memdesc:af032d8433c87a0a3a431faf6563a1f03 inherit pub_methods_classModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default destructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModel.html#af032d8433c87a0a3a431faf6563a1f03">More...</a><br /></td></tr>
 <tr class="separator:af032d8433c87a0a3a431faf6563a1f03 inherit pub_methods_classModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aec304b6a80e8371e3ed915cde8148e inherit pub_methods_classModel"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7aec304b6a80e8371e3ed915cde8148e inherit pub_methods_classModel"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classFlow.html">Flow</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classModel.html#a7aec304b6a80e8371e3ed915cde8148e">createFlow</a> (std::string name=&quot;&quot;, <a class="el" href="classSystem.html">System</a> *source=nullptr, <a class="el" href="classSystem.html">System</a> *target=nullptr)</td></tr>
+<tr class="memdesc:a7aec304b6a80e8371e3ed915cde8148e inherit pub_methods_classModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template factory method to create any type of <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> inside this model.  <a href="classModel.html#a7aec304b6a80e8371e3ed915cde8148e">More...</a><br /></td></tr>
+<tr class="separator:a7aec304b6a80e8371e3ed915cde8148e inherit pub_methods_classModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a081505846c37ce9928f2176d77db4bc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a081505846c37ce9928f2176d77db4bc8">ModelImpl</a> ()</td></tr>
+<tr class="memdesc:a081505846c37ce9928f2176d77db4bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModelImpl.html#a081505846c37ce9928f2176d77db4bc8">More...</a><br /></td></tr>
+<tr class="separator:a081505846c37ce9928f2176d77db4bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abece455e5562804c96db3b952e3d2c48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#abece455e5562804c96db3b952e3d2c48">ModelImpl</a> (std::string <a class="el" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>, double <a class="el" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>)</td></tr>
+<tr class="memdesc:abece455e5562804c96db3b952e3d2c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the parameterized constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModelImpl.html#abece455e5562804c96db3b952e3d2c48">More...</a><br /></td></tr>
+<tr class="separator:abece455e5562804c96db3b952e3d2c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027c2618c0645601df6287193db1ae1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a027c2618c0645601df6287193db1ae1c">ModelImpl</a> (const <a class="el" href="classModelImpl.html">ModelImpl</a> &amp;model)</td></tr>
+<tr class="memdesc:a027c2618c0645601df6287193db1ae1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the copy constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModelImpl.html#a027c2618c0645601df6287193db1ae1c">More...</a><br /></td></tr>
+<tr class="separator:a027c2618c0645601df6287193db1ae1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c89b104c20013688809cfc0e1d12e10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classModelImpl.html">ModelImpl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a5c89b104c20013688809cfc0e1d12e10">operator=</a> (const <a class="el" href="classModelImpl.html">ModelImpl</a> &amp;model)</td></tr>
+<tr class="memdesc:a5c89b104c20013688809cfc0e1d12e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the overloaded assignment operator for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModelImpl.html#a5c89b104c20013688809cfc0e1d12e10">More...</a><br /></td></tr>
+<tr class="separator:a5c89b104c20013688809cfc0e1d12e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -161,6 +172,15 @@ Protected Attributes</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:a686d152cfd45e63b5bc3db6f327fdaeb"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a686d152cfd45e63b5bc3db6f327fdaeb">Unit_Model</a></td></tr>
 <tr class="separator:a686d152cfd45e63b5bc3db6f327fdaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf2a0e9b454c55aa5dcb5aa4698697b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelImpl.html#a2bf2a0e9b454c55aa5dcb5aa4698697b">Model</a></td></tr>
+<tr class="separator:a2bf2a0e9b454c55aa5dcb5aa4698697b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classModel"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classModel')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classModel.html">Model</a></td></tr>
+<tr class="memitem:adf5cf7d33af8042c591725d2d41cafca inherit pub_static_methods_classModel"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classModel.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#adf5cf7d33af8042c591725d2d41cafca">createModel</a> (std::string name=&quot;&quot;, double time=0.0)</td></tr>
+<tr class="memdesc:adf5cf7d33af8042c591725d2d41cafca inherit pub_static_methods_classModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static method that acts as a factory to create a <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> instance.  <a href="classModel.html#adf5cf7d33af8042c591725d2d41cafca">More...</a><br /></td></tr>
+<tr class="separator:adf5cf7d33af8042c591725d2d41cafca inherit pub_static_methods_classModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents the concrete implementation of a <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a>. </p>
@@ -172,6 +192,9 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ModelImpl::ModelImpl </td>
@@ -180,15 +203,20 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>This is the default constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class. </p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00003">3</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                     {</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = 0.0;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00004">4</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                     {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = 0.0;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
 <div class="ttc" id="aclassModelImpl_html_a7534904f5a4b12ef7a4addc65590189b"><div class="ttname"><a href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">ModelImpl::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8h_source.html#l00019">ModelImpl.h:19</a></div></div>
 <div class="ttc" id="aclassModelImpl_html_aad5b642a4500713444c44bdadd5d19dc"><div class="ttname"><a href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">ModelImpl::time</a></div><div class="ttdeci">double time</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8h_source.html#l00021">ModelImpl.h:21</a></div></div>
 </div><!-- fragment -->
@@ -199,6 +227,9 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">ModelImpl::ModelImpl </td>
@@ -218,6 +249,11 @@ Friends</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>This is the parameterized constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class. </p>
@@ -232,8 +268,55 @@ Friends</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00008">8</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;: <a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>(<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>), <a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>(<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>) {}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00009">9</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;: <a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>(<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>), <a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>(<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a027c2618c0645601df6287193db1ae1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027c2618c0645601df6287193db1ae1c">&#9670;&nbsp;</a></span>ModelImpl() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ModelImpl::ModelImpl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classModelImpl.html">ModelImpl</a> &amp;&#160;</td>
+          <td class="paramname"><em>model</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the copy constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class. </p>
+<ul>
+<li><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model</td><td>the model that is going to be cloned. </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00090">90</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                           {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a> = model.<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = model.<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a> = model.<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>; <span class="comment">//copia os ponteiros</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a> = model.<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="ttc" id="aclassModelImpl_html_a63652ea53099fffc02b2f91f0cf5d5ba"><div class="ttname"><a href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">ModelImpl::systems</a></div><div class="ttdeci">std::vector&lt; System * &gt; systems</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8h_source.html#l00023">ModelImpl.h:23</a></div></div>
+<div class="ttc" id="aclassModelImpl_html_a8b029de6dc420bd98213c51997dd18ea"><div class="ttname"><a href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">ModelImpl::flows</a></div><div class="ttdeci">std::vector&lt; Flow * &gt; flows</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8h_source.html#l00025">ModelImpl.h:25</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -260,51 +343,12 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00010">10</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                      {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//limpar os apenas os vetires, sem destruir os sistemas e fluxos</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.clear();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.clear();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-<div class="ttc" id="aclassModelImpl_html_a63652ea53099fffc02b2f91f0cf5d5ba"><div class="ttname"><a href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">ModelImpl::systems</a></div><div class="ttdeci">std::vector&lt; System * &gt; systems</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8h_source.html#l00023">ModelImpl.h:23</a></div></div>
-<div class="ttc" id="aclassModelImpl_html_a8b029de6dc420bd98213c51997dd18ea"><div class="ttname"><a href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">ModelImpl::flows</a></div><div class="ttdeci">std::vector&lt; Flow * &gt; flows</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8h_source.html#l00025">ModelImpl.h:25</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a027c2618c0645601df6287193db1ae1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a027c2618c0645601df6287193db1ae1c">&#9670;&nbsp;</a></span>ModelImpl() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ModelImpl::ModelImpl </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classModelImpl.html">ModelImpl</a> &amp;&#160;</td>
-          <td class="paramname"><em>model</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is the copy constructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class. </p>
-<ul>
-<li><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">model</td><td>the model that is going to be cloned. </td></tr>
-  </table>
-  </dd>
-</dl>
-</li>
-</ul>
-
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00089">89</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                           {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a> = model.<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = model.<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a> = model.<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>; <span class="comment">//copia os ponteiros</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a> = model.<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00011">11</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                      {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//limpar os apenas os vetires, sem destruir os sistemas e fluxos</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.clear();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.clear();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -346,10 +390,10 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#ac1e19f5fcc4ced9defbfe2847a26ff33">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00045">45</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                              {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.push_back(flow);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00046">46</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                              {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.push_back(flow);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -390,10 +434,70 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a70362afdd9db6268b4adaedfeddb2935">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00041">41</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                               {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.push_back(sys);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00042">42</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                               {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.push_back(sys);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a033781acaa9c0c0ff60b719c916ea2be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a033781acaa9c0c0ff60b719c916ea2be">&#9670;&nbsp;</a></span>createSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSystem.html">System</a> * ModelImpl::createSystem </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Factory method to create a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> inside this model. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the system. </td></tr>
+    <tr><td class="paramname">value</td><td>the initial value of the system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>System* - pointer to the created system. </dd></dl>
+
+<p>Implements <a class="el" href="classModel.html#adf9c63fb5e39bd2cb025255001907524">Model</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00115">115</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                                            {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">//instancia</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="classSystem.html">System</a>* sys = <span class="keyword">new</span> <a class="code" href="classSystemImpl.html">SystemImpl</a>(<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>, value);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">//adiciona systema ao modelo</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a4f2039580d1464b29593df95f3979998">add</a>(sys);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> sys;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="ttc" id="aclassModelImpl_html_a4f2039580d1464b29593df95f3979998"><div class="ttname"><a href="classModelImpl.html#a4f2039580d1464b29593df95f3979998">ModelImpl::add</a></div><div class="ttdeci">void add(System *sys) override</div><div class="ttdoc">Adds a System pointer to the internal container of the model.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00042">ModelImpl.cpp:42</a></div></div>
+<div class="ttc" id="aclassSystemImpl_html"><div class="ttname"><a href="classSystemImpl.html">SystemImpl</a></div><div class="ttdoc">This class represents the concrete implementation of a System.</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8h_source.html#l00011">SystemImpl.h:11</a></div></div>
+<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdoc">This Class represents the interface of a system in the General Systems Theory implemented in this cod...</div><div class="ttdef"><b>Definition:</b> <a href="System_8h_source.html#l00008">System.h:8</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -452,33 +556,32 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a756ab116538d1c2f0bd9cd9487ac4f51">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00016">16</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                                                  {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = start;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">while</span> (this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> &lt; end) {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::vector&lt;double&gt; valueFlow; <span class="comment">//vetor com os valores de cada fluxo</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">//calcular a equação de cada fluxo</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> f : <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            valueFlow.push_back(f-&gt;execute());</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">//atualizar os sistemas com valores novos</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.size(); i++) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="classSystem.html">System</a>* source = <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>[i]-&gt;getSource();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="classSystem.html">System</a>* target = <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>[i]-&gt;getTarget();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="comment">//realizar o fluxo</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">if</span> (source) { <span class="comment">//diminui o valor da origem</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                source-&gt;<a class="code" href="classSystem.html#a95e6d4c1ce05b47b5fa743fd2401dd03">setValue</a>(source-&gt;<a class="code" href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">getValue</a>() - valueFlow[i]);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (target) { <span class="comment">//aumenta valor do destino</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                target-&gt;<a class="code" href="classSystem.html#a95e6d4c1ce05b47b5fa743fd2401dd03">setValue</a>(target-&gt;<a class="code" href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">getValue</a>() + valueFlow[i]);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">//incrementar o tempo (time)</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#a2b96592e72a176881c9ac01b85dc9158">incrementTime</a>(increment);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="ttc" id="aclassModelImpl_html_a2b96592e72a176881c9ac01b85dc9158"><div class="ttname"><a href="classModelImpl.html#a2b96592e72a176881c9ac01b85dc9158">ModelImpl::incrementTime</a></div><div class="ttdeci">void incrementTime(double increment) override</div><div class="ttdoc">Increments the simulation time by a specific value.</div><div class="ttdef"><b>Definition:</b> <a href="Model_8cpp_source.html#l00084">Model.cpp:84</a></div></div>
-<div class="ttc" id="aclassSystem_html"><div class="ttname"><a href="classSystem.html">System</a></div><div class="ttdoc">This Class represents the interface of a system in the General Systems Theory implemented in this cod...</div><div class="ttdef"><b>Definition:</b> <a href="System_8h_source.html#l00008">System.h:8</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00017">17</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = start;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">while</span> (this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> &lt; end) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::vector&lt;double&gt; valueFlow; <span class="comment">//vetor com os valores de cada fluxo</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">//calcular a equação de cada fluxo</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> f : <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            valueFlow.push_back(f-&gt;execute());</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//atualizar os sistemas com valores novos</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.size(); i++) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="classSystem.html">System</a>* source = <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>[i]-&gt;getSource();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="classSystem.html">System</a>* target = <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>[i]-&gt;getTarget();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="comment">//realizar o fluxo</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (source) { <span class="comment">//diminui o valor da origem</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                source-&gt;<a class="code" href="classSystem.html#a95e6d4c1ce05b47b5fa743fd2401dd03">setValue</a>(source-&gt;<a class="code" href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">getValue</a>() - valueFlow[i]);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">if</span> (target) { <span class="comment">//aumenta valor do destino</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                target-&gt;<a class="code" href="classSystem.html#a95e6d4c1ce05b47b5fa743fd2401dd03">setValue</a>(target-&gt;<a class="code" href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">getValue</a>() + valueFlow[i]);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">//incrementar o tempo (time)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#a2b96592e72a176881c9ac01b85dc9158">incrementTime</a>(increment);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="ttc" id="aclassModelImpl_html_a2b96592e72a176881c9ac01b85dc9158"><div class="ttname"><a href="classModelImpl.html#a2b96592e72a176881c9ac01b85dc9158">ModelImpl::incrementTime</a></div><div class="ttdeci">void incrementTime(double increment) override</div><div class="ttdoc">Increments the simulation time by a specific value.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00085">ModelImpl.cpp:85</a></div></div>
 <div class="ttc" id="aclassSystem_html_a41b673faa6c199eb8e4f204639fab4f2"><div class="ttname"><a href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">System::getValue</a></div><div class="ttdeci">virtual double getValue() const =0</div><div class="ttdoc">Returns the value attribute in the System Class.</div></div>
 <div class="ttc" id="aclassSystem_html_a95e6d4c1ce05b47b5fa743fd2401dd03"><div class="ttname"><a href="classSystem.html#a95e6d4c1ce05b47b5fa743fd2401dd03">System::setValue</a></div><div class="ttdeci">virtual void setValue(double)=0</div><div class="ttdoc">Sets the value attribute in the System Class.</div></div>
 </div><!-- fragment -->
@@ -515,10 +618,10 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a17e89ca8d15af46d074423a47d3c6802">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00072">72</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                   {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00073">73</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                   {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -553,10 +656,10 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a41569269c162962571a791c0fe737bca">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00080">80</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00081">81</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -597,10 +700,10 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#ad8f1c8d076bc82d40636a1ca0e581b92">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00084">84</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                              {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> += increment;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00085">85</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                              {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> += increment;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -609,6 +712,9 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classModelImpl.html">ModelImpl</a> &amp; ModelImpl::operator= </td>
@@ -618,6 +724,11 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>This is the overloaded assignment operator for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class. </p>
@@ -632,16 +743,16 @@ Friends</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00097">97</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                      {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (&amp;model != <span class="keyword">this</span>) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a> = model.<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = model.<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a> = model.<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a> = model.<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>; <span class="comment">//retorna o modelo</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00098">98</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                                      {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (&amp;model != <span class="keyword">this</span>) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a> = model.<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = model.<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a> = model.<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        this-&gt;<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a> = model.<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>; <span class="comment">//retorna o modelo</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -682,16 +793,16 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a9dfb3ab85127622aa9d9db591ee63454">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00058">58</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                 {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//deve procurar o ponteiro flow no vetor</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">auto</span> it = std::find(<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.begin(), <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.end(), flow);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//se ele for diferente do fim o ponteiro foi encontrado e deve remover</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//se for igual ao fim é uma posição inválida.</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (it != <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.end()) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.erase(it); <span class="comment">//remove o fluxo do vetor.</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00059">59</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                 {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">//deve procurar o ponteiro flow no vetor</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">auto</span> it = std::find(<a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.begin(), <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.end(), flow);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//se ele for diferente do fim o ponteiro foi encontrado e deve remover</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//se for igual ao fim é uma posição inválida.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (it != <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.end()) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="classModelImpl.html#a8b029de6dc420bd98213c51997dd18ea">flows</a>.erase(it); <span class="comment">//remove o fluxo do vetor.</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -732,15 +843,15 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#ac1884d0df43bd3eaa98fb2493b1eadbd">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00049">49</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                  {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//deve procurar o ponteiro sys no vetor</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">auto</span> it = std::find(<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.begin(), <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.end(), sys);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">//se ele for diferente do fim o ponteiro foi encontrado e deve remover</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (it != <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.end()) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.erase(it); <span class="comment">//remove  o sistema do vetor.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00050">50</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                  {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//deve procurar o ponteiro sys no vetor</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">auto</span> it = std::find(<a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.begin(), <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.end(), sys);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">//se ele for diferente do fim o ponteiro foi encontrado e deve remover</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (it != <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.end()) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classModelImpl.html#a63652ea53099fffc02b2f91f0cf5d5ba">systems</a>.erase(it); <span class="comment">//remove  o sistema do vetor.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -781,10 +892,10 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a0418ba1c3f1016a13a2cbb4c1be5e43b">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00068">68</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                      {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a> = <a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00069">69</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                      {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a> = <a class="code" href="classModelImpl.html#a7534904f5a4b12ef7a4addc65590189b">name</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -825,14 +936,38 @@ Friends</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a210839e2d275d6821a8beac249470beb">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8cpp_source.html#l00076">76</a> of file <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                   {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = <a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00077">77</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                   {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    this-&gt;<a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a> = <a class="code" href="classModelImpl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a2bf2a0e9b454c55aa5dcb5aa4698697b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf2a0e9b454c55aa5dcb5aa4698697b">&#9670;&nbsp;</a></span>Model</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classModel.html">Model</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8h_source.html#l00070">70</a> of file <a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a>.</p>
+
+</div>
+</div>
 <a id="a686d152cfd45e63b5bc3db6f327fdaeb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a686d152cfd45e63b5bc3db6f327fdaeb">&#9670;&nbsp;</a></span>Unit_Model</h2>
 
@@ -853,7 +988,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8h_source.html#l00064">64</a> of file <a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8h_source.html#l00068">68</a> of file <a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a>.</p>
 
 </div>
 </div>
@@ -960,7 +1095,7 @@ Friends</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a></li>
-<li>src/<a class="el" href="Model_8cpp_source.html">Model.cpp</a></li>
+<li>src/<a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

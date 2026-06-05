@@ -274,6 +274,54 @@ bool Unit_Model::assignmentOperator(void) {
     return true;
 }
 
+//Implementar testes dos metodos da fabrica
+bool Unit_Model::createModel(void){
+    Model* m = Model::createModel("Modelo Fabrica", 2.0);
+
+    assert(m->getName() == "Modelo Fabrica");
+    assert(m->getTime() == 2.0);
+
+    delete m;
+    return true;
+}
+
+bool Unit_Model::createSystem(void){
+    ModelImpl m;
+
+    System* s = m.createSystem("Sistema", 10.0);
+
+    assert(m.systems.size() == 1);
+    assert(m.systems[0] == s);
+    assert(s->getName() == "Sistema");
+    assert(s->getValue() == 10.0);
+
+    m.systems.clear();
+    delete s;
+    return true;
+}
+
+bool Unit_Model::creteFlow(void){
+    ModelImpl m;
+    System* s1 = m.createSystem("s1", 10.0);
+    System* s2 = m.createSystem("s2", 0.0);
+
+    Flow* f = m.createFlow<FlowTest2>("Fluxo", s1, s2);
+
+    assert(m.flows.size() == 1);
+    assert(m.flows[0] == f);
+    assert(f->getName() == "Fluxo");
+    assert(f->getSource() == s1);
+    assert(f->getTarget() == s2);
+
+    m.systems.clear();
+    m.flows.clear();
+    delete s1;
+    delete s2;
+    delete f;
+
+    return true;
+}
+
 bool Unit_Model::regressiveTest(void) {
     // Executa todasa as funções
     assert(defaultConstructor());

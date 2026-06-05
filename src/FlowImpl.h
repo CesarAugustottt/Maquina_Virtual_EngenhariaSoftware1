@@ -16,7 +16,7 @@ protected:
     System* source;
     /*! This pointer points to the target System of the flow. */
     System* target;
-public:
+
     // construtores e destrutor
     /*!
      * @brief This is the default constructor for the FlowImpl Class.
@@ -29,6 +29,22 @@ public:
      * @param target pointer to the target System.
      */
     FlowImpl(std::string name, System* source, System* target);
+
+    //construtor copia
+    /*!
+     * @brief This is the copy constructor for the FlowImpl Class.
+     * * @param flow the flow that is going to be cloned.
+     */
+    FlowImpl(const FlowImpl& flow);
+
+    //atribuição pelo operador =
+    /*!
+     * @brief This is the overloaded assignment operator for the FlowImpl Class.
+     * * @param flow the flow that is going to be cloned.
+     * @return FlowImpl& - a reference to the updated FlowImpl Class object.
+     */
+    FlowImpl& operator=(const FlowImpl& flow);
+public:
 
     /*!
      * @brief This is the default destructor for the FlowImpl Class.
@@ -46,23 +62,11 @@ public:
     void setTarget(System* target) override;
     System* getTarget()const override;
 
-    //construtor copia
-    /*!
-     * @brief This is the copy constructor for the FlowImpl Class.
-     * * @param flow the flow that is going to be cloned.
-     */
-    FlowImpl(const FlowImpl& flow);
-
-    //atribuição pelo operador =
-    /*!
-     * @brief This is the overloaded assignment operator for the FlowImpl Class.
-     * * @param flow the flow that is going to be cloned.
-     * @return FlowImpl& - a reference to the updated FlowImpl Class object.
-     */
-    FlowImpl& operator=(const FlowImpl& flow);
 
     // Permite que a classe de teste faça testes unitário a cada método
     friend class Unit_Flow;
+    //permite que o template createFloe de Model instacie os fluxos
+    friend class Model;
 };
 
 #endif
