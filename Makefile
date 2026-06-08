@@ -1,13 +1,18 @@
-all:
+all: build_lib build_tests
+
+build_lib:
 	mkdir -p bin
-	g++ test/funcional/*.cpp src/*.cpp -I./src -o bin/funcional_tests.exe
-	g++ test/unit/*.cpp src/*.cpp -I./src -o bin/unit_tests.exe
+	g++ -fPIC -shared -DBUILD_DLL src/*.cpp -I./src -o bin/libmodel.so
+
+build_tests:
+	g++ test/funcional/*.cpp -I./src -L./bin -lmodel -o bin/funcional_tests
+	g++ test/unit/*.cpp -I./src -L./bin -lmodel -o bin/unit_tests
 
 run_funcional:
-	./bin/funcional_tests.exe
+	LD_LIBRARY_PATH=./bin ./bin/funcional_tests
 
 run_unit:
-	./bin/unit_tests.exe
+	LD_LIBRARY_PATH=./bin ./bin/unit_tests
 
 clean:
 	rm -rf bin/
