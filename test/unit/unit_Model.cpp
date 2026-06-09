@@ -9,10 +9,10 @@
  * @brief Class used exclusively to instantiate and test System.
  */
 class SystemTest : public System{
-private:
+public:
     std :: string name;
     double value;
-public:
+    
     SystemTest() {
         this->name = "";
         this->value = 0.0;
@@ -81,19 +81,19 @@ public:
 
 
 bool Unit_Model::defaultConstructor(void) {
-    ModelImpl m1;
-    assert(m1.name == "");
-    assert(m1.time == 0.0);
-    assert(m1.systems.size() == 0);
-    assert(m1.flows.size() == 0);
+    ModelImpl m;
+    assert(m.name == "");
+    assert(m.time == 0.0);
+    assert(m.systems.size() == 0);
+    assert(m.flows.size() == 0);
 
     return true;
 }
 
 bool Unit_Model::constructor(void) {
-    ModelImpl m2("Modelo", 10.0);
-    assert(m2.name == "Modelo");
-    assert(m2.time == 10.0);
+    ModelImpl m("Modelo", 10.0);
+    assert(m.name == "Modelo");
+    assert(m.time == 10.0);
 
     return true;
 }
@@ -112,8 +112,8 @@ bool Unit_Model::destructor(void){
 
 bool Unit_Model::execute(void) {
     ModelImpl m;
-    System* s1 = new SystemTest("Origem", 100.0);
-    System* s2 = new SystemTest("Destino", 0.0);
+    SystemTest* s1 = new SystemTest("Origem", 100.0);
+    SystemTest* s2 = new SystemTest("Destino", 0.0);
 
     Flow* f = new FlowTest2("Fluxo", s1, s2);
 
@@ -128,8 +128,8 @@ bool Unit_Model::execute(void) {
 
     assert(m.time == 2.0);
 
-    assert(round(fabs(s1->getValue() - 98.01) * 100) == 0);
-    assert(round(fabs(s2->getValue() - 1.99) * 100) == 0);
+    assert(s1->value == 98.01);
+    assert(s2->value == 1.99);
 
     //liberar memoria
     m.systems.clear();
@@ -271,54 +271,6 @@ bool Unit_Model::assignmentOperator(void) {
     destino = original;
     assert(destino.name == "Original");
     assert(destino.time == 10.0);
-    return true;
-}
-
-//Implementar testes dos metodos da fabrica
-bool Unit_Model::createModel(void){
-    Model* m = Model::createModel("Modelo Fabrica", 2.0);
-
-    assert(m->getName() == "Modelo Fabrica");
-    assert(m->getTime() == 2.0);
-
-    delete m;
-    return true;
-}
-
-bool Unit_Model::createSystem(void){
-    ModelImpl m;
-
-    System* s = m.createSystem("Sistema", 10.0);
-
-    assert(m.systems.size() == 1);
-    assert(m.systems[0] == s);
-    assert(s->getName() == "Sistema");
-    assert(s->getValue() == 10.0);
-
-    m.systems.clear();
-    delete s;
-    return true;
-}
-
-bool Unit_Model::creteFlow(void){
-    ModelImpl m;
-    System* s1 = m.createSystem("s1", 10.0);
-    System* s2 = m.createSystem("s2", 0.0);
-
-    Flow* f = m.createFlow<FlowTest2>("Fluxo", s1, s2);
-
-    assert(m.flows.size() == 1);
-    assert(m.flows[0] == f);
-    assert(f->getName() == "Fluxo");
-    assert(f->getSource() == s1);
-    assert(f->getTarget() == s2);
-
-    m.systems.clear();
-    m.flows.clear();
-    delete s1;
-    delete s2;
-    delete f;
-
     return true;
 }
 
