@@ -9,10 +9,10 @@
  * @brief Class used exclusively to instantiate and test System.
  */
 class SystemTest : public System{
-private:
+public:
     std :: string name;
     double value;
-public:
+    
     SystemTest() {
         this->name = "";
         this->value = 0.0;
@@ -81,19 +81,19 @@ public:
 
 
 bool Unit_Model::defaultConstructor(void) {
-    ModelImpl m1;
-    assert(m1.name == "");
-    assert(m1.time == 0.0);
-    assert(m1.systems.size() == 0);
-    assert(m1.flows.size() == 0);
+    ModelImpl m;
+    assert(m.name == "");
+    assert(m.time == 0.0);
+    assert(m.systems.size() == 0);
+    assert(m.flows.size() == 0);
 
     return true;
 }
 
 bool Unit_Model::constructor(void) {
-    ModelImpl m2("Modelo", 10.0);
-    assert(m2.name == "Modelo");
-    assert(m2.time == 10.0);
+    ModelImpl m("Modelo", 10.0);
+    assert(m.name == "Modelo");
+    assert(m.time == 10.0);
 
     return true;
 }
@@ -112,8 +112,8 @@ bool Unit_Model::destructor(void){
 
 bool Unit_Model::execute(void) {
     ModelImpl m;
-    System* s1 = new SystemTest("Origem", 100.0);
-    System* s2 = new SystemTest("Destino", 0.0);
+    SystemTest* s1 = new SystemTest("Origem", 100.0);
+    SystemTest* s2 = new SystemTest("Destino", 0.0);
 
     Flow* f = new FlowTest2("Fluxo", s1, s2);
 
@@ -128,8 +128,8 @@ bool Unit_Model::execute(void) {
 
     assert(m.time == 2.0);
 
-    assert(round(fabs(s1->getValue() - 98.01) * 100) == 0);
-    assert(round(fabs(s2->getValue() - 1.99) * 100) == 0);
+    assert(s1->value == 98.01);
+    assert(s2->value == 1.99);
 
     //liberar memoria
     m.systems.clear();

@@ -1,4 +1,5 @@
 #include "ModelImpl.h"
+#include "SystemImpl.h"
 
 ModelImpl::ModelImpl() {
     this->name = "";
@@ -103,3 +104,20 @@ ModelImpl& ModelImpl::operator=(const ModelImpl& model) {
     }
     return *this; //retorna o modelo
 }
+
+//IMPLEMENTAÇÃO metodos da fabrica
+//criar Model
+Model* Model::createModel(std::string name, double time) {
+    return new ModelImpl(name, time);
+}
+
+//Criar system
+System* ModelImpl:: createSystem(std::string name, double value){
+    //instancia
+    System* sys = new SystemImpl(name, value);
+    //adiciona systema ao modelo
+    this->add(sys);
+    return sys;
+}
+
+//create flow ja implementadp pois é metodo template

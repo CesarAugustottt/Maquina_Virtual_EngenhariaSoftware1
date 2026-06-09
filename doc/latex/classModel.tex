@@ -42,7 +42,16 @@ virtual void \mbox{\hyperlink{classModel_a210839e2d275d6821a8beac249470beb}{set\
 virtual double \mbox{\hyperlink{classModel_a41569269c162962571a791c0fe737bca}{get\+Time}} () const =0
 \begin{DoxyCompactList}\small\item\em Returns the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}{increment\+Time}} (double)=0
-\begin{DoxyCompactList}\small\item\em Increments the simulation time by a specific value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Increments the simulation time by a specific value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classModel_adf9c63fb5e39bd2cb025255001907524}{create\+System}} (std\+::string name=\char`\"{}\char`\"{}, double value=0.\+0)=0
+\begin{DoxyCompactList}\small\item\em Factory method to create a \mbox{\hyperlink{classSystem}{System}} inside this model. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classFlow}{Flow}} $\ast$ \mbox{\hyperlink{classModel_a7aec304b6a80e8371e3ed915cde8148e}{create\+Flow}} (std\+::string name=\char`\"{}\char`\"{}, \mbox{\hyperlink{classSystem}{System}} $\ast$source=nullptr, \mbox{\hyperlink{classSystem}{System}} $\ast$target=nullptr)
+\begin{DoxyCompactList}\small\item\em Template factory method to create any type of \mbox{\hyperlink{classFlow}{Flow}} inside this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classModel}{Model}} $\ast$ \mbox{\hyperlink{classModel_adf5cf7d33af8042c591725d2d41cafca}{create\+Model}} (std\+::string name=\char`\"{}\char`\"{}, double time=0.\+0)
+\begin{DoxyCompactList}\small\item\em Static method that acts as a factory to create a \mbox{\hyperlink{classModel}{Model}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -123,6 +132,102 @@ Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container 
 \end{DoxyItemize}
 
 Implemented in \mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{Model\+Impl}}.
+
+\mbox{\Hypertarget{classModel_a7aec304b6a80e8371e3ed915cde8148e}\label{classModel_a7aec304b6a80e8371e3ed915cde8148e}} 
+\index{Model@{Model}!createFlow@{createFlow}}
+\index{createFlow@{createFlow}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{createFlow()}{createFlow()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFlow}{Flow}}$\ast$ Model\+::create\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Template factory method to create any type of \mbox{\hyperlink{classFlow}{Flow}} inside this model. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & the concrete subclass of \mbox{\hyperlink{classFlow}{Flow}}. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the flow. \\
+\hline
+{\em source} & pointer to the source system. \\
+\hline
+{\em target} & pointer to the target system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flow$\ast$ -\/ pointer to the created flow. 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file Model.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100                                                                                               \{ \textcolor{comment}{//metodo template não pode ser virtual}}
+\DoxyCodeLine{101         \mbox{\hyperlink{classFlow}{Flow}}* flow = \textcolor{keyword}{new} T(name, source, target);}
+\DoxyCodeLine{102         this-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(flow); \textcolor{comment}{// Já adiciona automaticamente ao modelo}}
+\DoxyCodeLine{103         \textcolor{keywordflow}{return} flow;}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_adf5cf7d33af8042c591725d2d41cafca}\label{classModel_adf5cf7d33af8042c591725d2d41cafca}} 
+\index{Model@{Model}!createModel@{createModel}}
+\index{createModel@{createModel}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{createModel()}{createModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModel}{Model}} $\ast$ Model\+::create\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{double}]{time = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static method that acts as a factory to create a \mbox{\hyperlink{classModel}{Model}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the model. \\
+\hline
+{\em time} & the initial time of the model. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Model$\ast$ -\/ pointer to the created model interface. 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file Model\+Impl.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110                                                      \{}
+\DoxyCodeLine{111     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classModelImpl}{ModelImpl}}(name, time);}
+\DoxyCodeLine{112 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_adf9c63fb5e39bd2cb025255001907524}\label{classModel_adf9c63fb5e39bd2cb025255001907524}} 
+\index{Model@{Model}!createSystem@{createSystem}}
+\index{createSystem@{createSystem}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{createSystem()}{createSystem()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classSystem}{System}}$\ast$ Model\+::create\+System (\begin{DoxyParamCaption}\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{double}]{value = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Factory method to create a \mbox{\hyperlink{classSystem}{System}} inside this model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the system. \\
+\hline
+{\em value} & the initial value of the system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+System$\ast$ -\/ pointer to the created system. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classModelImpl_a033781acaa9c0c0ff60b719c916ea2be}{Model\+Impl}}.
 
 \mbox{\Hypertarget{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}\label{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}} 
 \index{Model@{Model}!execute@{execute}}
@@ -302,6 +407,7 @@ Implemented in \mbox{\hyperlink{classModelImpl_a1071f515e45c86e9295b193b7d28cc98
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{Model_8h}{Model.\+h}}\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{Model_8h}{Model.\+h}}\item 
+src/\mbox{\hyperlink{ModelImpl_8cpp}{Model\+Impl.\+cpp}}\end{DoxyCompactItemize}

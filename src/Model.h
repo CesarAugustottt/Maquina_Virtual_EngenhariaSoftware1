@@ -69,6 +69,39 @@ public:
     * * @param increment the value to be added to the current time.
     */
     virtual void incrementTime(double) = 0;
+
+    //METODOS frabrica
+    /*!
+    * @brief Static method that acts as a factory to create a Model instance.
+    * @param name the name of the model.
+    * @param time the initial time of the model.
+    * @return Model* - pointer to the created model interface.
+    */
+    static Model* createModel(std::string name = "", double time = 0.0);
+
+    /*!
+    * @brief Factory method to create a System inside this model.
+    * @param name the name of the system.
+    * @param value the initial value of the system.
+    * @return System* - pointer to the created system.
+    */
+    virtual System* createSystem(std::string name = "", double value = 0.0) = 0;
+
+
+    /*!
+    * @brief Template factory method to create any type of Flow inside this model.
+    * @tparam T the concrete subclass of Flow.
+    * @param name the name of the flow.
+    * @param source pointer to the source system.
+    * @param target pointer to the target system.
+    * @return Flow* - pointer to the created flow.
+    */
+    template <typename T>
+    Flow* createFlow(std::string name = "", System* source = nullptr, System* target = nullptr) { //metodo template não pode ser virtual
+        Flow* flow = new T(name, source, target);
+        this->add(flow); // Já adiciona automaticamente ao modelo
+        return flow;
+    }
 };
 
 #endif

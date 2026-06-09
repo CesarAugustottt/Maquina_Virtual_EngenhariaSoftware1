@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['unit_5fflow_201',['Unit_Flow',['../classFlowImpl.html#ac1ba2f84b2ef6fa52ad3ab246d9b4d54',1,'FlowImpl']]],
-  ['unit_5fmodel_202',['Unit_Model',['../classModelImpl.html#a686d152cfd45e63b5bc3db6f327fdaeb',1,'ModelImpl']]],
-  ['unit_5fsystem_203',['Unit_System',['../classSystemImpl.html#a570c37a257d6d888145dec2cfc309e4b',1,'SystemImpl']]]
+  ['model_201',['Model',['../classFlowImpl.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'FlowImpl::Model()'],['../classModelImpl.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'ModelImpl::Model()'],['../classComplexFlow.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'ComplexFlow::Model()'],['../classExponentialFlow.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'ExponentialFlow::Model()'],['../classLogisticFlow.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'LogisticFlow::Model()']]],
+  ['modelimpl_202',['ModelImpl',['../classSystemImpl.html#afb81d2077780e342b8fd3654cabc4c19',1,'SystemImpl']]]
 ];

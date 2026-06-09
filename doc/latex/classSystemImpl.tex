@@ -30,10 +30,6 @@ Collaboration diagram for System\+Impl\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSystemImpl_a6e8460199ac54949b08ecb315fce168b}{System\+Impl}} ()
-\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classSystemImpl}{System\+Impl}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSystemImpl_a85defe8ed20d3337bc6a41c138c5bace}{System\+Impl}} (std\+::string \mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}}, double \mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}})
-\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classSystemImpl}{System\+Impl}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classSystemImpl_a0cd451779458a7bd7c224a48ed163a9e}{$\sim$\+System\+Impl}} ()
 \begin{DoxyCompactList}\small\item\em destrutor \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystemImpl_a2acbc548ef25167adaa25effec099432}{set\+Name}} (std\+::string \mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}}) override
@@ -43,7 +39,14 @@ std\+::string \mbox{\hyperlink{classSystemImpl_ad3843b49bbde11738f395c5fbeae4633
 void \mbox{\hyperlink{classSystemImpl_a3ebff8dd869e1fab281375d5c2ef8362}{set\+Value}} (double \mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}}) override
 \begin{DoxyCompactList}\small\item\em Sets the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classSystemImpl_abd3ff91586d4474c0a747dc5dd6e0268}{get\+Value}} () const override
-\begin{DoxyCompactList}\small\item\em Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSystemImpl_a6e8460199ac54949b08ecb315fce168b}{System\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classSystemImpl}{System\+Impl}} Class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystemImpl_a85defe8ed20d3337bc6a41c138c5bace}{System\+Impl}} (std\+::string \mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}}, double \mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}})
+\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classSystemImpl}{System\+Impl}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystemImpl_a89d92eb58ac9ce979e0f2b2d0a33894f}{System\+Impl}} (const \mbox{\hyperlink{classSystemImpl}{System\+Impl}} \&sys)
 \begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classSystemImpl}{System\+Impl}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystemImpl}{System\+Impl}} \& \mbox{\hyperlink{classSystemImpl_aa90a45b567f1d915a6c2cadb578e3deb}{operator=}} (const \mbox{\hyperlink{classSystemImpl}{System\+Impl}} \&sys)
@@ -59,6 +62,8 @@ double \mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classSystemImpl_a570c37a257d6d888145dec2cfc309e4b}{Unit\+\_\+\+System}}
+\item 
+class \mbox{\hyperlink{classSystemImpl_afb81d2077780e342b8fd3654cabc4c19}{Model\+Impl}}
 \end{DoxyCompactItemize}
 
 
@@ -74,7 +79,7 @@ Definition at line 11 of file System\+Impl.\+h.
 \index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
 \index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
 \doxysubsubsection{\texorpdfstring{SystemImpl()}{SystemImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily System\+Impl\+::\+System\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily System\+Impl\+::\+System\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -82,7 +87,7 @@ This is the default constructor for the \mbox{\hyperlink{classSystemImpl}{System
 
 
 
-Definition at line 3 of file System.\+cpp.
+Definition at line 3 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -96,7 +101,7 @@ Definition at line 3 of file System.\+cpp.
 \index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
 \index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
 \doxysubsubsection{\texorpdfstring{SystemImpl()}{SystemImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily System\+Impl\+::\+System\+Impl (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily System\+Impl\+::\+System\+Impl (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -114,37 +119,18 @@ This is the parameterized constructor for the \mbox{\hyperlink{classSystemImpl}{
 
 \end{DoxyItemize}
 
-Definition at line 8 of file System.\+cpp.
+Definition at line 8 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{8 : \mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}}(\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}}), \mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}}(\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}}) \{\}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classSystemImpl_a0cd451779458a7bd7c224a48ed163a9e}\label{classSystemImpl_a0cd451779458a7bd7c224a48ed163a9e}} 
-\index{SystemImpl@{SystemImpl}!````~SystemImpl@{$\sim$SystemImpl}}
-\index{````~SystemImpl@{$\sim$SystemImpl}!SystemImpl@{SystemImpl}}
-\doxysubsubsection{\texorpdfstring{$\sim$SystemImpl()}{~SystemImpl()}}
-{\footnotesize\ttfamily System\+Impl\+::$\sim$\+System\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-destrutor 
-
-
-
-Definition at line 10 of file System.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{10 \{\}}
-
-\end{DoxyCode}
 \mbox{\Hypertarget{classSystemImpl_a89d92eb58ac9ce979e0f2b2d0a33894f}\label{classSystemImpl_a89d92eb58ac9ce979e0f2b2d0a33894f}} 
 \index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
 \index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
 \doxysubsubsection{\texorpdfstring{SystemImpl()}{SystemImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily System\+Impl\+::\+System\+Impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSystemImpl}{System\+Impl}} \&}]{sys }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily System\+Impl\+::\+System\+Impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSystemImpl}{System\+Impl}} \&}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -160,7 +146,7 @@ This is the copy constructor for the \mbox{\hyperlink{classSystemImpl}{System\+I
 
 \end{DoxyItemize}
 
-Definition at line 28 of file System.\+cpp.
+Definition at line 28 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -168,6 +154,25 @@ Definition at line 28 of file System.\+cpp.
 \DoxyCodeLine{29     this-\/>\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}} = sys.\mbox{\hyperlink{classSystemImpl_aaf1f43ae8a49e3eec145459a22520fa5}{name}};}
 \DoxyCodeLine{30     this-\/>\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}} = sys.\mbox{\hyperlink{classSystemImpl_ad068c75f35f48f312d0899d161ea7481}{value}};}
 \DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSystemImpl_a0cd451779458a7bd7c224a48ed163a9e}\label{classSystemImpl_a0cd451779458a7bd7c224a48ed163a9e}} 
+\index{SystemImpl@{SystemImpl}!````~SystemImpl@{$\sim$SystemImpl}}
+\index{````~SystemImpl@{$\sim$SystemImpl}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{$\sim$SystemImpl()}{~SystemImpl()}}
+{\footnotesize\ttfamily System\+Impl\+::$\sim$\+System\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+destrutor 
+
+
+
+Definition at line 10 of file System\+Impl.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10 \{\}}
 
 \end{DoxyCode}
 
@@ -195,7 +200,7 @@ Implements \mbox{\hyperlink{classSystem_a3bc2509274e6c346e07b0bf1151378c5}{Syste
 
 
 
-Definition at line 16 of file System.\+cpp.
+Definition at line 16 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -226,7 +231,7 @@ Implements \mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{Syste
 
 
 
-Definition at line 24 of file System.\+cpp.
+Definition at line 24 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -239,7 +244,7 @@ Definition at line 24 of file System.\+cpp.
 \index{SystemImpl@{SystemImpl}!operator=@{operator=}}
 \index{operator=@{operator=}!SystemImpl@{SystemImpl}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classSystemImpl}{System\+Impl}} \& System\+Impl\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSystemImpl}{System\+Impl}} \&}]{sys }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystemImpl}{System\+Impl}} \& System\+Impl\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSystemImpl}{System\+Impl}} \&}]{sys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -258,7 +263,7 @@ This is the overloaded assignment operator for the \mbox{\hyperlink{classSystemI
 
 \end{DoxyItemize}
 
-Definition at line 33 of file System.\+cpp.
+Definition at line 33 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -296,7 +301,7 @@ Implements \mbox{\hyperlink{classSystem_a9b91be893916f4cf8680ac56970950f1}{Syste
 
 
 
-Definition at line 12 of file System.\+cpp.
+Definition at line 12 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -329,7 +334,7 @@ Implements \mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{Syste
 
 
 
-Definition at line 20 of file System.\+cpp.
+Definition at line 20 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
@@ -341,6 +346,16 @@ Definition at line 20 of file System.\+cpp.
 
 
 \doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classSystemImpl_afb81d2077780e342b8fd3654cabc4c19}\label{classSystemImpl_afb81d2077780e342b8fd3654cabc4c19}} 
+\index{SystemImpl@{SystemImpl}!ModelImpl@{ModelImpl}}
+\index{ModelImpl@{ModelImpl}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{ModelImpl}{ModelImpl}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classModelImpl}{Model\+Impl}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 55 of file System\+Impl.\+h.
+
 \mbox{\Hypertarget{classSystemImpl_a570c37a257d6d888145dec2cfc309e4b}\label{classSystemImpl_a570c37a257d6d888145dec2cfc309e4b}} 
 \index{SystemImpl@{SystemImpl}!Unit\_System@{Unit\_System}}
 \index{Unit\_System@{Unit\_System}!SystemImpl@{SystemImpl}}
@@ -349,7 +364,7 @@ Definition at line 20 of file System.\+cpp.
 
 
 
-Definition at line 51 of file System\+Impl.\+h.
+Definition at line 53 of file System\+Impl.\+h.
 
 
 
@@ -379,4 +394,4 @@ Definition at line 16 of file System\+Impl.\+h.
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 src/\mbox{\hyperlink{SystemImpl_8h}{System\+Impl.\+h}}\item 
-src/\mbox{\hyperlink{System_8cpp}{System.\+cpp}}\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{SystemImpl_8cpp}{System\+Impl.\+cpp}}\end{DoxyCompactItemize}

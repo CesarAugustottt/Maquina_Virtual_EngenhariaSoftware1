@@ -14,7 +14,7 @@ protected:
     std::string name;
     /*! This attribute contains the actual value of the system. */
     double value;
-public:
+
     // Construtores e Destrutor
     /*!
      * @brief This is the default constructor for the SystemImpl Class.
@@ -26,13 +26,6 @@ public:
      * @param value the initial value of the System.
      */
     SystemImpl(std::string name, double value);
-    ///destrutor
-    virtual ~SystemImpl();
-    // Setters e Getters
-    void setName(std::string name) override;
-    std::string getName() const override;
-    void setValue(double value) override;
-    double getValue() const override;
 
     // Construtor de copia e Operador de atribuicao
     /*!
@@ -46,9 +39,20 @@ public:
      * @return SystemImpl& - a reference to the updated SystemImpl Class object.
      */
     SystemImpl& operator=(const SystemImpl& sys);
+public:
+    ///destrutor
+    virtual ~SystemImpl();
+    // Setters e Getters
+    void setName(std::string name) override;
+    std::string getName() const override;
+    void setValue(double value) override;
+    double getValue() const override;
 
-    // Permite que a classe de teste faça testes unitário a cada método
+
+    // Permite que a classe de teste faça testes unitario a cada método
     friend class Unit_System;
+    // Permite que o metodo createSystem implementado em ModelImpl acesse os cobstrutores
+    friend class ModelImpl;
 };
 
 #endif
