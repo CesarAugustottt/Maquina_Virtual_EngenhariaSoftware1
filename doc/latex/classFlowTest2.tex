@@ -46,7 +46,7 @@ virtual void \mbox{\hyperlink{classFlowTest2_af9d0cd1cc7c335d49459b526473beda7}{
 \begin{DoxyCompactList}\small\item\em Sets the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{classFlowTest2_a1a0a36de7f919f708cc50c4f1eedd835}{execute}} () override
 \begin{DoxyCompactList}\small\item\em Pure virtual method to execute the flow equation. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}
@@ -60,7 +60,7 @@ std\+::string \mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}
 \doxysubsection{Detailed Description}
 Class used exclusively to instantiate and test \mbox{\hyperlink{classFlow}{Flow}}. 
 
-Definition at line 41 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 31 of file unit\+\_\+\+Model.\+cpp.
 
 
 
@@ -73,15 +73,15 @@ Definition at line 41 of file unit\+\_\+\+Model.\+cpp.
 
 
 
-Definition at line 47 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 37 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{47                \{}
-\DoxyCodeLine{48         this-\/>\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}= \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{49         this-\/>\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}= \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{50         this-\/>\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}= \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{51     \}}
+\DoxyCodeLine{37                \{}
+\DoxyCodeLine{38         this-\/>\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}= \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{39         this-\/>\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}= \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{40         this-\/>\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}= \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{41     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest2_a5221bef0c713ed9636dfbd6377df06c8}\label{classFlowTest2_a5221bef0c713ed9636dfbd6377df06c8}} 
@@ -92,11 +92,11 @@ Definition at line 47 of file unit\+\_\+\+Model.\+cpp.
 
 
 
-Definition at line 53 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 42 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{54         : \mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}(\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}), \mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}(\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}), \mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}(\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}) \{\}}
+\DoxyCodeLine{43         : \mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}(\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}), \mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}(\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}), \mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}(\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}) \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest2_a6fdaab7361fdf4ee8d470a7b4f4aedf6}\label{classFlowTest2_a6fdaab7361fdf4ee8d470a7b4f4aedf6}} 
@@ -107,11 +107,11 @@ Definition at line 53 of file unit\+\_\+\+Model.\+cpp.
 
 
 
-Definition at line 55 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 44 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{55 \{\}}
+\DoxyCodeLine{44 \{\}}
 
 \end{DoxyCode}
 
@@ -139,16 +139,16 @@ Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
 
 
 
-Definition at line 74 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 51 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{74                                       \{ }
-\DoxyCodeLine{75         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}{getSource}}() != \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{// se tiver sistema de origem}}
-\DoxyCodeLine{76             \textcolor{keywordflow}{return} 0.01 * this-\/>\mbox{\hyperlink{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}{getSource}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(); }
-\DoxyCodeLine{77         \}}
-\DoxyCodeLine{78         \textcolor{keywordflow}{return} 0.0;}
-\DoxyCodeLine{79     \}}
+\DoxyCodeLine{51                                       \{ }
+\DoxyCodeLine{52         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}{getSource}}() != \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{// se tiver sistema de origem}}
+\DoxyCodeLine{53             \textcolor{keywordflow}{return} 0.01 * this-\/>\mbox{\hyperlink{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}{getSource}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(); }
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55         \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{56     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest2_a59048238b62ffd20066f2fcaab5ec6f6}\label{classFlowTest2_a59048238b62ffd20066f2fcaab5ec6f6}} 
@@ -173,13 +173,11 @@ Implements \mbox{\hyperlink{classFlow_a2d0340d844ab2d275222938234e44169}{Flow}}.
 
 
 
-Definition at line 56 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 45 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{56                                               \{}
-\DoxyCodeLine{57         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}};}
-\DoxyCodeLine{58     \}}
+\DoxyCodeLine{45 \{ \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}}; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}\label{classFlowTest2_a92141085bcb3110e530bd936bbcf4368}} 
@@ -204,13 +202,11 @@ Implements \mbox{\hyperlink{classFlow_aff381195663a5028494e3de9c6194f2c}{Flow}}.
 
 
 
-Definition at line 62 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 47 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{62                                               \{}
-\DoxyCodeLine{63         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}};}
-\DoxyCodeLine{64     \}}
+\DoxyCodeLine{47 \{ \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}}; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest2_a630aaabfa4820861a57d47e147ccd644}\label{classFlowTest2_a630aaabfa4820861a57d47e147ccd644}} 
@@ -235,13 +231,11 @@ Implements \mbox{\hyperlink{classFlow_a81aeceffcb2b425af124c3b0d1962786}{Flow}}.
 
 
 
-Definition at line 68 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 49 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{68                                               \{}
-\DoxyCodeLine{69         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}};}
-\DoxyCodeLine{70     \}}
+\DoxyCodeLine{49 \{ \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}}; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest2_af7651c772946a3cea04bd94e926c692b}\label{classFlowTest2_af7651c772946a3cea04bd94e926c692b}} 
@@ -268,13 +262,11 @@ Implements \mbox{\hyperlink{classFlow_a80346b11c95c20a009278eb78f8f9653}{Flow}}.
 
 
 
-Definition at line 59 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 46 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{59                                               \{}
-\DoxyCodeLine{60         this-\/>\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}} = n;}
-\DoxyCodeLine{61     \}}
+\DoxyCodeLine{46 \{ this-\/>\mbox{\hyperlink{classFlowTest2_ad90e2c18210c34989d048835d2859c67}{name}} = n; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest2_a5e9bb179ca12696a94d4cbc4ed66515f}\label{classFlowTest2_a5e9bb179ca12696a94d4cbc4ed66515f}} 
@@ -301,13 +293,11 @@ Implements \mbox{\hyperlink{classFlow_a1ca17cd54e042c1c1ccf73597e7f188e}{Flow}}.
 
 
 
-Definition at line 65 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 48 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{65                                               \{}
-\DoxyCodeLine{66         this-\/>\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}} = s;}
-\DoxyCodeLine{67     \}}
+\DoxyCodeLine{48 \{ this-\/>\mbox{\hyperlink{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}{source}} = s; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest2_af9d0cd1cc7c335d49459b526473beda7}\label{classFlowTest2_af9d0cd1cc7c335d49459b526473beda7}} 
@@ -334,13 +324,11 @@ Implements \mbox{\hyperlink{classFlow_a0a6d9503f9fd5afb978dd07346fa7e0d}{Flow}}.
 
 
 
-Definition at line 71 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 50 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{71                                               \{}
-\DoxyCodeLine{72         this-\/>\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}} = t;}
-\DoxyCodeLine{73     \}}
+\DoxyCodeLine{50 \{ this-\/>\mbox{\hyperlink{classFlowTest2_a4431cb98598d155297321677865c4361}{target}} = t; \}}
 
 \end{DoxyCode}
 
@@ -350,31 +338,31 @@ Definition at line 71 of file unit\+\_\+\+Model.\+cpp.
 \index{FlowTest2@{FlowTest2}!name@{name}}
 \index{name@{name}!FlowTest2@{FlowTest2}}
 \doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily std\+::string Flow\+Test2\+::name\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::string Flow\+Test2\+::name}
 
 
 
-Definition at line 43 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 33 of file unit\+\_\+\+Model.\+cpp.
 
 \mbox{\Hypertarget{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}\label{classFlowTest2_a2ec080cecbdc8a7822d00402caa96e11}} 
 \index{FlowTest2@{FlowTest2}!source@{source}}
 \index{source@{source}!FlowTest2@{FlowTest2}}
 \doxysubsubsection{\texorpdfstring{source}{source}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}}$\ast$ Flow\+Test2\+::source\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}}$\ast$ Flow\+Test2\+::source}
 
 
 
-Definition at line 44 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 34 of file unit\+\_\+\+Model.\+cpp.
 
 \mbox{\Hypertarget{classFlowTest2_a4431cb98598d155297321677865c4361}\label{classFlowTest2_a4431cb98598d155297321677865c4361}} 
 \index{FlowTest2@{FlowTest2}!target@{target}}
 \index{target@{target}!FlowTest2@{FlowTest2}}
 \doxysubsubsection{\texorpdfstring{target}{target}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}}$\ast$ Flow\+Test2\+::target\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}}$\ast$ Flow\+Test2\+::target}
 
 
 
-Definition at line 45 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 35 of file unit\+\_\+\+Model.\+cpp.
 
 
 

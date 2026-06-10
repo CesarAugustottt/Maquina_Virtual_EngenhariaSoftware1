@@ -50,6 +50,12 @@ public:
     static bool addFlow(void);
 
     /*!
+     * @brief Tests the private static method addModel.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool addModel(void);
+
+    /*!
      * @brief Tests the removal of Systems from ModelImpl.
      * @return true if the test passed, false otherwise.
      */
@@ -97,8 +103,7 @@ public:
      */
     static bool copyConstructor(void);
 
-    //metodos da fabrica
-
+    //metodos da fabrica de criação
     /*!
      * @brief Tests the static factory method createModel.
      * @return true if the test passed, false otherwise.
@@ -115,7 +120,26 @@ public:
      * @brief Tests the template factory method createFlow.
      * @return true if the test passed, false otherwise.
      */
-    static bool creteFlow(void);
+    static bool createFlow(void);
+
+    //metodos da fabrica de destruição
+    /*!
+     * @brief Tests the static factory method deleteModel.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool deleteModel(void);
+
+    /*!
+     * @brief Tests the factory method deleteSystem.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool deleteSystem(void);
+
+    /*!
+     * @brief Tests the factory method deleteFlow.
+     * @return true if the test passed, false otherwise.
+     */
+    static bool deleteFlow(void);
 
     //função global chamada pela main
     /*!

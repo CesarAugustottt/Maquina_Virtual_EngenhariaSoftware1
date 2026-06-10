@@ -3,6 +3,7 @@
 #include <cassert>
 #include <string>
 #include <cmath>
+#include<algorithm>
 #include <iostream>
 
 /*!
@@ -11,66 +12,42 @@
 class SystemTest : public System{
 public:
     std :: string name;
-    double value;
-    
+    double value;  
     SystemTest() {
         this->name = "";
         this->value = 0.0;
     }
     SystemTest(std::string name, double value) : name(name), value(value){}
     virtual ~SystemTest(){}
-
-    virtual std::string getName() const override{
-        return this->name;
-    }
-    virtual void setName(std::string n) override{
-        this->name = n;
-    }
-    virtual double getValue() const override{
-        return this->value;
-    }
-    virtual void setValue(double v) override{
-        this->value = v;
-    }
-
+    virtual std::string getName() const override{ return this->name; }
+    virtual void setName(std::string n) override{ this->name = n; }
+    virtual double getValue() const override{ return this->value; }
+    virtual void setValue(double v) override{ this->value = v; }
 };
 
 /*!
  * @brief Class used exclusively to instantiate and test Flow.
  */
 class FlowTest2 : public Flow {
-private:
+public:
     std::string name;
     System* source;
     System* target;
-public:
+
     FlowTest2(){
         this->name= "";
         this->source= nullptr;
         this->target= nullptr;
     }
-
     FlowTest2(std::string name, System* source, System* target) 
         : name(name), source(source), target(target) {}
     virtual ~FlowTest2() {}
-    virtual std::string getName() const override{
-        return this->name;
-    }
-    virtual void setName(std::string n) override{
-        this->name = n;
-    }
-    virtual System* getSource() const override{
-        return this->source;
-    }
-    virtual void setSource(System* s) override{
-        this->source = s;
-    }
-    virtual System* getTarget() const override{
-        return this->target;
-    }
-    virtual void setTarget(System* t) override{
-        this->target = t;
-    }
+    virtual std::string getName() const override{ return this->name; }
+    virtual void setName(std::string n) override{ this->name = n; }
+    virtual System* getSource() const override{ return this->source; }
+    virtual void setSource(System* s) override{ this->source = s; }
+    virtual System* getTarget() const override{ return this->target; }
+    virtual void setTarget(System* t) override{ this->target = t; }
     virtual double execute() override { 
         if (this->getSource() != nullptr) { // se tiver sistema de origem
             return 0.01 * this->getSource()->getValue(); 
@@ -86,7 +63,6 @@ bool Unit_Model::defaultConstructor(void) {
     assert(m.time == 0.0);
     assert(m.systems.size() == 0);
     assert(m.flows.size() == 0);
-
     return true;
 }
 
@@ -94,7 +70,6 @@ bool Unit_Model::constructor(void) {
     ModelImpl m("Modelo", 10.0);
     assert(m.name == "Modelo");
     assert(m.time == 10.0);
-
     return true;
 }
 
@@ -104,8 +79,7 @@ bool Unit_Model::destructor(void){
     
     m->systems.push_back(s1);
     
-    delete m; 
-    delete s1; 
+    delete m;
     
     return true;
 }
@@ -177,6 +151,23 @@ bool Unit_Model::addFlow(void) {
     //liberar memoria
     m.flows.clear();
     delete f;
+    return true;
+}
+
+bool Unit_Model::addModel(void){
+    //tamanho inicial do vetor models
+    size_t tamanhoInicial = Model::models.size();
+    Model* m = new ModelImpl();
+    Model::addModel(m); //adicionar model ao vetor
+    assert(Model::models.size() == tamanhoInicial + 1);
+    
+    //remover model
+    auto it = std::find(Model::models.begin(), Model::models.end(), m);
+    if (it != Model::models.end()) {
+        Model::models.erase(it);
+    }
+     
+    delete m;
     return true;
 }
 
@@ -274,6 +265,92 @@ bool Unit_Model::assignmentOperator(void) {
     return true;
 }
 
+bool Unit_Model::createModel(void) {
+    Model* m = Model::createModel("Modelo", 10.0);
+    assert(m != nullptr);
+
+    ModelImpl* mImpl = static_cast<ModelImpl*>(m); //cast
+    assert(mImpl->name == "Modelo");
+    assert(mImpl->time == 10.0);
+    
+    //remover model
+    auto it = std::find(Model::models.begin(), Model::models.end(), m);
+    if (it != Model::models.end()) {
+        Model::models.erase(it);
+    }
+     
+    delete m;
+    
+    return true;
+}
+
+bool Unit_Model::createSystem(void) {
+    ModelImpl* m = new ModelImpl();
+    System* s = m->createSystem("Sistema", 10.0);
+    
+    assert(s != nullptr);
+    SystemTest * sTest = static_cast<SystemTest*>(s); //cast
+    assert(sTest->name == "Sistema");
+    assert(sTest->value == 10.0);
+    
+    //testar se system ja foi inserido no vetor
+    assert(m->systems.size() == 1);
+    assert(m->systems[0] == s);
+
+    delete m;
+    return true;
+}
+
+bool Unit_Model::createFlow(void) {
+    ModelImpl* m = new ModelImpl();
+    Flow* f = m->createFlow<FlowTest2>("Fluxo", nullptr, nullptr);
+    
+    assert(f != nullptr);
+    FlowTest2* fTest = static_cast<FlowTest2*>(f); //cast
+    assert(fTest->name == "Fluxo");
+    
+    //testar se flow foi inserido no vetor
+    assert(m->flows.size() == 1);
+    assert(m->flows[0] == f);
+
+    delete m;
+    return true;
+}
+
+bool Unit_Model::deleteModel(void) {
+    Model* m = new ModelImpl();
+    Model::deleteModel(m);
+    return true;
+}
+
+bool Unit_Model::deleteSystem(void) {
+    ModelImpl* m = new ModelImpl();
+    System* s = new SystemTest();
+    
+    m->systems.push_back(s); //adiciona system
+    
+    //Deleta
+    m->deleteSystem(s);
+    assert(m->systems.size() == 0);
+
+    delete m;
+    return true;
+}
+
+bool Unit_Model::deleteFlow(void) {
+    ModelImpl* m = new ModelImpl();
+    Flow* f = new FlowTest2();
+    
+    m->flows.push_back(f); //adicionar flow ao modelo
+    
+    //Deletar
+    m->deleteFlow(f);
+    assert(m->flows.size() == 0);
+
+    delete m;
+    return true;
+}
+
 bool Unit_Model::regressiveTest(void) {
     // Executa todasa as funções
     assert(defaultConstructor());
@@ -283,6 +360,7 @@ bool Unit_Model::regressiveTest(void) {
     assert(increment());
     assert(addSystem());
     assert(addFlow());
+    assert(addModel());
     assert(removeSystem());
     assert(removeFlow());
     assert(getName());
@@ -291,6 +369,14 @@ bool Unit_Model::regressiveTest(void) {
     assert(setTime());
     assert(copyConstructor());
     assert(assignmentOperator());
+
+    //testes metodos da fabrica
+    assert(createModel());
+    assert(createSystem());
+    assert(createFlow());
+    assert(deleteModel());
+    assert(deleteSystem());
+    assert(deleteFlow());
     
     return true;
 }

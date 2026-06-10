@@ -2,6 +2,7 @@
 #define MODEL_H
 
 #include <string>
+#include <vector>
 
 class Flow;
 class System;
@@ -11,6 +12,27 @@ class System;
  * * It acts as a container for systems and flows, controlling the execution of the simulation.
  */
 class Model {
+private:
+    /*! @brief Static container for storing all models created by the factory.*/
+    static std::vector<Model*> models;
+    
+    /*!
+     * @brief Adds a Model instance within the static global vector.
+     * * @param Pointer to the instance of the model to be added.
+     */
+    static void addModel(Model*);
+
+protected:
+    /*!
+    * @brief Adds a System pointer to the internal container of the model.
+    * * @param sys the System pointer to be added.
+    */
+    virtual void add(System*) = 0;
+    /*!
+    * @brief Adds a Flow pointer to the internal container of the model.
+    * * @param flow the Flow pointer to be added.
+    */
+    virtual void add(Flow*) = 0;
 public:
     /*!
     * @brief This is the default destructor for the Model Class
@@ -24,16 +46,6 @@ public:
     * @param increment the time step increment for each iteration.
     */
     virtual void execute(double, double, double) = 0;
-    /*!
-    * @brief Adds a System pointer to the internal container of the model.
-    * * @param sys the System pointer to be added.
-    */
-    virtual void add(System*) = 0;
-    /*!
-    * @brief Adds a Flow pointer to the internal container of the model.
-    * * @param flow the Flow pointer to be added.
-    */
-    virtual void add(Flow*) = 0;
     /*!
     * @brief Removes a System pointer from the internal container of the model.
     * * @param sys the System pointer to be removed.
@@ -71,6 +83,7 @@ public:
     virtual void incrementTime(double) = 0;
 
     //METODOS frabrica
+    //metodos de criação
     /*!
     * @brief Static method that acts as a factory to create a Model instance.
     * @param name the name of the model.
@@ -102,6 +115,26 @@ public:
         this->add(flow); // Já adiciona automaticamente ao modelo
         return flow;
     }
+
+    //metodos para deletar
+    /*!
+     * @brief Static method that acts as a factory to delete a Model instance.
+     * * @param model Pointer to the Model instance to be deleted.
+     */
+    static void deleteModel(Model*);
+
+    /*!
+     * @brief Factory method to delete a System instance from this model.
+     * * @param sys Pointer to the System instance to be deleted.
+     */
+    virtual void deleteSystem(System*) = 0;
+
+    /*!
+     * @brief Factory method to delete a Flow instance from this model.
+     * * @param flow Pointer to the Flow instance to be deleted.
+     */
+    virtual void deleteFlow(Flow*) = 0;
+    friend class Unit_Model;
 };
 
 #endif

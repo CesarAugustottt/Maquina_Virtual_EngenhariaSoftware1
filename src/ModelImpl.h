@@ -7,7 +7,6 @@
 
 #include <vector>
 #include <string>
-#include <algorithm>
 
 /*!
  * @brief This class represents the concrete implementation of a Model.
@@ -48,11 +47,12 @@ protected:
     */
     ModelImpl& operator=(const ModelImpl& model);
 
+    //metodos de adicionar protegido
+    void add(System* sys) override;
+    void add(Flow* flow) override;
 public:
     virtual ~ModelImpl();
     void execute(double start, double final, double increment) override;
-    void add(System* sys) override;
-    void add(Flow* flow) override;
     void remove(System* sys) override;
     void remove(Flow* flow) override;
     void setName(std::string name) override;
@@ -61,8 +61,12 @@ public:
     double getTime() const override;
     void incrementTime(double increment) override;
 
-    //Metodo da fabrica
+    //Metodo create da fabrica
     System* createSystem(std::string name = "", double value = 0.0) override;
+
+    //metodos delete da fabrica
+    void deleteSystem(System*) override;
+    void deleteFlow(Flow*) override;
 
     // Permite que a classe de teste faça testes unitario a cada metodo
     friend class Unit_Model;
