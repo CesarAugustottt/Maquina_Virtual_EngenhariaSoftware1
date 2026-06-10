@@ -28,12 +28,12 @@ make all
 
 Para rodar os testes funcionais:
 ```bash
-./bin/funcional_tests.exe
+make run_funcional
 ```
 
 Para rodar os testes unitários:
 ```bash
-./bin/unit_tests.exe
+make run_unit
 ```
 
 ## Fluxo de Desenvolvimento
