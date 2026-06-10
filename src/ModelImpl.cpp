@@ -1,5 +1,14 @@
 #include "ModelImpl.h"
 #include "SystemImpl.h"
+#include <algorithm>
+
+//atributo statico de model
+std::vector<Model*> Model::models;
+
+//Metodo estatico para adiconar modelo ao vetor
+void Model::addModel(Model* model) {
+    models.push_back(model);
+}
 
 ModelImpl::ModelImpl() {
     this->name = "";
@@ -9,7 +18,15 @@ ModelImpl::ModelImpl() {
 ModelImpl::ModelImpl(std::string name, double time) : name(name), time(time) {}
 
 ModelImpl::~ModelImpl() {
-    //limpar os apenas os vetires, sem destruir os sistemas e fluxos
+    //deletar systems
+    for (std::vector<System*>::iterator it = systems.begin(); it != systems.end(); ++it) {
+        delete *it; //deleta a memoria alocada dinamicamente
+    }
+    //deletar flows
+    for (std::vector<Flow*>::iterator it = flows.begin(); it != flows.end(); ++it) {
+        delete *it;
+    }
+    //limpar os apenas os vetores
     systems.clear();
     flows.clear();
 }
@@ -108,7 +125,9 @@ ModelImpl& ModelImpl::operator=(const ModelImpl& model) {
 //IMPLEMENTAÇÃO metodos da fabrica
 //criar Model
 Model* Model::createModel(std::string name, double time) {
-    return new ModelImpl(name, time);
+    Model* m = new ModelImpl(name, time);
+    Model::addModel(m);
+    return m;
 }
 
 //Criar system
@@ -121,3 +140,27 @@ System* ModelImpl:: createSystem(std::string name, double value){
 }
 
 //create flow ja implementadp pois é metodo template
+
+//metodos delete
+void Model::deleteModel(Model* model){
+    if(!model){
+        return;
+    }
+    auto it = std::find(models.begin(), models.end(), model);
+    if (it != models.end()) {
+        models.erase(it);
+    }
+    delete model;
+}
+
+void ModelImpl::deleteSystem(System* sys) {
+    if (!sys) return;
+    this->remove(sys); // Tira do vetor
+    delete sys;        // Apagar
+}
+
+void ModelImpl::deleteFlow(Flow* flow) {
+    if (!flow) return;
+    this->remove(flow); // Tira do vetor
+    delete flow;        // Apagar
+}

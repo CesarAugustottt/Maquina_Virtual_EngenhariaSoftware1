@@ -25,10 +25,6 @@ virtual \mbox{\hyperlink{classModel_af032d8433c87a0a3a431faf6563a1f03}{$\sim$\+M
 \begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}{execute}} (double, double, double)=0
 \begin{DoxyCompactList}\small\item\em Executes the simulation by updating systems based on the flows equations over a period of time. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$)=0
-\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classModel_ac1e19f5fcc4ced9defbfe2847a26ff33}{add}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$)=0
-\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classModel_ac1884d0df43bd3eaa98fb2493b1eadbd}{remove}} (\mbox{\hyperlink{classSystem}{System}} $\ast$)=0
 \begin{DoxyCompactList}\small\item\em Removes a \mbox{\hyperlink{classSystem}{System}} pointer from the internal container of the model. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classModel_a9dfb3ab85127622aa9d9db591ee63454}{remove}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$)=0
@@ -46,12 +42,40 @@ virtual void \mbox{\hyperlink{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}{incr
 virtual \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classModel_adf9c63fb5e39bd2cb025255001907524}{create\+System}} (std\+::string name=\char`\"{}\char`\"{}, double value=0.\+0)=0
 \begin{DoxyCompactList}\small\item\em Factory method to create a \mbox{\hyperlink{classSystem}{System}} inside this model. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classFlow}{Flow}} $\ast$ \mbox{\hyperlink{classModel_a7aec304b6a80e8371e3ed915cde8148e}{create\+Flow}} (std\+::string name=\char`\"{}\char`\"{}, \mbox{\hyperlink{classSystem}{System}} $\ast$source=nullptr, \mbox{\hyperlink{classSystem}{System}} $\ast$target=nullptr)
-\begin{DoxyCompactList}\small\item\em Template factory method to create any type of \mbox{\hyperlink{classFlow}{Flow}} inside this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Template factory method to create any type of \mbox{\hyperlink{classFlow}{Flow}} inside this model. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classModel_a8513437cddbde699020045bc56338ac3}{delete\+System}} (\mbox{\hyperlink{classSystem}{System}} $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Factory method to delete a \mbox{\hyperlink{classSystem}{System}} instance from this model. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classModel_af88c1fa873e890ecabb8d32fc380c476}{delete\+Flow}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Factory method to delete a \mbox{\hyperlink{classFlow}{Flow}} instance from this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{classModel}{Model}} $\ast$ \mbox{\hyperlink{classModel_adf5cf7d33af8042c591725d2d41cafca}{create\+Model}} (std\+::string name=\char`\"{}\char`\"{}, double time=0.\+0)
-\begin{DoxyCompactList}\small\item\em Static method that acts as a factory to create a \mbox{\hyperlink{classModel}{Model}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Static method that acts as a factory to create a \mbox{\hyperlink{classModel}{Model}} instance. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classModel_a56ad5995d561c6096c9c6560fbb512fd}{delete\+Model}} (\mbox{\hyperlink{classModel}{Model}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Static method that acts as a factory to delete a \mbox{\hyperlink{classModel}{Model}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classModel_ac1e19f5fcc4ced9defbfe2847a26ff33}{add}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classModel_a8d34e397c313e0787181a2940a0f4fb5}{add\+Model}} (\mbox{\hyperlink{classModel}{Model}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classModel}{Model}} instance within the static global vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{classModel}{Model}} $\ast$ $>$ \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}
+\begin{DoxyCompactList}\small\item\em Static container for storing all models created by the factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classModel_a686d152cfd45e63b5bc3db6f327fdaeb}{Unit\+\_\+\+Model}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -62,7 +86,7 @@ This class represents the interface of a model in the General Systems Theory imp
 \item It acts as a container for systems and flows, controlling the execution of the simulation. 
 \end{DoxyItemize}
 
-Definition at line 13 of file Model.\+h.
+Definition at line 14 of file Model.\+h.
 
 
 
@@ -79,11 +103,11 @@ This is the default destructor for the \mbox{\hyperlink{classModel}{Model}} Clas
 
 
 
-Definition at line 18 of file Model.\+h.
+Definition at line 40 of file Model.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{18 \{\}}
+\DoxyCodeLine{40 \{\}}
 
 \end{DoxyCode}
 
@@ -93,7 +117,7 @@ Definition at line 18 of file Model.\+h.
 \index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -115,7 +139,7 @@ Implemented in \mbox{\hyperlink{classModelImpl_a3e8843e5353f40ab30afcf19b4f13a67
 \index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -133,6 +157,35 @@ Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container 
 
 Implemented in \mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{Model\+Impl}}.
 
+\mbox{\Hypertarget{classModel_a8d34e397c313e0787181a2940a0f4fb5}\label{classModel_a8d34e397c313e0787181a2940a0f4fb5}} 
+\index{Model@{Model}!addModel@{addModel}}
+\index{addModel@{addModel}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{addModel()}{addModel()}}
+{\footnotesize\ttfamily void Model\+::add\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModel}{Model}} $\ast$}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Adds a \mbox{\hyperlink{classModel}{Model}} instance within the static global vector. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the instance of the model to be added. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Definition at line 9 of file Model\+Impl.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                                  \{}
+\DoxyCodeLine{10     \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.push\_back(model);}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classModel_a7aec304b6a80e8371e3ed915cde8148e}\label{classModel_a7aec304b6a80e8371e3ed915cde8148e}} 
 \index{Model@{Model}!createFlow@{createFlow}}
 \index{createFlow@{createFlow}!Model@{Model}}
@@ -163,15 +216,15 @@ Flow$\ast$ -\/ pointer to the created flow.
 \end{DoxyReturn}
 
 
-Definition at line 100 of file Model.\+h.
+Definition at line 113 of file Model.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{100                                                                                               \{ \textcolor{comment}{//metodo template não pode ser virtual}}
-\DoxyCodeLine{101         \mbox{\hyperlink{classFlow}{Flow}}* flow = \textcolor{keyword}{new} T(name, source, target);}
-\DoxyCodeLine{102         this-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(flow); \textcolor{comment}{// Já adiciona automaticamente ao modelo}}
-\DoxyCodeLine{103         \textcolor{keywordflow}{return} flow;}
-\DoxyCodeLine{104     \}}
+\DoxyCodeLine{113                                                                                               \{ \textcolor{comment}{//metodo template não pode ser virtual}}
+\DoxyCodeLine{114         \mbox{\hyperlink{classFlow}{Flow}}* flow = \textcolor{keyword}{new} T(name, source, target);}
+\DoxyCodeLine{115         this-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(flow); \textcolor{comment}{// Já adiciona automaticamente ao modelo}}
+\DoxyCodeLine{116         \textcolor{keywordflow}{return} flow;}
+\DoxyCodeLine{117     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_adf5cf7d33af8042c591725d2d41cafca}\label{classModel_adf5cf7d33af8042c591725d2d41cafca}} 
@@ -196,13 +249,15 @@ Model$\ast$ -\/ pointer to the created model interface.
 \end{DoxyReturn}
 
 
-Definition at line 110 of file Model\+Impl.\+cpp.
+Definition at line 127 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{110                                                      \{}
-\DoxyCodeLine{111     \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classModelImpl}{ModelImpl}}(name, time);}
-\DoxyCodeLine{112 \}}
+\DoxyCodeLine{127                                                      \{}
+\DoxyCodeLine{128     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModelImpl}{ModelImpl}}(name, time);}
+\DoxyCodeLine{129     \mbox{\hyperlink{classModel_a8d34e397c313e0787181a2940a0f4fb5}{Model::addModel}}(m);}
+\DoxyCodeLine{130     \textcolor{keywordflow}{return} m;}
+\DoxyCodeLine{131 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_adf9c63fb5e39bd2cb025255001907524}\label{classModel_adf9c63fb5e39bd2cb025255001907524}} 
@@ -228,6 +283,86 @@ System$\ast$ -\/ pointer to the created system.
 
 
 Implemented in \mbox{\hyperlink{classModelImpl_a033781acaa9c0c0ff60b719c916ea2be}{Model\+Impl}}.
+
+\mbox{\Hypertarget{classModel_af88c1fa873e890ecabb8d32fc380c476}\label{classModel_af88c1fa873e890ecabb8d32fc380c476}} 
+\index{Model@{Model}!deleteFlow@{deleteFlow}}
+\index{deleteFlow@{deleteFlow}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{deleteFlow()}{deleteFlow()}}
+{\footnotesize\ttfamily virtual void Model\+::delete\+Flow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFlow}{Flow}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Factory method to delete a \mbox{\hyperlink{classFlow}{Flow}} instance from this model. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em flow} & Pointer to the \mbox{\hyperlink{classFlow}{Flow}} instance to be deleted. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implemented in \mbox{\hyperlink{classModelImpl_a80bff310efcf0d515a0c6a856e8529ae}{Model\+Impl}}.
+
+\mbox{\Hypertarget{classModel_a56ad5995d561c6096c9c6560fbb512fd}\label{classModel_a56ad5995d561c6096c9c6560fbb512fd}} 
+\index{Model@{Model}!deleteModel@{deleteModel}}
+\index{deleteModel@{deleteModel}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{deleteModel()}{deleteModel()}}
+{\footnotesize\ttfamily void Model\+::delete\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModel}{Model}} $\ast$}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static method that acts as a factory to delete a \mbox{\hyperlink{classModel}{Model}} instance. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em model} & Pointer to the \mbox{\hyperlink{classModel}{Model}} instance to be deleted. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Definition at line 145 of file Model\+Impl.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145                                    \{}
+\DoxyCodeLine{146     \textcolor{keywordflow}{if}(!model)\{}
+\DoxyCodeLine{147         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{148     \}}
+\DoxyCodeLine{149     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.begin(), \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.end(), model);}
+\DoxyCodeLine{150     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.end()) \{}
+\DoxyCodeLine{151         \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.erase(it);}
+\DoxyCodeLine{152     \}}
+\DoxyCodeLine{153     \textcolor{keyword}{delete} model;}
+\DoxyCodeLine{154 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classModel_a8513437cddbde699020045bc56338ac3}\label{classModel_a8513437cddbde699020045bc56338ac3}} 
+\index{Model@{Model}!deleteSystem@{deleteSystem}}
+\index{deleteSystem@{deleteSystem}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{deleteSystem()}{deleteSystem()}}
+{\footnotesize\ttfamily virtual void Model\+::delete\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Factory method to delete a \mbox{\hyperlink{classSystem}{System}} instance from this model. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em sys} & Pointer to the \mbox{\hyperlink{classSystem}{System}} instance to be deleted. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implemented in \mbox{\hyperlink{classModelImpl_aa6b7d767014894b6655de16eb58ba153}{Model\+Impl}}.
 
 \mbox{\Hypertarget{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}\label{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}} 
 \index{Model@{Model}!execute@{execute}}
@@ -404,6 +539,36 @@ Sets the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class.
 \end{DoxyItemize}
 
 Implemented in \mbox{\hyperlink{classModelImpl_a1071f515e45c86e9295b193b7d28cc98}{Model\+Impl}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classModel_a686d152cfd45e63b5bc3db6f327fdaeb}\label{classModel_a686d152cfd45e63b5bc3db6f327fdaeb}} 
+\index{Model@{Model}!Unit\_Model@{Unit\_Model}}
+\index{Unit\_Model@{Unit\_Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{Unit\_Model}{Unit\_Model}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classUnit__Model}{Unit\+\_\+\+Model}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 137 of file Model.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classModel_a990c47d3aea3111f93164d6ad50ae3e4}\label{classModel_a990c47d3aea3111f93164d6ad50ae3e4}} 
+\index{Model@{Model}!models@{models}}
+\index{models@{models}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{models}{models}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classModel}{Model}} $\ast$ $>$ Model\+::models\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Static container for storing all models created by the factory. 
+
+
+
+Definition at line 17 of file Model.\+h.
 
 
 
