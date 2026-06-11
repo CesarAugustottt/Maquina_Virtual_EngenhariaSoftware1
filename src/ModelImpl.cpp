@@ -29,6 +29,13 @@ ModelImpl::~ModelImpl() {
     //limpar os apenas os vetores
     systems.clear();
     flows.clear();
+    //deletar model no vetor!!
+    for (auto it = Model::models.begin(); it != Model::models.end(); ++it) {
+        if (*it == this) {
+            Model::models.erase(it);
+            break; // Sai do laço imediatamente após remover
+        }
+    }
 }
 
 void ModelImpl::execute(double start, double end, double increment) {
@@ -145,10 +152,6 @@ System* ModelImpl:: createSystem(std::string name, double value){
 void Model::deleteModel(Model* model){
     if(!model){
         return;
-    }
-    auto it = std::find(models.begin(), models.end(), model);
-    if (it != models.end()) {
-        models.erase(it);
     }
     delete model;
 }
