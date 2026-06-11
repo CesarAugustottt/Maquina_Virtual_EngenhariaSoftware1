@@ -1,13 +1,20 @@
 #ifndef COMPLEXFLOW_H
 #define COMPLEXFLOW_H
 
-#include "../../src/FlowImpl.h"
+#include "../../src/Flow.h"
 
 /*!
  * @brief This Class represents a complex flow in the General Systems Theory implemented in this code.
  */
-class ComplexFlow : public FlowImpl {
+class ComplexFlow : public Flow {
 protected:
+    /*! This attribute contains a name for the flow. */
+    std::string name;
+    /*! This pointer points to the source System of the flow. */
+    System* source;
+    /*! This pointer points to the target System of the flow. */
+    System* target;
+
     // Construtor padrao
     /*!
      * @brief This is the default constructor for the ComplexFlow Class.
@@ -49,6 +56,14 @@ public:
      * @return double - the calculated value for the transfer.
      */
     virtual double execute() override;
+
+    //getters e setters
+    void setName(std::string name) override;
+    std::string getName()const override;
+    void setSource(System* source) override;
+    System* getSource()const override;
+    void setTarget(System* target) override;
+    System* getTarget()const override;
 
     //permite que o template createFloe de Model instacie os fluxos
     friend class Model;

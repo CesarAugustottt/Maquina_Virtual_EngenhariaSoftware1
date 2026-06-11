@@ -6,6 +6,7 @@
 
 class Flow;
 class System;
+class ModelImpl;
 
 /*!
  * @brief This class represents the interface of a model in the General Systems Theory implemented in this code.
@@ -22,6 +23,7 @@ private:
      */
     static void addModel(Model*);
 
+    friend class ModelImpl;
 protected:
     /*!
     * @brief Adds a System pointer to the internal container of the model.
