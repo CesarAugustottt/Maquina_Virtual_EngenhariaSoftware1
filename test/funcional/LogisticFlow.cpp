@@ -1,26 +1,64 @@
-#include"LogisticFlow.h"
+#include "LogisticFlow.h"
+#include "../../src/System.h"
 
-LogisticFlow::LogisticFlow():FlowImpl(){}
+// Construtor padrao
+LogisticFlow::LogisticFlow() {
+    this->name = "";
+    this->source = nullptr;
+    this->target = nullptr;
+}
 
+// Construtor parametrizado
 LogisticFlow::LogisticFlow(std::string name, System* source, System* target)
-    : FlowImpl(name, source, target){}
+    : name(name), source(source), target(target) {}
 
-LogisticFlow::~LogisticFlow(){} //devido ao virtual da classe mae, o ~Flow sera chamdo em seguida
+LogisticFlow::~LogisticFlow() {} 
 
-double LogisticFlow::execute(){
-    if(this->getTarget()==nullptr){ //se não tiver sitesma de destino
+void LogisticFlow::setName(std::string name) {
+    this->name = name;
+}
+
+std::string LogisticFlow::getName() const {
+    return this->name;
+}
+
+void LogisticFlow::setSource(System* source) {
+    this->source = source;
+}
+
+System* LogisticFlow::getSource() const {
+    return this->source;
+}
+
+void LogisticFlow::setTarget(System* target) {
+    this->target = target;
+}
+
+System* LogisticFlow::getTarget() const {
+    return this->target;
+}
+
+double LogisticFlow::execute() {
+    if(this->getTarget() == nullptr) { //se não tiver sistema de destino
         return 0.0;
     }
     double valueTarget = getTarget()->getValue();
     return 0.01 * valueTarget * (1 - valueTarget/70);
 }
-//constrtor de copia
-LogisticFlow::LogisticFlow(const LogisticFlow& flow)
-    : FlowImpl(flow){} //chamar o contrutor de copia da base
-//atribuição por =
-LogisticFlow& LogisticFlow::operator=(const LogisticFlow& flow){
-    if (&flow != this){ //se for diferente, faz a atribuição
-        FlowImpl::operator=(flow); //chama o operador = da base para a atribuição
+
+// Construtor de copia
+LogisticFlow::LogisticFlow(const LogisticFlow& flow) {
+    this->name = flow.name;
+    this->source = flow.source;
+    this->target = flow.target;
+}
+
+// Atribuição por =
+LogisticFlow& LogisticFlow::operator=(const LogisticFlow& flow) {
+    if (&flow != this) { //se for diferente, faz a atribuição
+        this->name = flow.name;
+        this->source = flow.source;
+        this->target = flow.target; 
     }
-    return *this; //retorna o conteúdo
+    return *this; 
 }
