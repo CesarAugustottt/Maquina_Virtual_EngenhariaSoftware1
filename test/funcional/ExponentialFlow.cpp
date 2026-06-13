@@ -1,13 +1,42 @@
 #include "ExponentialFlow.h"
+#include "../../src/System.h"
 
-// Invoca o construtor padrão da classe base
-ExponentialFlow::ExponentialFlow() : FlowImpl() {}
+// Invoca o construtor padrao
+ExponentialFlow::ExponentialFlow() {
+    this->name = "";
+    this->source = nullptr;
+    this->target = nullptr;
+}
 
-// Repassa os parametros para o construtor da classe base
+// Construtor parametrizado
 ExponentialFlow::ExponentialFlow(std::string name, System* source, System* target) 
-    : FlowImpl(name, source, target) {}
+    : name(name), source(source), target(target) {}
 
-ExponentialFlow::~ExponentialFlow() {} // Vazio pelo mesmo motivo da base
+ExponentialFlow::~ExponentialFlow() {} 
+
+void ExponentialFlow::setName(std::string name) {
+    this->name = name;
+}
+
+std::string ExponentialFlow::getName() const {
+    return this->name;
+}
+
+void ExponentialFlow::setSource(System* source) {
+    this->source = source;
+}
+
+System* ExponentialFlow::getSource() const {
+    return this->source;
+}
+
+void ExponentialFlow::setTarget(System* target) {
+    this->target = target;
+}
+
+System* ExponentialFlow::getTarget() const {
+    return this->target;
+}
 
 // Implementacao do calculo
 double ExponentialFlow::execute() {
@@ -17,8 +46,12 @@ double ExponentialFlow::execute() {
     return 0.0;
 }
 
-// Invoca o construtor de copia da classe base
-ExponentialFlow::ExponentialFlow(const ExponentialFlow& flow) : FlowImpl(flow) {}
+// Construtor de copia
+ExponentialFlow::ExponentialFlow(const ExponentialFlow& flow) {
+    this->name = flow.name;
+    this->source = flow.source;
+    this->target = flow.target;
+}
 
 // Operador de atribuicao
 ExponentialFlow& ExponentialFlow::operator=(const ExponentialFlow& flow) {
@@ -26,8 +59,9 @@ ExponentialFlow& ExponentialFlow::operator=(const ExponentialFlow& flow) {
         return *this; // Protecao contra auto-atribuicao
     }
     
-    // Chama o operador de atribuicao da classe base para copiar name, source e target
-    FlowImpl::operator=(flow); 
+    this->name = flow.name;
+    this->source = flow.source;
+    this->target = flow.target;
     
     return *this;
 }
