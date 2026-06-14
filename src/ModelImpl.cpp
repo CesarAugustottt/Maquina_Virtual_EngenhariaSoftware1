@@ -148,7 +148,7 @@ void ModelBody::deleteFlow(Flow* flow) {
 ModelHandle::ModelHandle() : Handle<ModelBody>() {}
 
 ModelHandle::ModelHandle(std::string name, double time) {
-    delete pImpl_;
+    pImpl_->detach();
     pImpl_ = new ModelBody(name, time);
     pImpl_->attach();
 }

@@ -29,7 +29,7 @@ double SystemBody::getValue() const {
 SystemHandle::SystemHandle() : Handle<SystemBody>() {}
 
 SystemHandle::SystemHandle(std::string name, double value) {
-        delete pImpl_; 
+        pImpl_->detach(); 
         pImpl_ = new SystemBody(name, value);
         pImpl_->attach();
     }

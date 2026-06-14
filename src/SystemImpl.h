@@ -15,7 +15,8 @@ protected:
     std::string name;
     /*! This attribute contains the actual value of the system. */
     double value;
-
+    friend class Unit_System;
+    friend class Unit_Model;
 public:
     /*!
      * @brief This is the default constructor for the SystemBody Class.
@@ -32,7 +33,7 @@ public:
     /**
      * @brief Destructor for SystemBody.
      */
-    virtual ~SystemBody() {}
+    virtual ~SystemBody();
 
     void setName(std::string name);
     std::string getName() const;
@@ -62,7 +63,7 @@ public:
     /**
      * @brief Destructor for SystemHandle.
      */
-    virtual ~SystemHandle(){}
+    virtual ~SystemHandle();
 
     double getValue() const override;
     std::string getName() const override;
@@ -72,6 +73,7 @@ public:
     //classe amiga para testes unitários
     friend class Unit_System;
     friend class ModelImpl;
+    friend class Unit_Model;
 };
 
 #endif
