@@ -1,40 +1,53 @@
 #include "SystemImpl.h"
 
-SystemImpl::SystemImpl() {
+SystemBody::SystemBody() {
     this->name = "";
     this->value = 0.0;
 }
 
-SystemImpl::SystemImpl(std::string name, double value) : name(name), value(value) {}
+SystemBody::SystemBody(std::string name, double value) : name(name), value(value) {}
 
-SystemImpl::~SystemImpl() {}
+SystemBody::~SystemBody() {}
 
-void SystemImpl::setName(std::string name) {
+void SystemBody::setName(std::string name) {
     this->name = name;
 }
 
-std::string SystemImpl::getName() const {
+std::string SystemBody::getName() const {
     return this->name;
 }
 
-void SystemImpl::setValue(double value) {
+void SystemBody::setValue(double value) {
     this->value = value;
 }
 
-double SystemImpl::getValue() const {
+double SystemBody::getValue() const {
     return this->value;
 }
 
-SystemImpl::SystemImpl(const SystemImpl& sys) {
-    this->name = sys.name;
-    this->value = sys.value;
+//Implementação do SystemHandle
+SystemHandle::SystemHandle() : Handle<SystemBody>() {}
+
+SystemHandle::SystemHandle(std::string name, double value) {
+        delete pImpl_; 
+        pImpl_ = new SystemBody(name, value);
+        pImpl_->attach();
+    }
+
+SystemHandle::~SystemHandle(){}
+
+double SystemHandle::getValue() const { 
+    return pImpl_->getValue(); 
 }
 
-SystemImpl& SystemImpl::operator=(const SystemImpl& sys) {
-    if (&sys == this) {
-        return *this;
-    }
-    this->name = sys.name;
-    this->value = sys.value;
-    return *this;
+std::string SystemHandle::getName() const{ 
+    return pImpl_->getName(); 
+}
+
+void SystemHandle::setValue(double value){ 
+    pImpl_->setValue(value); 
+}
+
+void SystemHandle::setName(std::string name){ 
+    pImpl_->setName(name); 
 }

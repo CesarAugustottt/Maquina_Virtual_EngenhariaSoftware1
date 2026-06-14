@@ -140,7 +140,7 @@ Model* Model::createModel(std::string name, double time) {
 //Criar system
 System* ModelImpl:: createSystem(std::string name, double value){
     //instancia
-    System* sys = new SystemImpl(name, value);
+    System* sys = new SystemHandle(name, value);
     //adiciona systema ao modelo
     this->add(sys);
     return sys;
