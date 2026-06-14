@@ -95,7 +95,7 @@ public:
     /**
      * @brief This is the destructor for ModelHandle.
      */
-    virtual ~ModelHandle() {}
+    virtual ~ModelHandle();
 
     void execute(double start, double end, double increment) override;
     void remove(System* sys) override ;

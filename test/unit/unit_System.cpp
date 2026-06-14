@@ -3,74 +3,74 @@
 #include <cassert>
 
 bool Unit_System::defaultConstructor(void) {
-    SystemImpl s1;
-    assert(s1.name == "");
-    assert(s1.value == 0.0);
+    SystemHandle s1;
+    assert(s1.pImpl_->name == "");
+    assert(s1.pImpl_->value == 0.0);
     return true;
 }
 
 bool Unit_System::constructor(void) {
-    SystemImpl s2("Sys", 10.0);
-    assert(s2.name == "Sys");
-    assert(s2.value == 10.0);
+    SystemHandle s2("Sys", 10.0);
+    assert(s2.pImpl_->name == "Sys");
+    assert(s2.pImpl_->value == 10.0);
     return true;
 }
 
 bool Unit_System::destructor(void) {
-    SystemImpl* s = new SystemImpl();
+    SystemHandle* s = new SystemHandle();
     delete s;
     return true;
 }
 
 bool Unit_System::getName(void) {
-    SystemImpl s;
-    s.name = "TestName";
+    SystemHandle s;
+    s.pImpl_->name = "TestName";
     assert(s.getName() == "TestName");
     return true;
 }
 
 bool Unit_System::setName(void) {
-    SystemImpl s;
+    SystemHandle s;
     s.setName("NewName");
-    assert(s.name == "NewName");
+    assert(s.pImpl_->name == "NewName");
     return true;
 }
 
 bool Unit_System::getValue(void) {
-    SystemImpl s;
-    s.value = 10.0;
+    SystemHandle s;
+    s.pImpl_->value = 10.0;
     assert(s.getValue() == 10.0);
     return true;
 }
 
 bool Unit_System::setValue(void) {
-    SystemImpl s;
+    SystemHandle s;
     s.setValue(100.0);
-    assert(s.value == 100.0);
+    assert(s.pImpl_->value == 100.0);
     return true;
 }
 
 bool Unit_System::copyConstructor(void) {
-    SystemImpl original;
-    original.name = "Original";
-    original.value = 10.0;
+    SystemHandle original;
+    original.pImpl_->name = "Original";
+    original.pImpl_->value = 10.0;
     
-    SystemImpl copy(original);
-    assert(copy.name == "Original");
-    assert(copy.value == 10.0);
+    SystemHandle copy(original);
+    assert(copy.pImpl_->name == "Original");
+    assert(copy.pImpl_->value == 10.0);
     return true;
 }
 
 bool Unit_System::assignmentOperator(void) {
-    SystemImpl original;
-    original.name = "Original";
-    original.value = 10.0;
+    SystemHandle original;
+    original.pImpl_->name = "Original";
+    original.pImpl_->value = 10.0;
     
-    SystemImpl destination;
+    SystemHandle destination;
     destination = original;
 
-    assert(destination.name == "Original");
-    assert(destination.value == 10.0);
+    assert(destination.pImpl_->name == "Original");
+    assert(destination.pImpl_->value == 10.0);
     return true;
 }
 
