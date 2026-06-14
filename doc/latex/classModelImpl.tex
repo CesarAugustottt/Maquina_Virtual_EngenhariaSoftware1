@@ -169,16 +169,16 @@ This is the copy constructor for the \mbox{\hyperlink{classModel}{Model}} Class.
 
 \end{DoxyItemize}
 
-Definition at line 107 of file Model\+Impl.\+cpp.
+Definition at line 114 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{107                                            \{}
-\DoxyCodeLine{108     this-\/>\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = model.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}};}
-\DoxyCodeLine{109     this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = model.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}};}
-\DoxyCodeLine{110     this-\/>\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}} = model.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}; \textcolor{comment}{//copia os ponteiros}}
-\DoxyCodeLine{111     this-\/>\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}} = model.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}};}
-\DoxyCodeLine{112 \}}
+\DoxyCodeLine{114                                            \{}
+\DoxyCodeLine{115     this-\/>\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = model.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}};}
+\DoxyCodeLine{116     this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = model.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}};}
+\DoxyCodeLine{117     this-\/>\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}} = model.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}; \textcolor{comment}{//copia os ponteiros}}
+\DoxyCodeLine{118     this-\/>\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}} = model.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}};}
+\DoxyCodeLine{119 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a427f422a6d356b94afbe3937d6452a2b}\label{classModelImpl_a427f422a6d356b94afbe3937d6452a2b}} 
@@ -205,7 +205,14 @@ Definition at line 20 of file Model\+Impl.\+cpp.
 \DoxyCodeLine{29     \textcolor{comment}{//limpar os apenas os vetores}}
 \DoxyCodeLine{30     \mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.clear();}
 \DoxyCodeLine{31     \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.clear();}
-\DoxyCodeLine{32 \}}
+\DoxyCodeLine{32     \textcolor{comment}{//deletar model no vetor!!}}
+\DoxyCodeLine{33     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.begin(); it != \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.end(); ++it) \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{if} (*it == \textcolor{keyword}{this}) \{}
+\DoxyCodeLine{35             \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.erase(it);}
+\DoxyCodeLine{36             \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do laço imediatamente após remover}}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39 \}}
 
 \end{DoxyCode}
 
@@ -235,13 +242,13 @@ Implements \mbox{\hyperlink{classModel_ac1e19f5fcc4ced9defbfe2847a26ff33}{Model}
 
 
 
-Definition at line 63 of file Model\+Impl.\+cpp.
+Definition at line 70 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{63                               \{}
-\DoxyCodeLine{64     \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.push\_back(flow);}
-\DoxyCodeLine{65 \}}
+\DoxyCodeLine{70                               \{}
+\DoxyCodeLine{71     \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.push\_back(flow);}
+\DoxyCodeLine{72 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a4f2039580d1464b29593df95f3979998}\label{classModelImpl_a4f2039580d1464b29593df95f3979998}} 
@@ -268,13 +275,13 @@ Implements \mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{Model}
 
 
 
-Definition at line 59 of file Model\+Impl.\+cpp.
+Definition at line 66 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{59                                \{}
-\DoxyCodeLine{60     \mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.push\_back(sys);}
-\DoxyCodeLine{61 \}}
+\DoxyCodeLine{66                                \{}
+\DoxyCodeLine{67     \mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.push\_back(sys);}
+\DoxyCodeLine{68 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a033781acaa9c0c0ff60b719c916ea2be}\label{classModelImpl_a033781acaa9c0c0ff60b719c916ea2be}} 
@@ -303,17 +310,17 @@ Implements \mbox{\hyperlink{classModel_adf9c63fb5e39bd2cb025255001907524}{Model}
 
 
 
-Definition at line 134 of file Model\+Impl.\+cpp.
+Definition at line 141 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{134                                                             \{}
-\DoxyCodeLine{135     \textcolor{comment}{//instancia}}
-\DoxyCodeLine{136     \mbox{\hyperlink{classSystem}{System}}* sys = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}}, value);}
-\DoxyCodeLine{137     \textcolor{comment}{//adiciona systema ao modelo}}
-\DoxyCodeLine{138     this-\/>\mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{add}}(sys);}
-\DoxyCodeLine{139     \textcolor{keywordflow}{return} sys;}
-\DoxyCodeLine{140 \}}
+\DoxyCodeLine{141                                                             \{}
+\DoxyCodeLine{142     \textcolor{comment}{//instancia}}
+\DoxyCodeLine{143     \mbox{\hyperlink{classSystem}{System}}* sys = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemImpl}{SystemImpl}}(\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}}, value);}
+\DoxyCodeLine{144     \textcolor{comment}{//adiciona systema ao modelo}}
+\DoxyCodeLine{145     this-\/>\mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{add}}(sys);}
+\DoxyCodeLine{146     \textcolor{keywordflow}{return} sys;}
+\DoxyCodeLine{147 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a80bff310efcf0d515a0c6a856e8529ae}\label{classModelImpl_a80bff310efcf0d515a0c6a856e8529ae}} 
@@ -340,15 +347,15 @@ Implements \mbox{\hyperlink{classModel_af88c1fa873e890ecabb8d32fc380c476}{Model}
 
 
 
-Definition at line 162 of file Model\+Impl.\+cpp.
+Definition at line 165 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{162                                      \{}
-\DoxyCodeLine{163     \textcolor{keywordflow}{if} (!flow) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{164     this-\/>\mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{remove}}(flow); \textcolor{comment}{// Tira do vetor}}
-\DoxyCodeLine{165     \textcolor{keyword}{delete} flow;        \textcolor{comment}{// Apagar}}
-\DoxyCodeLine{166 \}}
+\DoxyCodeLine{165                                      \{}
+\DoxyCodeLine{166     \textcolor{keywordflow}{if} (!flow) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{167     this-\/>\mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{remove}}(flow); \textcolor{comment}{// Tira do vetor}}
+\DoxyCodeLine{168     \textcolor{keyword}{delete} flow;        \textcolor{comment}{// Apagar}}
+\DoxyCodeLine{169 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_aa6b7d767014894b6655de16eb58ba153}\label{classModelImpl_aa6b7d767014894b6655de16eb58ba153}} 
@@ -375,15 +382,15 @@ Implements \mbox{\hyperlink{classModel_a8513437cddbde699020045bc56338ac3}{Model}
 
 
 
-Definition at line 156 of file Model\+Impl.\+cpp.
+Definition at line 159 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{156                                         \{}
-\DoxyCodeLine{157     \textcolor{keywordflow}{if} (!sys) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{158     this-\/>\mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{remove}}(sys); \textcolor{comment}{// Tira do vetor}}
-\DoxyCodeLine{159     \textcolor{keyword}{delete} sys;        \textcolor{comment}{// Apagar}}
-\DoxyCodeLine{160 \}}
+\DoxyCodeLine{159                                         \{}
+\DoxyCodeLine{160     \textcolor{keywordflow}{if} (!sys) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{161     this-\/>\mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{remove}}(sys); \textcolor{comment}{// Tira do vetor}}
+\DoxyCodeLine{162     \textcolor{keyword}{delete} sys;        \textcolor{comment}{// Apagar}}
+\DoxyCodeLine{163 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a3b060fc6802d9d6040ab8af1a9186631}\label{classModelImpl_a3b060fc6802d9d6040ab8af1a9186631}} 
@@ -414,34 +421,34 @@ Implements \mbox{\hyperlink{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}{Model}
 
 
 
-Definition at line 34 of file Model\+Impl.\+cpp.
+Definition at line 41 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{34                                                                   \{}
-\DoxyCodeLine{35     this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = start;}
-\DoxyCodeLine{36     \textcolor{keywordflow}{while} (this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} < end) \{}
-\DoxyCodeLine{37         std::vector<double> valueFlow; \textcolor{comment}{//vetor com os valores de cada fluxo}}
-\DoxyCodeLine{38         \textcolor{comment}{//calcular a equação de cada fluxo}}
-\DoxyCodeLine{39         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} f : \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}) \{}
-\DoxyCodeLine{40             valueFlow.push\_back(f-\/>execute());}
-\DoxyCodeLine{41         \}}
-\DoxyCodeLine{42         \textcolor{comment}{//atualizar os sistemas com valores novos}}
-\DoxyCodeLine{43         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.size(); i++) \{}
-\DoxyCodeLine{44             \mbox{\hyperlink{classSystem}{System}}* source = \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}[i]-\/>getSource();}
-\DoxyCodeLine{45             \mbox{\hyperlink{classSystem}{System}}* target = \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}[i]-\/>getTarget();}
-\DoxyCodeLine{46             \textcolor{comment}{//realizar o fluxo}}
-\DoxyCodeLine{47             \textcolor{keywordflow}{if} (source) \{ \textcolor{comment}{//diminui o valor da origem}}
-\DoxyCodeLine{48                 source-\/>\mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{setValue}}(source-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ valueFlow[i]);}
-\DoxyCodeLine{49             \}}
-\DoxyCodeLine{50             \textcolor{keywordflow}{if} (target) \{ \textcolor{comment}{//aumenta valor do destino}}
-\DoxyCodeLine{51                 target-\/>\mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{setValue}}(target-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() + valueFlow[i]);}
-\DoxyCodeLine{52             \}}
-\DoxyCodeLine{53         \}}
-\DoxyCodeLine{54         \textcolor{comment}{//incrementar o tempo (time)}}
-\DoxyCodeLine{55         this-\/>\mbox{\hyperlink{classModelImpl_a2b96592e72a176881c9ac01b85dc9158}{incrementTime}}(increment);}
-\DoxyCodeLine{56     \}}
-\DoxyCodeLine{57 \}}
+\DoxyCodeLine{41                                                                   \{}
+\DoxyCodeLine{42     this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = start;}
+\DoxyCodeLine{43     \textcolor{keywordflow}{while} (this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} < end) \{}
+\DoxyCodeLine{44         std::vector<double> valueFlow; \textcolor{comment}{//vetor com os valores de cada fluxo}}
+\DoxyCodeLine{45         \textcolor{comment}{//calcular a equação de cada fluxo}}
+\DoxyCodeLine{46         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} f : \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}) \{}
+\DoxyCodeLine{47             valueFlow.push\_back(f-\/>execute());}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49         \textcolor{comment}{//atualizar os sistemas com valores novos}}
+\DoxyCodeLine{50         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.size(); i++) \{}
+\DoxyCodeLine{51             \mbox{\hyperlink{classSystem}{System}}* source = \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}[i]-\/>getSource();}
+\DoxyCodeLine{52             \mbox{\hyperlink{classSystem}{System}}* target = \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}[i]-\/>getTarget();}
+\DoxyCodeLine{53             \textcolor{comment}{//realizar o fluxo}}
+\DoxyCodeLine{54             \textcolor{keywordflow}{if} (source) \{ \textcolor{comment}{//diminui o valor da origem}}
+\DoxyCodeLine{55                 source-\/>\mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{setValue}}(source-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() -\/ valueFlow[i]);}
+\DoxyCodeLine{56             \}}
+\DoxyCodeLine{57             \textcolor{keywordflow}{if} (target) \{ \textcolor{comment}{//aumenta valor do destino}}
+\DoxyCodeLine{58                 target-\/>\mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{setValue}}(target-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() + valueFlow[i]);}
+\DoxyCodeLine{59             \}}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61         \textcolor{comment}{//incrementar o tempo (time)}}
+\DoxyCodeLine{62         this-\/>\mbox{\hyperlink{classModelImpl_a2b96592e72a176881c9ac01b85dc9158}{incrementTime}}(increment);}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a6d6ef8f72413650749d9ca9850226a6b}\label{classModelImpl_a6d6ef8f72413650749d9ca9850226a6b}} 
@@ -466,13 +473,13 @@ Implements \mbox{\hyperlink{classModel_a17e89ca8d15af46d074423a47d3c6802}{Model}
 
 
 
-Definition at line 90 of file Model\+Impl.\+cpp.
+Definition at line 97 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{90                                    \{}
-\DoxyCodeLine{91     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}};}
-\DoxyCodeLine{92 \}}
+\DoxyCodeLine{97                                    \{}
+\DoxyCodeLine{98     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}};}
+\DoxyCodeLine{99 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a9233d23b2fa19917f314cf286749a924}\label{classModelImpl_a9233d23b2fa19917f314cf286749a924}} 
@@ -497,13 +504,13 @@ Implements \mbox{\hyperlink{classModel_a41569269c162962571a791c0fe737bca}{Model}
 
 
 
-Definition at line 98 of file Model\+Impl.\+cpp.
+Definition at line 105 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{98                                 \{}
-\DoxyCodeLine{99     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}};}
-\DoxyCodeLine{100 \}}
+\DoxyCodeLine{105                                 \{}
+\DoxyCodeLine{106     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}};}
+\DoxyCodeLine{107 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a2b96592e72a176881c9ac01b85dc9158}\label{classModelImpl_a2b96592e72a176881c9ac01b85dc9158}} 
@@ -530,13 +537,13 @@ Implements \mbox{\hyperlink{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}{Model}
 
 
 
-Definition at line 102 of file Model\+Impl.\+cpp.
+Definition at line 109 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{102                                               \{}
-\DoxyCodeLine{103     this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} += increment;}
-\DoxyCodeLine{104 \}}
+\DoxyCodeLine{109                                               \{}
+\DoxyCodeLine{110     this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} += increment;}
+\DoxyCodeLine{111 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a5c89b104c20013688809cfc0e1d12e10}\label{classModelImpl_a5c89b104c20013688809cfc0e1d12e10}} 
@@ -562,19 +569,19 @@ This is the overloaded assignment operator for the \mbox{\hyperlink{classModel}{
 
 \end{DoxyItemize}
 
-Definition at line 115 of file Model\+Impl.\+cpp.
+Definition at line 122 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{115                                                       \{}
-\DoxyCodeLine{116     \textcolor{keywordflow}{if} (\&model != \textcolor{keyword}{this}) \{}
-\DoxyCodeLine{117         this-\/>\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = model.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}};}
-\DoxyCodeLine{118         this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = model.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}};}
-\DoxyCodeLine{119         this-\/>\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}} = model.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}};}
-\DoxyCodeLine{120         this-\/>\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}} = model.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}};}
-\DoxyCodeLine{121     \}}
-\DoxyCodeLine{122     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{//retorna o modelo}}
-\DoxyCodeLine{123 \}}
+\DoxyCodeLine{122                                                       \{}
+\DoxyCodeLine{123     \textcolor{keywordflow}{if} (\&model != \textcolor{keyword}{this}) \{}
+\DoxyCodeLine{124         this-\/>\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = model.\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}};}
+\DoxyCodeLine{125         this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = model.\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}};}
+\DoxyCodeLine{126         this-\/>\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}} = model.\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}};}
+\DoxyCodeLine{127         this-\/>\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}} = model.\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}};}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{//retorna o modelo}}
+\DoxyCodeLine{130 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_af03872fad7d17184098442d7a2030440}\label{classModelImpl_af03872fad7d17184098442d7a2030440}} 
@@ -601,19 +608,19 @@ Implements \mbox{\hyperlink{classModel_a9dfb3ab85127622aa9d9db591ee63454}{Model}
 
 
 
-Definition at line 76 of file Model\+Impl.\+cpp.
+Definition at line 83 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{76                                  \{}
-\DoxyCodeLine{77     \textcolor{comment}{//deve procurar o ponteiro flow no vetor}}
-\DoxyCodeLine{78     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.begin(), \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.end(), flow);}
-\DoxyCodeLine{79     \textcolor{comment}{//se ele for diferente do fim o ponteiro foi encontrado e deve remover}}
-\DoxyCodeLine{80     \textcolor{comment}{//se for igual ao fim é uma posição inválida.}}
-\DoxyCodeLine{81     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.end()) \{}
-\DoxyCodeLine{82         \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.erase(it); \textcolor{comment}{//remove o fluxo do vetor.}}
-\DoxyCodeLine{83     \}}
-\DoxyCodeLine{84 \}}
+\DoxyCodeLine{83                                  \{}
+\DoxyCodeLine{84     \textcolor{comment}{//deve procurar o ponteiro flow no vetor}}
+\DoxyCodeLine{85     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.begin(), \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.end(), flow);}
+\DoxyCodeLine{86     \textcolor{comment}{//se ele for diferente do fim o ponteiro foi encontrado e deve remover}}
+\DoxyCodeLine{87     \textcolor{comment}{//se for igual ao fim é uma posição inválida.}}
+\DoxyCodeLine{88     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.end()) \{}
+\DoxyCodeLine{89         \mbox{\hyperlink{classModelImpl_a8b029de6dc420bd98213c51997dd18ea}{flows}}.erase(it); \textcolor{comment}{//remove o fluxo do vetor.}}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_aa12b7df505b53eef62ae93e595905727}\label{classModelImpl_aa12b7df505b53eef62ae93e595905727}} 
@@ -640,18 +647,18 @@ Implements \mbox{\hyperlink{classModel_ac1884d0df43bd3eaa98fb2493b1eadbd}{Model}
 
 
 
-Definition at line 67 of file Model\+Impl.\+cpp.
+Definition at line 74 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{67                                   \{}
-\DoxyCodeLine{68     \textcolor{comment}{//deve procurar o ponteiro sys no vetor}}
-\DoxyCodeLine{69     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.begin(), \mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.end(), sys);}
-\DoxyCodeLine{70     \textcolor{comment}{//se ele for diferente do fim o ponteiro foi encontrado e deve remover}}
-\DoxyCodeLine{71     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.end()) \{}
-\DoxyCodeLine{72         \mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.erase(it); \textcolor{comment}{//remove  o sistema do vetor.}}
-\DoxyCodeLine{73     \}}
-\DoxyCodeLine{74 \}}
+\DoxyCodeLine{74                                   \{}
+\DoxyCodeLine{75     \textcolor{comment}{//deve procurar o ponteiro sys no vetor}}
+\DoxyCodeLine{76     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.begin(), \mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.end(), sys);}
+\DoxyCodeLine{77     \textcolor{comment}{//se ele for diferente do fim o ponteiro foi encontrado e deve remover}}
+\DoxyCodeLine{78     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.end()) \{}
+\DoxyCodeLine{79         \mbox{\hyperlink{classModelImpl_a63652ea53099fffc02b2f91f0cf5d5ba}{systems}}.erase(it); \textcolor{comment}{//remove  o sistema do vetor.}}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a4c11009a6eed8fabce6c6c3a584a53b8}\label{classModelImpl_a4c11009a6eed8fabce6c6c3a584a53b8}} 
@@ -678,13 +685,13 @@ Implements \mbox{\hyperlink{classModel_a0418ba1c3f1016a13a2cbb4c1be5e43b}{Model}
 
 
 
-Definition at line 86 of file Model\+Impl.\+cpp.
+Definition at line 93 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{86                                       \{}
-\DoxyCodeLine{87     this-\/>\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = \mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}};}
-\DoxyCodeLine{88 \}}
+\DoxyCodeLine{93                                       \{}
+\DoxyCodeLine{94     this-\/>\mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}} = \mbox{\hyperlink{classModelImpl_a7534904f5a4b12ef7a4addc65590189b}{name}};}
+\DoxyCodeLine{95 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelImpl_a1071f515e45c86e9295b193b7d28cc98}\label{classModelImpl_a1071f515e45c86e9295b193b7d28cc98}} 
@@ -711,13 +718,13 @@ Implements \mbox{\hyperlink{classModel_a210839e2d275d6821a8beac249470beb}{Model}
 
 
 
-Definition at line 94 of file Model\+Impl.\+cpp.
+Definition at line 101 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{94                                    \{}
-\DoxyCodeLine{95     this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = \mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}};}
-\DoxyCodeLine{96 \}}
+\DoxyCodeLine{101                                    \{}
+\DoxyCodeLine{102     this-\/>\mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}} = \mbox{\hyperlink{classModelImpl_aad5b642a4500713444c44bdadd5d19dc}{time}};}
+\DoxyCodeLine{103 \}}
 
 \end{DoxyCode}
 

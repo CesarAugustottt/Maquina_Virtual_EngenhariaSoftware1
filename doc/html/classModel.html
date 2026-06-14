@@ -164,6 +164,8 @@ Static Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:afb81d2077780e342b8fd3654cabc4c19"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#afb81d2077780e342b8fd3654cabc4c19">ModelImpl</a></td></tr>
+<tr class="separator:afb81d2077780e342b8fd3654cabc4c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a686d152cfd45e63b5bc3db6f327fdaeb"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a686d152cfd45e63b5bc3db6f327fdaeb">Unit_Model</a></td></tr>
 <tr class="separator:a686d152cfd45e63b5bc3db6f327fdaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -173,7 +175,7 @@ Friends</h2></td></tr>
 <li>It acts as a container for systems and flows, controlling the execution of the simulation. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00014">14</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00015">15</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af032d8433c87a0a3a431faf6563a1f03"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af032d8433c87a0a3a431faf6563a1f03">&#9670;&nbsp;</a></span>~Model()</h2>
@@ -200,8 +202,8 @@ Friends</h2></td></tr>
 
 <p>This is the default destructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class. </p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00040">40</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{}</div>
+<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00042">42</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -323,7 +325,7 @@ Friends</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                 {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">models</a>.push_back(model);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
-<div class="ttc" id="aclassModel_html_a990c47d3aea3111f93164d6ad50ae3e4"><div class="ttname"><a href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a></div><div class="ttdeci">static std::vector&lt; Model * &gt; models</div><div class="ttdoc">Static container for storing all models created by the factory.</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00017">Model.h:17</a></div></div>
+<div class="ttc" id="aclassModel_html_a990c47d3aea3111f93164d6ad50ae3e4"><div class="ttname"><a href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a></div><div class="ttdeci">static std::vector&lt; Model * &gt; models</div><div class="ttdoc">Static container for storing all models created by the factory.</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00018">Model.h:18</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -386,12 +388,12 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Flow* - pointer to the created flow. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00113">113</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                                                                              { <span class="comment">//metodo template não pode ser virtual</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="classFlow.html">Flow</a>* flow = <span class="keyword">new</span> T(name, source, target);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        this-&gt;<a class="code" href="classModel.html#a70362afdd9db6268b4adaedfeddb2935">add</a>(flow); <span class="comment">// Já adiciona automaticamente ao modelo</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span> flow;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00115">115</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                                                                              { <span class="comment">//metodo template não pode ser virtual</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="classFlow.html">Flow</a>* flow = <span class="keyword">new</span> T(name, source, target);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        this-&gt;<a class="code" href="classModel.html#a70362afdd9db6268b4adaedfeddb2935">add</a>(flow); <span class="comment">// Já adiciona automaticamente ao modelo</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> flow;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
 <div class="ttc" id="aclassFlow_html"><div class="ttname"><a href="classFlow.html">Flow</a></div><div class="ttdoc">This class represents the interface of a flow in General Systems Theory as implemented in this code.</div><div class="ttdef"><b>Definition:</b> <a href="Flow_8h_source.html#l00013">Flow.h:13</a></div></div>
 <div class="ttc" id="aclassModel_html_a70362afdd9db6268b4adaedfeddb2935"><div class="ttname"><a href="classModel.html#a70362afdd9db6268b4adaedfeddb2935">Model::add</a></div><div class="ttdeci">virtual void add(System *)=0</div><div class="ttdoc">Adds a System pointer to the internal container of the model.</div></div>
 </div><!-- fragment -->
@@ -441,15 +443,15 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Model* - pointer to the created model interface. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00127">127</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                                                     {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="classModel.html">Model</a>* m = <span class="keyword">new</span> <a class="code" href="classModelImpl.html">ModelImpl</a>(name, time);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="classModel.html#a8d34e397c313e0787181a2940a0f4fb5">Model::addModel</a>(m);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> m;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
-<div class="ttc" id="aclassModelImpl_html"><div class="ttname"><a href="classModelImpl.html">ModelImpl</a></div><div class="ttdoc">This class represents the concrete implementation of a Model.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8h_source.html#l00015">ModelImpl.h:15</a></div></div>
-<div class="ttc" id="aclassModel_html"><div class="ttname"><a href="classModel.html">Model</a></div><div class="ttdoc">This class represents the interface of a model in the General Systems Theory implemented in this code...</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00014">Model.h:14</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00134">134</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                                     {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="classModel.html">Model</a>* m = <span class="keyword">new</span> <a class="code" href="classModel.html#afb81d2077780e342b8fd3654cabc4c19">ModelImpl</a>(name, time);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="classModel.html#a8d34e397c313e0787181a2940a0f4fb5">Model::addModel</a>(m);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> m;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="ttc" id="aclassModel_html"><div class="ttname"><a href="classModel.html">Model</a></div><div class="ttdoc">This class represents the interface of a model in the General Systems Theory implemented in this code...</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00015">Model.h:15</a></div></div>
 <div class="ttc" id="aclassModel_html_a8d34e397c313e0787181a2940a0f4fb5"><div class="ttname"><a href="classModel.html#a8d34e397c313e0787181a2940a0f4fb5">Model::addModel</a></div><div class="ttdeci">static void addModel(Model *)</div><div class="ttdoc">Adds a Model instance within the static global vector.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00009">ModelImpl.cpp:9</a></div></div>
+<div class="ttc" id="aclassModel_html_afb81d2077780e342b8fd3654cabc4c19"><div class="ttname"><a href="classModel.html#afb81d2077780e342b8fd3654cabc4c19">Model::ModelImpl</a></div><div class="ttdeci">friend class ModelImpl</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00026">Model.h:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -575,17 +577,13 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00145">145</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                   {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">if</span>(!model){</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">auto</span> it = std::find(<a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">models</a>.begin(), <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">models</a>.end(), model);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">if</span> (it != <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">models</a>.end()) {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">models</a>.erase(it);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">delete</span> model;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00152">152</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                                   {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">if</span>(!model){</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">delete</span> model;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -947,6 +945,30 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="afb81d2077780e342b8fd3654cabc4c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb81d2077780e342b8fd3654cabc4c19">&#9670;&nbsp;</a></span>ModelImpl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classModelImpl.html">ModelImpl</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00026">26</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
+
+</div>
+</div>
 <a id="a686d152cfd45e63b5bc3db6f327fdaeb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a686d152cfd45e63b5bc3db6f327fdaeb">&#9670;&nbsp;</a></span>Unit_Model</h2>
 
@@ -967,7 +989,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00137">137</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00139">139</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1016,7 @@ template&lt;typename T &gt; </div>
 
 <p>Static container for storing all models created by the factory. </p>
 
-<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00017">17</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Model_8h_source.html#l00018">18</a> of file <a class="el" href="Model_8h_source.html">Model.h</a>.</p>
 
 </div>
 </div>

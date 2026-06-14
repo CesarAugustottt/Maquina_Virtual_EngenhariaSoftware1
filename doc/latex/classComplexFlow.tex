@@ -11,7 +11,8 @@ This Class represents a complex flow in the General Systems Theory implemented i
 
 
 
-Inheritance diagram for Complex\+Flow\+:\nopagebreak
+Inheritance diagram for Complex\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Complex\+Flow\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Complex\+Flow\+:\nopagebreak
+Collaboration diagram for Complex\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,24 +35,44 @@ Collaboration diagram for Complex\+Flow\+:\nopagebreak
 virtual \mbox{\hyperlink{classComplexFlow_a3ea63b4de8f10baefdbb71c52986cd74}{$\sim$\+Complex\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{classComplexFlow_a744cb3029e9335038f3f8c1da6daea4d}{execute}} () override
-\begin{DoxyCompactList}\small\item\em Executes the complex equation to calculate the flow\textquotesingle{}s value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Executes the complex equation to calculate the flow\textquotesingle{}s value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classComplexFlow_a89cd4ee0abe87ff81c7735500c864cfa}{set\+Name}} (std\+::string \mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}}) override
+\begin{DoxyCompactList}\small\item\em Sets the name attribute in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classComplexFlow_a3b83239f5ed3a1934af277059e84a74c}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name attribute in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classComplexFlow_acaefe2aace6648c75c2ba776f0403892}{set\+Source}} (\mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}}) override
+\begin{DoxyCompactList}\small\item\em Sets the source system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classComplexFlow_a393496676f7e7b752294949aa7ddf7eb}{get\+Source}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the source system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classComplexFlow_ae38d2c4c334c1ca9812087ee8575c63c}{set\+Target}} (\mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}}) override
+\begin{DoxyCompactList}\small\item\em Sets the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classComplexFlow_ad0b4c97b74625290bcc991eb4889a6ba}{get\+Target}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classComplexFlow_a5842ce02ac6229830dbe8895b61891cf}{Complex\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classComplexFlow_a9b286c4ec26c6d4e7fd39de285e02817}{Complex\+Flow}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}})
+\mbox{\hyperlink{classComplexFlow_a9b286c4ec26c6d4e7fd39de285e02817}{Complex\+Flow}} (std\+::string \mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}})
 \begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classComplexFlow_a6fb57c177ace7dd5d33a326101dc754c}{Complex\+Flow}} (const \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \&flow)
 \begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \& \mbox{\hyperlink{classComplexFlow_a4b7d7263094e0e829bd87a0d6c815304}{operator=}} (const \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} \&flow)
 \begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classComplexFlow}{Complex\+Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}}
+\item 
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}}
+\item 
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classComplexFlow_a2bf2a0e9b454c55aa5dcb5aa4698697b}{Model}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -76,11 +98,15 @@ This is the default constructor for the \mbox{\hyperlink{classComplexFlow}{Compl
 \end{DoxyReturn}
 
 
-Definition at line 4 of file Complex\+Flow.\+cpp.
+Definition at line 5 of file Complex\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{4 : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}() \{\}}
+\DoxyCodeLine{5                         \{}
+\DoxyCodeLine{6     this-\/>\mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}}= \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{7     this-\/>\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}}= \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{8     this-\/>\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}}= \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{9 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classComplexFlow_a9b286c4ec26c6d4e7fd39de285e02817}\label{classComplexFlow_a9b286c4ec26c6d4e7fd39de285e02817}} 
@@ -104,11 +130,11 @@ This is the parameterized constructor for the \mbox{\hyperlink{classComplexFlow}
 \end{DoxyParams}
 
 
-Definition at line 7 of file Complex\+Flow.\+cpp.
+Definition at line 12 of file Complex\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{8     : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}(\mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}, \mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}, \mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}}) \{\}}
+\DoxyCodeLine{13     : \mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}}(\mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}}), \mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}}(\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}}), \mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}}(\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}})\{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classComplexFlow_a6fb57c177ace7dd5d33a326101dc754c}\label{classComplexFlow_a6fb57c177ace7dd5d33a326101dc754c}} 
@@ -128,11 +154,15 @@ This is the copy constructor for the \mbox{\hyperlink{classComplexFlow}{Complex\
 \end{DoxyParams}
 
 
-Definition at line 21 of file Complex\+Flow.\+cpp.
+Definition at line 47 of file Complex\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{21 : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}(flow) \{\}}
+\DoxyCodeLine{47                                                \{}
+\DoxyCodeLine{48     this-\/>\mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}} = flow.\mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}};}
+\DoxyCodeLine{49     this-\/>\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}} = flow.\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}};}
+\DoxyCodeLine{50     this-\/>\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}} = flow.\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}};}
+\DoxyCodeLine{51 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classComplexFlow_a3ea63b4de8f10baefdbb71c52986cd74}\label{classComplexFlow_a3ea63b4de8f10baefdbb71c52986cd74}} 
@@ -147,11 +177,11 @@ This is the default destructor for the \mbox{\hyperlink{classComplexFlow}{Comple
 
 
 
-Definition at line 10 of file Complex\+Flow.\+cpp.
+Definition at line 15 of file Complex\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{10 \{\} \textcolor{comment}{// Vazio devido ao virtual da classe mae}}
+\DoxyCodeLine{15 \{\} \textcolor{comment}{// Vazio devido ao virtual da classe mae}}
 
 \end{DoxyCode}
 
@@ -172,20 +202,113 @@ double -\/ the calculated value for the transfer.
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classFlowImpl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
+Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
 
 
 
-Definition at line 13 of file Complex\+Flow.\+cpp.
+Definition at line 39 of file Complex\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{13                             \{}
-\DoxyCodeLine{14     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classFlowImpl_a06c8ffdcfd36b04ddad091d2c043f5d0}{getSource}}() != \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{// se tiver sistema de origem}}
-\DoxyCodeLine{15         \textcolor{keywordflow}{return} 0.01 * this-\/>\mbox{\hyperlink{classFlowImpl_a06c8ffdcfd36b04ddad091d2c043f5d0}{getSource}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(); }
-\DoxyCodeLine{16     \}}
-\DoxyCodeLine{17     \textcolor{keywordflow}{return} 0.0;}
-\DoxyCodeLine{18 \}}
+\DoxyCodeLine{39                             \{}
+\DoxyCodeLine{40     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classComplexFlow_a393496676f7e7b752294949aa7ddf7eb}{getSource}}() != \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{// se tiver sistema de origem}}
+\DoxyCodeLine{41         \textcolor{keywordflow}{return} 0.01 * this-\/>\mbox{\hyperlink{classComplexFlow_a393496676f7e7b752294949aa7ddf7eb}{getSource}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(); }
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classComplexFlow_a3b83239f5ed3a1934af277059e84a74c}\label{classComplexFlow_a3b83239f5ed3a1934af277059e84a74c}} 
+\index{ComplexFlow@{ComplexFlow}!getName@{getName}}
+\index{getName@{getName}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Complex\+Flow\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name attribute in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+string -\/ the content name attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a2d0340d844ab2d275222938234e44169}{Flow}}.
+
+
+
+Definition at line 20 of file Complex\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                                    \{}
+\DoxyCodeLine{21     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}};}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classComplexFlow_a393496676f7e7b752294949aa7ddf7eb}\label{classComplexFlow_a393496676f7e7b752294949aa7ddf7eb}} 
+\index{ComplexFlow@{ComplexFlow}!getSource@{getSource}}
+\index{getSource@{getSource}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}} $\ast$ Complex\+Flow\+::get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the source system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+System$\ast$ -\/ pointer to the source system. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_aff381195663a5028494e3de9c6194f2c}{Flow}}.
+
+
+
+Definition at line 27 of file Complex\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                                    \{}
+\DoxyCodeLine{28     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}};}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classComplexFlow_ad0b4c97b74625290bcc991eb4889a6ba}\label{classComplexFlow_ad0b4c97b74625290bcc991eb4889a6ba}} 
+\index{ComplexFlow@{ComplexFlow}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}} $\ast$ Complex\+Flow\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+System$\ast$ -\/ pointer to the target system. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a81aeceffcb2b425af124c3b0d1962786}{Flow}}.
+
+
+
+Definition at line 34 of file Complex\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                    \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}};}
+\DoxyCodeLine{36 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classComplexFlow_a4b7d7263094e0e829bd87a0d6c815304}\label{classComplexFlow_a4b7d7263094e0e829bd87a0d6c815304}} 
@@ -208,17 +331,118 @@ This is the overloaded assignment operator for the \mbox{\hyperlink{classComplex
 \end{DoxyReturn}
 
 
+Definition at line 54 of file Complex\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                                            \{}
+\DoxyCodeLine{55     \textcolor{keywordflow}{if}(\&flow == \textcolor{keyword}{this})\{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{//são iguais}}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58     this-\/>\mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}} = flow.\mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}};}
+\DoxyCodeLine{59     this-\/>\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}} = flow.\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}};}
+\DoxyCodeLine{60     this-\/>\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}} = flow.\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}};}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classComplexFlow_a89cd4ee0abe87ff81c7735500c864cfa}\label{classComplexFlow_a89cd4ee0abe87ff81c7735500c864cfa}} 
+\index{ComplexFlow@{ComplexFlow}!setName@{setName}}
+\index{setName@{setName}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Complex\+Flow\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the name attribute in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em name} & which will be set to the current flow. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a80346b11c95c20a009278eb78f8f9653}{Flow}}.
+
+
+
+Definition at line 17 of file Complex\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                        \{}
+\DoxyCodeLine{18     this-\/>\mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}} = \mbox{\hyperlink{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}{name}};}
+\DoxyCodeLine{19 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classComplexFlow_acaefe2aace6648c75c2ba776f0403892}\label{classComplexFlow_acaefe2aace6648c75c2ba776f0403892}} 
+\index{ComplexFlow@{ComplexFlow}!setSource@{setSource}}
+\index{setSource@{setSource}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
+{\footnotesize\ttfamily void Complex\+Flow\+::set\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the source system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em source} & pointer to the system that will be the source. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a1ca17cd54e042c1c1ccf73597e7f188e}{Flow}}.
+
+
+
 Definition at line 24 of file Complex\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{24                                                            \{}
-\DoxyCodeLine{25     \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \&flow) \{ \textcolor{comment}{// se for diferente, faz a atribuicao}}
-\DoxyCodeLine{26         \mbox{\hyperlink{classFlowImpl_a856d066683cf70a957004c507c08b4fd}{FlowImpl::operator=}}(flow); \textcolor{comment}{// chama o operador = da base para copiar name, source e target}}
-\DoxyCodeLine{27     \}}
-\DoxyCodeLine{28     }
-\DoxyCodeLine{29     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{// retorna o conteudo}}
-\DoxyCodeLine{30 \}}
+\DoxyCodeLine{24                                          \{}
+\DoxyCodeLine{25     this-\/>\mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}} = \mbox{\hyperlink{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}{source}};}
+\DoxyCodeLine{26 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classComplexFlow_ae38d2c4c334c1ca9812087ee8575c63c}\label{classComplexFlow_ae38d2c4c334c1ca9812087ee8575c63c}} 
+\index{ComplexFlow@{ComplexFlow}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
+{\footnotesize\ttfamily void Complex\+Flow\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em target} & pointer to the system that will be the target. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlow_a0a6d9503f9fd5afb978dd07346fa7e0d}{Flow}}.
+
+
+
+Definition at line 31 of file Complex\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                                          \{}
+\DoxyCodeLine{32     this-\/>\mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}}= \mbox{\hyperlink{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}{target}};}
+\DoxyCodeLine{33 \}}
 
 \end{DoxyCode}
 
@@ -232,7 +456,40 @@ Definition at line 24 of file Complex\+Flow.\+cpp.
 
 
 
-Definition at line 54 of file Complex\+Flow.\+h.
+Definition at line 69 of file Complex\+Flow.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}\label{classComplexFlow_a1c702af9fbea9d0a148777fbb211e4e4}} 
+\index{ComplexFlow@{ComplexFlow}!name@{name}}
+\index{name@{name}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Complex\+Flow\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+This attribute contains a name for the flow. 
+
+Definition at line 12 of file Complex\+Flow.\+h.
+
+\mbox{\Hypertarget{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}\label{classComplexFlow_ac983a1dd2ac97999f7e6832069b2c52f}} 
+\index{ComplexFlow@{ComplexFlow}!source@{source}}
+\index{source@{source}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}}$\ast$ Complex\+Flow\+::source\hspace{0.3cm}{\ttfamily [protected]}}
+
+This pointer points to the source \mbox{\hyperlink{classSystem}{System}} of the flow. 
+
+Definition at line 14 of file Complex\+Flow.\+h.
+
+\mbox{\Hypertarget{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}\label{classComplexFlow_a717a7acf6b44c95424fd8dc229f6bb75}} 
+\index{ComplexFlow@{ComplexFlow}!target@{target}}
+\index{target@{target}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}}$\ast$ Complex\+Flow\+::target\hspace{0.3cm}{\ttfamily [protected]}}
+
+This pointer points to the target \mbox{\hyperlink{classSystem}{System}} of the flow. 
+
+Definition at line 16 of file Complex\+Flow.\+h.
 
 
 

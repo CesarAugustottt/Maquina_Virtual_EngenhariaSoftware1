@@ -74,6 +74,8 @@ static std\+::vector$<$ \mbox{\hyperlink{classModel}{Model}} $\ast$ $>$ \mbox{\h
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{classModel_afb81d2077780e342b8fd3654cabc4c19}{Model\+Impl}}
+\item 
 class \mbox{\hyperlink{classModel_a686d152cfd45e63b5bc3db6f327fdaeb}{Unit\+\_\+\+Model}}
 \end{DoxyCompactItemize}
 
@@ -86,7 +88,7 @@ This class represents the interface of a model in the General Systems Theory imp
 \item It acts as a container for systems and flows, controlling the execution of the simulation. 
 \end{DoxyItemize}
 
-Definition at line 14 of file Model.\+h.
+Definition at line 15 of file Model.\+h.
 
 
 
@@ -103,11 +105,11 @@ This is the default destructor for the \mbox{\hyperlink{classModel}{Model}} Clas
 
 
 
-Definition at line 40 of file Model.\+h.
+Definition at line 42 of file Model.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{40 \{\}}
+\DoxyCodeLine{42 \{\}}
 
 \end{DoxyCode}
 
@@ -216,15 +218,15 @@ Flow$\ast$ -\/ pointer to the created flow.
 \end{DoxyReturn}
 
 
-Definition at line 113 of file Model.\+h.
+Definition at line 115 of file Model.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{113                                                                                               \{ \textcolor{comment}{//metodo template não pode ser virtual}}
-\DoxyCodeLine{114         \mbox{\hyperlink{classFlow}{Flow}}* flow = \textcolor{keyword}{new} T(name, source, target);}
-\DoxyCodeLine{115         this-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(flow); \textcolor{comment}{// Já adiciona automaticamente ao modelo}}
-\DoxyCodeLine{116         \textcolor{keywordflow}{return} flow;}
-\DoxyCodeLine{117     \}}
+\DoxyCodeLine{115                                                                                               \{ \textcolor{comment}{//metodo template não pode ser virtual}}
+\DoxyCodeLine{116         \mbox{\hyperlink{classFlow}{Flow}}* flow = \textcolor{keyword}{new} T(name, source, target);}
+\DoxyCodeLine{117         this-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(flow); \textcolor{comment}{// Já adiciona automaticamente ao modelo}}
+\DoxyCodeLine{118         \textcolor{keywordflow}{return} flow;}
+\DoxyCodeLine{119     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_adf5cf7d33af8042c591725d2d41cafca}\label{classModel_adf5cf7d33af8042c591725d2d41cafca}} 
@@ -249,15 +251,15 @@ Model$\ast$ -\/ pointer to the created model interface.
 \end{DoxyReturn}
 
 
-Definition at line 127 of file Model\+Impl.\+cpp.
+Definition at line 134 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{127                                                      \{}
-\DoxyCodeLine{128     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModelImpl}{ModelImpl}}(name, time);}
-\DoxyCodeLine{129     \mbox{\hyperlink{classModel_a8d34e397c313e0787181a2940a0f4fb5}{Model::addModel}}(m);}
-\DoxyCodeLine{130     \textcolor{keywordflow}{return} m;}
-\DoxyCodeLine{131 \}}
+\DoxyCodeLine{134                                                      \{}
+\DoxyCodeLine{135     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModel_afb81d2077780e342b8fd3654cabc4c19}{ModelImpl}}(name, time);}
+\DoxyCodeLine{136     \mbox{\hyperlink{classModel_a8d34e397c313e0787181a2940a0f4fb5}{Model::addModel}}(m);}
+\DoxyCodeLine{137     \textcolor{keywordflow}{return} m;}
+\DoxyCodeLine{138 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_adf9c63fb5e39bd2cb025255001907524}\label{classModel_adf9c63fb5e39bd2cb025255001907524}} 
@@ -326,20 +328,16 @@ Static method that acts as a factory to delete a \mbox{\hyperlink{classModel}{Mo
 
 \end{DoxyItemize}
 
-Definition at line 145 of file Model\+Impl.\+cpp.
+Definition at line 152 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{145                                    \{}
-\DoxyCodeLine{146     \textcolor{keywordflow}{if}(!model)\{}
-\DoxyCodeLine{147         \textcolor{keywordflow}{return};}
-\DoxyCodeLine{148     \}}
-\DoxyCodeLine{149     \textcolor{keyword}{auto} it = std::find(\mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.begin(), \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.end(), model);}
-\DoxyCodeLine{150     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.end()) \{}
-\DoxyCodeLine{151         \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.erase(it);}
-\DoxyCodeLine{152     \}}
-\DoxyCodeLine{153     \textcolor{keyword}{delete} model;}
-\DoxyCodeLine{154 \}}
+\DoxyCodeLine{152                                    \{}
+\DoxyCodeLine{153     \textcolor{keywordflow}{if}(!model)\{}
+\DoxyCodeLine{154         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{155     \}}
+\DoxyCodeLine{156     \textcolor{keyword}{delete} model;}
+\DoxyCodeLine{157 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_a8513437cddbde699020045bc56338ac3}\label{classModel_a8513437cddbde699020045bc56338ac3}} 
@@ -543,6 +541,16 @@ Implemented in \mbox{\hyperlink{classModelImpl_a1071f515e45c86e9295b193b7d28cc98
 
 
 \doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classModel_afb81d2077780e342b8fd3654cabc4c19}\label{classModel_afb81d2077780e342b8fd3654cabc4c19}} 
+\index{Model@{Model}!ModelImpl@{ModelImpl}}
+\index{ModelImpl@{ModelImpl}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{ModelImpl}{ModelImpl}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classModelImpl}{Model\+Impl}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 26 of file Model.\+h.
+
 \mbox{\Hypertarget{classModel_a686d152cfd45e63b5bc3db6f327fdaeb}\label{classModel_a686d152cfd45e63b5bc3db6f327fdaeb}} 
 \index{Model@{Model}!Unit\_Model@{Unit\_Model}}
 \index{Unit\_Model@{Unit\_Model}!Model@{Model}}
@@ -551,7 +559,7 @@ Implemented in \mbox{\hyperlink{classModelImpl_a1071f515e45c86e9295b193b7d28cc98
 
 
 
-Definition at line 137 of file Model.\+h.
+Definition at line 139 of file Model.\+h.
 
 
 
@@ -568,7 +576,7 @@ Static container for storing all models created by the factory.
 
 
 
-Definition at line 17 of file Model.\+h.
+Definition at line 18 of file Model.\+h.
 
 
 
