@@ -2,56 +2,75 @@
 #define SYSTEMIMPL_H
 
 #include "System.h" //interface
+#include "handleBodySemDebug.h"
 #include <string>
 
 /*!
+ * @class SystemBody
  * @brief This class represents the concrete implementation of a System.
  */
-
-class SystemImpl : public System {
+class SystemBody : public Body {
 protected:
     /*! This attribute contains a name for the system. */
     std::string name;
     /*! This attribute contains the actual value of the system. */
     double value;
 
-    // Construtores e Destrutor
+public:
     /*!
-     * @brief This is the default constructor for the SystemImpl Class.
+     * @brief This is the default constructor for the SystemBody Class.
      */
-    SystemImpl();
+    SystemBody();
+
     /*!
-     * @brief This is the parameterized constructor for the SystemImpl Class.
+     * @brief This is the parameterized constructor for the SystemBody Class.
      * * @param name the name of the System.
      * @param value the initial value of the System.
      */
-    SystemImpl(std::string name, double value);
+    SystemBody(std::string name, double value);
 
-    // Construtor de copia e Operador de atribuicao
-    /*!
-     * @brief This is the copy constructor for the SystemImpl Class.
-     * * @param sys the system that is going to be cloned.
+    /**
+     * @brief Destructor for SystemBody.
      */
-    SystemImpl(const SystemImpl& sys);
-    /*!
-     * @brief This is the overloaded assignment operator for the SystemImpl Class.
-     * * @param sys the system that is going to be cloned.
-     * @return SystemImpl& - a reference to the updated SystemImpl Class object.
-     */
-    SystemImpl& operator=(const SystemImpl& sys);
+    virtual ~SystemBody() {}
+
+    void setName(std::string name);
+    std::string getName() const;
+    void setValue(double value);
+    double getValue() const;
+};
+
+
+/**
+ * @class SystemHandle
+ * @brief This class represents the handle of a system.
+ */
+class SystemHandle : public System, public Handle<SystemBody> {
 public:
-    ///destrutor
-    virtual ~SystemImpl();
-    // Setters e Getters
-    void setName(std::string name) override;
+    /**
+     * @brief Default constructor for SystemHandle.
+     */
+    SystemHandle();
+
+    /**
+     * @brief This is the Parameterized constructor for SystemHandle.
+     * @param name The name of the System.
+     * @param value The initial value of the System.
+     */
+    SystemHandle(std::string name, double value);
+
+    /**
+     * @brief Destructor for SystemHandle.
+     */
+    virtual ~SystemHandle();
+
+    double getValue() const override;
     std::string getName() const override;
     void setValue(double value) override;
-    double getValue() const override;
-
-
-    // Permite que a classe de teste faça testes unitario a cada método
+    void setName(std::string name) override;
+    
+    //classe amiga para testes unitários
     friend class Unit_System;
-    // Permite que o metodo createSystem implementado em ModelImpl acesse os cobstrutores
     friend class ModelImpl;
 };
 
