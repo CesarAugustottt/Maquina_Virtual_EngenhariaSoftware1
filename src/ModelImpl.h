@@ -4,15 +4,16 @@
 #include "Model.h"
 #include "System.h"
 #include "Flow.h"
+#include "handleBodySemDebug.h"
 
 #include <vector>
 #include <string>
 
-/*!
+/**
+ * @class ModelBody
  * @brief This class represents the concrete implementation of a Model.
  */
-
-class ModelImpl : public Model {
+class ModelBody : public Body {
 protected:
     /*! This attribute contains a name for the model. */
     std::string name;
@@ -22,55 +23,95 @@ protected:
     std::vector<System*> systems;
     /*! This vector contains pointers to all flows registered in the model. */
     std::vector<Flow*> flows;
+  
+    void add(System* sys);
+    void add(Flow* flow);
 
-    //Construtores protegidos, ninguem fora da fabrica pode usar os contrutores ou fazer copia.
-    /*!
-    * @brief This is the default constructor for the Model Class.
-    */
-    ModelImpl();
+public:
+    /**
+     * @brief This is the default constructor for the Model Class.
+     */
+    ModelBody();
+
     /*!
     * @brief This is the parameterized constructor for the Model Class.
     * * @param name the name of the Model.
     * @param time the initial time of the simulation.
     */
-    ModelImpl(std::string name, double time);
+    ModelBody(std::string name, double time);
 
-    /*!
-    * @brief This is the copy constructor for the Model Class.
-    * * @param model the model that is going to be cloned.
-    */
-    ModelImpl(const ModelImpl& model);
-    /*!
-    * @brief This is the overloaded assignment operator for the Model Class.
-    * * @param model the model that is going to be cloned.
-    * @return Model& - a reference to the updated Model Class object.
-    */
-    ModelImpl& operator=(const ModelImpl& model);
+    /**
+     * @brief This is the destructor for ModelBody.
+     */
+    virtual ~ModelBody();
 
-    //metodos de adicionar protegido
+
+    void execute(double start, double end, double increment);
+    void remove(System* sys);
+    void remove(Flow* flow);
+
+    // metodos factory
+    System* createSystem(std::string name = "", double value = 0.0);
+    void deleteSystem(System* sys);
+    void deleteFlow(Flow* flow);
+
+    // Getters e Setters
+    void setName(std::string name);
+    std::string getName() const;
+    void setTime(double time);
+    double getTime() const ;
+    void incrementTime(double increment);
+
+    //Garante acesso a classe ModelHndle acessar metoodos protegidos
+    friend class ModelHandle;
+    //acesso aos testes unitarios
+    friend class Unit_Model;
+    friend class Model;
+
+};
+
+/**
+ * @class ModelHandle
+ * @brief This class represents the Handle of a Model.
+ */
+class ModelHandle : public Model, public Handle<ModelBody> {
+protected:
     void add(System* sys) override;
     void add(Flow* flow) override;
+
 public:
-    virtual ~ModelImpl();
-    void execute(double start, double final, double increment) override;
-    void remove(System* sys) override;
+    /**
+     * @brief This is the default constructor for ModelHandle.
+     */
+    ModelHandle();
+
+    /**
+     * @brief This is the parameterized constructor for ModelHandle.
+     * @param name The name of the Model.
+     * @param time The initial time of the simulation.
+     */
+    ModelHandle(std::string name, double time);
+
+    /**
+     * @brief This is the destructor for ModelHandle.
+     */
+    virtual ~ModelHandle() {}
+
+    void execute(double start, double end, double increment) override;
+    void remove(System* sys) override ;
     void remove(Flow* flow) override;
+
+    System* createSystem(std::string name = "", double value = 0.0) override;
+    void deleteSystem(System* sys) override;
+    void deleteFlow(Flow* flow) override;
+
     void setName(std::string name) override;
     std::string getName() const override;
     void setTime(double time) override;
     double getTime() const override;
     void incrementTime(double increment) override;
 
-    //Metodo create da fabrica
-    System* createSystem(std::string name = "", double value = 0.0) override;
-
-    //metodos delete da fabrica
-    void deleteSystem(System*) override;
-    void deleteFlow(Flow*) override;
-
-    // Permite que a classe de teste faça testes unitario a cada metodo
     friend class Unit_Model;
-    // Permite que o metodo statico da fabrica acesse os construtores protegidos
     friend class Model;
 };
 

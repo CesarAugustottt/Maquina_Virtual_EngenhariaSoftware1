@@ -62,7 +62,7 @@ public:
     /**
      * @brief Destructor for SystemHandle.
      */
-    virtual ~SystemHandle();
+    virtual ~SystemHandle(){}
 
     double getValue() const override;
     std::string getName() const override;

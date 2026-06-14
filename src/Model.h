@@ -23,7 +23,8 @@ private:
      */
     static void addModel(Model*);
 
-    friend class ModelImpl;
+    friend class ModelBody;
+    friend class ModelHandle;
 protected:
     /*!
     * @brief Adds a System pointer to the internal container of the model.
