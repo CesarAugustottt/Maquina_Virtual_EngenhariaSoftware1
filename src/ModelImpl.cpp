@@ -2,6 +2,8 @@
 #include "SystemImpl.h"
 #include <algorithm>
 
+
+//GLOBAL
 //atributo statico de model
 std::vector<Model*> Model::models;
 
@@ -10,14 +12,30 @@ void Model::addModel(Model* model) {
     models.push_back(model);
 }
 
-ModelImpl::ModelImpl() {
+//FABRICA MODEL
+//criar model
+Model* Model::createModel(std::string name, double time) {
+    Model* m = new ModelHandle(name, time);
+    Model::addModel(m);
+    return m;
+}
+//metodos model
+void Model::deleteModel(Model* model){
+    if(!model){
+        return;
+    }
+    delete model;
+}
+
+//IMPLEMENTAÇÃO DO MODELBODY
+ModelBody::ModelBody() {
     this->name = "";
     this->time = 0.0;
 }
 
-ModelImpl::ModelImpl(std::string name, double time) : name(name), time(time) {}
+ModelBody::ModelBody(std::string name, double time) : name(name), time(time) {}
 
-ModelImpl::~ModelImpl() {
+ModelBody::~ModelBody() {
     //deletar systems
     for (std::vector<System*>::iterator it = systems.begin(); it != systems.end(); ++it) {
         delete *it; //deleta a memoria alocada dinamicamente
@@ -29,16 +47,9 @@ ModelImpl::~ModelImpl() {
     //limpar os apenas os vetores
     systems.clear();
     flows.clear();
-    //deletar model no vetor!!
-    for (auto it = Model::models.begin(); it != Model::models.end(); ++it) {
-        if (*it == this) {
-            Model::models.erase(it);
-            break; // Sai do laço imediatamente após remover
-        }
-    }
 }
 
-void ModelImpl::execute(double start, double end, double increment) {
+void ModelBody::execute(double start, double end, double increment) {
     this->time = start;
     while (this->time < end) {
         std::vector<double> valueFlow; //vetor com os valores de cada fluxo
@@ -63,15 +74,15 @@ void ModelImpl::execute(double start, double end, double increment) {
     }
 }
 
-void ModelImpl::add(System* sys) {
+void ModelBody::add(System* sys) {
     systems.push_back(sys);
 }
 
-void ModelImpl::add(Flow* flow) {
+void ModelBody::add(Flow* flow) {
     flows.push_back(flow);
 }
 
-void ModelImpl::remove(System* sys) {
+void ModelBody::remove(System* sys) {
     //deve procurar o ponteiro sys no vetor
     auto it = std::find(systems.begin(), systems.end(), sys);
     //se ele for diferente do fim o ponteiro foi encontrado e deve remover
@@ -80,7 +91,7 @@ void ModelImpl::remove(System* sys) {
     }
 }
 
-void ModelImpl::remove(Flow* flow) {
+void ModelBody::remove(Flow* flow) {
     //deve procurar o ponteiro flow no vetor
     auto it = std::find(flows.begin(), flows.end(), flow);
     //se ele for diferente do fim o ponteiro foi encontrado e deve remover
@@ -90,55 +101,29 @@ void ModelImpl::remove(Flow* flow) {
     }
 }
 
-void ModelImpl::setName(std::string name) {
+void ModelBody::setName(std::string name) {
     this->name = name;
 }
 
-std::string ModelImpl::getName() const {
+std::string ModelBody::getName() const {
     return this->name;
 }
 
-void ModelImpl::setTime(double time) {
+void ModelBody::setTime(double time) {
     this->time = time;
 }
 
-double ModelImpl::getTime() const {
+double ModelBody::getTime() const {
     return this->time;
 }
 
-void ModelImpl::incrementTime(double increment) {
+void ModelBody::incrementTime(double increment) {
     this->time += increment;
 }
 
-//construtor de copia
-ModelImpl::ModelImpl(const ModelImpl& model) {
-    this->name = model.name;
-    this->time = model.time;
-    this->systems = model.systems; //copia os ponteiros
-    this->flows = model.flows;
-}
 
-//operador = de atribuição
-ModelImpl& ModelImpl::operator=(const ModelImpl& model) {
-    if (&model != this) {
-        this->name = model.name;
-        this->time = model.time;
-        this->systems = model.systems;
-        this->flows = model.flows;
-    }
-    return *this; //retorna o modelo
-}
-
-//IMPLEMENTAÇÃO metodos da fabrica
-//criar Model
-Model* Model::createModel(std::string name, double time) {
-    Model* m = new ModelImpl(name, time);
-    Model::addModel(m);
-    return m;
-}
-
-//Criar system
-System* ModelImpl:: createSystem(std::string name, double value){
+//Criar system FABRICA SYSTEM
+System* ModelBody:: createSystem(std::string name, double value){
     //instancia
     System* sys = new SystemHandle(name, value);
     //adiciona systema ao modelo
@@ -146,24 +131,92 @@ System* ModelImpl:: createSystem(std::string name, double value){
     return sys;
 }
 
-//create flow ja implementadp pois é metodo template
-
-//metodos delete
-void Model::deleteModel(Model* model){
-    if(!model){
-        return;
-    }
-    delete model;
-}
-
-void ModelImpl::deleteSystem(System* sys) {
+void ModelBody::deleteSystem(System* sys) {
     if (!sys) return;
     this->remove(sys); // Tira do vetor
     delete sys;        // Apagar
 }
 
-void ModelImpl::deleteFlow(Flow* flow) {
+void ModelBody::deleteFlow(Flow* flow) {
     if (!flow) return;
-    this->remove(flow); // Tira do vetor
-    delete flow;        // Apagar
+    this->remove(flow); 
+    delete flow;       
+}
+
+//IMPLEMENTAÇÃO DO MODELHANDLE
+
+ModelHandle::ModelHandle() : Handle<ModelBody>() {}
+
+ModelHandle::ModelHandle(std::string name, double time) {
+    delete pImpl_;
+    pImpl_ = new ModelBody(name, time);
+    pImpl_->attach();
+}
+
+ModelHandle::~ModelHandle() {
+    for (auto it = Model::models.begin(); it != Model::models.end(); ++it) {
+        if (*it == this) {
+            Model::models.erase(it);
+            break; 
+        }
+    }
+    //destrutor de modelBody é chamado 
+}
+
+void ModelHandle::execute(double start, double end, double increment) {
+    pImpl_->execute(start, end, increment);
+}
+
+void ModelHandle::add(System* sys) {
+    pImpl_->add(sys);
+}
+
+void ModelHandle::add(Flow* flow) {
+    pImpl_->add(flow);
+}
+
+void ModelHandle::remove(System* sys) {
+    pImpl_->remove(sys);
+}
+
+void ModelHandle::remove(Flow* flow) {
+    pImpl_->remove(flow);
+}
+
+void ModelHandle::setName(std::string name) {
+    pImpl_->setName(name); 
+}
+
+std::string ModelHandle::getName() const {
+    return pImpl_->getName();;
+}
+
+void ModelHandle::setTime(double time) {
+    pImpl_->setTime(time);
+}
+
+double ModelHandle::getTime() const {
+    return pImpl_->getTime();
+}
+
+void ModelHandle::incrementTime(double increment) {
+    pImpl_->incrementTime(increment);
+}
+
+
+//IMPLEMENTAÇÃO metodos da fabrica
+
+//Criar system
+System* ModelHandle:: createSystem(std::string name, double value){
+    return pImpl_->createSystem(name, value);
+}
+
+//metodos delete
+
+void ModelHandle::deleteSystem(System* sys) {
+    pImpl_->deleteSystem(sys);
+}
+
+void ModelHandle::deleteFlow(Flow* flow) {
+    pImpl_->deleteFlow(flow);
 }
