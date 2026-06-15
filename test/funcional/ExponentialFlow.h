@@ -1,21 +1,13 @@
 #ifndef EXPONENTIALFLOW_H
 #define EXPONENTIALFLOW_H
 
-#include "../../src/Flow.h"
-#include <string>
+#include "../../src/FlowImpl.h"
 
 /*!
  * @brief This Class represents an exponential flow in the General Systems Theory implemented in this code.
  */
-class ExponentialFlow : public Flow {
+class ExponentialFlow : public FlowHandle {
 protected:
-    /*! This attribute contains a name for the flow. */
-    std::string name;
-    /*! This pointer points to the source System of the flow. */
-    System* source;
-    /*! This pointer points to the target System of the flow. */
-    System* target;
-
     // Construtor padrao
     /*!
      * @brief This is the default constructor for the ExponentialFlow Class.
@@ -60,14 +52,6 @@ public:
      * @return double - the calculated value for the transfer.
      */
     virtual double execute() override;
-
-    // Getters e setters
-    void setName(std::string name) override;
-    std::string getName() const override;
-    void setSource(System* source) override;
-    System* getSource() const override;
-    void setTarget(System* target) override;
-    System* getTarget() const override;
 
     // Permite que o template createFlow de Model instancie os fluxos
     friend class Model;
