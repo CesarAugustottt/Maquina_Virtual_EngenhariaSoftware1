@@ -1,53 +1,71 @@
 #include "FlowImpl.h"
 
-FlowImpl::FlowImpl(){
+// FlowBody
+
+FlowBody::FlowBody(){
     this->name= "";
     this->source= nullptr;
     this->target= nullptr;
 }
 
-FlowImpl::FlowImpl(std::string name, System* source, System* target): name(name), 
+FlowBody::FlowBody(std::string name, System* source, System* target): name(name), 
     source(source), target(target){}
 
-FlowImpl::~FlowImpl(){} //fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles
+FlowBody::~FlowBody(){} //fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles
 
-//metodo execute é virtual puro.
-
-void FlowImpl::setName(std::string name){
+void FlowBody::setName(std::string name){
     this->name = name;
 }
-std::string FlowImpl::getName()const{
+std::string FlowBody::getName()const{
     return this->name;
 }
 
-void FlowImpl::setSource(System* source){
+void FlowBody::setSource(System* source){
     this->source = source;
 }
-System* FlowImpl::getSource()const{
+System* FlowBody::getSource()const{
     return this->source;
 }
 
-void FlowImpl::setTarget(System* target){
+void FlowBody::setTarget(System* target){
     this->target= target;
 }
-System* FlowImpl::getTarget()const{
+System* FlowBody::getTarget()const{
     return this->target;
 }
 
-//construtor de copia
-FlowImpl::FlowImpl(const FlowImpl& flow){
-    this->name = flow.name;
-    this->source = flow.source;
-    this->target = flow.target;
+// FlowHandle
+
+FlowHandle::FlowHandle() : Handle<FlowBody>() {}
+
+FlowHandle::FlowHandle(std::string name, System* source, System* target) : Handle<FlowBody>() {
+    FlowBody* newBody = new FlowBody(name, source, target);
+    pImpl_->detach();
+    pImpl_ = newBody;
+    pImpl_->attach();
 }
 
-//Atribuição por =
-FlowImpl& FlowImpl::operator=(const FlowImpl& flow){
-    if(&flow == this){
-        return *this; //são iguais
-    }
-    this->name = flow.name;
-    this->source = flow.source;
-    this->target = flow.target;
-    return *this;
+FlowHandle::~FlowHandle(){} //fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles
+
+//metodo execute é virtual puro.
+
+void FlowHandle::setName(std::string name){
+    pImpl_->setName(name);
+}
+std::string FlowHandle::getName()const{
+    return pImpl_->getName();
+}
+
+void FlowHandle::setSource(System* source){
+    pImpl_->setSource(source);
+}
+System* FlowHandle::getSource()const{
+    return pImpl_->getSource();
+}
+
+void FlowHandle::setTarget(System* target){
+    pImpl_->setTarget(target);
+}
+System* FlowHandle::getTarget()const{
+    return pImpl_->getTarget();
 }
