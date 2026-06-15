@@ -1,42 +1,13 @@
 #include "LogisticFlow.h"
-#include "../../src/System.h"
 
 // Construtor padrao
-LogisticFlow::LogisticFlow() {
-    this->name = "";
-    this->source = nullptr;
-    this->target = nullptr;
-}
+LogisticFlow::LogisticFlow() : FlowHandle() {}
 
 // Construtor parametrizado
 LogisticFlow::LogisticFlow(std::string name, System* source, System* target)
-    : name(name), source(source), target(target) {}
+    : FlowHandle(name, source, target) {}
 
 LogisticFlow::~LogisticFlow() {} 
-
-void LogisticFlow::setName(std::string name) {
-    this->name = name;
-}
-
-std::string LogisticFlow::getName() const {
-    return this->name;
-}
-
-void LogisticFlow::setSource(System* source) {
-    this->source = source;
-}
-
-System* LogisticFlow::getSource() const {
-    return this->source;
-}
-
-void LogisticFlow::setTarget(System* target) {
-    this->target = target;
-}
-
-System* LogisticFlow::getTarget() const {
-    return this->target;
-}
 
 double LogisticFlow::execute() {
     if(this->getTarget() == nullptr) { //se não tiver sistema de destino
@@ -47,18 +18,12 @@ double LogisticFlow::execute() {
 }
 
 // Construtor de copia
-LogisticFlow::LogisticFlow(const LogisticFlow& flow) {
-    this->name = flow.name;
-    this->source = flow.source;
-    this->target = flow.target;
-}
+LogisticFlow::LogisticFlow(const LogisticFlow& flow) : FlowHandle(flow) {}
 
 // Atribuição por =
 LogisticFlow& LogisticFlow::operator=(const LogisticFlow& flow) {
     if (&flow != this) { //se for diferente, faz a atribuição
-        this->name = flow.name;
-        this->source = flow.source;
-        this->target = flow.target; 
+        FlowHandle::operator=(flow);
     }
     return *this; 
 }
