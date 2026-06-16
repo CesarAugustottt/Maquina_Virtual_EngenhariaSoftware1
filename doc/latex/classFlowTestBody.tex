@@ -1,0 +1,124 @@
+\hypertarget{classFlowTestBody}{}\doxysection{Flow\+Test\+Body Class Reference}
+\label{classFlowTestBody}\index{FlowTestBody@{FlowTestBody}}
+
+
+Class used exclusively to instantiate and test \mbox{\hyperlink{classFlow}{Flow}} (\mbox{\hyperlink{classBody}{Body}}).  
+
+
+
+
+Inheritance diagram for Flow\+Test\+Body\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{classFlowTestBody__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flow\+Test\+Body\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classFlowTestBody__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFlowTestBody_a31682a464c3f20b79456b84524fdbd96}{Flow\+Test\+Body}} (std\+::string n=\char`\"{}\char`\"{}, \mbox{\hyperlink{classSystem}{System}} $\ast$s=nullptr, \mbox{\hyperlink{classSystem}{System}} $\ast$t=nullptr)
+\item 
+double \mbox{\hyperlink{classFlowTestBody_afafa7a4bc1733619d048afd3e93af5e8}{execute}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classFlowTestBody_a90b1ae92da4842c4255199893b223ee6}{name}}
+\item 
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlowTestBody_a573ba6a5e21f8af3ed6b8f5eaa4b8ad7}{source}}
+\item 
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classFlowTestBody_a209c7042cec8a6c03ab6f568c1b51687}{target}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class used exclusively to instantiate and test \mbox{\hyperlink{classFlow}{Flow}} (\mbox{\hyperlink{classBody}{Body}}). 
+
+Definition at line 39 of file unit\+\_\+\+Model.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFlowTestBody_a31682a464c3f20b79456b84524fdbd96}\label{classFlowTestBody_a31682a464c3f20b79456b84524fdbd96}} 
+\index{FlowTestBody@{FlowTestBody}!FlowTestBody@{FlowTestBody}}
+\index{FlowTestBody@{FlowTestBody}!FlowTestBody@{FlowTestBody}}
+\doxysubsubsection{\texorpdfstring{FlowTestBody()}{FlowTestBody()}}
+{\footnotesize\ttfamily Flow\+Test\+Body\+::\+Flow\+Test\+Body (\begin{DoxyParamCaption}\item[{std\+::string}]{n = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{s = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{t = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43 : \mbox{\hyperlink{classFlowTestBody_a90b1ae92da4842c4255199893b223ee6}{name}}(n), \mbox{\hyperlink{classFlowTestBody_a573ba6a5e21f8af3ed6b8f5eaa4b8ad7}{source}}(s), \mbox{\hyperlink{classFlowTestBody_a209c7042cec8a6c03ab6f568c1b51687}{target}}(t) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFlowTestBody_afafa7a4bc1733619d048afd3e93af5e8}\label{classFlowTestBody_afafa7a4bc1733619d048afd3e93af5e8}} 
+\index{FlowTestBody@{FlowTestBody}!execute@{execute}}
+\index{execute@{execute}!FlowTestBody@{FlowTestBody}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily double Flow\+Test\+Body\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 44 of file unit\+\_\+\+Model.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classFlowTestBody_a573ba6a5e21f8af3ed6b8f5eaa4b8ad7}{source}} ? 0.01 * \mbox{\hyperlink{classFlowTestBody_a573ba6a5e21f8af3ed6b8f5eaa4b8ad7}{source}}-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() : 0.0; \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classFlowTestBody_a90b1ae92da4842c4255199893b223ee6}\label{classFlowTestBody_a90b1ae92da4842c4255199893b223ee6}} 
+\index{FlowTestBody@{FlowTestBody}!name@{name}}
+\index{name@{name}!FlowTestBody@{FlowTestBody}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Flow\+Test\+Body\+::name}
+
+
+
+Definition at line 41 of file unit\+\_\+\+Model.\+cpp.
+
+\mbox{\Hypertarget{classFlowTestBody_a573ba6a5e21f8af3ed6b8f5eaa4b8ad7}\label{classFlowTestBody_a573ba6a5e21f8af3ed6b8f5eaa4b8ad7}} 
+\index{FlowTestBody@{FlowTestBody}!source@{source}}
+\index{source@{source}!FlowTestBody@{FlowTestBody}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}}$\ast$ Flow\+Test\+Body\+::source}
+
+
+
+Definition at line 42 of file unit\+\_\+\+Model.\+cpp.
+
+\mbox{\Hypertarget{classFlowTestBody_a209c7042cec8a6c03ab6f568c1b51687}\label{classFlowTestBody_a209c7042cec8a6c03ab6f568c1b51687}} 
+\index{FlowTestBody@{FlowTestBody}!target@{target}}
+\index{target@{target}!FlowTestBody@{FlowTestBody}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSystem}{System}} $\ast$ Flow\+Test\+Body\+::target}
+
+
+
+Definition at line 42 of file unit\+\_\+\+Model.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test/unit/\mbox{\hyperlink{unit__Model_8cpp}{unit\+\_\+\+Model.\+cpp}}\end{DoxyCompactItemize}

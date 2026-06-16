@@ -23,7 +23,6 @@ private:
      */
     static void addModel(Model*);
 
-    friend class ModelBody;
     friend class ModelHandle;
 protected:
     /*!

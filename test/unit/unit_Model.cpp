@@ -1,61 +1,68 @@
 #include "unit_Model.h"
 #include "../../src/ModelImpl.h"
-#include "../../src/SystemImpl.h"
-#include "../../src/FlowImpl.h"
 #include <cassert>
-#include <string>
 #include <cmath>
 #include<algorithm>
 #include <iostream>
 
 /*!
- * @brief Class used exclusively to instantiate and test System.
+ * @brief Class used exclusively to instantiate and test System (Body).
  */
-class SystemTest : public System{
+class SystemTestBody : public Body {
 public:
-    std :: string name;
-    double value;  
-    SystemTest() {
-        this->name = "";
-        this->value = 0.0;
-    }
-    SystemTest(std::string name, double value) : name(name), value(value){}
-    virtual ~SystemTest(){}
-    virtual std::string getName() const override{ return this->name; }
-    virtual void setName(std::string n) override{ this->name = n; }
-    virtual double getValue() const override{ return this->value; }
-    virtual void setValue(double v) override{ this->value = v; }
+    std::string name;
+    double value;
+    SystemTestBody(std::string n = "", double v = 0.0) : name(n), value(v) {}
 };
 
 /*!
- * @brief Class used exclusively to instantiate and test Flow.
+ * @brief Class used exclusively to instantiate and test System (Handle).
  */
-class FlowTest2 : public Flow {
+class SystemTestHandle : public System, public Handle<SystemTestBody> {
+public:
+    SystemTestHandle(std::string n = "", double v = 0.0) {
+        pImpl_->detach();
+        pImpl_ = new SystemTestBody(n, v);
+        pImpl_->attach();
+    }
+    virtual ~SystemTestHandle() {}
+    std::string getName() const override { return pImpl_->name; }
+    void setName(std::string n) override { pImpl_->name = n; }
+    double getValue() const override { return pImpl_->value; }
+    void setValue(double v) override { pImpl_->value = v; }
+    friend class Unit_Model;
+};
+
+/*!
+ * @brief Class used exclusively to instantiate and test Flow (Body).
+ */
+class FlowTestBody : public Body {
 public:
     std::string name;
-    System* source;
-    System* target;
+    System *source, *target;
+    FlowTestBody(std::string n="", System* s=nullptr, System* t=nullptr) : name(n), source(s), target(t) {}
+    double execute() { return source ? 0.01 * source->getValue() : 0.0; }
+};
 
-    FlowTest2(){
-        this->name= "";
-        this->source= nullptr;
-        this->target= nullptr;
+/*!
+ * @brief Class used exclusively to instantiate and test Flow (Handle).
+ */
+class FlowTestHandle : public Flow, public Handle<FlowTestBody> {
+public:
+    FlowTestHandle(std::string n="", System* s=nullptr, System* t=nullptr) {
+        pImpl_->detach();
+        pImpl_ = new FlowTestBody(n, s, t);
+        pImpl_->attach();
     }
-    FlowTest2(std::string name, System* source, System* target) 
-        : name(name), source(source), target(target) {}
-    virtual ~FlowTest2() {}
-    virtual std::string getName() const override{ return this->name; }
-    virtual void setName(std::string n) override{ this->name = n; }
-    virtual System* getSource() const override{ return this->source; }
-    virtual void setSource(System* s) override{ this->source = s; }
-    virtual System* getTarget() const override{ return this->target; }
-    virtual void setTarget(System* t) override{ this->target = t; }
-    virtual double execute() override { 
-        if (this->getSource() != nullptr) { // se tiver sistema de origem
-            return 0.01 * this->getSource()->getValue(); 
-        }
-        return 0.0;
-    }
+    virtual ~FlowTestHandle() {}
+    std::string getName() const override { return pImpl_->name; }
+    void setName(std::string n) override { pImpl_->name = n; }
+    System* getSource() const override { return pImpl_->source; }
+    void setSource(System* s) override { pImpl_->source = s; }
+    System* getTarget() const override { return pImpl_->target; }
+    void setTarget(System* t) override { pImpl_->target = t; }
+    double execute() override { return pImpl_->execute(); }
+    friend class Unit_Model;
 };
 
 
@@ -77,7 +84,7 @@ bool Unit_Model::constructor(void) {
 
 bool Unit_Model::destructor(void){
     ModelHandle* m = new ModelHandle();
-    System* s1 = new SystemTest();
+    System* s1 = new SystemTestHandle();
     
     m->pImpl_->systems.push_back(s1);
     
@@ -88,14 +95,14 @@ bool Unit_Model::destructor(void){
 
 bool Unit_Model::execute(void) {
     ModelHandle m;
-    SystemTest* s1 = new SystemTest("Origem", 100.0);
-    SystemTest* s2 = new SystemTest("Destino", 0.0);
+    SystemTestHandle* s1 = new SystemTestHandle("Origem", 100.0);
+    SystemTestHandle* s2 = new SystemTestHandle("Destino", 0.0);
 
-    Flow* f = new FlowTest2("Fluxo", s1, s2);
+    Flow* f = new FlowTestHandle("Fluxo", s1, s2);
 
     //adicionar sistemas
     m.pImpl_->systems.push_back(s1);
-     m.pImpl_->systems.push_back(s2);
+    m.pImpl_->systems.push_back(s2);
 
     //adicionar fluxos
     m.pImpl_->flows.push_back(f);
@@ -104,8 +111,8 @@ bool Unit_Model::execute(void) {
 
     assert(m.pImpl_->time == 2.0);
 
-    assert(s1->value == 98.01);
-    assert(s2->value == 1.99);
+    assert(s1->pImpl_->value == 98.01);
+    assert(s2->pImpl_->value == 1.99);
 
     //liberar memoria
     m.pImpl_->systems.clear();
@@ -127,7 +134,7 @@ bool Unit_Model::increment(void){
 
 bool Unit_Model::addSystem(void) {
     ModelHandle m;
-    System* s1 = new SystemTest("S1", 10.0);
+    System* s1 = new SystemTestHandle("S1", 10.0);
 
     //adicionar sistema 
     m.add(s1);
@@ -143,7 +150,7 @@ bool Unit_Model::addSystem(void) {
 
 bool Unit_Model::addFlow(void) {
     ModelHandle m;
-    Flow* f = new FlowTest2("F1", nullptr, nullptr);
+    Flow* f = new FlowTestHandle("F1", nullptr, nullptr);
 
     //adicionar fluxo
     m.add(f);
@@ -170,7 +177,7 @@ bool Unit_Model::addModel(void){
 
 bool Unit_Model::removeSystem(void) {
     ModelHandle m;
-    System* s1 = new SystemTest("S1", 10.0);
+    System* s1 = new SystemTestHandle("S1", 10.0);
 
     m.pImpl_->systems.push_back(s1);
 
@@ -184,7 +191,7 @@ bool Unit_Model::removeSystem(void) {
 
 bool Unit_Model::removeFlow(void) {
     ModelHandle m;
-    Flow* f = new FlowTest2("F1", nullptr, nullptr);
+    Flow* f = new FlowTestHandle("F1", nullptr, nullptr);
 
     m.pImpl_->flows.push_back(f);
 
@@ -228,7 +235,7 @@ bool Unit_Model::copyConstructor(void) {
     ModelHandle original;
     original.pImpl_->name = "Original";
     original.pImpl_->time = 10.0;
-    System* s = new SystemTest("S1", 0.0);
+    System* s = new SystemTestHandle("S1", 0.0);
 
     //adiciona sistema no modelo original
     original.pImpl_->systems.push_back(s);
@@ -279,9 +286,9 @@ bool Unit_Model::createSystem(void) {
     System* s = m->createSystem("Sistema", 10.0);
     
     assert(s != nullptr);
-    SystemHandle* sTest = static_cast<SystemHandle*>(s);
-    assert(sTest->pImpl_->name == "Sistema");
-    assert(sTest->pImpl_->value == 10.0);
+    SystemTestHandle* sReal = static_cast<SystemTestHandle*>(s);
+    assert(sReal->pImpl_->name == "Sistema");
+    assert(sReal->pImpl_->value == 10.0);
     
     //testar se system ja foi inserido no vetor
     assert(m->pImpl_->systems.size() == 1);
@@ -293,10 +300,10 @@ bool Unit_Model::createSystem(void) {
 
 bool Unit_Model::createFlow(void) {
     ModelHandle* m = new ModelHandle();
-    Flow* f = m->createFlow<FlowTest2>("Fluxo", nullptr, nullptr);
+    Flow* f = m->createFlow<FlowTestHandle>("Fluxo", nullptr, nullptr);
     
     assert(f != nullptr);
-    FlowHandle* fTest = static_cast<FlowHandle*>(f); //cast
+    FlowTestHandle* fTest = static_cast<FlowTestHandle*>(f);
     assert(fTest->pImpl_->name == "Fluxo");
     
     //testar se flow foi inserido no vetor
@@ -315,7 +322,7 @@ bool Unit_Model::deleteModel(void) {
 
 bool Unit_Model::deleteSystem(void) {
     ModelHandle* m = new ModelHandle();
-    System* s = new SystemTest();
+    System* s = new SystemTestHandle();
     
     m->pImpl_->systems.push_back(s); //adiciona system
     
@@ -329,7 +336,7 @@ bool Unit_Model::deleteSystem(void) {
 
 bool Unit_Model::deleteFlow(void) {
     ModelHandle* m = new ModelHandle();
-    Flow* f = new FlowTest2();
+    Flow* f = new FlowTestHandle();
     
     m->pImpl_->flows.push_back(f); //adicionar flow ao modelo
     

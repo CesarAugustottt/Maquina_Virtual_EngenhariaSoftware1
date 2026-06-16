@@ -66,8 +66,6 @@ public:
     friend class ModelHandle;
     //acesso aos testes unitarios
     friend class Unit_Model;
-    friend class Model;
-
 };
 
 /**
@@ -79,7 +77,6 @@ protected:
     void add(System* sys) override;
     void add(Flow* flow) override;
 
-public:
     /**
      * @brief This is the default constructor for ModelHandle.
      */
@@ -91,6 +88,7 @@ public:
      * @param time The initial time of the simulation.
      */
     ModelHandle(std::string name, double time);
+public:
 
     /**
      * @brief This is the destructor for ModelHandle.
@@ -111,6 +109,7 @@ public:
     double getTime() const override;
     void incrementTime(double increment) override;
 
+    //Permite que a classe de testes faça testes unitários
     friend class Unit_Model;
     friend class Model;
 };

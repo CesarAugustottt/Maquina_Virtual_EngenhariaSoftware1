@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3d_176',['operator=',['../classFlowImpl.html#a856d066683cf70a957004c507c08b4fd',1,'FlowImpl::operator=()'],['../classModelImpl.html#a5c89b104c20013688809cfc0e1d12e10',1,'ModelImpl::operator=()'],['../classSystemImpl.html#aa90a45b567f1d915a6c2cadb578e3deb',1,'SystemImpl::operator=()'],['../classComplexFlow.html#a4b7d7263094e0e829bd87a0d6c815304',1,'ComplexFlow::operator=()'],['../classExponentialFlow.html#af9903c1a715409270d83c24e7f23a15d',1,'ExponentialFlow::operator=()'],['../classLogisticFlow.html#ac3dca15396c96ca30dfec725ef732931',1,'LogisticFlow::operator=()']]]
+  ['logisticalfuncionaltest_214',['logisticalFuncionalTest',['../funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29',1,'logisticalFuncionalTest():&#160;funcional_tests.cpp'],['../funcional__tests_8h.html#a60914db64bde71b56d69320797266c29',1,'logisticalFuncionalTest():&#160;funcional_tests.cpp']]],
+  ['logisticflow_215',['LogisticFlow',['../classLogisticFlow.html#ab0f7906cfe1a27e18a4f558124e53ee0',1,'LogisticFlow::LogisticFlow()'],['../classLogisticFlow.html#a7aefd04a99cc5b7984fd02919ebabc73',1,'LogisticFlow::LogisticFlow(std::string name, System *source, System *target)'],['../classLogisticFlow.html#a8b195e7752074c8a7f44c8e50f97c955',1,'LogisticFlow::LogisticFlow(const LogisticFlow &amp;flow)']]]
 ];

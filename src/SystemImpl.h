@@ -16,7 +16,7 @@ protected:
     /*! This attribute contains the actual value of the system. */
     double value;
     friend class Unit_System;
-    friend class Unit_Model;
+    friend class SystemHandle;
 public:
     /*!
      * @brief This is the default constructor for the SystemBody Class.
@@ -47,7 +47,7 @@ public:
  * @brief This class represents the handle of a system.
  */
 class SystemHandle : public System, public Handle<SystemBody> {
-public:
+protected:
     /**
      * @brief Default constructor for SystemHandle.
      */
@@ -59,6 +59,7 @@ public:
      * @param value The initial value of the System.
      */
     SystemHandle(std::string name, double value);
+public:
 
     /**
      * @brief Destructor for SystemHandle.
@@ -72,8 +73,7 @@ public:
     
     //classe amiga para testes unitários
     friend class Unit_System;
-    friend class ModelImpl;
-    friend class Unit_Model;
+    friend class ModelBody;
 };
 
 #endif

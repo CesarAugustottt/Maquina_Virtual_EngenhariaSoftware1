@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['logisticalfuncionaltest_41',['logisticalFuncionalTest',['../funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29',1,'logisticalFuncionalTest():&#160;funcional_tests.cpp'],['../funcional__tests_8h.html#a60914db64bde71b56d69320797266c29',1,'logisticalFuncionalTest():&#160;funcional_tests.cpp']]],
-  ['logisticflow_42',['LogisticFlow',['../classLogisticFlow.html',1,'LogisticFlow'],['../classLogisticFlow.html#ab0f7906cfe1a27e18a4f558124e53ee0',1,'LogisticFlow::LogisticFlow()'],['../classLogisticFlow.html#a7aefd04a99cc5b7984fd02919ebabc73',1,'LogisticFlow::LogisticFlow(std::string name, System *source, System *target)'],['../classLogisticFlow.html#a8b195e7752074c8a7f44c8e50f97c955',1,'LogisticFlow::LogisticFlow(const LogisticFlow &amp;flow)']]],
-  ['logisticflow_2ecpp_43',['LogisticFlow.cpp',['../LogisticFlow_8cpp.html',1,'']]],
-  ['logisticflow_2eh_44',['LogisticFlow.h',['../LogisticFlow_8h.html',1,'']]]
+  ['handle_44',['Handle',['../classHandle.html',1,'Handle&lt; T &gt;'],['../classHandle.html#a6a72028918adf79c0ff8d9996e5e4107',1,'Handle::Handle()'],['../classHandle.html#af304e7014a2e600e235140d246783f85',1,'Handle::Handle(const Handle &amp;hd)']]],
+  ['handle_3c_20flowbody_20_3e_45',['Handle&lt; FlowBody &gt;',['../classHandle.html',1,'']]],
+  ['handle_3c_20flowtestbody_20_3e_46',['Handle&lt; FlowTestBody &gt;',['../classHandle.html',1,'']]],
+  ['handle_3c_20modelbody_20_3e_47',['Handle&lt; ModelBody &gt;',['../classHandle.html',1,'']]],
+  ['handle_3c_20systembody_20_3e_48',['Handle&lt; SystemBody &gt;',['../classHandle.html',1,'']]],
+  ['handle_3c_20systemtestbody_20_3e_49',['Handle&lt; SystemTestBody &gt;',['../classHandle.html',1,'']]],
+  ['handlebodysemdebug_2eh_50',['handleBodySemDebug.h',['../handleBodySemDebug_8h.html',1,'']]]
 ];

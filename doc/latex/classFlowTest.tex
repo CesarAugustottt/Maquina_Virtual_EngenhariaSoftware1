@@ -2,12 +2,13 @@
 \label{classFlowTest}\index{FlowTest@{FlowTest}}
 
 
-Class used exclusively to instantiate and test \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}}.  
+Class used exclusively to instantiate and test Flow\+Impl.  
 
 
 
 
-Inheritance diagram for Flow\+Test\+:\nopagebreak
+Inheritance diagram for Flow\+Test\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,11 +17,12 @@ Inheritance diagram for Flow\+Test\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Flow\+Test\+:\nopagebreak
+Collaboration diagram for Flow\+Test\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=192pt]{classFlowTest__coll__graph}
+\includegraphics[width=142pt]{classFlowTest__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -28,17 +30,16 @@ Collaboration diagram for Flow\+Test\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classFlowTest_a4883847a4fb99890633a21dad18636d6}{Flow\+Test}} ()
 \item 
-\mbox{\hyperlink{classFlowTest_ab223d0dcef21dac320ebb64130f576a1}{Flow\+Test}} (std\+::string \mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}})
+\mbox{\hyperlink{classFlowTest_ab223d0dcef21dac320ebb64130f576a1}{Flow\+Test}} (std\+::string name, \mbox{\hyperlink{classSystem}{System}} $\ast$source, \mbox{\hyperlink{classSystem}{System}} $\ast$target)
 \item 
 virtual \mbox{\hyperlink{classFlowTest_a760e0e57dfa1384e811616bdd2a625bd}{$\sim$\+Flow\+Test}} ()
 \item 
 virtual double \mbox{\hyperlink{classFlowTest_a5a280ab4a17e72c9632c68f43f32a430}{execute}} () override
-\begin{DoxyCompactList}\small\item\em Pure virtual method to execute the flow equation. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Class used exclusively to instantiate and test \mbox{\hyperlink{classFlowImpl}{Flow\+Impl}}. 
+Class used exclusively to instantiate and test Flow\+Impl. 
 
 Definition at line 20 of file unit\+\_\+\+Flow.\+cpp.
 
@@ -57,7 +58,7 @@ Definition at line 22 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{22 : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}() \{\}}
+\DoxyCodeLine{22 : FlowImpl() \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest_ab223d0dcef21dac320ebb64130f576a1}\label{classFlowTest_ab223d0dcef21dac320ebb64130f576a1}} 
@@ -72,7 +73,7 @@ Definition at line 23 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{23 : \mbox{\hyperlink{classFlowImpl_aa835ccb3c368c683aa95d660175a298b}{FlowImpl}}(\mbox{\hyperlink{classFlowImpl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}, \mbox{\hyperlink{classFlowImpl_a950987351656a518a1057b64c5f85af8}{source}}, \mbox{\hyperlink{classFlowImpl_af97039b649da65573e5582edbeb287b5}{target}}) \{\}}
+\DoxyCodeLine{23 : FlowImpl(name, source, target) \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest_a760e0e57dfa1384e811616bdd2a625bd}\label{classFlowTest_a760e0e57dfa1384e811616bdd2a625bd}} 
@@ -98,20 +99,6 @@ Definition at line 24 of file unit\+\_\+\+Flow.\+cpp.
 \index{execute@{execute}!FlowTest@{FlowTest}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
 {\footnotesize\ttfamily virtual double Flow\+Test\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Pure virtual method to execute the flow equation. 
-
-
-\begin{DoxyItemize}
-\item Must be implemented by subclasses to define specific behaviors. \begin{DoxyReturn}{Returns}
-double -\/ the calculated value to be transferred between systems. 
-\end{DoxyReturn}
-
-\end{DoxyItemize}
-
-Implements \mbox{\hyperlink{classFlowImpl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
 
 
 

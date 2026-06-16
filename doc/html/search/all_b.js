@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['regressivetest_55',['regressiveTest',['../classUnit__Flow.html#a3fbb54e045e1a94ea032678fdbf92898',1,'Unit_Flow::regressiveTest()'],['../classUnit__Model.html#a37d435d1e63ba4f6025b551c4eabcb38',1,'Unit_Model::regressiveTest()'],['../classUnit__System.html#a7b90ea8dc91977b75a136d7a383089c9',1,'Unit_System::regressiveTest()']]],
-  ['remove_56',['remove',['../classModel.html#ac1884d0df43bd3eaa98fb2493b1eadbd',1,'Model::remove(System *)=0'],['../classModel.html#a9dfb3ab85127622aa9d9db591ee63454',1,'Model::remove(Flow *)=0'],['../classModelImpl.html#aa12b7df505b53eef62ae93e595905727',1,'ModelImpl::remove(System *sys) override'],['../classModelImpl.html#af03872fad7d17184098442d7a2030440',1,'ModelImpl::remove(Flow *flow) override']]],
-  ['removeflow_57',['removeFlow',['../classUnit__Model.html#aa3030ec43120f2675f7423be7b0d8b1c',1,'Unit_Model']]],
-  ['removesystem_58',['removeSystem',['../classUnit__Model.html#ad024cdace0d05b359466d8ffc1a5c58d',1,'Unit_Model']]]
+  ['name_66',['name',['../classFlowBody.html#ab82748ef3d7db33d7963b7dfeb96564e',1,'FlowBody::name()'],['../classModelBody.html#a962d3fee42955ed8a9cc2ec8df50ca25',1,'ModelBody::name()'],['../classSystemBody.html#a62da4563b8efd2a08f32c309e2790314',1,'SystemBody::name()'],['../classComplexFlow.html#a1c702af9fbea9d0a148777fbb211e4e4',1,'ComplexFlow::name()'],['../classExponentialFlow.html#a76534bcc7800637488b91cf3dc47cb38',1,'ExponentialFlow::name()'],['../classLogisticFlow.html#a3783eff10a122a19ab25b40477de5f87',1,'LogisticFlow::name()'],['../classSystemTestBody.html#a403f4e8197fd5c4d95795fdc047b6102',1,'SystemTestBody::name()'],['../classFlowTestBody.html#a90b1ae92da4842c4255199893b223ee6',1,'FlowTestBody::name()']]]
 ];
