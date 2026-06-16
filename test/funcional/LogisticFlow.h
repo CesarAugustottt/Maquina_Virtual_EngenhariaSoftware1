@@ -1,22 +1,14 @@
 #ifndef LOGISTICFLOW_H
 #define LOGISTICFLOW_H
 
-#include "../../src/Flow.h"
-#include <string>
+#include "../../src/FlowImpl.h"
 
 /*!
  * @brief This class represents a logistic flow in the General Systems Theory implemented in this code.
  * * It implements the execute method using a logistic equation for resource transfer.
  */
-class LogisticFlow : public Flow {
+class LogisticFlow : public FlowHandle {
 protected:
-    /*! This attribute contains a name for the flow. */
-    std::string name;
-    /*! This pointer points to the source System of the flow. */
-    System* source;
-    /*! This pointer points to the target System of the flow. */
-    System* target;
-
     // construtor e destrutor 
     /*!
      * @brief This is the default constructor for the LogisticFlow Class.
@@ -60,14 +52,6 @@ public:
      * @return double - the calculated value based on the logistic equation.
      */
     virtual double execute() override;
-
-    //getters e setters
-    void setName(std::string name) override;
-    std::string getName() const override;
-    void setSource(System* source) override;
-    System* getSource() const override;
-    void setTarget(System* target) override;
-    System* getTarget() const override;
 
     //permite que o template createFlow de Model instancie os fluxos
     friend class Model;
