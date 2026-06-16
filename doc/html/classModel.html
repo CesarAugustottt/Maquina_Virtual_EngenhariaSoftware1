@@ -84,8 +84,8 @@ Inheritance diagram for Model:</div>
 <div class="dyncontent">
 <div class="center"><img src="classModel__inherit__graph.png" border="0" usemap="#aModel_inherit__map" alt="Inheritance graph"/></div>
 <map name="aModel_inherit__map" id="aModel_inherit__map">
-<area shape="rect" title="This class represents the interface of a model in the General Systems Theory implemented in this code..." alt="" coords="19,5,82,32"/>
-<area shape="rect" href="classModelImpl.html" title="This class represents the concrete implementation of a Model." alt="" coords="5,80,96,107"/>
+<area shape="rect" title="This class represents the interface of a model in the General Systems Theory implemented in this code..." alt="" coords="28,5,91,32"/>
+<area shape="rect" href="classModelHandle.html" title="This class represents the Handle of a Model." alt="" coords="5,80,113,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -164,8 +164,8 @@ Static Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:afb81d2077780e342b8fd3654cabc4c19"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#afb81d2077780e342b8fd3654cabc4c19">ModelImpl</a></td></tr>
-<tr class="separator:afb81d2077780e342b8fd3654cabc4c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5532754c97911d8df1569a79c76b4057"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a5532754c97911d8df1569a79c76b4057">ModelHandle</a></td></tr>
+<tr class="separator:a5532754c97911d8df1569a79c76b4057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a686d152cfd45e63b5bc3db6f327fdaeb"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a686d152cfd45e63b5bc3db6f327fdaeb">Unit_Model</a></td></tr>
 <tr class="separator:a686d152cfd45e63b5bc3db6f327fdaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -243,7 +243,7 @@ Friends</h2></td></tr>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a3e8843e5353f40ab30afcf19b4f13a67">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a45c6d720aef9767633263bea1643aade">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -282,7 +282,7 @@ Friends</h2></td></tr>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a4f2039580d1464b29593df95f3979998">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a1520a0851eef3fd94b19f946a3e41ef8">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -321,10 +321,10 @@ Friends</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00009">9</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                 {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">models</a>.push_back(model);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00011">11</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                 {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">models</a>.push_back(model);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
 <div class="ttc" id="aclassModel_html_a990c47d3aea3111f93164d6ad50ae3e4"><div class="ttname"><a href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a></div><div class="ttdeci">static std::vector&lt; Model * &gt; models</div><div class="ttdoc">Static container for storing all models created by the factory.</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00018">Model.h:18</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -443,15 +443,15 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Model* - pointer to the created model interface. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00134">134</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                                     {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="classModel.html">Model</a>* m = <span class="keyword">new</span> <a class="code" href="classModel.html#afb81d2077780e342b8fd3654cabc4c19">ModelImpl</a>(name, time);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="classModel.html#a8d34e397c313e0787181a2940a0f4fb5">Model::addModel</a>(m);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> m;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00017">17</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                                     {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classModel.html">Model</a>* m = <span class="keyword">new</span> <a class="code" href="classModel.html#a5532754c97911d8df1569a79c76b4057">ModelHandle</a>(name, time);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classModel.html#a8d34e397c313e0787181a2940a0f4fb5">Model::addModel</a>(m);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> m;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="ttc" id="aclassModel_html"><div class="ttname"><a href="classModel.html">Model</a></div><div class="ttdoc">This class represents the interface of a model in the General Systems Theory implemented in this code...</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00015">Model.h:15</a></div></div>
-<div class="ttc" id="aclassModel_html_a8d34e397c313e0787181a2940a0f4fb5"><div class="ttname"><a href="classModel.html#a8d34e397c313e0787181a2940a0f4fb5">Model::addModel</a></div><div class="ttdeci">static void addModel(Model *)</div><div class="ttdoc">Adds a Model instance within the static global vector.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00009">ModelImpl.cpp:9</a></div></div>
-<div class="ttc" id="aclassModel_html_afb81d2077780e342b8fd3654cabc4c19"><div class="ttname"><a href="classModel.html#afb81d2077780e342b8fd3654cabc4c19">Model::ModelImpl</a></div><div class="ttdeci">friend class ModelImpl</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00026">Model.h:26</a></div></div>
+<div class="ttc" id="aclassModel_html_a5532754c97911d8df1569a79c76b4057"><div class="ttname"><a href="classModel.html#a5532754c97911d8df1569a79c76b4057">Model::ModelHandle</a></div><div class="ttdeci">friend class ModelHandle</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00026">Model.h:26</a></div></div>
+<div class="ttc" id="aclassModel_html_a8d34e397c313e0787181a2940a0f4fb5"><div class="ttname"><a href="classModel.html#a8d34e397c313e0787181a2940a0f4fb5">Model::addModel</a></div><div class="ttdeci">static void addModel(Model *)</div><div class="ttdoc">Adds a Model instance within the static global vector.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00011">ModelImpl.cpp:11</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -499,7 +499,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>System* - pointer to the created system. </dd></dl>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a033781acaa9c0c0ff60b719c916ea2be">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a0a9bb1b8d99c4e8415d149b04e2e55dc">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -538,7 +538,7 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a80bff310efcf0d515a0c6a856e8529ae">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a244b50b8010daaca290e0290f03e9c1e">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -577,13 +577,13 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00152">152</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                                   {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">if</span>(!model){</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">delete</span> model;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00023">23</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                   {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span>(!model){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">delete</span> model;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -622,7 +622,7 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#aa6b7d767014894b6655de16eb58ba153">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a24a185f16e3ea9d6babdaf15390f2ac2">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -679,7 +679,7 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a3b060fc6802d9d6040ab8af1a9186631">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#aa685a0d46d40284d571535f91ffb7d7d">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -712,7 +712,7 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a6d6ef8f72413650749d9ca9850226a6b">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a46c2e64955c7d0f2515a310155252962">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -745,7 +745,7 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a9233d23b2fa19917f314cf286749a924">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a6037ca68e12e2cbeff9e7a26cb72d6a9">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -784,7 +784,7 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a2b96592e72a176881c9ac01b85dc9158">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a3ff1feaf5402de034221823e027ac600">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -823,7 +823,7 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#af03872fad7d17184098442d7a2030440">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a25f34d68f75ee24fccee30c4697ce10d">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -862,7 +862,7 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#aa12b7df505b53eef62ae93e595905727">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a21ab99df27ce53760ed40555a6d0a85c">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -901,7 +901,7 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a4c11009a6eed8fabce6c6c3a584a53b8">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a6d23b6cb75d0fa828d2cb12e4cd2a524">ModelHandle</a>.</p>
 
 </div>
 </div>
@@ -940,13 +940,13 @@ template&lt;typename T &gt; </div>
 </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classModelImpl.html#a1071f515e45c86e9295b193b7d28cc98">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="classModelHandle.html#a591265eaecb8a2fe693a5b3d95e8c226">ModelHandle</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="afb81d2077780e342b8fd3654cabc4c19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb81d2077780e342b8fd3654cabc4c19">&#9670;&nbsp;</a></span>ModelImpl</h2>
+<a id="a5532754c97911d8df1569a79c76b4057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5532754c97911d8df1569a79c76b4057">&#9670;&nbsp;</a></span>ModelHandle</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -955,7 +955,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="classModelImpl.html">ModelImpl</a></td>
+          <td class="memname">friend class <a class="el" href="classModelHandle.html">ModelHandle</a></td>
         </tr>
       </table>
   </td>

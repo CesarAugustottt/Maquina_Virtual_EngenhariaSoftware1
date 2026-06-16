@@ -11,11 +11,12 @@ This class represents the interface of a model in the General Systems Theory imp
 
 
 
-Inheritance diagram for Model\+:\nopagebreak
+Inheritance diagram for Model\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=148pt]{classModel__inherit__graph}
+\includegraphics[width=161pt]{classModel__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -74,7 +75,7 @@ static std\+::vector$<$ \mbox{\hyperlink{classModel}{Model}} $\ast$ $>$ \mbox{\h
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classModel_afb81d2077780e342b8fd3654cabc4c19}{Model\+Impl}}
+class \mbox{\hyperlink{classModel_a5532754c97911d8df1569a79c76b4057}{Model\+Handle}}
 \item 
 class \mbox{\hyperlink{classModel_a686d152cfd45e63b5bc3db6f327fdaeb}{Unit\+\_\+\+Model}}
 \end{DoxyCompactItemize}
@@ -135,7 +136,7 @@ Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of t
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_a3e8843e5353f40ab30afcf19b4f13a67}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a45c6d720aef9767633263bea1643aade}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_a70362afdd9db6268b4adaedfeddb2935}\label{classModel_a70362afdd9db6268b4adaedfeddb2935}} 
 \index{Model@{Model}!add@{add}}
@@ -157,7 +158,7 @@ Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container 
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_a4f2039580d1464b29593df95f3979998}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a1520a0851eef3fd94b19f946a3e41ef8}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_a8d34e397c313e0787181a2940a0f4fb5}\label{classModel_a8d34e397c313e0787181a2940a0f4fb5}} 
 \index{Model@{Model}!addModel@{addModel}}
@@ -179,13 +180,13 @@ Adds a \mbox{\hyperlink{classModel}{Model}} instance within the static global ve
 
 \end{DoxyItemize}
 
-Definition at line 9 of file Model\+Impl.\+cpp.
+Definition at line 11 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{9                                  \{}
-\DoxyCodeLine{10     \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.push\_back(model);}
-\DoxyCodeLine{11 \}}
+\DoxyCodeLine{11                                  \{}
+\DoxyCodeLine{12     \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.push\_back(model);}
+\DoxyCodeLine{13 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_a7aec304b6a80e8371e3ed915cde8148e}\label{classModel_a7aec304b6a80e8371e3ed915cde8148e}} 
@@ -251,15 +252,15 @@ Model$\ast$ -\/ pointer to the created model interface.
 \end{DoxyReturn}
 
 
-Definition at line 134 of file Model\+Impl.\+cpp.
+Definition at line 17 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{134                                                      \{}
-\DoxyCodeLine{135     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModel_afb81d2077780e342b8fd3654cabc4c19}{ModelImpl}}(name, time);}
-\DoxyCodeLine{136     \mbox{\hyperlink{classModel_a8d34e397c313e0787181a2940a0f4fb5}{Model::addModel}}(m);}
-\DoxyCodeLine{137     \textcolor{keywordflow}{return} m;}
-\DoxyCodeLine{138 \}}
+\DoxyCodeLine{17                                                      \{}
+\DoxyCodeLine{18     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModel_a5532754c97911d8df1569a79c76b4057}{ModelHandle}}(name, time);}
+\DoxyCodeLine{19     \mbox{\hyperlink{classModel_a8d34e397c313e0787181a2940a0f4fb5}{Model::addModel}}(m);}
+\DoxyCodeLine{20     \textcolor{keywordflow}{return} m;}
+\DoxyCodeLine{21 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_adf9c63fb5e39bd2cb025255001907524}\label{classModel_adf9c63fb5e39bd2cb025255001907524}} 
@@ -284,7 +285,7 @@ System$\ast$ -\/ pointer to the created system.
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classModelImpl_a033781acaa9c0c0ff60b719c916ea2be}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a0a9bb1b8d99c4e8415d149b04e2e55dc}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_af88c1fa873e890ecabb8d32fc380c476}\label{classModel_af88c1fa873e890ecabb8d32fc380c476}} 
 \index{Model@{Model}!deleteFlow@{deleteFlow}}
@@ -306,7 +307,7 @@ Factory method to delete a \mbox{\hyperlink{classFlow}{Flow}} instance from this
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_a80bff310efcf0d515a0c6a856e8529ae}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a244b50b8010daaca290e0290f03e9c1e}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_a56ad5995d561c6096c9c6560fbb512fd}\label{classModel_a56ad5995d561c6096c9c6560fbb512fd}} 
 \index{Model@{Model}!deleteModel@{deleteModel}}
@@ -328,16 +329,16 @@ Static method that acts as a factory to delete a \mbox{\hyperlink{classModel}{Mo
 
 \end{DoxyItemize}
 
-Definition at line 152 of file Model\+Impl.\+cpp.
+Definition at line 23 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{152                                    \{}
-\DoxyCodeLine{153     \textcolor{keywordflow}{if}(!model)\{}
-\DoxyCodeLine{154         \textcolor{keywordflow}{return};}
-\DoxyCodeLine{155     \}}
-\DoxyCodeLine{156     \textcolor{keyword}{delete} model;}
-\DoxyCodeLine{157 \}}
+\DoxyCodeLine{23                                    \{}
+\DoxyCodeLine{24     \textcolor{keywordflow}{if}(!model)\{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27     \textcolor{keyword}{delete} model;}
+\DoxyCodeLine{28 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_a8513437cddbde699020045bc56338ac3}\label{classModel_a8513437cddbde699020045bc56338ac3}} 
@@ -360,7 +361,7 @@ Factory method to delete a \mbox{\hyperlink{classSystem}{System}} instance from 
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_aa6b7d767014894b6655de16eb58ba153}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a24a185f16e3ea9d6babdaf15390f2ac2}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}\label{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}} 
 \index{Model@{Model}!execute@{execute}}
@@ -386,7 +387,7 @@ Executes the simulation by updating systems based on the flows equations over a 
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_a3b060fc6802d9d6040ab8af1a9186631}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_aa685a0d46d40284d571535f91ffb7d7d}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_a17e89ca8d15af46d074423a47d3c6802}\label{classModel_a17e89ca8d15af46d074423a47d3c6802}} 
 \index{Model@{Model}!getName@{getName}}
@@ -406,7 +407,7 @@ string -\/ the content name attribute.
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_a6d6ef8f72413650749d9ca9850226a6b}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a46c2e64955c7d0f2515a310155252962}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_a41569269c162962571a791c0fe737bca}\label{classModel_a41569269c162962571a791c0fe737bca}} 
 \index{Model@{Model}!getTime@{getTime}}
@@ -426,7 +427,7 @@ double -\/ the content time attribute.
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_a9233d23b2fa19917f314cf286749a924}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a6037ca68e12e2cbeff9e7a26cb72d6a9}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}\label{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}} 
 \index{Model@{Model}!incrementTime@{incrementTime}}
@@ -448,7 +449,7 @@ Increments the simulation time by a specific value.
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_a2b96592e72a176881c9ac01b85dc9158}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a3ff1feaf5402de034221823e027ac600}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_a9dfb3ab85127622aa9d9db591ee63454}\label{classModel_a9dfb3ab85127622aa9d9db591ee63454}} 
 \index{Model@{Model}!remove@{remove}}
@@ -470,7 +471,7 @@ Removes a \mbox{\hyperlink{classFlow}{Flow}} pointer from the internal container
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_af03872fad7d17184098442d7a2030440}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a25f34d68f75ee24fccee30c4697ce10d}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_ac1884d0df43bd3eaa98fb2493b1eadbd}\label{classModel_ac1884d0df43bd3eaa98fb2493b1eadbd}} 
 \index{Model@{Model}!remove@{remove}}
@@ -492,7 +493,7 @@ Removes a \mbox{\hyperlink{classSystem}{System}} pointer from the internal conta
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_aa12b7df505b53eef62ae93e595905727}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a21ab99df27ce53760ed40555a6d0a85c}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_a0418ba1c3f1016a13a2cbb4c1be5e43b}\label{classModel_a0418ba1c3f1016a13a2cbb4c1be5e43b}} 
 \index{Model@{Model}!setName@{setName}}
@@ -514,7 +515,7 @@ Sets the name attribute in the \mbox{\hyperlink{classModel}{Model}} Class.
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_a4c11009a6eed8fabce6c6c3a584a53b8}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a6d23b6cb75d0fa828d2cb12e4cd2a524}{Model\+Handle}}.
 
 \mbox{\Hypertarget{classModel_a210839e2d275d6821a8beac249470beb}\label{classModel_a210839e2d275d6821a8beac249470beb}} 
 \index{Model@{Model}!setTime@{setTime}}
@@ -536,16 +537,16 @@ Sets the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class.
 
 \end{DoxyItemize}
 
-Implemented in \mbox{\hyperlink{classModelImpl_a1071f515e45c86e9295b193b7d28cc98}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{classModelHandle_a591265eaecb8a2fe693a5b3d95e8c226}{Model\+Handle}}.
 
 
 
 \doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{classModel_afb81d2077780e342b8fd3654cabc4c19}\label{classModel_afb81d2077780e342b8fd3654cabc4c19}} 
-\index{Model@{Model}!ModelImpl@{ModelImpl}}
-\index{ModelImpl@{ModelImpl}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{ModelImpl}{ModelImpl}}
-{\footnotesize\ttfamily friend class \mbox{\hyperlink{classModelImpl}{Model\+Impl}}\hspace{0.3cm}{\ttfamily [friend]}}
+\mbox{\Hypertarget{classModel_a5532754c97911d8df1569a79c76b4057}\label{classModel_a5532754c97911d8df1569a79c76b4057}} 
+\index{Model@{Model}!ModelHandle@{ModelHandle}}
+\index{ModelHandle@{ModelHandle}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{ModelHandle}{ModelHandle}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classModelHandle}{Model\+Handle}}\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 

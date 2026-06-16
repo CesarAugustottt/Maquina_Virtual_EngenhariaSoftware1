@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['unit_5fflow_211',['Unit_Flow',['../classFlowImpl.html#ac1ba2f84b2ef6fa52ad3ab246d9b4d54',1,'FlowImpl']]],
-  ['unit_5fmodel_212',['Unit_Model',['../classModel.html#a686d152cfd45e63b5bc3db6f327fdaeb',1,'Model::Unit_Model()'],['../classModelImpl.html#a686d152cfd45e63b5bc3db6f327fdaeb',1,'ModelImpl::Unit_Model()']]],
-  ['unit_5fsystem_213',['Unit_System',['../classSystemImpl.html#a570c37a257d6d888145dec2cfc309e4b',1,'SystemImpl']]]
+  ['model_263',['Model',['../classFlowHandle.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'FlowHandle::Model()'],['../classModelHandle.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'ModelHandle::Model()'],['../classComplexFlow.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'ComplexFlow::Model()'],['../classExponentialFlow.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'ExponentialFlow::Model()'],['../classLogisticFlow.html#a2bf2a0e9b454c55aa5dcb5aa4698697b',1,'LogisticFlow::Model()']]],
+  ['modelbody_264',['ModelBody',['../classSystemHandle.html#adc2d6f6d1ec89a3cc5a899cd89018051',1,'SystemHandle']]],
+  ['modelhandle_265',['ModelHandle',['../classModel.html#a5532754c97911d8df1569a79c76b4057',1,'Model::ModelHandle()'],['../classModelBody.html#a5532754c97911d8df1569a79c76b4057',1,'ModelBody::ModelHandle()']]]
 ];
