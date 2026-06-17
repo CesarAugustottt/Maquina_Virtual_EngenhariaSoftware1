@@ -1,15 +1,10 @@
 #include "FlowImpl.h"
 
-// FlowBody
-
 FlowBody::FlowBody(){
     this->name= "";
     this->source= nullptr;
     this->target= nullptr;
 }
-
-FlowBody::FlowBody(std::string name, System* source, System* target): name(name), 
-    source(source), target(target){}
 
 FlowBody::~FlowBody(){} //fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles
 
@@ -34,37 +29,33 @@ System* FlowBody::getTarget()const{
     return this->target;
 }
 
-// FlowHandle
+// Implementação de FlowHandle
+FlowHandle::FlowHandle(){}
 
-FlowHandle::FlowHandle() : Handle<FlowBody>() {}
-
-FlowHandle::FlowHandle(std::string name, System* source, System* target) : Handle<FlowBody>() {
-    FlowBody* newBody = new FlowBody(name, source, target);
-    pImpl_->detach();
-    pImpl_ = newBody;
-    pImpl_->attach();
+FlowHandle::FlowHandle(std::string name, System* source, System* target) {
+    pImpl_->setName(name);
+    pImpl_->setSource(source);
+    pImpl_->setTarget(target);
 }
 
-FlowHandle::~FlowHandle(){} //fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles
-
-//metodo execute é virtual puro.
+FlowHandle::~FlowHandle(){}
 
 void FlowHandle::setName(std::string name){
-    pImpl_->setName(name);
+    return pImpl_->setName(name);
 }
-std::string FlowHandle::getName()const{
+std::string FlowBody::getName()const{
     return pImpl_->getName();
 }
 
 void FlowHandle::setSource(System* source){
-    pImpl_->setSource(source);
+    return pImpl_->setSource(source);
 }
 System* FlowHandle::getSource()const{
     return pImpl_->getSource();
 }
 
 void FlowHandle::setTarget(System* target){
-    pImpl_->setTarget(target);
+    return pImpl_->setTarget(target);
 }
 System* FlowHandle::getTarget()const{
     return pImpl_->getTarget();
