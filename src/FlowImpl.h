@@ -1,6 +1,7 @@
 #ifndef FLOWIMPL_H
 #define FLOWIMPL_H
 #include "Flow.h" //interface
+#include "handleBody.h"
 #include "System.h"
 #include <string>
 
@@ -22,12 +23,12 @@ public:
     /*!
      * @brief This is the default constructor for the FlowImpl Class.
      */
-    FlowImpl();
+    FlowBody();
 
     /*!
      * @brief This is the default destructor for the FlowImpl Class.
      */
-    virtual ~FlowImpl();
+    virtual ~FlowBody();
 
     //metodo virtual puro
     virtual double execute()=0; 
@@ -53,31 +54,24 @@ public:
  */
 class FlowHandle : public Flow, public Handle<FlowBody> {
 protected:
-    /*! This attribute contains a name for the flow. */
-    std::string name;
-    /*! This pointer points to the source System of the flow. */
-    System* source;
-    /*! This pointer points to the target System of the flow. */
-    System* target;
-
-public:
     // construtores e destrutor
     /*!
      * @brief This is the default constructor for the FlowImpl Class.
      */
-    FlowImpl();
+    FlowBody();
     /*!
      * @brief This is the parameterized constructor for the FlowImpl Class.
      * * @param name the name of the Flow.
      * @param source pointer to the source System.
      * @param target pointer to the target System.
      */
-    FlowImpl(std::string name, System* source, System* target);
+    FlowBody(std::string name, System* source, System* target);
 
+public:
     /*!
      * @brief This is the default destructor for the FlowImpl Class.
      */
-    virtual ~FlowImpl();
+    virtual ~FlowBody();
 
     //metodo virtual puro
     virtual double execute()=0; 
