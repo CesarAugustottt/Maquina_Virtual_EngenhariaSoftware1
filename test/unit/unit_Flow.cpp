@@ -1,6 +1,5 @@
 #include "unit_Flow.h"
 #include "../../src/FlowImpl.h"
-#include "../../src/SystemImpl.h"
 #include <cassert>
 
 #define DEBUGING
@@ -11,9 +10,15 @@
     extern int numBodyDeleted;
 #endif
 
-/*!
- * @brief Class used exclusively to instantiate and test FlowHandle since it is an abstract class.
- */
+class SystemMock : public System {
+public:
+    virtual ~SystemMock() {}
+    virtual std::string getName() const override { return ""; }
+    virtual void setName(std::string) override {}
+    virtual double getValue() const override { return 0.0; }
+    virtual void setValue(double) override {}
+};
+
 class FlowTest : public FlowHandle {
 public:
     FlowTest() : FlowHandle() {}
@@ -31,8 +36,8 @@ bool Unit_Flow::defaultConstructor(void) {
 }
 
 bool Unit_Flow::constructor(void) {
-    SystemHandle s1("Origem", 10.0);
-    SystemHandle s2("Destino", 20.0);
+    SystemMock s1;
+    SystemMock s2;
     FlowTest f2("Fluxo", &s1, &s2);
     
     assert(f2.pImpl_->name == "Fluxo");
@@ -62,7 +67,7 @@ bool Unit_Flow::setName(void) {
 }
 
 bool Unit_Flow::getSource(void) {
-    SystemHandle s("Origem", 10.0);
+    SystemMock s;
     FlowTest f;
     f.pImpl_->source = &s;
     assert(f.getSource() == &s);
@@ -70,7 +75,7 @@ bool Unit_Flow::getSource(void) {
 }
 
 bool Unit_Flow::setSource(void) {
-    SystemHandle s("Origem", 10.0);
+    SystemMock s;
     FlowTest f;
     f.setSource(&s);
     assert(f.pImpl_->source == &s);
@@ -78,7 +83,7 @@ bool Unit_Flow::setSource(void) {
 }
 
 bool Unit_Flow::getTarget(void) {
-    SystemHandle s("Destino", 20.0);
+    SystemMock s;
     FlowTest f;
     f.pImpl_->target = &s;
     assert(f.getTarget() == &s);
@@ -86,7 +91,7 @@ bool Unit_Flow::getTarget(void) {
 }
 
 bool Unit_Flow::setTarget(void) {
-    SystemHandle s("Destino", 20.0);
+    SystemMock s;
     FlowTest f;
     f.setTarget(&s);
     assert(f.pImpl_->target == &s);
@@ -94,8 +99,8 @@ bool Unit_Flow::setTarget(void) {
 }
 
 bool Unit_Flow::copyConstructor(void) {
-    SystemHandle s1("Origem", 10.0);
-    SystemHandle s2("Destino", 20.0);
+    SystemMock s1;
+    SystemMock s2;
     FlowTest original;
     original.pImpl_->name = "Original";
     original.pImpl_->source = &s1;
@@ -109,8 +114,8 @@ bool Unit_Flow::copyConstructor(void) {
 }
 
 bool Unit_Flow::assignmentOperator(void) {
-    SystemHandle s1("Origem", 10.0);
-    SystemHandle s2("Destino", 20.0);
+    SystemMock s1;
+    SystemMock s2;
     FlowTest original;
     original.pImpl_->name = "Original";
     original.pImpl_->source = &s1;
@@ -133,7 +138,6 @@ bool Unit_Flow::handleBodyTest(void) {
         numBodyDeleted = 0;
     #endif
 
-    // Bloco 1: Atribuição entre invólucros
     {
         FlowTest f1("Fluxo 1", nullptr, nullptr);
         FlowTest f2("Fluxo 2", nullptr, nullptr);
@@ -159,7 +163,6 @@ bool Unit_Flow::handleBodyTest(void) {
         numBodyDeleted = 0;
     #endif
 
-    // Bloco 2: Construtor de cópia
     {
         FlowTest f3("Original", nullptr, nullptr); 
         
@@ -183,7 +186,6 @@ bool Unit_Flow::handleBodyTest(void) {
         numBodyDeleted = 0;
     #endif
 
-    // Bloco 3: Ponteiros dinâmicos e atribuição
     {
         FlowTest* p1 = new FlowTest("Ponteiro 1", nullptr, nullptr); 
         FlowTest* p2 = new FlowTest("Ponteiro 2", nullptr, nullptr); 
