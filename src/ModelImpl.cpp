@@ -33,7 +33,7 @@ ModelBody::ModelBody() {
     this->time = 0.0;
 }
 
-ModelBody::ModelBody(std::string name, double time) : name(name), time(time) {}
+//ModelBody::ModelBody(std::string name, double time) : name(name), time(time) {}
 
 ModelBody::~ModelBody() {
     //deletar systems
@@ -145,12 +145,11 @@ void ModelBody::deleteFlow(Flow* flow) {
 
 //IMPLEMENTAÇÃO DO MODELHANDLE
 
-ModelHandle::ModelHandle() : Handle<ModelBody>() {}
+ModelHandle::ModelHandle(){}
 
 ModelHandle::ModelHandle(std::string name, double time) {
-    pImpl_->detach();
-    pImpl_ = new ModelBody(name, time);
-    pImpl_->attach();
+    this->setName(name);
+    this->setTime(time);
 }
 
 ModelHandle::~ModelHandle() {
@@ -220,3 +219,12 @@ void ModelHandle::deleteSystem(System* sys) {
 void ModelHandle::deleteFlow(Flow* flow) {
     pImpl_->deleteFlow(flow);
 }
+
+#define DEBUGING
+//variaveis externas para testes
+#ifdef DEBUGING
+    int numHandleCreated = 0;
+    int numHandleDeleted = 0;
+    int numBodyCreated = 0;
+    int numBodyDeleted = 0;
+#endif

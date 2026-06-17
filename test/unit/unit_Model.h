@@ -141,12 +141,19 @@ public:
      */
     static bool deleteFlow(void);
 
+    /*!
+     * @brief Unit test to validate the Handle-Body memory management.
+     * @return true if all tests pass, false otherwise.
+     */
+    static bool handleBodyTest(void);
+
     //função global chamada pela main
     /*!
      * @brief Runs all the unit tests for the Model class (Regression Testing).
      * @return true if all tests pass, false otherwise.
      */
     static bool regressiveTest(void);
+
 };
 
 

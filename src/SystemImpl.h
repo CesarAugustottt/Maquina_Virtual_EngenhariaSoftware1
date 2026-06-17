@@ -2,7 +2,7 @@
 #define SYSTEMIMPL_H
 
 #include "System.h" //interface
-#include "handleBodySemDebug.h"
+#include "handleBody.h"
 #include <string>
 
 /*!
@@ -15,20 +15,12 @@ protected:
     std::string name;
     /*! This attribute contains the actual value of the system. */
     double value;
-    friend class Unit_System;
-    friend class SystemHandle;
+    
 public:
     /*!
      * @brief This is the default constructor for the SystemBody Class.
      */
     SystemBody();
-
-    /*!
-     * @brief This is the parameterized constructor for the SystemBody Class.
-     * * @param name the name of the System.
-     * @param value the initial value of the System.
-     */
-    SystemBody(std::string name, double value);
 
     /**
      * @brief Destructor for SystemBody.
@@ -39,6 +31,10 @@ public:
     std::string getName() const;
     void setValue(double value);
     double getValue() const;
+
+    //acesso a classes de testes unitarios
+    friend class Unit_System;
+    friend class SystemHandle;
 };
 
 
