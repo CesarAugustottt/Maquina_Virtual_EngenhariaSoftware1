@@ -41,21 +41,22 @@ FlowHandle::FlowHandle(std::string name, System* source, System* target) {
 FlowHandle::~FlowHandle(){}
 
 void FlowHandle::setName(std::string name){
-    return pImpl_->setName(name);
+    pImpl_->setName(name);
 }
-std::string FlowBody::getName()const{
+std::string FlowHandle::getName()const{
     return pImpl_->getName();
 }
 
 void FlowHandle::setSource(System* source){
-    return pImpl_->setSource(source);
+    pImpl_->setSource(source);
 }
+
 System* FlowHandle::getSource()const{
     return pImpl_->getSource();
 }
 
 void FlowHandle::setTarget(System* target){
-    return pImpl_->setTarget(target);
+    pImpl_->setTarget(target);
 }
 System* FlowHandle::getTarget()const{
     return pImpl_->getTarget();
