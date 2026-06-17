@@ -30,9 +30,6 @@ public:
      */
     virtual ~FlowBody();
 
-    //metodo virtual puro
-    virtual double execute()=0; 
-
     //getters e setters
     void setName(std::string name);
     std::string getName()const;
