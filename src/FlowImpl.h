@@ -58,20 +58,20 @@ protected:
     /*!
      * @brief This is the default constructor for the FlowImpl Class.
      */
-    FlowBody();
+    FlowHandle();
     /*!
      * @brief This is the parameterized constructor for the FlowImpl Class.
      * * @param name the name of the Flow.
      * @param source pointer to the source System.
      * @param target pointer to the target System.
      */
-    FlowBody(std::string name, System* source, System* target);
+    FlowHandle(std::string name, System* source, System* target);
 
 public:
     /*!
      * @brief This is the default destructor for the FlowImpl Class.
      */
-    virtual ~FlowBody();
+    virtual ~FlowHandle();
 
     //metodo virtual puro
     virtual double execute()=0; 
