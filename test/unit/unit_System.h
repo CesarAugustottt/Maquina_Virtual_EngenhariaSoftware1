@@ -62,6 +62,12 @@ public:
     static bool assignmentOperator(void);
 
     /*!
+     * @brief Unit test to validate the Handle-Body memory management.
+     * @return true if all tests pass, false otherwise.
+     */
+    static bool handleBodyTest(void);
+
+    /*!
      * @brief Runs all the unit tests for the System class (Regression Testing).
      * @return true if all tests pass, false otherwise.
      */
