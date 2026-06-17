@@ -1,29 +1,47 @@
 #include "LogisticFlow.h"
 
 // Construtor padrao
-LogisticFlow::LogisticFlow() : FlowHandle() {}
+LogisticFlow::LogisticFlow() {
+    this->name = "";
+    this->source = nullptr;
+    this->target = nullptr;
+}
 
 // Construtor parametrizado
 LogisticFlow::LogisticFlow(std::string name, System* source, System* target)
-    : FlowHandle(name, source, target) {}
+    : name(name), source(source), target(target) {}
 
 LogisticFlow::~LogisticFlow() {} 
 
-double LogisticFlow::execute() {
-    if(this->getTarget() == nullptr) { //se não tiver sistema de destino
-        return 0.0;
-    }
-    double valueTarget = getTarget()->getValue();
-    return 0.01 * valueTarget * (1 - valueTarget/70);
+void LogisticFlow::setName(std::string name) {
+    this->name = name;
 }
 
-// Construtor de copia
-LogisticFlow::LogisticFlow(const LogisticFlow& flow) : FlowHandle(flow) {}
+std::string LogisticFlow::getName() const {
+    return this->name;
+}
 
-// Atribuição por =
-LogisticFlow& LogisticFlow::operator=(const LogisticFlow& flow) {
-    if (&flow != this) { //se for diferente, faz a atribuição
-        FlowHandle::operator=(flow);
+void LogisticFlow::setSource(System* source) {
+    this->source = source;
+}
+
+System* LogisticFlow::getSource() const {
+    return this->source;
+}
+
+void LogisticFlow::setTarget(System* target) {
+    this->target = target;
+}
+
+System* LogisticFlow::getTarget() const {
+    return this->target;
+}
+
+// Implementacao do calculo
+double LogisticFlow::execute() {
+    if(this->target == nullptr) { // Proteção contra ponteiro nulo
+        return 0.0;
     }
-    return *this; 
+    double valueTarget = this->target->getValue();
+    return 0.01 * valueTarget * (1 - valueTarget / 70.0);
 }
