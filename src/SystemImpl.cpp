@@ -5,7 +5,6 @@ SystemBody::SystemBody() {
     this->value = 0.0;
 }
 
-SystemBody::SystemBody(std::string name, double value) : name(name), value(value) {}
 
 SystemBody::~SystemBody() {}
 
@@ -26,13 +25,12 @@ double SystemBody::getValue() const {
 }
 
 //Implementação do SystemHandle
-SystemHandle::SystemHandle() : Handle<SystemBody>() {}
+SystemHandle::SystemHandle(){}
 
 SystemHandle::SystemHandle(std::string name, double value) {
-        pImpl_->detach(); 
-        pImpl_ = new SystemBody(name, value);
-        pImpl_->attach();
-    }
+        pImpl_->setName(name);
+        pImpl_->setValue(value);
+}
 
 SystemHandle::~SystemHandle(){}
 
