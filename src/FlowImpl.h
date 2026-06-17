@@ -34,12 +34,12 @@ public:
     virtual double execute()=0; 
 
     //getters e setters
-    void setName(std::string name) override;
-    std::string getName()const override;
-    void setSource(System* source) override;
-    System* getSource()const override;
-    void setTarget(System* target) override;
-    System* getTarget()const override;
+    void setName(std::string name);
+    std::string getName()const;
+    void setSource(System* source);
+    System* getSource()const;
+    void setTarget(System* target);
+    System* getTarget()const;
 
 
     // Permite que a classe de teste faça testes unitário a cada método
@@ -58,20 +58,20 @@ protected:
     /*!
      * @brief This is the default constructor for the FlowImpl Class.
      */
-    FlowBody();
+    FlowHandle();
     /*!
      * @brief This is the parameterized constructor for the FlowImpl Class.
      * * @param name the name of the Flow.
      * @param source pointer to the source System.
      * @param target pointer to the target System.
      */
-    FlowBody(std::string name, System* source, System* target);
+    FlowHandle(std::string name, System* source, System* target);
 
 public:
     /*!
      * @brief This is the default destructor for the FlowImpl Class.
      */
-    virtual ~FlowBody();
+    virtual ~FlowHandle();
 
     //metodo virtual puro
     virtual double execute()=0; 
