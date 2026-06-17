@@ -4,7 +4,6 @@
 /*!
  * @brief A class containing static unit tests for the Flow class.
  */
-
 class Unit_Flow {
 public:
     /*!
@@ -72,6 +71,12 @@ public:
      * @return true if the test passed, false otherwise.
      */
     static bool assignmentOperator(void);
+
+    /*!
+     * @brief Unit test to validate the Handle-Body memory management for Flows.
+     * @return true if all tests pass, false otherwise.
+     */
+    static bool handleBodyTest(void);
 
     /*!
      * @brief Runs all the unit tests for the Flow class (Regression Testing).
