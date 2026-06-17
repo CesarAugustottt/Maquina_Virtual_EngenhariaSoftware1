@@ -4,7 +4,7 @@
 #include "Model.h"
 #include "System.h"
 #include "Flow.h"
-#include "handleBodySemDebug.h"
+#include "handleBody.h"
 
 #include <vector>
 #include <string>
@@ -24,21 +24,14 @@ protected:
     /*! This vector contains pointers to all flows registered in the model. */
     std::vector<Flow*> flows;
   
+
     void add(System* sys);
     void add(Flow* flow);
-
 public:
     /**
      * @brief This is the default constructor for the Model Class.
      */
     ModelBody();
-
-    /*!
-    * @brief This is the parameterized constructor for the Model Class.
-    * * @param name the name of the Model.
-    * @param time the initial time of the simulation.
-    */
-    ModelBody(std::string name, double time);
 
     /**
      * @brief This is the destructor for ModelBody.
@@ -74,9 +67,6 @@ public:
  */
 class ModelHandle : public Model, public Handle<ModelBody> {
 protected:
-    void add(System* sys) override;
-    void add(Flow* flow) override;
-
     /**
      * @brief This is the default constructor for ModelHandle.
      */
@@ -88,6 +78,10 @@ protected:
      * @param time The initial time of the simulation.
      */
     ModelHandle(std::string name, double time);
+
+    //metodos de adicionar protegidos
+    void add(System* sys) override;
+    void add(Flow* flow) override;
 public:
 
     /**
@@ -99,15 +93,15 @@ public:
     void remove(System* sys) override ;
     void remove(Flow* flow) override;
 
-    System* createSystem(std::string name = "", double value = 0.0) override;
-    void deleteSystem(System* sys) override;
-    void deleteFlow(Flow* flow) override;
-
     void setName(std::string name) override;
     std::string getName() const override;
     void setTime(double time) override;
     double getTime() const override;
     void incrementTime(double increment) override;
+
+    System* createSystem(std::string name = "", double value = 0.0) override;
+    void deleteSystem(System* sys) override;
+    void deleteFlow(Flow* flow) override;
 
     //Permite que a classe de testes faça testes unitários
     friend class Unit_Model;
