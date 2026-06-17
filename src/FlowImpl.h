@@ -8,7 +8,7 @@
  * @class FlowBody
  * @brief This class represents the concrete implementation of a Flow.
  */
-class FlowBody: public Body {
+class FlowBody : public Body {
 protected:
     /*! This attribute contains a name for the flow. */
     std::string name;
@@ -23,28 +23,6 @@ public:
      * @brief This is the default constructor for the FlowImpl Class.
      */
     FlowImpl();
-    /*!
-     * @brief This is the parameterized constructor for the FlowImpl Class.
-     * * @param name the name of the Flow.
-     * @param source pointer to the source System.
-     * @param target pointer to the target System.
-     */
-    FlowImpl(std::string name, System* source, System* target);
-
-    //construtor copia
-    /*!
-     * @brief This is the copy constructor for the FlowImpl Class.
-     * * @param flow the flow that is going to be cloned.
-     */
-    FlowImpl(const FlowImpl& flow);
-
-    //atribuição pelo operador =
-    /*!
-     * @brief This is the overloaded assignment operator for the FlowImpl Class.
-     * * @param flow the flow that is going to be cloned.
-     * @return FlowImpl& - a reference to the updated FlowImpl Class object.
-     */
-    FlowImpl& operator=(const FlowImpl& flow);
 
     /*!
      * @brief This is the default destructor for the FlowImpl Class.
@@ -96,21 +74,6 @@ public:
      */
     FlowImpl(std::string name, System* source, System* target);
 
-    //construtor copia
-    /*!
-     * @brief This is the copy constructor for the FlowImpl Class.
-     * * @param flow the flow that is going to be cloned.
-     */
-    FlowImpl(const FlowImpl& flow);
-
-    //atribuição pelo operador =
-    /*!
-     * @brief This is the overloaded assignment operator for the FlowImpl Class.
-     * * @param flow the flow that is going to be cloned.
-     * @return FlowImpl& - a reference to the updated FlowImpl Class object.
-     */
-    FlowImpl& operator=(const FlowImpl& flow);
-
     /*!
      * @brief This is the default destructor for the FlowImpl Class.
      */
@@ -126,7 +89,6 @@ public:
     System* getSource()const override;
     void setTarget(System* target) override;
     System* getTarget()const override;
-
 
     // Permite que a classe de teste faça testes unitário a cada método
     friend class Unit_Flow;
