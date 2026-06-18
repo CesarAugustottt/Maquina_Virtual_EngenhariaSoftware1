@@ -336,8 +336,15 @@ Definition at line 23 of file Model\+Impl.\+cpp.
 \DoxyCodeLine{24     \textcolor{keywordflow}{if}(!model)\{}
 \DoxyCodeLine{25         \textcolor{keywordflow}{return};}
 \DoxyCodeLine{26     \}}
-\DoxyCodeLine{27     \textcolor{keyword}{delete} model;}
-\DoxyCodeLine{28 \}}
+\DoxyCodeLine{27     \textcolor{comment}{//deleta do vetor e chama o destrutor}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.begin(); it != \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.end(); ++it) \{}
+\DoxyCodeLine{29         \textcolor{keywordflow}{if} (*it == model) \{}
+\DoxyCodeLine{30             \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.erase(it);}
+\DoxyCodeLine{31             \textcolor{keyword}{delete} model;}
+\DoxyCodeLine{32             \textcolor{keywordflow}{break}; }
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_a8513437cddbde699020045bc56338ac3}\label{classModel_a8513437cddbde699020045bc56338ac3}} 
