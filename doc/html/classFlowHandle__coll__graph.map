@@ -1,5 +1,5 @@
 <map id="FlowHandle" name="FlowHandle">
-<area shape="rect" id="node1" title="This class represents the handle (wrapper) of a Flow." alt="" coords="103,80,201,107"/>
-<area shape="rect" id="node2" href="$classHandle.html" title=" " alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node3" href="$classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code." alt="" coords="192,5,245,32"/>
+<area shape="rect" id="node1" title="This class represents the handle of a Flow." alt="" coords="48,80,147,107"/>
+<area shape="rect" id="node2" href="$classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code." alt="" coords="5,5,59,32"/>
+<area shape="rect" id="node3" href="$classHandle.html" title=" " alt="" coords="83,5,245,32"/>
 </map>

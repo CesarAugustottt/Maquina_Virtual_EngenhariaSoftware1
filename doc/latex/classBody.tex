@@ -7,7 +7,7 @@ The class Implementation was implemented based on the class te\+Counted writed b
 
 
 
-{\ttfamily \#include $<$handle\+Body\+Sem\+Debug.\+h$>$}
+{\ttfamily \#include $<$handle\+Body.\+h$>$}
 
 
 
@@ -49,7 +49,7 @@ int \mbox{\hyperlink{classBody_a70b46681762de310d6a3fba89ba2d721}{ref\+Count\+\_
 \doxysubsection{Detailed Description}
 The class Implementation was implemented based on the class te\+Counted writed by Ricardo Cartaxo and Gilberto Câmara and founded in the geographic library Terra\+Lib. 
 
-Definition at line 60 of file handle\+Body\+Sem\+Debug.\+h.
+Definition at line 81 of file handle\+Body.\+h.
 
 
 
@@ -66,11 +66,15 @@ Constructor\+: zero references when the object is being built.
 
 
 
-Definition at line 64 of file handle\+Body\+Sem\+Debug.\+h.
+Definition at line 85 of file handle\+Body.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{64 : \mbox{\hyperlink{classBody_a70b46681762de310d6a3fba89ba2d721}{refCount\_}} ( 0 )\{  \}}
+\DoxyCodeLine{85           : \mbox{\hyperlink{classBody_a70b46681762de310d6a3fba89ba2d721}{refCount\_}} ( 0 )\{  }
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#ifdef DEBUGING     }}
+\DoxyCodeLine{87         \mbox{\hyperlink{handleBody_8h_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}}++;}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{89     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classBody_a9b15e54cf881ac0ca64790ca1d50110e}\label{classBody_a9b15e54cf881ac0ca64790ca1d50110e}} 
@@ -85,11 +89,11 @@ Destructor.
 
 
 
-Definition at line 82 of file handle\+Body\+Sem\+Debug.\+h.
+Definition at line 110 of file handle\+Body.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{82 \{\}}
+\DoxyCodeLine{110 \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classBody_ad7fa496772479f2d3debe3c1ea0e8c1b}\label{classBody_ad7fa496772479f2d3debe3c1ea0e8c1b}} 
@@ -117,11 +121,11 @@ Increases the number of references to this object.
 
 
 
-Definition at line 68 of file handle\+Body\+Sem\+Debug.\+h.
+Definition at line 93 of file handle\+Body.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{68 \{ \mbox{\hyperlink{classBody_a70b46681762de310d6a3fba89ba2d721}{refCount\_}}++; \}}
+\DoxyCodeLine{93 \{ \mbox{\hyperlink{classBody_a70b46681762de310d6a3fba89ba2d721}{refCount\_}}++; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classBody_ad481d0c8368db318795c9a0a8fdd3717}\label{classBody_ad481d0c8368db318795c9a0a8fdd3717}} 
@@ -132,15 +136,18 @@ Definition at line 68 of file handle\+Body\+Sem\+Debug.\+h.
 
 Decreases the number of references to this object. Destroy it if there are no more references to it 
 
-Definition at line 72 of file handle\+Body\+Sem\+Debug.\+h.
+Definition at line 97 of file handle\+Body.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{72                   \{ }
-\DoxyCodeLine{73         \textcolor{keywordflow}{if} ( -\/-\/\mbox{\hyperlink{classBody_a70b46681762de310d6a3fba89ba2d721}{refCount\_}} == 0 )    \{ }
-\DoxyCodeLine{74             \textcolor{keyword}{delete} \textcolor{keyword}{this}; }
-\DoxyCodeLine{75         \}}
-\DoxyCodeLine{76     \}}
+\DoxyCodeLine{97                   \{ }
+\DoxyCodeLine{98         \textcolor{keywordflow}{if} ( -\/-\/\mbox{\hyperlink{classBody_a70b46681762de310d6a3fba89ba2d721}{refCount\_}} == 0 )    \{ }
+\DoxyCodeLine{99             \textcolor{keyword}{delete} \textcolor{keyword}{this};}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#ifdef DEBUGING}}
+\DoxyCodeLine{101             \mbox{\hyperlink{handleBody_8h_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}}++; }
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classBody_a18ca8b6719c0d91416e7f4355d04f3f7}\label{classBody_a18ca8b6719c0d91416e7f4355d04f3f7}} 
@@ -155,11 +162,11 @@ Implementation.
 
 
 
-Definition at line 90 of file handle\+Body\+Sem\+Debug.\+h.
+Definition at line 118 of file handle\+Body.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{90 \{\textcolor{keywordflow}{return} *\textcolor{keyword}{this};\}}
+\DoxyCodeLine{118 \{\textcolor{keywordflow}{return} *\textcolor{keyword}{this};\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classBody_a59ae961812625b8636071ba61b1a75fc}\label{classBody_a59ae961812625b8636071ba61b1a75fc}} 
@@ -174,11 +181,11 @@ Returns the number of references to this object.
 
 
 
-Definition at line 79 of file handle\+Body\+Sem\+Debug.\+h.
+Definition at line 107 of file handle\+Body.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{79 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classBody_a70b46681762de310d6a3fba89ba2d721}{refCount\_}}; \}}
+\DoxyCodeLine{107 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classBody_a70b46681762de310d6a3fba89ba2d721}{refCount\_}}; \}}
 
 \end{DoxyCode}
 
@@ -192,10 +199,10 @@ Definition at line 79 of file handle\+Body\+Sem\+Debug.\+h.
 
 
 
-Definition at line 92 of file handle\+Body\+Sem\+Debug.\+h.
+Definition at line 120 of file handle\+Body.\+h.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{handleBodySemDebug_8h}{handle\+Body\+Sem\+Debug.\+h}}\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{handleBody_8h}{handle\+Body.\+h}}\end{DoxyCompactItemize}

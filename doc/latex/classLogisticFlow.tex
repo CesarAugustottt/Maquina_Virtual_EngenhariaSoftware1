@@ -30,6 +30,10 @@ Collaboration diagram for Logistic\+Flow\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classLogisticFlow_ab0f7906cfe1a27e18a4f558124e53ee0}{Logistic\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}{Logistic\+Flow}} (std\+::string \mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}})
+\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}{$\sim$\+Logistic\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{classLogisticFlow_ae0d2de87d6dbb8cfc2af6db5cd22e884}{execute}} () override
@@ -46,17 +50,6 @@ void \mbox{\hyperlink{classLogisticFlow_a0b2dd47f4fe0313018d450071104ffe3}{set\+
 \begin{DoxyCompactList}\small\item\em Sets the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classLogisticFlow_a5d0f6280bc33c721f9bbb4ac0d1570cc}{get\+Target}} () const override
 \begin{DoxyCompactList}\small\item\em Returns the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classLogisticFlow_ab0f7906cfe1a27e18a4f558124e53ee0}{Logistic\+Flow}} ()
-\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}{Logistic\+Flow}} (std\+::string \mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}})
-\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classLogisticFlow_a8b195e7752074c8a7f44c8e50f97c955}{Logistic\+Flow}} (const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&flow)
-\begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \& \mbox{\hyperlink{classLogisticFlow_ac3dca15396c96ca30dfec725ef732931}{operator=}} (const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&flow)
-\begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -65,11 +58,6 @@ std\+::string \mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f
 \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}}
 \item 
 \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Friends}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classLogisticFlow_a2bf2a0e9b454c55aa5dcb5aa4698697b}{Model}}
 \end{DoxyCompactItemize}
 
 
@@ -81,7 +69,7 @@ This class represents a logistic flow in the General Systems Theory implemented 
 \item It implements the execute method using a logistic equation for resource transfer. 
 \end{DoxyItemize}
 
-Definition at line 11 of file Logistic\+Flow.\+h.
+Definition at line 12 of file Logistic\+Flow.\+h.
 
 
 
@@ -89,8 +77,8 @@ Definition at line 11 of file Logistic\+Flow.\+h.
 \mbox{\Hypertarget{classLogisticFlow_ab0f7906cfe1a27e18a4f558124e53ee0}\label{classLogisticFlow_ab0f7906cfe1a27e18a4f558124e53ee0}} 
 \index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
 \index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
-\doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Logistic\+Flow\+::\+Logistic\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+\doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Logistic\+Flow\+::\+Logistic\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -98,22 +86,22 @@ This is the default constructor for the \mbox{\hyperlink{classLogisticFlow}{Logi
 
 
 
-Definition at line 5 of file Logistic\+Flow.\+cpp.
+Definition at line 4 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{5                            \{}
-\DoxyCodeLine{6     this-\/>\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}} = \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{7     this-\/>\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}} = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{8     this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}} = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{9 \}}
+\DoxyCodeLine{4                            \{}
+\DoxyCodeLine{5     this-\/>\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{6     this-\/>\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{7     this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{8 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}\label{classLogisticFlow_a7aefd04a99cc5b7984fd02919ebabc73}} 
 \index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
 \index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
-\doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Logistic\+Flow\+::\+Logistic\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+\doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Logistic\+Flow\+::\+Logistic\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})}
 
 
 
@@ -133,42 +121,11 @@ This is the parameterized constructor for the \mbox{\hyperlink{classLogisticFlow
 
 \end{DoxyItemize}
 
-Definition at line 12 of file Logistic\+Flow.\+cpp.
+Definition at line 11 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{13     : \mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}}(\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}}), \mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}}(\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}}), \mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}}(\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}}) \{\}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classLogisticFlow_a8b195e7752074c8a7f44c8e50f97c955}\label{classLogisticFlow_a8b195e7752074c8a7f44c8e50f97c955}} 
-\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
-\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
-\doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Logistic\+Flow\+::\+Logistic\+Flow (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-This is the copy constructor for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. 
-
-
-\begin{DoxyItemize}
-\item 
-\begin{DoxyParams}{Parameters}
-{\em flow} & the logistic flow that is going to be cloned. \\
-\hline
-\end{DoxyParams}
-
-\end{DoxyItemize}
-
-Definition at line 50 of file Logistic\+Flow.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{50                                                    \{}
-\DoxyCodeLine{51     this-\/>\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}} = flow.\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}};}
-\DoxyCodeLine{52     this-\/>\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}} = flow.\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}};}
-\DoxyCodeLine{53     this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}} = flow.\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}};}
-\DoxyCodeLine{54 \}}
+\DoxyCodeLine{12     : \mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}}(\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}}), \mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}}(\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}}), \mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}}(\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}}) \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}\label{classLogisticFlow_a39d18cc1ab327715c4b8e0377cff8435}} 
@@ -183,11 +140,11 @@ This is the default destructor for the \mbox{\hyperlink{classLogisticFlow}{Logis
 
 
 
-Definition at line 15 of file Logistic\+Flow.\+cpp.
+Definition at line 14 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{15 \{\} }
+\DoxyCodeLine{14 \{\} }
 
 \end{DoxyCode}
 
@@ -220,11 +177,11 @@ Definition at line 41 of file Logistic\+Flow.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{41                              \{}
-\DoxyCodeLine{42     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classLogisticFlow_a5d0f6280bc33c721f9bbb4ac0d1570cc}{getTarget}}() == \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{//se não tiver sistema de destino}}
+\DoxyCodeLine{42     \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}} == \textcolor{keyword}{nullptr}) \{ \textcolor{comment}{// Proteção contra ponteiro nulo}}
 \DoxyCodeLine{43         \textcolor{keywordflow}{return} 0.0;}
 \DoxyCodeLine{44     \}}
-\DoxyCodeLine{45     \textcolor{keywordtype}{double} valueTarget = \mbox{\hyperlink{classLogisticFlow_a5d0f6280bc33c721f9bbb4ac0d1570cc}{getTarget}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}();}
-\DoxyCodeLine{46     \textcolor{keywordflow}{return} 0.01 * valueTarget * (1 -\/ valueTarget/70);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{double} valueTarget = this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}}-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}();}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} 0.01 * valueTarget * (1 -\/ valueTarget / 70.0);}
 \DoxyCodeLine{47 \}}
 
 \end{DoxyCode}
@@ -250,13 +207,13 @@ Implements \mbox{\hyperlink{classFlow_a2d0340d844ab2d275222938234e44169}{Flow}}.
 
 
 
-Definition at line 21 of file Logistic\+Flow.\+cpp.
+Definition at line 20 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{21                                       \{}
-\DoxyCodeLine{22     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}};}
-\DoxyCodeLine{23 \}}
+\DoxyCodeLine{20                                       \{}
+\DoxyCodeLine{21     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}};}
+\DoxyCodeLine{22 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classLogisticFlow_a0b881b206484a97fd904f560a7e7a780}\label{classLogisticFlow_a0b881b206484a97fd904f560a7e7a780}} 
@@ -281,13 +238,13 @@ Implements \mbox{\hyperlink{classFlow_aff381195663a5028494e3de9c6194f2c}{Flow}}.
 
 
 
-Definition at line 29 of file Logistic\+Flow.\+cpp.
+Definition at line 28 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29                                       \{}
-\DoxyCodeLine{30     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}};}
-\DoxyCodeLine{31 \}}
+\DoxyCodeLine{28                                       \{}
+\DoxyCodeLine{29     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}};}
+\DoxyCodeLine{30 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classLogisticFlow_a5d0f6280bc33c721f9bbb4ac0d1570cc}\label{classLogisticFlow_a5d0f6280bc33c721f9bbb4ac0d1570cc}} 
@@ -312,50 +269,13 @@ Implements \mbox{\hyperlink{classFlow_a81aeceffcb2b425af124c3b0d1962786}{Flow}}.
 
 
 
-Definition at line 37 of file Logistic\+Flow.\+cpp.
+Definition at line 36 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{37                                       \{}
-\DoxyCodeLine{38     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}};}
-\DoxyCodeLine{39 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classLogisticFlow_ac3dca15396c96ca30dfec725ef732931}\label{classLogisticFlow_ac3dca15396c96ca30dfec725ef732931}} 
-\index{LogisticFlow@{LogisticFlow}!operator=@{operator=}}
-\index{operator=@{operator=}!LogisticFlow@{LogisticFlow}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \& Logistic\+Flow\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} \&}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-This is the overloaded assignment operator for the \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class. 
-
-
-\begin{DoxyItemize}
-\item 
-\begin{DoxyParams}{Parameters}
-{\em flow} & the logistic flow that is going to be cloned. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}}\& -\/ a reference to the updated \mbox{\hyperlink{classLogisticFlow}{Logistic\+Flow}} Class object. 
-\end{DoxyReturn}
-
-\end{DoxyItemize}
-
-Definition at line 57 of file Logistic\+Flow.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{57                                                               \{}
-\DoxyCodeLine{58     \textcolor{keywordflow}{if} (\&flow != \textcolor{keyword}{this}) \{ \textcolor{comment}{//se for diferente, faz a atribuição}}
-\DoxyCodeLine{59         this-\/>\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}} = flow.\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}};}
-\DoxyCodeLine{60         this-\/>\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}} = flow.\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}};}
-\DoxyCodeLine{61         this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}} = flow.\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}}; }
-\DoxyCodeLine{62     \}}
-\DoxyCodeLine{63     \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; }
-\DoxyCodeLine{64 \}}
+\DoxyCodeLine{36                                       \{}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}};}
+\DoxyCodeLine{38 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classLogisticFlow_a439c095bf5b9bcdfab4993ae65f307a5}\label{classLogisticFlow_a439c095bf5b9bcdfab4993ae65f307a5}} 
@@ -382,13 +302,13 @@ Implements \mbox{\hyperlink{classFlow_a80346b11c95c20a009278eb78f8f9653}{Flow}}.
 
 
 
-Definition at line 17 of file Logistic\+Flow.\+cpp.
+Definition at line 16 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{17                                          \{}
-\DoxyCodeLine{18     this-\/>\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}} = \mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}};}
-\DoxyCodeLine{19 \}}
+\DoxyCodeLine{16                                          \{}
+\DoxyCodeLine{17     this-\/>\mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}} = \mbox{\hyperlink{classLogisticFlow_a3783eff10a122a19ab25b40477de5f87}{name}};}
+\DoxyCodeLine{18 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classLogisticFlow_a8ef426f2ebab8b2190dfddfbb915c15a}\label{classLogisticFlow_a8ef426f2ebab8b2190dfddfbb915c15a}} 
@@ -415,13 +335,13 @@ Implements \mbox{\hyperlink{classFlow_a1ca17cd54e042c1c1ccf73597e7f188e}{Flow}}.
 
 
 
-Definition at line 25 of file Logistic\+Flow.\+cpp.
+Definition at line 24 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25                                            \{}
-\DoxyCodeLine{26     this-\/>\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}} = \mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}};}
-\DoxyCodeLine{27 \}}
+\DoxyCodeLine{24                                            \{}
+\DoxyCodeLine{25     this-\/>\mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}} = \mbox{\hyperlink{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}{source}};}
+\DoxyCodeLine{26 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classLogisticFlow_a0b2dd47f4fe0313018d450071104ffe3}\label{classLogisticFlow_a0b2dd47f4fe0313018d450071104ffe3}} 
@@ -448,28 +368,15 @@ Implements \mbox{\hyperlink{classFlow_a0a6d9503f9fd5afb978dd07346fa7e0d}{Flow}}.
 
 
 
-Definition at line 33 of file Logistic\+Flow.\+cpp.
+Definition at line 32 of file Logistic\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{33                                            \{}
-\DoxyCodeLine{34     this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}} = \mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}};}
-\DoxyCodeLine{35 \}}
+\DoxyCodeLine{32                                            \{}
+\DoxyCodeLine{33     this-\/>\mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}} = \mbox{\hyperlink{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}{target}};}
+\DoxyCodeLine{34 \}}
 
 \end{DoxyCode}
-
-
-\doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{classLogisticFlow_a2bf2a0e9b454c55aa5dcb5aa4698697b}\label{classLogisticFlow_a2bf2a0e9b454c55aa5dcb5aa4698697b}} 
-\index{LogisticFlow@{LogisticFlow}!Model@{Model}}
-\index{Model@{Model}!LogisticFlow@{LogisticFlow}}
-\doxysubsubsection{\texorpdfstring{Model}{Model}}
-{\footnotesize\ttfamily friend class \mbox{\hyperlink{classModel}{Model}}\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-Definition at line 73 of file Logistic\+Flow.\+h.
-
 
 
 \doxysubsection{Member Data Documentation}
@@ -481,7 +388,7 @@ Definition at line 73 of file Logistic\+Flow.\+h.
 
 This attribute contains a name for the flow. 
 
-Definition at line 14 of file Logistic\+Flow.\+h.
+Definition at line 15 of file Logistic\+Flow.\+h.
 
 \mbox{\Hypertarget{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}\label{classLogisticFlow_a4872679ae2eb7b2b8de2182404da0eae}} 
 \index{LogisticFlow@{LogisticFlow}!source@{source}}
@@ -491,7 +398,7 @@ Definition at line 14 of file Logistic\+Flow.\+h.
 
 This pointer points to the source \mbox{\hyperlink{classSystem}{System}} of the flow. 
 
-Definition at line 16 of file Logistic\+Flow.\+h.
+Definition at line 17 of file Logistic\+Flow.\+h.
 
 \mbox{\Hypertarget{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}\label{classLogisticFlow_a731fbb8bde269ab6ee665e5852f1e503}} 
 \index{LogisticFlow@{LogisticFlow}!target@{target}}
@@ -501,7 +408,7 @@ Definition at line 16 of file Logistic\+Flow.\+h.
 
 This pointer points to the target \mbox{\hyperlink{classSystem}{System}} of the flow. 
 
-Definition at line 18 of file Logistic\+Flow.\+h.
+Definition at line 19 of file Logistic\+Flow.\+h.
 
 
 

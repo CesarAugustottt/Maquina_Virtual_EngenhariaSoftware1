@@ -158,7 +158,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents the handle of a system. </p>
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8h_source.html#l00049">49</a> of file <a class="el" href="SystemImpl_8h_source.html">SystemImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8h_source.html#l00045">45</a> of file <a class="el" href="SystemImpl_8h_source.html">SystemImpl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a89a4db1dc76231a95167a904fd0175c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89a4db1dc76231a95167a904fd0175c4">&#9670;&nbsp;</a></span>SystemHandle() <span class="overload">[1/2]</span></h2>
@@ -185,9 +185,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Default constructor for <a class="el" href="classSystemHandle.html" title="This class represents the handle of a system.">SystemHandle</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00029">29</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;: <a class="code" href="classHandle.html">Handle&lt;SystemBody&gt;</a>() {}</div>
-<div class="ttc" id="aclassHandle_html"><div class="ttname"><a href="classHandle.html">Handle&lt; SystemBody &gt;</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00028">28</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -234,16 +233,14 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00031">31</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                       {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classBody.html#ad481d0c8368db318795c9a0a8fdd3717">detach</a>(); </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a> = <span class="keyword">new</span> <a class="code" href="classSystemBody.html">SystemBody</a>(name, value);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classBody.html#a5d53322c76a6952d096cb7564ac86db1">attach</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="ttc" id="aclassBody_html_a5d53322c76a6952d096cb7564ac86db1"><div class="ttname"><a href="classBody.html#a5d53322c76a6952d096cb7564ac86db1">Body::attach</a></div><div class="ttdeci">void attach()</div><div class="ttdoc">Increases the number of references to this object.</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00068">handleBodySemDebug.h:68</a></div></div>
-<div class="ttc" id="aclassBody_html_ad481d0c8368db318795c9a0a8fdd3717"><div class="ttname"><a href="classBody.html#ad481d0c8368db318795c9a0a8fdd3717">Body::detach</a></div><div class="ttdeci">void detach()</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00072">handleBodySemDebug.h:72</a></div></div>
-<div class="ttc" id="aclassHandle_html_a16021e57596d7369dfa1a9fadc35c06f"><div class="ttname"><a href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">Handle&lt; SystemBody &gt;::pImpl_</a></div><div class="ttdeci">SystemBody * pImpl_</div><div class="ttdoc">referência para a implementação</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00050">handleBodySemDebug.h:50</a></div></div>
-<div class="ttc" id="aclassSystemBody_html"><div class="ttname"><a href="classSystemBody.html">SystemBody</a></div><div class="ttdoc">This class represents the concrete implementation of a System.</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8h_source.html#l00012">SystemImpl.h:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00030">30</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                                       {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#a85d71f126c28018dab75fe69f4fe001e">setName</a>(name);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#ab2cfe1da302b87bc1d7ad0661f3313b0">setValue</a>(value);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="aclassHandle_html_a16021e57596d7369dfa1a9fadc35c06f"><div class="ttname"><a href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">Handle&lt; SystemBody &gt;::pImpl_</a></div><div class="ttdeci">SystemBody * pImpl_</div><div class="ttdoc">referência para a implementação</div><div class="ttdef"><b>Definition:</b> <a href="handleBody_8h_source.html#l00071">handleBody.h:71</a></div></div>
+<div class="ttc" id="aclassSystemBody_html_a85d71f126c28018dab75fe69f4fe001e"><div class="ttname"><a href="classSystemBody.html#a85d71f126c28018dab75fe69f4fe001e">SystemBody::setName</a></div><div class="ttdeci">void setName(std::string name)</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8cpp_source.html#l00011">SystemImpl.cpp:11</a></div></div>
+<div class="ttc" id="aclassSystemBody_html_ab2cfe1da302b87bc1d7ad0661f3313b0"><div class="ttname"><a href="classSystemBody.html#ab2cfe1da302b87bc1d7ad0661f3313b0">SystemBody::setValue</a></div><div class="ttdeci">void setValue(double value)</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8cpp_source.html#l00019">SystemImpl.cpp:19</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -272,8 +269,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Destructor for <a class="el" href="classSystemHandle.html" title="This class represents the handle of a system.">SystemHandle</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00037">37</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{}</div>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00035">35</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -309,11 +306,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSystem.html#a3bc2509274e6c346e07b0bf1151378c5">System</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00043">43</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                     { </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#ade0121ff9741d3a8317a0343f4e95ea7">getName</a>(); </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="ttc" id="aclassSystemBody_html_ade0121ff9741d3a8317a0343f4e95ea7"><div class="ttname"><a href="classSystemBody.html#ade0121ff9741d3a8317a0343f4e95ea7">SystemBody::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8cpp_source.html#l00016">SystemImpl.cpp:16</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00041">41</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                     { </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#ade0121ff9741d3a8317a0343f4e95ea7">getName</a>(); </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="aclassSystemBody_html_ade0121ff9741d3a8317a0343f4e95ea7"><div class="ttname"><a href="classSystemBody.html#ade0121ff9741d3a8317a0343f4e95ea7">SystemBody::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8cpp_source.html#l00015">SystemImpl.cpp:15</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -348,11 +345,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">System</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00039">39</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                    { </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#aaa79b2b5454c81ffd4020de4d0b9da6a">getValue</a>(); </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="ttc" id="aclassSystemBody_html_aaa79b2b5454c81ffd4020de4d0b9da6a"><div class="ttname"><a href="classSystemBody.html#aaa79b2b5454c81ffd4020de4d0b9da6a">SystemBody::getValue</a></div><div class="ttdeci">double getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8cpp_source.html#l00024">SystemImpl.cpp:24</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00037">37</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                    { </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#aaa79b2b5454c81ffd4020de4d0b9da6a">getValue</a>(); </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="aclassSystemBody_html_aaa79b2b5454c81ffd4020de4d0b9da6a"><div class="ttname"><a href="classSystemBody.html#aaa79b2b5454c81ffd4020de4d0b9da6a">SystemBody::getValue</a></div><div class="ttdeci">double getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8cpp_source.html#l00023">SystemImpl.cpp:23</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -393,11 +390,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSystem.html#a9b91be893916f4cf8680ac56970950f1">System</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00051">51</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                        { </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#a85d71f126c28018dab75fe69f4fe001e">setName</a>(name); </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="ttc" id="aclassSystemBody_html_a85d71f126c28018dab75fe69f4fe001e"><div class="ttname"><a href="classSystemBody.html#a85d71f126c28018dab75fe69f4fe001e">SystemBody::setName</a></div><div class="ttdeci">void setName(std::string name)</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8cpp_source.html#l00012">SystemImpl.cpp:12</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00049">49</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                        { </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#a85d71f126c28018dab75fe69f4fe001e">setName</a>(name); </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -438,11 +434,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSystem.html#a95e6d4c1ce05b47b5fa743fd2401dd03">System</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00047">47</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                       { </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#ab2cfe1da302b87bc1d7ad0661f3313b0">setValue</a>(value); </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="ttc" id="aclassSystemBody_html_ab2cfe1da302b87bc1d7ad0661f3313b0"><div class="ttname"><a href="classSystemBody.html#ab2cfe1da302b87bc1d7ad0661f3313b0">SystemBody::setValue</a></div><div class="ttdeci">void setValue(double value)</div><div class="ttdef"><b>Definition:</b> <a href="SystemImpl_8cpp_source.html#l00020">SystemImpl.cpp:20</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8cpp_source.html#l00045">45</a> of file <a class="el" href="SystemImpl_8cpp_source.html">SystemImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                       { </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemBody.html#ab2cfe1da302b87bc1d7ad0661f3313b0">setValue</a>(value); </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -467,7 +462,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8h_source.html#l00076">76</a> of file <a class="el" href="SystemImpl_8h_source.html">SystemImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8h_source.html#l00072">72</a> of file <a class="el" href="SystemImpl_8h_source.html">SystemImpl.h</a>.</p>
 
 </div>
 </div>
@@ -491,7 +486,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SystemImpl_8h_source.html#l00075">75</a> of file <a class="el" href="SystemImpl_8h_source.html">SystemImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SystemImpl_8h_source.html#l00071">71</a> of file <a class="el" href="SystemImpl_8h_source.html">SystemImpl.h</a>.</p>
 
 </div>
 </div>

@@ -2,7 +2,7 @@
 \label{classFlowBody}\index{FlowBody@{FlowBody}}
 
 
-This class represents the body (concrete implementation) of a \mbox{\hyperlink{classFlow}{Flow}}.  
+This class represents the concrete implementation of a \mbox{\hyperlink{classFlow}{Flow}}.  
 
 
 
@@ -33,11 +33,9 @@ Collaboration diagram for Flow\+Body\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlowBody_af7c4dc7b257284ba66176985df9ad544}{Flow\+Body}} ()
-\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classFlowBody}{Flow\+Body}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classFlowBody_ae9533136ec1d4b77b023c7ae239b4bf6}{Flow\+Body}} (std\+::string \mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}})
-\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classFlowBody}{Flow\+Body}} Class. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This is the default constructor for the Flow\+Impl Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classFlowBody_a178e56af6c29c29b49c1f9f7af7d9311}{$\sim$\+Flow\+Body}} ()
-\begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classFlowBody}{Flow\+Body}} Class. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This is the default destructor for the Flow\+Impl Class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classFlowBody_a10704fba96bc988e45f49259b3cfea94}{set\+Name}} (std\+::string \mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}})
 \item 
 std\+::string \mbox{\hyperlink{classFlowBody_a29d6502cf501a418aec01312257a4b55}{get\+Name}} () const
@@ -62,16 +60,16 @@ std\+::string \mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classFlowBody_afaef326215e0b2ff4591db1fc9156ba8}{Flow\+Handle}}
-\item 
 class \mbox{\hyperlink{classFlowBody_ac1ba2f84b2ef6fa52ad3ab246d9b4d54}{Unit\+\_\+\+Flow}}
+\item 
+class \mbox{\hyperlink{classFlowBody_a2bf2a0e9b454c55aa5dcb5aa4698697b}{Model}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This class represents the body (concrete implementation) of a \mbox{\hyperlink{classFlow}{Flow}}. 
+This class represents the concrete implementation of a \mbox{\hyperlink{classFlow}{Flow}}. 
 
-Definition at line 11 of file Flow\+Impl.\+h.
+Definition at line 12 of file Flow\+Impl.\+h.
 
 
 
@@ -79,56 +77,24 @@ Definition at line 11 of file Flow\+Impl.\+h.
 \mbox{\Hypertarget{classFlowBody_af7c4dc7b257284ba66176985df9ad544}\label{classFlowBody_af7c4dc7b257284ba66176985df9ad544}} 
 \index{FlowBody@{FlowBody}!FlowBody@{FlowBody}}
 \index{FlowBody@{FlowBody}!FlowBody@{FlowBody}}
-\doxysubsubsection{\texorpdfstring{FlowBody()}{FlowBody()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{FlowBody()}{FlowBody()}}
 {\footnotesize\ttfamily Flow\+Body\+::\+Flow\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-This is the default constructor for the \mbox{\hyperlink{classFlowBody}{Flow\+Body}} Class. 
+This is the default constructor for the Flow\+Impl Class. 
 
 
 
-Definition at line 5 of file Flow\+Impl.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{5                   \{}
-\DoxyCodeLine{6     this-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}}= \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{7     this-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}}= \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{8     this-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}}= \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{9 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classFlowBody_ae9533136ec1d4b77b023c7ae239b4bf6}\label{classFlowBody_ae9533136ec1d4b77b023c7ae239b4bf6}} 
-\index{FlowBody@{FlowBody}!FlowBody@{FlowBody}}
-\index{FlowBody@{FlowBody}!FlowBody@{FlowBody}}
-\doxysubsubsection{\texorpdfstring{FlowBody()}{FlowBody()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Flow\+Body\+::\+Flow\+Body (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})}
-
-
-
-This is the parameterized constructor for the \mbox{\hyperlink{classFlowBody}{Flow\+Body}} Class. 
-
-
-\begin{DoxyItemize}
-\item 
-\begin{DoxyParams}{Parameters}
-{\em name} & the name of the \mbox{\hyperlink{classFlow}{Flow}}. \\
-\hline
-{\em source} & pointer to the source \mbox{\hyperlink{classSystem}{System}}. \\
-\hline
-{\em target} & pointer to the target \mbox{\hyperlink{classSystem}{System}}. \\
-\hline
-\end{DoxyParams}
-
-\end{DoxyItemize}
-
-Definition at line 11 of file Flow\+Impl.\+cpp.
+Definition at line 3 of file Flow\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11                                                                 : \mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}}(\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}}), }
-\DoxyCodeLine{12     \mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}}(\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}}), \mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}}(\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}})\{\}}
+\DoxyCodeLine{3                   \{}
+\DoxyCodeLine{4     this-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}}= \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{5     this-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}}= \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{6     this-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}}= \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{7 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowBody_a178e56af6c29c29b49c1f9f7af7d9311}\label{classFlowBody_a178e56af6c29c29b49c1f9f7af7d9311}} 
@@ -139,15 +105,15 @@ Definition at line 11 of file Flow\+Impl.\+cpp.
 
 
 
-This is the default destructor for the \mbox{\hyperlink{classFlowBody}{Flow\+Body}} Class. 
+This is the default destructor for the Flow\+Impl Class. 
 
 
 
-Definition at line 14 of file Flow\+Impl.\+cpp.
+Definition at line 9 of file Flow\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{14 \{\} \textcolor{comment}{//fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles}}
+\DoxyCodeLine{9 \{\} \textcolor{comment}{//fica vazio, pois o flow aponta para sistemas, mas não pode excluir eles}}
 
 \end{DoxyCode}
 
@@ -161,13 +127,13 @@ Definition at line 14 of file Flow\+Impl.\+cpp.
 
 
 
-Definition at line 19 of file Flow\+Impl.\+cpp.
+Definition at line 14 of file Flow\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{19                                 \{}
-\DoxyCodeLine{20     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}};}
-\DoxyCodeLine{21 \}}
+\DoxyCodeLine{14                                 \{}
+\DoxyCodeLine{15     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}};}
+\DoxyCodeLine{16 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowBody_a73d79b44f545683272b888963469f9d0}\label{classFlowBody_a73d79b44f545683272b888963469f9d0}} 
@@ -178,13 +144,13 @@ Definition at line 19 of file Flow\+Impl.\+cpp.
 
 
 
-Definition at line 26 of file Flow\+Impl.\+cpp.
+Definition at line 21 of file Flow\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{26                                 \{}
-\DoxyCodeLine{27     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}};}
-\DoxyCodeLine{28 \}}
+\DoxyCodeLine{21                                 \{}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}};}
+\DoxyCodeLine{23 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowBody_a437ebb62001b40c57cc0bf3effd8a431}\label{classFlowBody_a437ebb62001b40c57cc0bf3effd8a431}} 
@@ -195,13 +161,13 @@ Definition at line 26 of file Flow\+Impl.\+cpp.
 
 
 
-Definition at line 33 of file Flow\+Impl.\+cpp.
+Definition at line 28 of file Flow\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{33                                 \{}
-\DoxyCodeLine{34     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}};}
-\DoxyCodeLine{35 \}}
+\DoxyCodeLine{28                                 \{}
+\DoxyCodeLine{29     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}};}
+\DoxyCodeLine{30 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowBody_a10704fba96bc988e45f49259b3cfea94}\label{classFlowBody_a10704fba96bc988e45f49259b3cfea94}} 
@@ -212,13 +178,13 @@ Definition at line 33 of file Flow\+Impl.\+cpp.
 
 
 
-Definition at line 16 of file Flow\+Impl.\+cpp.
+Definition at line 11 of file Flow\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{16                                     \{}
-\DoxyCodeLine{17     this-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}} = \mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}};}
-\DoxyCodeLine{18 \}}
+\DoxyCodeLine{11                                     \{}
+\DoxyCodeLine{12     this-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}} = \mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}};}
+\DoxyCodeLine{13 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowBody_aa50a239e37120f248e8f819e0310a088}\label{classFlowBody_aa50a239e37120f248e8f819e0310a088}} 
@@ -229,13 +195,13 @@ Definition at line 16 of file Flow\+Impl.\+cpp.
 
 
 
-Definition at line 23 of file Flow\+Impl.\+cpp.
+Definition at line 18 of file Flow\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{23                                       \{}
-\DoxyCodeLine{24     this-\/>source = \mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}};}
-\DoxyCodeLine{25 \}}
+\DoxyCodeLine{18                                       \{}
+\DoxyCodeLine{19     this-\/>source = \mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}};}
+\DoxyCodeLine{20 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowBody_ac8da156892f3cc43d079778fc8067054}\label{classFlowBody_ac8da156892f3cc43d079778fc8067054}} 
@@ -246,23 +212,23 @@ Definition at line 23 of file Flow\+Impl.\+cpp.
 
 
 
-Definition at line 30 of file Flow\+Impl.\+cpp.
+Definition at line 25 of file Flow\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{30                                       \{}
-\DoxyCodeLine{31     this-\/>target= \mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}};}
-\DoxyCodeLine{32 \}}
+\DoxyCodeLine{25                                       \{}
+\DoxyCodeLine{26     this-\/>target= \mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}};}
+\DoxyCodeLine{27 \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{classFlowBody_afaef326215e0b2ff4591db1fc9156ba8}\label{classFlowBody_afaef326215e0b2ff4591db1fc9156ba8}} 
-\index{FlowBody@{FlowBody}!FlowHandle@{FlowHandle}}
-\index{FlowHandle@{FlowHandle}!FlowBody@{FlowBody}}
-\doxysubsubsection{\texorpdfstring{FlowHandle}{FlowHandle}}
-{\footnotesize\ttfamily friend class \mbox{\hyperlink{classFlowHandle}{Flow\+Handle}}\hspace{0.3cm}{\ttfamily [friend]}}
+\mbox{\Hypertarget{classFlowBody_a2bf2a0e9b454c55aa5dcb5aa4698697b}\label{classFlowBody_a2bf2a0e9b454c55aa5dcb5aa4698697b}} 
+\index{FlowBody@{FlowBody}!Model@{Model}}
+\index{Model@{Model}!FlowBody@{FlowBody}}
+\doxysubsubsection{\texorpdfstring{Model}{Model}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classModel}{Model}}\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -276,7 +242,7 @@ Definition at line 45 of file Flow\+Impl.\+h.
 
 
 
-Definition at line 46 of file Flow\+Impl.\+h.
+Definition at line 43 of file Flow\+Impl.\+h.
 
 
 
@@ -289,7 +255,7 @@ Definition at line 46 of file Flow\+Impl.\+h.
 
 This attribute contains a name for the flow. 
 
-Definition at line 14 of file Flow\+Impl.\+h.
+Definition at line 15 of file Flow\+Impl.\+h.
 
 \mbox{\Hypertarget{classFlowBody_a7c46fc66ff02f18c387535e914337c82}\label{classFlowBody_a7c46fc66ff02f18c387535e914337c82}} 
 \index{FlowBody@{FlowBody}!source@{source}}
@@ -299,7 +265,7 @@ Definition at line 14 of file Flow\+Impl.\+h.
 
 This pointer points to the source \mbox{\hyperlink{classSystem}{System}} of the flow. 
 
-Definition at line 16 of file Flow\+Impl.\+h.
+Definition at line 17 of file Flow\+Impl.\+h.
 
 \mbox{\Hypertarget{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}\label{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}} 
 \index{FlowBody@{FlowBody}!target@{target}}
@@ -309,7 +275,7 @@ Definition at line 16 of file Flow\+Impl.\+h.
 
 This pointer points to the target \mbox{\hyperlink{classSystem}{System}} of the flow. 
 
-Definition at line 18 of file Flow\+Impl.\+h.
+Definition at line 19 of file Flow\+Impl.\+h.
 
 
 

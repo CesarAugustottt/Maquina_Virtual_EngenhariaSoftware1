@@ -11,8 +11,7 @@ This class represents the handle of a system.
 
 
 
-Inheritance diagram for System\+Handle\+:
-\nopagebreak
+Inheritance diagram for System\+Handle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for System\+Handle\+:
 \end{figure}
 
 
-Collaboration diagram for System\+Handle\+:
-\nopagebreak
+Collaboration diagram for System\+Handle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -62,7 +60,7 @@ class \mbox{\hyperlink{classSystemHandle_adc2d6f6d1ec89a3cc5a899cd89018051}{Mode
 \doxysubsection{Detailed Description}
 This class represents the handle of a system. 
 
-Definition at line 49 of file System\+Impl.\+h.
+Definition at line 45 of file System\+Impl.\+h.
 
 
 
@@ -79,11 +77,11 @@ Default constructor for \mbox{\hyperlink{classSystemHandle}{System\+Handle}}.
 
 
 
-Definition at line 29 of file System\+Impl.\+cpp.
+Definition at line 28 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29 : \mbox{\hyperlink{classHandle}{Handle<SystemBody>}}() \{\}}
+\DoxyCodeLine{28 \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSystemHandle_a98b1c77ca4899f70677e7bfbb1b0c3a8}\label{classSystemHandle_a98b1c77ca4899f70677e7bfbb1b0c3a8}} 
@@ -105,15 +103,14 @@ This is the Parameterized constructor for \mbox{\hyperlink{classSystemHandle}{Sy
 \end{DoxyParams}
 
 
-Definition at line 31 of file System\+Impl.\+cpp.
+Definition at line 30 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{31                                                        \{}
-\DoxyCodeLine{32         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classBody_ad481d0c8368db318795c9a0a8fdd3717}{detach}}(); }
-\DoxyCodeLine{33         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}} = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemBody}{SystemBody}}(name, value);}
-\DoxyCodeLine{34         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classBody_a5d53322c76a6952d096cb7564ac86db1}{attach}}();}
-\DoxyCodeLine{35     \}}
+\DoxyCodeLine{30                                                        \{}
+\DoxyCodeLine{31         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a85d71f126c28018dab75fe69f4fe001e}{setName}}(name);}
+\DoxyCodeLine{32         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_ab2cfe1da302b87bc1d7ad0661f3313b0}{setValue}}(value);}
+\DoxyCodeLine{33 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSystemHandle_a0f32dc96ff8e68c2b5ab3497a20f8169}\label{classSystemHandle_a0f32dc96ff8e68c2b5ab3497a20f8169}} 
@@ -128,11 +125,11 @@ Destructor for \mbox{\hyperlink{classSystemHandle}{System\+Handle}}.
 
 
 
-Definition at line 37 of file System\+Impl.\+cpp.
+Definition at line 35 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{37 \{\}}
+\DoxyCodeLine{35 \{\}}
 
 \end{DoxyCode}
 
@@ -160,13 +157,13 @@ Implements \mbox{\hyperlink{classSystem_a3bc2509274e6c346e07b0bf1151378c5}{Syste
 
 
 
-Definition at line 43 of file System\+Impl.\+cpp.
+Definition at line 41 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{43                                      \{ }
-\DoxyCodeLine{44     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_ade0121ff9741d3a8317a0343f4e95ea7}{getName}}(); }
-\DoxyCodeLine{45 \}}
+\DoxyCodeLine{41                                      \{ }
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_ade0121ff9741d3a8317a0343f4e95ea7}{getName}}(); }
+\DoxyCodeLine{43 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSystemHandle_a5c59a67c5a07cdd4f6c60488aea4075a}\label{classSystemHandle_a5c59a67c5a07cdd4f6c60488aea4075a}} 
@@ -191,13 +188,13 @@ Implements \mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{Syste
 
 
 
-Definition at line 39 of file System\+Impl.\+cpp.
+Definition at line 37 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{39                                     \{ }
-\DoxyCodeLine{40     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_aaa79b2b5454c81ffd4020de4d0b9da6a}{getValue}}(); }
-\DoxyCodeLine{41 \}}
+\DoxyCodeLine{37                                     \{ }
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_aaa79b2b5454c81ffd4020de4d0b9da6a}{getValue}}(); }
+\DoxyCodeLine{39 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSystemHandle_af0902a9ef7fef285b24cf72520550a9b}\label{classSystemHandle_af0902a9ef7fef285b24cf72520550a9b}} 
@@ -224,13 +221,13 @@ Implements \mbox{\hyperlink{classSystem_a9b91be893916f4cf8680ac56970950f1}{Syste
 
 
 
-Definition at line 51 of file System\+Impl.\+cpp.
+Definition at line 49 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{51                                         \{ }
-\DoxyCodeLine{52     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a85d71f126c28018dab75fe69f4fe001e}{setName}}(name); }
-\DoxyCodeLine{53 \}}
+\DoxyCodeLine{49                                         \{ }
+\DoxyCodeLine{50     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a85d71f126c28018dab75fe69f4fe001e}{setName}}(name); }
+\DoxyCodeLine{51 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSystemHandle_ab4d71f14764d5d0c95a29fcb0e4a792d}\label{classSystemHandle_ab4d71f14764d5d0c95a29fcb0e4a792d}} 
@@ -257,13 +254,13 @@ Implements \mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{Syste
 
 
 
-Definition at line 47 of file System\+Impl.\+cpp.
+Definition at line 45 of file System\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{47                                        \{ }
-\DoxyCodeLine{48     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_ab2cfe1da302b87bc1d7ad0661f3313b0}{setValue}}(value); }
-\DoxyCodeLine{49 \}}
+\DoxyCodeLine{45                                        \{ }
+\DoxyCodeLine{46     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_ab2cfe1da302b87bc1d7ad0661f3313b0}{setValue}}(value); }
+\DoxyCodeLine{47 \}}
 
 \end{DoxyCode}
 
@@ -277,7 +274,7 @@ Definition at line 47 of file System\+Impl.\+cpp.
 
 
 
-Definition at line 76 of file System\+Impl.\+h.
+Definition at line 72 of file System\+Impl.\+h.
 
 \mbox{\Hypertarget{classSystemHandle_a570c37a257d6d888145dec2cfc309e4b}\label{classSystemHandle_a570c37a257d6d888145dec2cfc309e4b}} 
 \index{SystemHandle@{SystemHandle}!Unit\_System@{Unit\_System}}
@@ -287,7 +284,7 @@ Definition at line 76 of file System\+Impl.\+h.
 
 
 
-Definition at line 75 of file System\+Impl.\+h.
+Definition at line 71 of file System\+Impl.\+h.
 
 
 

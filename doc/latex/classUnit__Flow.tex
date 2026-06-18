@@ -34,6 +34,8 @@ static bool \mbox{\hyperlink{classUnit__Flow_ac15b4e4b130924babe7ec1ea874f513e}{
 \begin{DoxyCompactList}\small\item\em Tests the copy constructor of Flow\+Impl. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__Flow_a1f6b5af8498638cb34684b7e87476ad6}{assignment\+Operator}} (void)
 \begin{DoxyCompactList}\small\item\em Tests the assignment operator (=) of Flow\+Impl. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classUnit__Flow_a3289cb75d34c090e1a35ffe116720b7e}{handle\+Body\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em Unit test to validate the Handle-\/\+Body memory management for Flows. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__Flow_a3fbb54e045e1a94ea032678fdbf92898}{regressive\+Test}} (void)
 \begin{DoxyCompactList}\small\item\em Runs all the unit tests for the \mbox{\hyperlink{classFlow}{Flow}} class (Regression Testing). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -41,7 +43,7 @@ static bool \mbox{\hyperlink{classUnit__Flow_a3fbb54e045e1a94ea032678fdbf92898}{
 \doxysubsection{Detailed Description}
 A class containing static unit tests for the \mbox{\hyperlink{classFlow}{Flow}} class. 
 
-Definition at line 8 of file unit\+\_\+\+Flow.\+h.
+Definition at line 7 of file unit\+\_\+\+Flow.\+h.
 
 
 
@@ -61,25 +63,26 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 114 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 116 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{114                                        \{}
-\DoxyCodeLine{115     \mbox{\hyperlink{classSystemMock}{SystemMock}} s1;}
-\DoxyCodeLine{116     \mbox{\hyperlink{classSystemMock}{SystemMock}} s2;}
-\DoxyCodeLine{117     \mbox{\hyperlink{classFlowTest}{FlowTest}} original;}
-\DoxyCodeLine{118     original.name = \textcolor{stringliteral}{"{}Original"{}};}
-\DoxyCodeLine{119     original.source = \&s1;}
-\DoxyCodeLine{120     original.target = \&s2;}
-\DoxyCodeLine{121     \mbox{\hyperlink{classFlowTest}{FlowTest}} destination;}
-\DoxyCodeLine{122 }
-\DoxyCodeLine{123     destination = original;}
-\DoxyCodeLine{124     assert(destination.name == \textcolor{stringliteral}{"{}Original"{}});}
-\DoxyCodeLine{125     assert(destination.source == \&s1);}
-\DoxyCodeLine{126     assert(destination.target == \&s2);}
-\DoxyCodeLine{127     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{128 \}}
+\DoxyCodeLine{116                                        \{}
+\DoxyCodeLine{117     \mbox{\hyperlink{classSystemMock}{SystemMock}} s1;}
+\DoxyCodeLine{118     \mbox{\hyperlink{classSystemMock}{SystemMock}} s2;}
+\DoxyCodeLine{119     \mbox{\hyperlink{classFlowTest}{FlowTest}} original;}
+\DoxyCodeLine{120     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
+\DoxyCodeLine{121     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}} = \&s1;}
+\DoxyCodeLine{122     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}} = \&s2;}
+\DoxyCodeLine{123     }
+\DoxyCodeLine{124     \mbox{\hyperlink{classFlowTest}{FlowTest}} destination;}
+\DoxyCodeLine{125     destination = original;}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     assert(destination.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}} == \textcolor{stringliteral}{"{}Original"{}});}
+\DoxyCodeLine{128     assert(destination.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}} == \&s1);}
+\DoxyCodeLine{129     assert(destination.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}} == \&s2);}
+\DoxyCodeLine{130     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{131 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_ad7db32ef219adfc77c1b5ade8121b980}\label{classUnit__Flow_ad7db32ef219adfc77c1b5ade8121b980}} 
@@ -97,20 +100,20 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 36 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 38 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{36                                 \{}
-\DoxyCodeLine{37     \mbox{\hyperlink{classSystemMock}{SystemMock}} s1;}
-\DoxyCodeLine{38     \mbox{\hyperlink{classSystemMock}{SystemMock}} s2;}
-\DoxyCodeLine{39     \mbox{\hyperlink{classFlowTest}{FlowTest}} f2(\textcolor{stringliteral}{"{}Fluxo"{}}, \&s1, \&s2);}
-\DoxyCodeLine{40     }
-\DoxyCodeLine{41     assert(f2.name == \textcolor{stringliteral}{"{}Fluxo"{}});}
-\DoxyCodeLine{42     assert(f2.source == \&s1);}
-\DoxyCodeLine{43     assert(f2.target == \&s2);}
-\DoxyCodeLine{44     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{45 \}}
+\DoxyCodeLine{38                                 \{}
+\DoxyCodeLine{39     \mbox{\hyperlink{classSystemMock}{SystemMock}} s1;}
+\DoxyCodeLine{40     \mbox{\hyperlink{classSystemMock}{SystemMock}} s2;}
+\DoxyCodeLine{41     \mbox{\hyperlink{classFlowTest}{FlowTest}} f2(\textcolor{stringliteral}{"{}Fluxo"{}}, \&s1, \&s2);}
+\DoxyCodeLine{42     }
+\DoxyCodeLine{43     assert(f2.pImpl\_-\/>name == \textcolor{stringliteral}{"{}Fluxo"{}});}
+\DoxyCodeLine{44     assert(f2.pImpl\_-\/>source == \&s1);}
+\DoxyCodeLine{45     assert(f2.pImpl\_-\/>target == \&s2);}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{47 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_ac15b4e4b130924babe7ec1ea874f513e}\label{classUnit__Flow_ac15b4e4b130924babe7ec1ea874f513e}} 
@@ -128,24 +131,24 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 99 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 101 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{99                                     \{}
-\DoxyCodeLine{100     \mbox{\hyperlink{classSystemMock}{SystemMock}} s1;}
-\DoxyCodeLine{101     \mbox{\hyperlink{classSystemMock}{SystemMock}} s2;}
-\DoxyCodeLine{102     \mbox{\hyperlink{classFlowTest}{FlowTest}} original;}
-\DoxyCodeLine{103     original.name = \textcolor{stringliteral}{"{}Original"{}};}
-\DoxyCodeLine{104     original.source = \&s1;}
-\DoxyCodeLine{105     original.target = \&s2;}
-\DoxyCodeLine{106 }
-\DoxyCodeLine{107     \mbox{\hyperlink{classFlowTest}{FlowTest}} copy(original);}
-\DoxyCodeLine{108     assert(copy.name == \textcolor{stringliteral}{"{}Original"{}});}
-\DoxyCodeLine{109     assert(copy.source == \&s1);}
-\DoxyCodeLine{110     assert(copy.target == \&s2);}
-\DoxyCodeLine{111     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{112 \}}
+\DoxyCodeLine{101                                     \{}
+\DoxyCodeLine{102     \mbox{\hyperlink{classSystemMock}{SystemMock}} s1;}
+\DoxyCodeLine{103     \mbox{\hyperlink{classSystemMock}{SystemMock}} s2;}
+\DoxyCodeLine{104     \mbox{\hyperlink{classFlowTest}{FlowTest}} original;}
+\DoxyCodeLine{105     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
+\DoxyCodeLine{106     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}} = \&s1;}
+\DoxyCodeLine{107     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}} = \&s2;}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \mbox{\hyperlink{classFlowTest}{FlowTest}} copy(original);}
+\DoxyCodeLine{110     assert(copy.pImpl\_-\/>name == \textcolor{stringliteral}{"{}Original"{}});}
+\DoxyCodeLine{111     assert(copy.pImpl\_-\/>source == \&s1);}
+\DoxyCodeLine{112     assert(copy.pImpl\_-\/>target == \&s2);}
+\DoxyCodeLine{113     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{114 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_aa6fba875009ea2093fc95e45f6b35755}\label{classUnit__Flow_aa6fba875009ea2093fc95e45f6b35755}} 
@@ -163,17 +166,17 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 28 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 30 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{28                                        \{}
-\DoxyCodeLine{29     \mbox{\hyperlink{classFlowTest}{FlowTest}} f1;}
-\DoxyCodeLine{30     assert(f1.name == \textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{31     assert(f1.source == \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{32     assert(f1.target == \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{33     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{34 \}}
+\DoxyCodeLine{30                                        \{}
+\DoxyCodeLine{31     \mbox{\hyperlink{classFlowTest}{FlowTest}} f1;}
+\DoxyCodeLine{32     assert(f1.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}} == \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{33     assert(f1.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}} == \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{34     assert(f1.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}} == \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{36 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_a7306d1e69397988bf17f0588d43f5d7e}\label{classUnit__Flow_a7306d1e69397988bf17f0588d43f5d7e}} 
@@ -191,15 +194,15 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 47 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 49 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{47                                \{}
-\DoxyCodeLine{48     \mbox{\hyperlink{classFlowTest}{FlowTest}}* f = \textcolor{keyword}{new} \mbox{\hyperlink{classFlowTest}{FlowTest}}();}
-\DoxyCodeLine{49     \textcolor{keyword}{delete} f;}
-\DoxyCodeLine{50     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{51 \}}
+\DoxyCodeLine{49                                \{}
+\DoxyCodeLine{50     \mbox{\hyperlink{classFlowTest}{FlowTest}}* f = \textcolor{keyword}{new} \mbox{\hyperlink{classFlowTest}{FlowTest}}();}
+\DoxyCodeLine{51     \textcolor{keyword}{delete} f;}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{53 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_abcf6e4f8df357f15b354d4e647be5a2c}\label{classUnit__Flow_abcf6e4f8df357f15b354d4e647be5a2c}} 
@@ -217,16 +220,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 53 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 55 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{53                             \{}
-\DoxyCodeLine{54     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
-\DoxyCodeLine{55     f.name = \textcolor{stringliteral}{"{}TestName"{}};}
-\DoxyCodeLine{56     assert(f.getName() == \textcolor{stringliteral}{"{}TestName"{}});}
-\DoxyCodeLine{57     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{58 \}}
+\DoxyCodeLine{55                             \{}
+\DoxyCodeLine{56     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
+\DoxyCodeLine{57     f.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}} = \textcolor{stringliteral}{"{}TestName"{}};}
+\DoxyCodeLine{58     assert(f.\mbox{\hyperlink{classFlowHandle_a2445723abbc8ae3123e3589c6d590ec1}{getName}}() == \textcolor{stringliteral}{"{}TestName"{}});}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{60 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_a1b248100097e4b7fa5f8d0d8f4894b91}\label{classUnit__Flow_a1b248100097e4b7fa5f8d0d8f4894b91}} 
@@ -244,17 +247,17 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 67 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 69 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{67                               \{}
-\DoxyCodeLine{68     \mbox{\hyperlink{classSystemMock}{SystemMock}} s;}
-\DoxyCodeLine{69     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
-\DoxyCodeLine{70     f.source = \&s;}
-\DoxyCodeLine{71     assert(f.getSource() == \&s);}
-\DoxyCodeLine{72     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{73 \}}
+\DoxyCodeLine{69                               \{}
+\DoxyCodeLine{70     \mbox{\hyperlink{classSystemMock}{SystemMock}} s;}
+\DoxyCodeLine{71     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
+\DoxyCodeLine{72     f.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}} = \&s;}
+\DoxyCodeLine{73     assert(f.\mbox{\hyperlink{classFlowHandle_a9ced76b3e7b67f47c8651dd4e8e6ff17}{getSource}}() == \&s);}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{75 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_acbcd610c6d5a4bd69a9773a21f7785f8}\label{classUnit__Flow_acbcd610c6d5a4bd69a9773a21f7785f8}} 
@@ -272,17 +275,117 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 83 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 85 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{83                               \{}
-\DoxyCodeLine{84     \mbox{\hyperlink{classSystemMock}{SystemMock}} s;}
-\DoxyCodeLine{85     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
-\DoxyCodeLine{86     f.target = \&s;}
-\DoxyCodeLine{87     assert(f.getTarget() == \&s);}
-\DoxyCodeLine{88     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{89 \}}
+\DoxyCodeLine{85                               \{}
+\DoxyCodeLine{86     \mbox{\hyperlink{classSystemMock}{SystemMock}} s;}
+\DoxyCodeLine{87     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
+\DoxyCodeLine{88     f.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}} = \&s;}
+\DoxyCodeLine{89     assert(f.\mbox{\hyperlink{classFlowHandle_a660808cc3bcc0ecc404e5e43ee2df5d9}{getTarget}}() == \&s);}
+\DoxyCodeLine{90     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{91 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit__Flow_a3289cb75d34c090e1a35ffe116720b7e}\label{classUnit__Flow_a3289cb75d34c090e1a35ffe116720b7e}} 
+\index{Unit\_Flow@{Unit\_Flow}!handleBodyTest@{handleBodyTest}}
+\index{handleBodyTest@{handleBodyTest}!Unit\_Flow@{Unit\_Flow}}
+\doxysubsubsection{\texorpdfstring{handleBodyTest()}{handleBodyTest()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+Flow\+::handle\+Body\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Unit test to validate the Handle-\/\+Body memory management for Flows. 
+
+\begin{DoxyReturn}{Returns}
+true if all tests pass, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file unit\+\_\+\+Flow.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133                                    \{}
+\DoxyCodeLine{134 \textcolor{preprocessor}{    \#ifdef DEBUGING}}
+\DoxyCodeLine{135         \mbox{\hyperlink{unit__Flow_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} = 0;}
+\DoxyCodeLine{136         \mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} = 0;}
+\DoxyCodeLine{137         \mbox{\hyperlink{unit__Flow_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} = 0;}
+\DoxyCodeLine{138         \mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} = 0;}
+\DoxyCodeLine{139 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     \{}
+\DoxyCodeLine{142         \mbox{\hyperlink{classFlowTest}{FlowTest}} f1(\textcolor{stringliteral}{"{}Fluxo 1"{}}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{143         \mbox{\hyperlink{classFlowTest}{FlowTest}} f2(\textcolor{stringliteral}{"{}Fluxo 2"{}}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145         assert(\mbox{\hyperlink{unit__Flow_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} == 2);}
+\DoxyCodeLine{146         assert(\mbox{\hyperlink{unit__Flow_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} == 2);}
+\DoxyCodeLine{147         assert(\mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 0);}
+\DoxyCodeLine{148         assert(\mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 0);}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150         f1 = f2; }
+\DoxyCodeLine{151         assert(\mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 1); }
+\DoxyCodeLine{152     \} }
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154     assert(\mbox{\hyperlink{unit__Flow_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} == 2);}
+\DoxyCodeLine{155     assert(\mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 2);}
+\DoxyCodeLine{156     assert(\mbox{\hyperlink{unit__Flow_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} == 2);}
+\DoxyCodeLine{157     assert(\mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 2);}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 \textcolor{preprocessor}{    \#ifdef DEBUGING}}
+\DoxyCodeLine{160         \mbox{\hyperlink{unit__Flow_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} = 0; }
+\DoxyCodeLine{161         \mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} = 0;}
+\DoxyCodeLine{162         \mbox{\hyperlink{unit__Flow_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} = 0; }
+\DoxyCodeLine{163         \mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} = 0;}
+\DoxyCodeLine{164 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166     \{}
+\DoxyCodeLine{167         \mbox{\hyperlink{classFlowTest}{FlowTest}} f3(\textcolor{stringliteral}{"{}Original"{}}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}); }
+\DoxyCodeLine{168         }
+\DoxyCodeLine{169         \{}
+\DoxyCodeLine{170             \mbox{\hyperlink{classFlowTest}{FlowTest}} f4(f3);}
+\DoxyCodeLine{171             assert(\mbox{\hyperlink{unit__Flow_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} == 2);}
+\DoxyCodeLine{172             assert(\mbox{\hyperlink{unit__Flow_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} == 1); }
+\DoxyCodeLine{173         \} }
+\DoxyCodeLine{174         }
+\DoxyCodeLine{175         assert(\mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 1);}
+\DoxyCodeLine{176         assert(\mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 0);}
+\DoxyCodeLine{177     \} }
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179     assert(\mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 2);}
+\DoxyCodeLine{180     assert(\mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 1);}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \textcolor{preprocessor}{    \#ifdef DEBUGING}}
+\DoxyCodeLine{183         \mbox{\hyperlink{unit__Flow_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} = 0; }
+\DoxyCodeLine{184         \mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} = 0;}
+\DoxyCodeLine{185         \mbox{\hyperlink{unit__Flow_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} = 0; }
+\DoxyCodeLine{186         \mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} = 0;}
+\DoxyCodeLine{187 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189     \{}
+\DoxyCodeLine{190         \mbox{\hyperlink{classFlowTest}{FlowTest}}* p1 = \textcolor{keyword}{new} \mbox{\hyperlink{classFlowTest}{FlowTest}}(\textcolor{stringliteral}{"{}Ponteiro 1"{}}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}); }
+\DoxyCodeLine{191         \mbox{\hyperlink{classFlowTest}{FlowTest}}* p2 = \textcolor{keyword}{new} \mbox{\hyperlink{classFlowTest}{FlowTest}}(\textcolor{stringliteral}{"{}Ponteiro 2"{}}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}); }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193         assert(\mbox{\hyperlink{unit__Flow_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} == 2);}
+\DoxyCodeLine{194         assert(\mbox{\hyperlink{unit__Flow_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} == 2);}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196         *p1 = *p2;}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198         assert(\mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 1);}
+\DoxyCodeLine{199         assert(\mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 0); }
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201         \textcolor{keyword}{delete} p1; }
+\DoxyCodeLine{202         assert(\mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 1);}
+\DoxyCodeLine{203         assert(\mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 1); }
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205         \textcolor{keyword}{delete} p2; }
+\DoxyCodeLine{206         assert(\mbox{\hyperlink{unit__Flow_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 2);}
+\DoxyCodeLine{207         assert(\mbox{\hyperlink{unit__Flow_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 2); }
+\DoxyCodeLine{208     \}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{211 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_a3fbb54e045e1a94ea032678fdbf92898}\label{classUnit__Flow_a3fbb54e045e1a94ea032678fdbf92898}} 
@@ -300,24 +403,25 @@ true if all tests pass, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 130 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 213 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{130                                    \{}
-\DoxyCodeLine{131     assert(\mbox{\hyperlink{classUnit__Flow_aa6fba875009ea2093fc95e45f6b35755}{defaultConstructor}}());}
-\DoxyCodeLine{132     assert(\mbox{\hyperlink{classUnit__Flow_ad7db32ef219adfc77c1b5ade8121b980}{constructor}}());}
-\DoxyCodeLine{133     assert(\mbox{\hyperlink{classUnit__Flow_a7306d1e69397988bf17f0588d43f5d7e}{destructor}}());}
-\DoxyCodeLine{134     assert(\mbox{\hyperlink{classUnit__Flow_abcf6e4f8df357f15b354d4e647be5a2c}{getName}}());}
-\DoxyCodeLine{135     assert(\mbox{\hyperlink{classUnit__Flow_ab26a48f677ddbabf6f5789750259cec6}{setName}}());}
-\DoxyCodeLine{136     assert(\mbox{\hyperlink{classUnit__Flow_a1b248100097e4b7fa5f8d0d8f4894b91}{getSource}}());}
-\DoxyCodeLine{137     assert(\mbox{\hyperlink{classUnit__Flow_abeb740dff0f7d13b8f9188c66dc53c81}{setSource}}());}
-\DoxyCodeLine{138     assert(\mbox{\hyperlink{classUnit__Flow_acbcd610c6d5a4bd69a9773a21f7785f8}{getTarget}}());}
-\DoxyCodeLine{139     assert(\mbox{\hyperlink{classUnit__Flow_a5f1440f55de4ef5d1f4d2cfc381703cb}{setTarget}}());}
-\DoxyCodeLine{140     assert(\mbox{\hyperlink{classUnit__Flow_ac15b4e4b130924babe7ec1ea874f513e}{copyConstructor}}());}
-\DoxyCodeLine{141     assert(\mbox{\hyperlink{classUnit__Flow_a1f6b5af8498638cb34684b7e87476ad6}{assignmentOperator}}());}
-\DoxyCodeLine{142     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{143 \}}
+\DoxyCodeLine{213                                    \{}
+\DoxyCodeLine{214     assert(\mbox{\hyperlink{classUnit__Flow_aa6fba875009ea2093fc95e45f6b35755}{defaultConstructor}}());}
+\DoxyCodeLine{215     assert(\mbox{\hyperlink{classUnit__Flow_ad7db32ef219adfc77c1b5ade8121b980}{constructor}}());}
+\DoxyCodeLine{216     assert(\mbox{\hyperlink{classUnit__Flow_a7306d1e69397988bf17f0588d43f5d7e}{destructor}}());}
+\DoxyCodeLine{217     assert(\mbox{\hyperlink{classUnit__Flow_abcf6e4f8df357f15b354d4e647be5a2c}{getName}}());}
+\DoxyCodeLine{218     assert(\mbox{\hyperlink{classUnit__Flow_ab26a48f677ddbabf6f5789750259cec6}{setName}}());}
+\DoxyCodeLine{219     assert(\mbox{\hyperlink{classUnit__Flow_a1b248100097e4b7fa5f8d0d8f4894b91}{getSource}}());}
+\DoxyCodeLine{220     assert(\mbox{\hyperlink{classUnit__Flow_abeb740dff0f7d13b8f9188c66dc53c81}{setSource}}());}
+\DoxyCodeLine{221     assert(\mbox{\hyperlink{classUnit__Flow_acbcd610c6d5a4bd69a9773a21f7785f8}{getTarget}}());}
+\DoxyCodeLine{222     assert(\mbox{\hyperlink{classUnit__Flow_a5f1440f55de4ef5d1f4d2cfc381703cb}{setTarget}}());}
+\DoxyCodeLine{223     assert(\mbox{\hyperlink{classUnit__Flow_ac15b4e4b130924babe7ec1ea874f513e}{copyConstructor}}());}
+\DoxyCodeLine{224     assert(\mbox{\hyperlink{classUnit__Flow_a1f6b5af8498638cb34684b7e87476ad6}{assignmentOperator}}());}
+\DoxyCodeLine{225     assert(\mbox{\hyperlink{classUnit__Flow_a3289cb75d34c090e1a35ffe116720b7e}{handleBodyTest}}());}
+\DoxyCodeLine{226     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{227 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_ab26a48f677ddbabf6f5789750259cec6}\label{classUnit__Flow_ab26a48f677ddbabf6f5789750259cec6}} 
@@ -335,16 +439,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 60 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 62 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{60                             \{}
-\DoxyCodeLine{61     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
-\DoxyCodeLine{62     f.setName(\textcolor{stringliteral}{"{}NewName"{}});}
-\DoxyCodeLine{63     assert(f.name == \textcolor{stringliteral}{"{}NewName"{}});}
-\DoxyCodeLine{64     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{65 \}}
+\DoxyCodeLine{62                             \{}
+\DoxyCodeLine{63     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
+\DoxyCodeLine{64     f.\mbox{\hyperlink{classFlowHandle_ab695ddf76ff4e9872ead3672fd46510b}{setName}}(\textcolor{stringliteral}{"{}NewName"{}});}
+\DoxyCodeLine{65     assert(f.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_ab82748ef3d7db33d7963b7dfeb96564e}{name}} == \textcolor{stringliteral}{"{}NewName"{}});}
+\DoxyCodeLine{66     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{67 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_abeb740dff0f7d13b8f9188c66dc53c81}\label{classUnit__Flow_abeb740dff0f7d13b8f9188c66dc53c81}} 
@@ -362,17 +466,17 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 75 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 77 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{75                               \{}
-\DoxyCodeLine{76     \mbox{\hyperlink{classSystemMock}{SystemMock}} s;}
-\DoxyCodeLine{77     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
-\DoxyCodeLine{78     f.setSource(\&s);}
-\DoxyCodeLine{79     assert(f.source == \&s);}
-\DoxyCodeLine{80     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{81 \}}
+\DoxyCodeLine{77                               \{}
+\DoxyCodeLine{78     \mbox{\hyperlink{classSystemMock}{SystemMock}} s;}
+\DoxyCodeLine{79     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
+\DoxyCodeLine{80     f.\mbox{\hyperlink{classFlowHandle_a7fce55ad68d4e2e4dccaa2576bd20fd3}{setSource}}(\&s);}
+\DoxyCodeLine{81     assert(f.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a7c46fc66ff02f18c387535e914337c82}{source}} == \&s);}
+\DoxyCodeLine{82     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{83 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__Flow_a5f1440f55de4ef5d1f4d2cfc381703cb}\label{classUnit__Flow_a5f1440f55de4ef5d1f4d2cfc381703cb}} 
@@ -390,17 +494,17 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 91 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 93 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{91                               \{}
-\DoxyCodeLine{92     \mbox{\hyperlink{classSystemMock}{SystemMock}} s;}
-\DoxyCodeLine{93     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
-\DoxyCodeLine{94     f.setTarget(\&s);}
-\DoxyCodeLine{95     assert(f.target == \&s);}
-\DoxyCodeLine{96     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{97 \}}
+\DoxyCodeLine{93                               \{}
+\DoxyCodeLine{94     \mbox{\hyperlink{classSystemMock}{SystemMock}} s;}
+\DoxyCodeLine{95     \mbox{\hyperlink{classFlowTest}{FlowTest}} f;}
+\DoxyCodeLine{96     f.\mbox{\hyperlink{classFlowHandle_a5029a2a17ace357b0d648193d3d03495}{setTarget}}(\&s);}
+\DoxyCodeLine{97     assert(f.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classFlowBody_a4a5d71f46863ff5e9d07161973817a34}{target}} == \&s);}
+\DoxyCodeLine{98     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{99 \}}
 
 \end{DoxyCode}
 

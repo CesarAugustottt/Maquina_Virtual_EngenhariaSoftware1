@@ -30,6 +30,10 @@ Collaboration diagram for Exponential\+Flow\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classExponentialFlow_a1f981db78e6635fd9837648960d8dc8d}{Exponential\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classExponentialFlow_a0243d42e46c8a4a9f831b6623d31d4a3}{Exponential\+Flow}} (std\+::string \mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}})
+\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classExponentialFlow_a47f85f24c8a74a00b025541e3ed950eb}{$\sim$\+Exponential\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em This is the default destructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{classExponentialFlow_aafb074830c5c18138913cb10da3b8782}{execute}} () override
@@ -46,17 +50,6 @@ void \mbox{\hyperlink{classExponentialFlow_a421761c9a29cdc5c4febbd176bf2d1ed}{se
 \begin{DoxyCompactList}\small\item\em Sets the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classExponentialFlow_abb414b48dcc5e091231970d06178b21b}{get\+Target}} () const override
 \begin{DoxyCompactList}\small\item\em Returns the target system pointer in the \mbox{\hyperlink{classFlow}{Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classExponentialFlow_a1f981db78e6635fd9837648960d8dc8d}{Exponential\+Flow}} ()
-\begin{DoxyCompactList}\small\item\em This is the default constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classExponentialFlow_a0243d42e46c8a4a9f831b6623d31d4a3}{Exponential\+Flow}} (std\+::string \mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}}, \mbox{\hyperlink{classSystem}{System}} $\ast$\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}})
-\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classExponentialFlow_a0a0fa7490d3c69ea7e32fa8f31410b86}{Exponential\+Flow}} (const \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \&flow)
-\begin{DoxyCompactList}\small\item\em This is the copy constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \& \mbox{\hyperlink{classExponentialFlow_af9903c1a715409270d83c24e7f23a15d}{operator=}} (const \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \&flow)
-\begin{DoxyCompactList}\small\item\em This is the overloaded assignment operator for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -66,17 +59,12 @@ std\+::string \mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc4
 \item 
 \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Friends}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classExponentialFlow_a2bf2a0e9b454c55aa5dcb5aa4698697b}{Model}}
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This Class represents an exponential flow in the General Systems Theory implemented in this code. 
 
-Definition at line 10 of file Exponential\+Flow.\+h.
+Definition at line 11 of file Exponential\+Flow.\+h.
 
 
 
@@ -84,8 +72,8 @@ Definition at line 10 of file Exponential\+Flow.\+h.
 \mbox{\Hypertarget{classExponentialFlow_a1f981db78e6635fd9837648960d8dc8d}\label{classExponentialFlow_a1f981db78e6635fd9837648960d8dc8d}} 
 \index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
 \index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
-\doxysubsubsection{\texorpdfstring{ExponentialFlow()}{ExponentialFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+\doxysubsubsection{\texorpdfstring{ExponentialFlow()}{ExponentialFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -96,22 +84,22 @@ This is the default constructor for the \mbox{\hyperlink{classExponentialFlow}{E
 \end{DoxyReturn}
 
 
-Definition at line 5 of file Exponential\+Flow.\+cpp.
+Definition at line 4 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{5                                  \{}
-\DoxyCodeLine{6     this-\/>\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}} = \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{7     this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}} = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{8     this-\/>\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}} = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{9 \}}
+\DoxyCodeLine{4                                  \{}
+\DoxyCodeLine{5     this-\/>\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{6     this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{7     this-\/>\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{8 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classExponentialFlow_a0243d42e46c8a4a9f831b6623d31d4a3}\label{classExponentialFlow_a0243d42e46c8a4a9f831b6623d31d4a3}} 
 \index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
 \index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
-\doxysubsubsection{\texorpdfstring{ExponentialFlow()}{ExponentialFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+\doxysubsubsection{\texorpdfstring{ExponentialFlow()}{ExponentialFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{source,  }\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{target }\end{DoxyParamCaption})}
 
 
 
@@ -128,39 +116,11 @@ This is the parameterized constructor for the \mbox{\hyperlink{classExponentialF
 \end{DoxyParams}
 
 
-Definition at line 12 of file Exponential\+Flow.\+cpp.
+Definition at line 11 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{13     : \mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}}(\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}}), \mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}}(\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}}), \mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}}(\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}}) \{\}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classExponentialFlow_a0a0fa7490d3c69ea7e32fa8f31410b86}\label{classExponentialFlow_a0a0fa7490d3c69ea7e32fa8f31410b86}} 
-\index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
-\index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
-\doxysubsubsection{\texorpdfstring{ExponentialFlow()}{ExponentialFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \&}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-This is the copy constructor for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em flow} & the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} that is going to be cloned. \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 50 of file Exponential\+Flow.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{50                                                             \{}
-\DoxyCodeLine{51     this-\/>\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}} = flow.\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}};}
-\DoxyCodeLine{52     this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}} = flow.\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}};}
-\DoxyCodeLine{53     this-\/>\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}} = flow.\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}};}
-\DoxyCodeLine{54 \}}
+\DoxyCodeLine{12     : \mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}}(\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}}), \mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}}(\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}}), \mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}}(\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}}) \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classExponentialFlow_a47f85f24c8a74a00b025541e3ed950eb}\label{classExponentialFlow_a47f85f24c8a74a00b025541e3ed950eb}} 
@@ -175,11 +135,11 @@ This is the default destructor for the \mbox{\hyperlink{classExponentialFlow}{Ex
 
 
 
-Definition at line 15 of file Exponential\+Flow.\+cpp.
+Definition at line 14 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{15 \{\} }
+\DoxyCodeLine{14 \{\} }
 
 \end{DoxyCode}
 
@@ -204,16 +164,16 @@ Implements \mbox{\hyperlink{classFlow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
 
 
 
-Definition at line 42 of file Exponential\+Flow.\+cpp.
+Definition at line 41 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{42                                 \{}
-\DoxyCodeLine{43     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classExponentialFlow_a66994e0383712a54c4d4e640a35f63c3}{getSource}}() != \textcolor{keyword}{nullptr}) \{}
-\DoxyCodeLine{44         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classExponentialFlow_a66994e0383712a54c4d4e640a35f63c3}{getSource}}()-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() * 0.01; }
-\DoxyCodeLine{45     \}}
-\DoxyCodeLine{46     \textcolor{keywordflow}{return} 0.0;}
-\DoxyCodeLine{47 \}}
+\DoxyCodeLine{41                                 \{}
+\DoxyCodeLine{42     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}} != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}}-\/>\mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}() * 0.01; }
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{46 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classExponentialFlow_a8d46d6dc6bc86bd3fbcb6dbca51df619}\label{classExponentialFlow_a8d46d6dc6bc86bd3fbcb6dbca51df619}} 
@@ -238,13 +198,13 @@ Implements \mbox{\hyperlink{classFlow_a2d0340d844ab2d275222938234e44169}{Flow}}.
 
 
 
-Definition at line 21 of file Exponential\+Flow.\+cpp.
+Definition at line 20 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{21                                          \{}
-\DoxyCodeLine{22     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}};}
-\DoxyCodeLine{23 \}}
+\DoxyCodeLine{20                                          \{}
+\DoxyCodeLine{21     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}};}
+\DoxyCodeLine{22 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classExponentialFlow_a66994e0383712a54c4d4e640a35f63c3}\label{classExponentialFlow_a66994e0383712a54c4d4e640a35f63c3}} 
@@ -269,13 +229,13 @@ Implements \mbox{\hyperlink{classFlow_aff381195663a5028494e3de9c6194f2c}{Flow}}.
 
 
 
-Definition at line 29 of file Exponential\+Flow.\+cpp.
+Definition at line 28 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29                                          \{}
-\DoxyCodeLine{30     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}};}
-\DoxyCodeLine{31 \}}
+\DoxyCodeLine{28                                          \{}
+\DoxyCodeLine{29     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}};}
+\DoxyCodeLine{30 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classExponentialFlow_abb414b48dcc5e091231970d06178b21b}\label{classExponentialFlow_abb414b48dcc5e091231970d06178b21b}} 
@@ -300,50 +260,13 @@ Implements \mbox{\hyperlink{classFlow_a81aeceffcb2b425af124c3b0d1962786}{Flow}}.
 
 
 
-Definition at line 37 of file Exponential\+Flow.\+cpp.
+Definition at line 36 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{37                                          \{}
-\DoxyCodeLine{38     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}};}
-\DoxyCodeLine{39 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classExponentialFlow_af9903c1a715409270d83c24e7f23a15d}\label{classExponentialFlow_af9903c1a715409270d83c24e7f23a15d}} 
-\index{ExponentialFlow@{ExponentialFlow}!operator=@{operator=}}
-\index{operator=@{operator=}!ExponentialFlow@{ExponentialFlow}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \& Exponential\+Flow\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} \&}]{flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-This is the overloaded assignment operator for the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em flow} & the \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} that is going to be cloned. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}}\& -\/ a reference to the updated \mbox{\hyperlink{classExponentialFlow}{Exponential\+Flow}} Class object. 
-\end{DoxyReturn}
-
-
-Definition at line 57 of file Exponential\+Flow.\+cpp.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{57                                                                        \{}
-\DoxyCodeLine{58     \textcolor{keywordflow}{if} (\textcolor{keyword}{this} == \&flow) \{}
-\DoxyCodeLine{59         \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \textcolor{comment}{// Protecao contra auto-\/atribuicao}}
-\DoxyCodeLine{60     \}}
-\DoxyCodeLine{61     }
-\DoxyCodeLine{62     this-\/>\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}} = flow.\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}};}
-\DoxyCodeLine{63     this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}} = flow.\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}};}
-\DoxyCodeLine{64     this-\/>\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}} = flow.\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}};}
-\DoxyCodeLine{65     }
-\DoxyCodeLine{66     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
-\DoxyCodeLine{67 \}}
+\DoxyCodeLine{36                                          \{}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}};}
+\DoxyCodeLine{38 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classExponentialFlow_aa829b5a1ba9f2ed2e09f2b832ac01fdd}\label{classExponentialFlow_aa829b5a1ba9f2ed2e09f2b832ac01fdd}} 
@@ -370,13 +293,13 @@ Implements \mbox{\hyperlink{classFlow_a80346b11c95c20a009278eb78f8f9653}{Flow}}.
 
 
 
-Definition at line 17 of file Exponential\+Flow.\+cpp.
+Definition at line 16 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{17                                             \{}
-\DoxyCodeLine{18     this-\/>\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}} = \mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}};}
-\DoxyCodeLine{19 \}}
+\DoxyCodeLine{16                                             \{}
+\DoxyCodeLine{17     this-\/>\mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}} = \mbox{\hyperlink{classExponentialFlow_a76534bcc7800637488b91cf3dc47cb38}{name}};}
+\DoxyCodeLine{18 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classExponentialFlow_a39fa810a7110ac97cfc5791135286090}\label{classExponentialFlow_a39fa810a7110ac97cfc5791135286090}} 
@@ -403,13 +326,13 @@ Implements \mbox{\hyperlink{classFlow_a1ca17cd54e042c1c1ccf73597e7f188e}{Flow}}.
 
 
 
-Definition at line 25 of file Exponential\+Flow.\+cpp.
+Definition at line 24 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25                                               \{}
-\DoxyCodeLine{26     this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}} = \mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}};}
-\DoxyCodeLine{27 \}}
+\DoxyCodeLine{24                                               \{}
+\DoxyCodeLine{25     this-\/>\mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}} = \mbox{\hyperlink{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}{source}};}
+\DoxyCodeLine{26 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classExponentialFlow_a421761c9a29cdc5c4febbd176bf2d1ed}\label{classExponentialFlow_a421761c9a29cdc5c4febbd176bf2d1ed}} 
@@ -436,28 +359,15 @@ Implements \mbox{\hyperlink{classFlow_a0a6d9503f9fd5afb978dd07346fa7e0d}{Flow}}.
 
 
 
-Definition at line 33 of file Exponential\+Flow.\+cpp.
+Definition at line 32 of file Exponential\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{33                                               \{}
-\DoxyCodeLine{34     this-\/>\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}} = \mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}};}
-\DoxyCodeLine{35 \}}
+\DoxyCodeLine{32                                               \{}
+\DoxyCodeLine{33     this-\/>\mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}} = \mbox{\hyperlink{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}{target}};}
+\DoxyCodeLine{34 \}}
 
 \end{DoxyCode}
-
-
-\doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{classExponentialFlow_a2bf2a0e9b454c55aa5dcb5aa4698697b}\label{classExponentialFlow_a2bf2a0e9b454c55aa5dcb5aa4698697b}} 
-\index{ExponentialFlow@{ExponentialFlow}!Model@{Model}}
-\index{Model@{Model}!ExponentialFlow@{ExponentialFlow}}
-\doxysubsubsection{\texorpdfstring{Model}{Model}}
-{\footnotesize\ttfamily friend class \mbox{\hyperlink{classModel}{Model}}\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-Definition at line 73 of file Exponential\+Flow.\+h.
-
 
 
 \doxysubsection{Member Data Documentation}
@@ -469,7 +379,7 @@ Definition at line 73 of file Exponential\+Flow.\+h.
 
 This attribute contains a name for the flow. 
 
-Definition at line 13 of file Exponential\+Flow.\+h.
+Definition at line 14 of file Exponential\+Flow.\+h.
 
 \mbox{\Hypertarget{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}\label{classExponentialFlow_ae86fa5a2fdfdc06d27852660cfced934}} 
 \index{ExponentialFlow@{ExponentialFlow}!source@{source}}
@@ -479,7 +389,7 @@ Definition at line 13 of file Exponential\+Flow.\+h.
 
 This pointer points to the source \mbox{\hyperlink{classSystem}{System}} of the flow. 
 
-Definition at line 15 of file Exponential\+Flow.\+h.
+Definition at line 16 of file Exponential\+Flow.\+h.
 
 \mbox{\Hypertarget{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}\label{classExponentialFlow_a301c3adb04b0712c40171df46d3296ea}} 
 \index{ExponentialFlow@{ExponentialFlow}!target@{target}}
@@ -489,7 +399,7 @@ Definition at line 15 of file Exponential\+Flow.\+h.
 
 This pointer points to the target \mbox{\hyperlink{classSystem}{System}} of the flow. 
 
-Definition at line 17 of file Exponential\+Flow.\+h.
+Definition at line 18 of file Exponential\+Flow.\+h.
 
 
 

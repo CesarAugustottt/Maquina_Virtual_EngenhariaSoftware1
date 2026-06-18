@@ -74,7 +74,7 @@ $(function() {
 <p>The classes <a class="el" href="classHandle.html" title="The classes Handle and Body implements the &quot;bridge&quot; design pattern (also known as &quot;handle/body idiom&quot;...">Handle</a> and <a class="el" href="classBody.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G...">Body</a> implements the "bridge" design pattern (also known as "handle/body idiom").  
  <a href="classHandle.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="handleBody_8h_source.html">handleBody.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -103,7 +103,7 @@ class Handle&lt; T &gt;</h3>
 
 <p>The classes <a class="el" href="classHandle.html" title="The classes Handle and Body implements the &quot;bridge&quot; design pattern (also known as &quot;handle/body idiom&quot;...">Handle</a> and <a class="el" href="classBody.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G...">Body</a> implements the "bridge" design pattern (also known as "handle/body idiom"). </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00020">20</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00028">28</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6a72028918adf79c0ff8d9996e5e4107"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a72028918adf79c0ff8d9996e5e4107">&#9670;&nbsp;</a></span>Handle() <span class="overload">[1/2]</span></h2>
@@ -132,12 +132,16 @@ template&lt;class T &gt; </div>
 
 <p>constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00001">1</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                {  </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a> = <span class="keyword">new</span> T; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;attach();  </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="ttc" id="aclassHandle_html_a16021e57596d7369dfa1a9fadc35c06f"><div class="ttname"><a href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">Handle::pImpl_</a></div><div class="ttdeci">T * pImpl_</div><div class="ttdoc">referência para a implementação</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00050">handleBodySemDebug.h:50</a></div></div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00017">17</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                {  </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a> = <span class="keyword">new</span> T; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;attach();  </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifdef DEBUGING</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="handleBody_8h.html#aac78cb29dfe4a565da68073b0beebf2f">numHandleCreated</a>++; <span class="comment">//cout &lt;&lt; &quot;AQUI&quot;;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif  </span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="ttc" id="aclassHandle_html_a16021e57596d7369dfa1a9fadc35c06f"><div class="ttname"><a href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">Handle::pImpl_</a></div><div class="ttdeci">T * pImpl_</div><div class="ttdoc">referência para a implementação</div><div class="ttdef"><b>Definition:</b> <a href="handleBody_8h_source.html#l00071">handleBody.h:71</a></div></div>
+<div class="ttc" id="ahandleBody_8h_html_aac78cb29dfe4a565da68073b0beebf2f"><div class="ttname"><a href="handleBody_8h.html#aac78cb29dfe4a565da68073b0beebf2f">numHandleCreated</a></div><div class="ttdeci">int numHandleCreated</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00226">ModelImpl.cpp:226</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -168,8 +172,14 @@ template&lt;class T &gt; </div>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00001">1</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{ <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;detach();     }</div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00017">17</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        { </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;detach();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#ifdef DEBUGING</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="handleBody_8h.html#a01128a06118f949a0b24a3d080f515fd">numHandleDeleted</a>++;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="ttc" id="ahandleBody_8h_html_a01128a06118f949a0b24a3d080f515fd"><div class="ttname"><a href="handleBody_8h.html#a01128a06118f949a0b24a3d080f515fd">numHandleDeleted</a></div><div class="ttdeci">int numHandleDeleted</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00227">ModelImpl.cpp:227</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -201,8 +211,13 @@ template&lt;class T &gt; </div>
 
 <p>copy constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00001">1</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;:<a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>( hd.<a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a> ) { <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;attach();  }</div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00017">17</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                 :<a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>( hd.<a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a> ) { </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;attach(); </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#ifdef DEBUGING</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="handleBody_8h.html#aac78cb29dfe4a565da68073b0beebf2f">numHandleCreated</a>++;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif   </span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -235,16 +250,16 @@ template&lt;class T &gt; </div>
 
 <p>assignment operator </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00038">38</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                            {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span> (  <span class="keyword">this</span> != &amp;hd )</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            hd.<a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;attach();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;detach();   </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>  = hd.<a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00059">59</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (  <span class="keyword">this</span> != &amp;hd )</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            hd.<a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;attach();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;detach();   </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>  = hd.<a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -273,12 +288,12 @@ template&lt;class T &gt; </div>
 
 <p>referência para a implementação </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00050">50</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00071">71</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a></li>
+<li>src/<a class="el" href="handleBody_8h_source.html">handleBody.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
