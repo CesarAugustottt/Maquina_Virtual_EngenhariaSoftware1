@@ -3,7 +3,7 @@
 #include <algorithm>
 
 
-//GLOBAL
+//staticos
 //atributo statico de model
 std::vector<Model*> Model::models;
 
@@ -24,7 +24,14 @@ void Model::deleteModel(Model* model){
     if(!model){
         return;
     }
-    delete model;
+    //deleta do vetor e chama o destrutor
+    for (auto it = Model::models.begin(); it != Model::models.end(); ++it) {
+        if (*it == model) {
+            Model::models.erase(it);
+            delete model;
+            break; 
+        }
+    }
 }
 
 //IMPLEMENTAÇÃO DO MODELBODY
@@ -153,13 +160,8 @@ ModelHandle::ModelHandle(std::string name, double time) {
 }
 
 ModelHandle::~ModelHandle() {
-    for (auto it = Model::models.begin(); it != Model::models.end(); ++it) {
-        if (*it == this) {
-            Model::models.erase(it);
-            break; 
-        }
-    }
-    //destrutor de modelBody é chamado 
+    
+    //destrutor de modelBody é chamado (colocar em body!!!)
 }
 
 void ModelHandle::execute(double start, double end, double increment) {
