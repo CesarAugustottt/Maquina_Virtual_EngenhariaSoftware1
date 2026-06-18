@@ -1,5 +1,5 @@
 <map id="FlowBody" name="FlowBody">
-<area shape="rect" id="node1" title="This class represents the body (concrete implementation) of a Flow." alt="" coords="32,109,119,136"/>
+<area shape="rect" id="node1" title="This class represents the concrete implementation of a Flow." alt="" coords="32,109,119,136"/>
 <area shape="rect" id="node2" href="$classBody.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="5,5,60,32"/>
 <area shape="rect" id="node3" href="$classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod..." alt="" coords="84,5,155,32"/>
 </map>

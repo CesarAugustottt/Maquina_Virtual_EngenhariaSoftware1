@@ -7,8 +7,7 @@ Class used exclusively to instantiate and test \mbox{\hyperlink{classSystem}{Sys
 
 
 
-Inheritance diagram for System\+Test\+Handle\+:
-\nopagebreak
+Inheritance diagram for System\+Test\+Handle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Inheritance diagram for System\+Test\+Handle\+:
 \end{figure}
 
 
-Collaboration diagram for System\+Test\+Handle\+:
-\nopagebreak
+Collaboration diagram for System\+Test\+Handle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -51,7 +49,7 @@ class \mbox{\hyperlink{classSystemTestHandle_a686d152cfd45e63b5bc3db6f327fdaeb}{
 \doxysubsection{Detailed Description}
 Class used exclusively to instantiate and test \mbox{\hyperlink{classSystem}{System}} (\mbox{\hyperlink{classHandle}{Handle}}). 
 
-Definition at line 21 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 33 of file unit\+\_\+\+Model.\+cpp.
 
 
 
@@ -64,15 +62,14 @@ Definition at line 21 of file unit\+\_\+\+Model.\+cpp.
 
 
 
-Definition at line 23 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 35 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{23                                                        \{}
-\DoxyCodeLine{24         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classBody_ad481d0c8368db318795c9a0a8fdd3717}{detach}}();}
-\DoxyCodeLine{25         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}} = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemTestBody}{SystemTestBody}}(n, v);}
-\DoxyCodeLine{26         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classBody_a5d53322c76a6952d096cb7564ac86db1}{attach}}();}
-\DoxyCodeLine{27     \}}
+\DoxyCodeLine{35                                                        \{}
+\DoxyCodeLine{36         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_a755a56a21e381f731ba51328b5cd4db0}{setName}}(n);}
+\DoxyCodeLine{37         \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_a5110c15cdb4814b71d3024d103ff2c08}{setValue}}(v);}
+\DoxyCodeLine{38     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSystemTestHandle_a61275bd70540fc217b60a980c9682fab}\label{classSystemTestHandle_a61275bd70540fc217b60a980c9682fab}} 
@@ -83,11 +80,11 @@ Definition at line 23 of file unit\+\_\+\+Model.\+cpp.
 
 
 
-Definition at line 28 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 39 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{28 \{\}}
+\DoxyCodeLine{39 \{\}}
 
 \end{DoxyCode}
 
@@ -115,11 +112,11 @@ Implements \mbox{\hyperlink{classSystem_a3bc2509274e6c346e07b0bf1151378c5}{Syste
 
 
 
-Definition at line 29 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 40 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_a403f4e8197fd5c4d95795fdc047b6102}{name}}; \}}
+\DoxyCodeLine{40 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_ab7e8b038416ce912290616b4e43e3ffc}{getName}}(); \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSystemTestHandle_aa4e0a02ac7041dc1a8047aa44c68a4c0}\label{classSystemTestHandle_aa4e0a02ac7041dc1a8047aa44c68a4c0}} 
@@ -144,11 +141,11 @@ Implements \mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{Syste
 
 
 
-Definition at line 31 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 42 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{31 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_a6c36d5c6a894fdf87ab7226684d8eddb}{value}}; \}}
+\DoxyCodeLine{42 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_aa421a0b9fc65496e6841fa7521391d14}{getValue}}(); \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSystemTestHandle_ac6391f4a98ee3b5e161996f6e91a77ae}\label{classSystemTestHandle_ac6391f4a98ee3b5e161996f6e91a77ae}} 
@@ -175,11 +172,11 @@ Implements \mbox{\hyperlink{classSystem_a9b91be893916f4cf8680ac56970950f1}{Syste
 
 
 
-Definition at line 30 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 41 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{30 \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_a403f4e8197fd5c4d95795fdc047b6102}{name}} = n; \}}
+\DoxyCodeLine{41 \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_a755a56a21e381f731ba51328b5cd4db0}{setName}}(n); \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classSystemTestHandle_a8eff8f373604cbc240f25816351b1a9f}\label{classSystemTestHandle_a8eff8f373604cbc240f25816351b1a9f}} 
@@ -206,11 +203,11 @@ Implements \mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{Syste
 
 
 
-Definition at line 32 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 43 of file unit\+\_\+\+Model.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{32 \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_a6c36d5c6a894fdf87ab7226684d8eddb}{value}} = v; \}}
+\DoxyCodeLine{43 \{ \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemTestBody_a5110c15cdb4814b71d3024d103ff2c08}{setValue}}(v); \}}
 
 \end{DoxyCode}
 
@@ -224,7 +221,7 @@ Definition at line 32 of file unit\+\_\+\+Model.\+cpp.
 
 
 
-Definition at line 33 of file unit\+\_\+\+Model.\+cpp.
+Definition at line 44 of file unit\+\_\+\+Model.\+cpp.
 
 
 

@@ -2,17 +2,12 @@
 \label{classFlowTest}\index{FlowTest@{FlowTest}}
 
 
-Class used exclusively to instantiate and test Flow\+Impl.  
-
-
-
-
 Inheritance diagram for Flow\+Test\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=142pt]{classFlowTest__inherit__graph}
+\includegraphics[width=260pt]{classFlowTest__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -22,7 +17,7 @@ Collaboration diagram for Flow\+Test\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=142pt]{classFlowTest__coll__graph}
+\includegraphics[width=260pt]{classFlowTest__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -35,13 +30,14 @@ Collaboration diagram for Flow\+Test\+:
 virtual \mbox{\hyperlink{classFlowTest_a760e0e57dfa1384e811616bdd2a625bd}{$\sim$\+Flow\+Test}} ()
 \item 
 virtual double \mbox{\hyperlink{classFlowTest_a5a280ab4a17e72c9632c68f43f32a430}{execute}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pure virtual method to execute the flow equation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
-Class used exclusively to instantiate and test Flow\+Impl. 
 
-Definition at line 20 of file unit\+\_\+\+Flow.\+cpp.
+
+Definition at line 22 of file unit\+\_\+\+Flow.\+cpp.
 
 
 
@@ -54,11 +50,11 @@ Definition at line 20 of file unit\+\_\+\+Flow.\+cpp.
 
 
 
-Definition at line 22 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 24 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{22 : FlowImpl() \{\}}
+\DoxyCodeLine{24 : \mbox{\hyperlink{classFlowHandle_adf61e2eadfbc04b5791dd15c330bd0b2}{FlowHandle}}() \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest_ab223d0dcef21dac320ebb64130f576a1}\label{classFlowTest_ab223d0dcef21dac320ebb64130f576a1}} 
@@ -69,11 +65,11 @@ Definition at line 22 of file unit\+\_\+\+Flow.\+cpp.
 
 
 
-Definition at line 23 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 25 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{23 : FlowImpl(name, source, target) \{\}}
+\DoxyCodeLine{25 : \mbox{\hyperlink{classFlowHandle_adf61e2eadfbc04b5791dd15c330bd0b2}{FlowHandle}}(name, source, target) \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classFlowTest_a760e0e57dfa1384e811616bdd2a625bd}\label{classFlowTest_a760e0e57dfa1384e811616bdd2a625bd}} 
@@ -84,11 +80,11 @@ Definition at line 23 of file unit\+\_\+\+Flow.\+cpp.
 
 
 
-Definition at line 24 of file unit\+\_\+\+Flow.\+cpp.
+Definition at line 26 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{24 \{\}}
+\DoxyCodeLine{26 \{\}}
 
 \end{DoxyCode}
 
@@ -102,11 +98,25 @@ Definition at line 24 of file unit\+\_\+\+Flow.\+cpp.
 
 
 
-Definition at line 25 of file unit\+\_\+\+Flow.\+cpp.
+Pure virtual method to execute the flow equation. 
+
+
+\begin{DoxyItemize}
+\item Must be implemented by subclasses to define specific behaviors. \begin{DoxyReturn}{Returns}
+double -\/ the calculated value to be transferred between systems. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classFlowHandle_a4af8a4a490953bf061cf21d73528dc70}{Flow\+Handle}}.
+
+
+
+Definition at line 27 of file unit\+\_\+\+Flow.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25 \{ \textcolor{keywordflow}{return} 0.0; \}}
+\DoxyCodeLine{27 \{ \textcolor{keywordflow}{return} 0.0; \}}
 
 \end{DoxyCode}
 

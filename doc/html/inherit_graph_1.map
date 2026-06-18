@@ -2,9 +2,10 @@
 <area shape="rect" id="node1" href="$classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code." alt="" coords="73,107,126,133"/>
 <area shape="rect" id="node2" href="$classComplexFlow.html" title="This Class represents a complex flow in the General Systems Theory implemented in this code." alt="" coords="251,5,362,32"/>
 <area shape="rect" id="node3" href="$classExponentialFlow.html" title="This Class represents an exponential flow in the General Systems Theory implemented in this code." alt="" coords="241,56,372,83"/>
-<area shape="rect" id="node4" href="$classFlowHandle.html" title="This class represents the handle (wrapper) of a Flow." alt="" coords="257,157,356,184"/>
-<area shape="rect" id="node5" href="$classFlowTestHandle.html" title="Class used exclusively to instantiate and test Flow (Handle)." alt="" coords="244,208,369,235"/>
-<area shape="rect" id="node6" href="$classLogisticFlow.html" title="This class represents a logistic flow in the General Systems Theory implemented in this code." alt="" coords="255,107,358,133"/>
-<area shape="rect" id="node7" href="$classHandle.html" title=" " alt="" coords="18,157,181,184"/>
-<area shape="rect" id="node8" href="$classHandle.html" title=" " alt="" coords="5,208,193,235"/>
+<area shape="rect" id="node4" href="$classFlowHandle.html" title="This class represents the handle of a Flow." alt="" coords="257,157,356,184"/>
+<area shape="rect" id="node6" href="$classFlowTestHandle.html" title="Class used exclusively to instantiate and test Flow (Handle)." alt="" coords="244,208,369,235"/>
+<area shape="rect" id="node7" href="$classLogisticFlow.html" title="This class represents a logistic flow in the General Systems Theory implemented in this code." alt="" coords="255,107,358,133"/>
+<area shape="rect" id="node5" href="$classFlowTest.html" title=" " alt="" coords="420,157,499,184"/>
+<area shape="rect" id="node8" href="$classHandle.html" title=" " alt="" coords="18,157,181,184"/>
+<area shape="rect" id="node9" href="$classHandle.html" title=" " alt="" coords="5,208,193,235"/>
 </map>

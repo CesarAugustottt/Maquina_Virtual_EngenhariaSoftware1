@@ -30,6 +30,8 @@ static bool \mbox{\hyperlink{classUnit__System_a11c26aff1affb78e464b7957e036ad38
 \begin{DoxyCompactList}\small\item\em Tests the copy constructor of System\+Impl. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__System_a5676eaa7f18e85f71260f0d90c0b31ce}{assignment\+Operator}} (void)
 \begin{DoxyCompactList}\small\item\em Tests the assignment operator (=) of System\+Impl. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classUnit__System_ac06ab8e57e17d3b8ee2ae8e59d42da9c}{handle\+Body\+Test}} (void)
+\begin{DoxyCompactList}\small\item\em Unit test to validate the Handle-\/\+Body memory management. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classUnit__System_a7b90ea8dc91977b75a136d7a383089c9}{regressive\+Test}} (void)
 \begin{DoxyCompactList}\small\item\em Runs all the unit tests for the \mbox{\hyperlink{classSystem}{System}} class (Regression Testing). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -57,22 +59,22 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 64 of file unit\+\_\+\+System.\+cpp.
+Definition at line 73 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{64                                          \{}
-\DoxyCodeLine{65     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} original;}
-\DoxyCodeLine{66     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
-\DoxyCodeLine{67     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} = 10.0;}
-\DoxyCodeLine{68     }
-\DoxyCodeLine{69     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} destination;}
-\DoxyCodeLine{70     destination = original;}
-\DoxyCodeLine{71 }
-\DoxyCodeLine{72     assert(destination.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} == \textcolor{stringliteral}{"{}Original"{}});}
-\DoxyCodeLine{73     assert(destination.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} == 10.0);}
-\DoxyCodeLine{74     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{75 \}}
+\DoxyCodeLine{73                                          \{}
+\DoxyCodeLine{74     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} original;}
+\DoxyCodeLine{75     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
+\DoxyCodeLine{76     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} = 10.0;}
+\DoxyCodeLine{77     }
+\DoxyCodeLine{78     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} destination;}
+\DoxyCodeLine{79     destination = original;}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     assert(destination.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} == \textcolor{stringliteral}{"{}Original"{}});}
+\DoxyCodeLine{82     assert(destination.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} == 10.0);}
+\DoxyCodeLine{83     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{84 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}\label{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}} 
@@ -90,16 +92,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 12 of file unit\+\_\+\+System.\+cpp.
+Definition at line 21 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{12                                   \{}
-\DoxyCodeLine{13     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s2(\textcolor{stringliteral}{"{}Sys"{}}, 10.0);}
-\DoxyCodeLine{14     assert(s2.pImpl\_-\/>name == \textcolor{stringliteral}{"{}Sys"{}});}
-\DoxyCodeLine{15     assert(s2.pImpl\_-\/>value == 10.0);}
-\DoxyCodeLine{16     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{17 \}}
+\DoxyCodeLine{21                                   \{}
+\DoxyCodeLine{22     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s2(\textcolor{stringliteral}{"{}Sys"{}}, 10.0);}
+\DoxyCodeLine{23     assert(s2.pImpl\_-\/>name == \textcolor{stringliteral}{"{}Sys"{}});}
+\DoxyCodeLine{24     assert(s2.pImpl\_-\/>value == 10.0);}
+\DoxyCodeLine{25     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{26 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_a11c26aff1affb78e464b7957e036ad38}\label{classUnit__System_a11c26aff1affb78e464b7957e036ad38}} 
@@ -117,20 +119,20 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 53 of file unit\+\_\+\+System.\+cpp.
+Definition at line 62 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{53                                       \{}
-\DoxyCodeLine{54     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} original;}
-\DoxyCodeLine{55     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
-\DoxyCodeLine{56     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} = 10.0;}
-\DoxyCodeLine{57     }
-\DoxyCodeLine{58     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} copy(original);}
-\DoxyCodeLine{59     assert(copy.pImpl\_-\/>name == \textcolor{stringliteral}{"{}Original"{}});}
-\DoxyCodeLine{60     assert(copy.pImpl\_-\/>value == 10.0);}
-\DoxyCodeLine{61     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{62 \}}
+\DoxyCodeLine{62                                       \{}
+\DoxyCodeLine{63     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} original;}
+\DoxyCodeLine{64     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} = \textcolor{stringliteral}{"{}Original"{}};}
+\DoxyCodeLine{65     original.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} = 10.0;}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{67     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} copy(original);}
+\DoxyCodeLine{68     assert(copy.pImpl\_-\/>name == \textcolor{stringliteral}{"{}Original"{}});}
+\DoxyCodeLine{69     assert(copy.pImpl\_-\/>value == 10.0);}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{71 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}\label{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}} 
@@ -148,16 +150,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 5 of file unit\+\_\+\+System.\+cpp.
+Definition at line 14 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{5                                          \{}
-\DoxyCodeLine{6     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s1;}
-\DoxyCodeLine{7     assert(s1.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} == \textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{8     assert(s1.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} == 0.0);}
-\DoxyCodeLine{9     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{10 \}}
+\DoxyCodeLine{14                                          \{}
+\DoxyCodeLine{15     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s1;}
+\DoxyCodeLine{16     assert(s1.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} == \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{17     assert(s1.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} == 0.0);}
+\DoxyCodeLine{18     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{19 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}\label{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}} 
@@ -175,15 +177,15 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 19 of file unit\+\_\+\+System.\+cpp.
+Definition at line 28 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{19                                  \{}
-\DoxyCodeLine{20     \mbox{\hyperlink{classSystemHandle}{SystemHandle}}* s = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemHandle}{SystemHandle}}();}
-\DoxyCodeLine{21     \textcolor{keyword}{delete} s;}
-\DoxyCodeLine{22     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{23 \}}
+\DoxyCodeLine{28                                  \{}
+\DoxyCodeLine{29     \mbox{\hyperlink{classSystemHandle}{SystemHandle}}* s = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemHandle}{SystemHandle}}();}
+\DoxyCodeLine{30     \textcolor{keyword}{delete} s;}
+\DoxyCodeLine{31     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{32 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_a1aacfeca3281214115a6666b73ace27c}\label{classUnit__System_a1aacfeca3281214115a6666b73ace27c}} 
@@ -201,16 +203,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 25 of file unit\+\_\+\+System.\+cpp.
+Definition at line 34 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25                               \{}
-\DoxyCodeLine{26     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s;}
-\DoxyCodeLine{27     s.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} = \textcolor{stringliteral}{"{}TestName"{}};}
-\DoxyCodeLine{28     assert(s.\mbox{\hyperlink{classSystemHandle_a79cf0387d6e785f3998d7adae4471a7b}{getName}}() == \textcolor{stringliteral}{"{}TestName"{}});}
-\DoxyCodeLine{29     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{30 \}}
+\DoxyCodeLine{34                               \{}
+\DoxyCodeLine{35     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s;}
+\DoxyCodeLine{36     s.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} = \textcolor{stringliteral}{"{}TestName"{}};}
+\DoxyCodeLine{37     assert(s.\mbox{\hyperlink{classSystemHandle_a79cf0387d6e785f3998d7adae4471a7b}{getName}}() == \textcolor{stringliteral}{"{}TestName"{}});}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{39 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_a24725e6baf31599fedba18d7f03455e5}\label{classUnit__System_a24725e6baf31599fedba18d7f03455e5}} 
@@ -228,16 +230,133 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 39 of file unit\+\_\+\+System.\+cpp.
+Definition at line 48 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{39                                \{}
-\DoxyCodeLine{40     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s;}
-\DoxyCodeLine{41     s.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} = 10.0;}
-\DoxyCodeLine{42     assert(s.\mbox{\hyperlink{classSystemHandle_a5c59a67c5a07cdd4f6c60488aea4075a}{getValue}}() == 10.0);}
-\DoxyCodeLine{43     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{44 \}}
+\DoxyCodeLine{48                                \{}
+\DoxyCodeLine{49     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s;}
+\DoxyCodeLine{50     s.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} = 10.0;}
+\DoxyCodeLine{51     assert(s.\mbox{\hyperlink{classSystemHandle_a5c59a67c5a07cdd4f6c60488aea4075a}{getValue}}() == 10.0);}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUnit__System_ac06ab8e57e17d3b8ee2ae8e59d42da9c}\label{classUnit__System_ac06ab8e57e17d3b8ee2ae8e59d42da9c}} 
+\index{Unit\_System@{Unit\_System}!handleBodyTest@{handleBodyTest}}
+\index{handleBodyTest@{handleBodyTest}!Unit\_System@{Unit\_System}}
+\doxysubsubsection{\texorpdfstring{handleBodyTest()}{handleBodyTest()}}
+{\footnotesize\ttfamily bool Unit\+\_\+\+System\+::handle\+Body\+Test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Unit test to validate the Handle-\/\+Body memory management. 
+
+\begin{DoxyReturn}{Returns}
+true if all tests pass, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file unit\+\_\+\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                      \{}
+\DoxyCodeLine{87     \textcolor{comment}{//resetar os contadores antes de começar o teste}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{    \#ifdef DEBUGING}}
+\DoxyCodeLine{89         \mbox{\hyperlink{unit__System_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} = 0;}
+\DoxyCodeLine{90         \mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} = 0;}
+\DoxyCodeLine{91         \mbox{\hyperlink{unit__System_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} = 0;}
+\DoxyCodeLine{92         \mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} = 0;}
+\DoxyCodeLine{93 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \textcolor{comment}{//teste 1:}}
+\DoxyCodeLine{96     \{}
+\DoxyCodeLine{97         \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s1(\textcolor{stringliteral}{"{}Sistema 1"{}}, 10.0);}
+\DoxyCodeLine{98         \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s2(\textcolor{stringliteral}{"{}Sistema 2"{}}, 20.0);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100         \textcolor{comment}{//deve ter criado cada um 2 body e 2 handle}}
+\DoxyCodeLine{101         assert(\mbox{\hyperlink{unit__System_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} == 2);}
+\DoxyCodeLine{102         assert(\mbox{\hyperlink{unit__System_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} == 2);}
+\DoxyCodeLine{103         assert(\mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 0);}
+\DoxyCodeLine{104         assert(\mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 0);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         \textcolor{comment}{//Atribuiçaõ, s1 aponta para s2}}
+\DoxyCodeLine{107         s1 = s2; }
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109         \textcolor{comment}{// Como o pImpl\_ antigo de s1 perdeu a referencia, ele é deletado}}
+\DoxyCodeLine{110         assert(\mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 1); }
+\DoxyCodeLine{111     \} }
+\DoxyCodeLine{112     \textcolor{comment}{// Saindo do bloco, s1 e s2 ssão destruidos}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     assert(\mbox{\hyperlink{unit__System_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} == 2);}
+\DoxyCodeLine{115     assert(\mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 2);}
+\DoxyCodeLine{116     assert(\mbox{\hyperlink{unit__System_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} == 2);}
+\DoxyCodeLine{117     assert(\mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 2);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119     \textcolor{comment}{//resetar os contadores}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{    \#ifdef DEBUGING}}
+\DoxyCodeLine{121         \mbox{\hyperlink{unit__System_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} = 0; }
+\DoxyCodeLine{122         \mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} = 0;}
+\DoxyCodeLine{123         \mbox{\hyperlink{unit__System_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} = 0; }
+\DoxyCodeLine{124         \mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} = 0;}
+\DoxyCodeLine{125 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{comment}{//teste 2:}}
+\DoxyCodeLine{128     \{}
+\DoxyCodeLine{129         \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s3(\textcolor{stringliteral}{"{}Original"{}}, 50.0); \textcolor{comment}{// +1 handle e +1 body.}}
+\DoxyCodeLine{130         }
+\DoxyCodeLine{131         \{}
+\DoxyCodeLine{132             \textcolor{comment}{//construtor de copia ( +1 handle, 0 body)}}
+\DoxyCodeLine{133             \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s4(s3);}
+\DoxyCodeLine{134             assert(\mbox{\hyperlink{unit__System_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} == 2);}
+\DoxyCodeLine{135             assert(\mbox{\hyperlink{unit__System_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} == 1); }
+\DoxyCodeLine{136         \} \textcolor{comment}{// s4 morre aqui, + 1 delete de handle}}
+\DoxyCodeLine{137         }
+\DoxyCodeLine{138         assert(\mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 1);}
+\DoxyCodeLine{139         assert(\mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 0);}
+\DoxyCodeLine{140     \} }
+\DoxyCodeLine{141     \textcolor{comment}{// saindo s3 morre (+1 handle e +1 body deletado)}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143     assert(\mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 2);}
+\DoxyCodeLine{144     assert(\mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 1);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146     \textcolor{comment}{//resetar os contadores}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{    \#ifdef DEBUGING}}
+\DoxyCodeLine{148         \mbox{\hyperlink{unit__System_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} = 0; }
+\DoxyCodeLine{149         \mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} = 0;}
+\DoxyCodeLine{150         \mbox{\hyperlink{unit__System_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} = 0; }
+\DoxyCodeLine{151         \mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} = 0;}
+\DoxyCodeLine{152 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154     \textcolor{comment}{//teste 3:}}
+\DoxyCodeLine{155     \{}
+\DoxyCodeLine{156         \mbox{\hyperlink{classSystemHandle}{SystemHandle}}* p1 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemHandle}{SystemHandle}}(\textcolor{stringliteral}{"{}Ponteiro 1"{}}, 100.0); \textcolor{comment}{// +1 handle e +1 body}}
+\DoxyCodeLine{157         \mbox{\hyperlink{classSystemHandle}{SystemHandle}}* p2 = \textcolor{keyword}{new} \mbox{\hyperlink{classSystemHandle}{SystemHandle}}(\textcolor{stringliteral}{"{}Ponteiro 2"{}}, 200.0); \textcolor{comment}{// +1 handle e +1 body}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159         assert(\mbox{\hyperlink{unit__System_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}} == 2);}
+\DoxyCodeLine{160         assert(\mbox{\hyperlink{unit__System_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}} == 2);}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162         \textcolor{comment}{// Atribuição de ponteiros}}
+\DoxyCodeLine{163         *p1 = *p2;}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165         \textcolor{comment}{// O conteúdo do handle de p1 agora aponta para o body de p2.}}
+\DoxyCodeLine{166         \textcolor{comment}{// O body antigo de p1 foi morto}}
+\DoxyCodeLine{167         assert(\mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 1);}
+\DoxyCodeLine{168         assert(\mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 0); \textcolor{comment}{// handle continua vivo}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170         \textcolor{comment}{// Deletar os ponteiros }}
+\DoxyCodeLine{171         \textcolor{keyword}{delete} p1; \textcolor{comment}{// p1 morre.}}
+\DoxyCodeLine{172         assert(\mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 1);}
+\DoxyCodeLine{173         assert(\mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 1); \textcolor{comment}{// p1 do body já tinha morrido}}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175         \textcolor{keyword}{delete} p2; \textcolor{comment}{// p2 morre}}
+\DoxyCodeLine{176         assert(\mbox{\hyperlink{unit__System_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}} == 2);}
+\DoxyCodeLine{177         assert(\mbox{\hyperlink{unit__System_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}} == 2); \textcolor{comment}{// ambos os corpos foram destruidos}}
+\DoxyCodeLine{178     \}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{181 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_a7b90ea8dc91977b75a136d7a383089c9}\label{classUnit__System_a7b90ea8dc91977b75a136d7a383089c9}} 
@@ -255,22 +374,24 @@ true if all tests pass, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 77 of file unit\+\_\+\+System.\+cpp.
+Definition at line 183 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{77                                      \{}
-\DoxyCodeLine{78     assert(\mbox{\hyperlink{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}{defaultConstructor}}());}
-\DoxyCodeLine{79     assert(\mbox{\hyperlink{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}{constructor}}());}
-\DoxyCodeLine{80     assert(\mbox{\hyperlink{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}{destructor}}());}
-\DoxyCodeLine{81     assert(\mbox{\hyperlink{classUnit__System_a1aacfeca3281214115a6666b73ace27c}{getName}}());}
-\DoxyCodeLine{82     assert(\mbox{\hyperlink{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}{setName}}());}
-\DoxyCodeLine{83     assert(\mbox{\hyperlink{classUnit__System_a24725e6baf31599fedba18d7f03455e5}{getValue}}());}
-\DoxyCodeLine{84     assert(\mbox{\hyperlink{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}{setValue}}());}
-\DoxyCodeLine{85     assert(\mbox{\hyperlink{classUnit__System_a11c26aff1affb78e464b7957e036ad38}{copyConstructor}}());}
-\DoxyCodeLine{86     assert(\mbox{\hyperlink{classUnit__System_a5676eaa7f18e85f71260f0d90c0b31ce}{assignmentOperator}}());}
-\DoxyCodeLine{87     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{88 \}}
+\DoxyCodeLine{183                                      \{}
+\DoxyCodeLine{184     assert(\mbox{\hyperlink{classUnit__System_ade48b81ab3c3b1c0d1749e312c996ef7}{defaultConstructor}}());}
+\DoxyCodeLine{185     assert(\mbox{\hyperlink{classUnit__System_ab9498fdc1dfbe0b74eafe0f1d94c511e}{constructor}}());}
+\DoxyCodeLine{186     assert(\mbox{\hyperlink{classUnit__System_a9b0749ca0f627f69c11d66e8654b14f5}{destructor}}());}
+\DoxyCodeLine{187     assert(\mbox{\hyperlink{classUnit__System_a1aacfeca3281214115a6666b73ace27c}{getName}}());}
+\DoxyCodeLine{188     assert(\mbox{\hyperlink{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}{setName}}());}
+\DoxyCodeLine{189     assert(\mbox{\hyperlink{classUnit__System_a24725e6baf31599fedba18d7f03455e5}{getValue}}());}
+\DoxyCodeLine{190     assert(\mbox{\hyperlink{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}{setValue}}());}
+\DoxyCodeLine{191     assert(\mbox{\hyperlink{classUnit__System_a11c26aff1affb78e464b7957e036ad38}{copyConstructor}}());}
+\DoxyCodeLine{192     assert(\mbox{\hyperlink{classUnit__System_a5676eaa7f18e85f71260f0d90c0b31ce}{assignmentOperator}}());}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194     assert(\mbox{\hyperlink{classUnit__System_ac06ab8e57e17d3b8ee2ae8e59d42da9c}{handleBodyTest}}());}
+\DoxyCodeLine{195     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{196 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}\label{classUnit__System_a4b7d1bb5edb70fabb2f9895c32d7e33d}} 
@@ -288,16 +409,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 32 of file unit\+\_\+\+System.\+cpp.
+Definition at line 41 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{32                               \{}
-\DoxyCodeLine{33     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s;}
-\DoxyCodeLine{34     s.\mbox{\hyperlink{classSystemHandle_af0902a9ef7fef285b24cf72520550a9b}{setName}}(\textcolor{stringliteral}{"{}NewName"{}});}
-\DoxyCodeLine{35     assert(s.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} == \textcolor{stringliteral}{"{}NewName"{}});}
-\DoxyCodeLine{36     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{37 \}}
+\DoxyCodeLine{41                               \{}
+\DoxyCodeLine{42     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s;}
+\DoxyCodeLine{43     s.\mbox{\hyperlink{classSystemHandle_af0902a9ef7fef285b24cf72520550a9b}{setName}}(\textcolor{stringliteral}{"{}NewName"{}});}
+\DoxyCodeLine{44     assert(s.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a62da4563b8efd2a08f32c309e2790314}{name}} == \textcolor{stringliteral}{"{}NewName"{}});}
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{46 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}\label{classUnit__System_aea16988b51ce63a388c5aa414a0fff4a}} 
@@ -315,16 +436,16 @@ true if the test passed, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line 46 of file unit\+\_\+\+System.\+cpp.
+Definition at line 55 of file unit\+\_\+\+System.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{46                                \{}
-\DoxyCodeLine{47     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s;}
-\DoxyCodeLine{48     s.\mbox{\hyperlink{classSystemHandle_ab4d71f14764d5d0c95a29fcb0e4a792d}{setValue}}(100.0);}
-\DoxyCodeLine{49     assert(s.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} == 100.0);}
-\DoxyCodeLine{50     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{51 \}}
+\DoxyCodeLine{55                                \{}
+\DoxyCodeLine{56     \mbox{\hyperlink{classSystemHandle}{SystemHandle}} s;}
+\DoxyCodeLine{57     s.\mbox{\hyperlink{classSystemHandle_ab4d71f14764d5d0c95a29fcb0e4a792d}{setValue}}(100.0);}
+\DoxyCodeLine{58     assert(s.\mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classSystemBody_a82fcaefb88098be09dbc59bf8b012922}{value}} == 100.0);}
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{60 \}}
 
 \end{DoxyCode}
 

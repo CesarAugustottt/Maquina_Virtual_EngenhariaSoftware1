@@ -145,7 +145,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used exclusively to instantiate and test <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> (<a class="el" href="classHandle.html" title="The classes Handle and Body implements the &quot;bridge&quot; design pattern (also known as &quot;handle/body idiom&quot;...">Handle</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00021">21</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00033">33</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a05e6b13cb529382607a0b5f6abc23736"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05e6b13cb529382607a0b5f6abc23736">&#9670;&nbsp;</a></span>SystemTestHandle()</h2>
@@ -181,16 +181,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00023">23</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                                       {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classBody.html#ad481d0c8368db318795c9a0a8fdd3717">detach</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a> = <span class="keyword">new</span> <a class="code" href="classSystemTestBody.html">SystemTestBody</a>(n, v);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classBody.html#a5d53322c76a6952d096cb7564ac86db1">attach</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="ttc" id="aclassBody_html_a5d53322c76a6952d096cb7564ac86db1"><div class="ttname"><a href="classBody.html#a5d53322c76a6952d096cb7564ac86db1">Body::attach</a></div><div class="ttdeci">void attach()</div><div class="ttdoc">Increases the number of references to this object.</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00068">handleBodySemDebug.h:68</a></div></div>
-<div class="ttc" id="aclassBody_html_ad481d0c8368db318795c9a0a8fdd3717"><div class="ttname"><a href="classBody.html#ad481d0c8368db318795c9a0a8fdd3717">Body::detach</a></div><div class="ttdeci">void detach()</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00072">handleBodySemDebug.h:72</a></div></div>
-<div class="ttc" id="aclassHandle_html_a16021e57596d7369dfa1a9fadc35c06f"><div class="ttname"><a href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">Handle&lt; SystemTestBody &gt;::pImpl_</a></div><div class="ttdeci">SystemTestBody * pImpl_</div><div class="ttdoc">referência para a implementação</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00050">handleBodySemDebug.h:50</a></div></div>
-<div class="ttc" id="aclassSystemTestBody_html"><div class="ttname"><a href="classSystemTestBody.html">SystemTestBody</a></div><div class="ttdoc">Class used exclusively to instantiate and test System (Body).</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00011">unit_Model.cpp:11</a></div></div>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00035">35</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                                       {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#a755a56a21e381f731ba51328b5cd4db0">setName</a>(n);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#a5110c15cdb4814b71d3024d103ff2c08">setValue</a>(v);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="ttc" id="aclassHandle_html_a16021e57596d7369dfa1a9fadc35c06f"><div class="ttname"><a href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">Handle&lt; SystemTestBody &gt;::pImpl_</a></div><div class="ttdeci">SystemTestBody * pImpl_</div><div class="ttdoc">referência para a implementação</div><div class="ttdef"><b>Definition:</b> <a href="handleBody_8h_source.html#l00071">handleBody.h:71</a></div></div>
+<div class="ttc" id="aclassSystemTestBody_html_a5110c15cdb4814b71d3024d103ff2c08"><div class="ttname"><a href="classSystemTestBody.html#a5110c15cdb4814b71d3024d103ff2c08">SystemTestBody::setValue</a></div><div class="ttdeci">void setValue(double v)</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00026">unit_Model.cpp:26</a></div></div>
+<div class="ttc" id="aclassSystemTestBody_html_a755a56a21e381f731ba51328b5cd4db0"><div class="ttname"><a href="classSystemTestBody.html#a755a56a21e381f731ba51328b5cd4db0">SystemTestBody::setName</a></div><div class="ttdeci">void setName(std::string n)</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00024">unit_Model.cpp:24</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -217,8 +215,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00028">28</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{}</div>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00039">39</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -254,9 +252,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSystem.html#a3bc2509274e6c346e07b0bf1151378c5">System</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00029">29</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#a403f4e8197fd5c4d95795fdc047b6102">name</a>; }</div>
-<div class="ttc" id="aclassSystemTestBody_html_a403f4e8197fd5c4d95795fdc047b6102"><div class="ttname"><a href="classSystemTestBody.html#a403f4e8197fd5c4d95795fdc047b6102">SystemTestBody::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00013">unit_Model.cpp:13</a></div></div>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00040">40</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#ab7e8b038416ce912290616b4e43e3ffc">getName</a>(); }</div>
+<div class="ttc" id="aclassSystemTestBody_html_ab7e8b038416ce912290616b4e43e3ffc"><div class="ttname"><a href="classSystemTestBody.html#ab7e8b038416ce912290616b4e43e3ffc">SystemTestBody::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00025">unit_Model.cpp:25</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -291,9 +289,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">System</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00031">31</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#a6c36d5c6a894fdf87ab7226684d8eddb">value</a>; }</div>
-<div class="ttc" id="aclassSystemTestBody_html_a6c36d5c6a894fdf87ab7226684d8eddb"><div class="ttname"><a href="classSystemTestBody.html#a6c36d5c6a894fdf87ab7226684d8eddb">SystemTestBody::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00014">unit_Model.cpp:14</a></div></div>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00042">42</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#aa421a0b9fc65496e6841fa7521391d14">getValue</a>(); }</div>
+<div class="ttc" id="aclassSystemTestBody_html_aa421a0b9fc65496e6841fa7521391d14"><div class="ttname"><a href="classSystemTestBody.html#aa421a0b9fc65496e6841fa7521391d14">SystemTestBody::getValue</a></div><div class="ttdeci">double getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00027">unit_Model.cpp:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -334,8 +332,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSystem.html#a9b91be893916f4cf8680ac56970950f1">System</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00030">30</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{ <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#a403f4e8197fd5c4d95795fdc047b6102">name</a> = n; }</div>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00041">41</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{ <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#a755a56a21e381f731ba51328b5cd4db0">setName</a>(n); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -376,8 +374,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classSystem.html#a95e6d4c1ce05b47b5fa743fd2401dd03">System</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00032">32</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{ <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#a6c36d5c6a894fdf87ab7226684d8eddb">value</a> = v; }</div>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00043">43</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{ <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classSystemTestBody.html#a5110c15cdb4814b71d3024d103ff2c08">setValue</a>(v); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -402,7 +400,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00033">33</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00044">44</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
 
 </div>
 </div>

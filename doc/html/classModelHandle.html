@@ -111,15 +111,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a25f34d68f75ee24fccee30c4697ce10d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a25f34d68f75ee24fccee30c4697ce10d">remove</a> (<a class="el" href="classFlow.html">Flow</a> *flow) override</td></tr>
 <tr class="memdesc:a25f34d68f75ee24fccee30c4697ce10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> pointer from the internal container of the model.  <a href="classModelHandle.html#a25f34d68f75ee24fccee30c4697ce10d">More...</a><br /></td></tr>
 <tr class="separator:a25f34d68f75ee24fccee30c4697ce10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a9bb1b8d99c4e8415d149b04e2e55dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a0a9bb1b8d99c4e8415d149b04e2e55dc">createSystem</a> (std::string name=&quot;&quot;, double value=0.0) override</td></tr>
-<tr class="memdesc:a0a9bb1b8d99c4e8415d149b04e2e55dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method to create a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> inside this model.  <a href="classModelHandle.html#a0a9bb1b8d99c4e8415d149b04e2e55dc">More...</a><br /></td></tr>
-<tr class="separator:a0a9bb1b8d99c4e8415d149b04e2e55dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24a185f16e3ea9d6babdaf15390f2ac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a24a185f16e3ea9d6babdaf15390f2ac2">deleteSystem</a> (<a class="el" href="classSystem.html">System</a> *sys) override</td></tr>
-<tr class="memdesc:a24a185f16e3ea9d6babdaf15390f2ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method to delete a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> instance from this model.  <a href="classModelHandle.html#a24a185f16e3ea9d6babdaf15390f2ac2">More...</a><br /></td></tr>
-<tr class="separator:a24a185f16e3ea9d6babdaf15390f2ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a244b50b8010daaca290e0290f03e9c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a244b50b8010daaca290e0290f03e9c1e">deleteFlow</a> (<a class="el" href="classFlow.html">Flow</a> *flow) override</td></tr>
-<tr class="memdesc:a244b50b8010daaca290e0290f03e9c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method to delete a <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> instance from this model.  <a href="classModelHandle.html#a244b50b8010daaca290e0290f03e9c1e">More...</a><br /></td></tr>
-<tr class="separator:a244b50b8010daaca290e0290f03e9c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d23b6cb75d0fa828d2cb12e4cd2a524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a6d23b6cb75d0fa828d2cb12e4cd2a524">setName</a> (std::string name) override</td></tr>
 <tr class="memdesc:a6d23b6cb75d0fa828d2cb12e4cd2a524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name attribute in the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModelHandle.html#a6d23b6cb75d0fa828d2cb12e4cd2a524">More...</a><br /></td></tr>
 <tr class="separator:a6d23b6cb75d0fa828d2cb12e4cd2a524"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +126,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ff1feaf5402de034221823e027ac600"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a3ff1feaf5402de034221823e027ac600">incrementTime</a> (double increment) override</td></tr>
 <tr class="memdesc:a3ff1feaf5402de034221823e027ac600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the simulation time by a specific value.  <a href="classModelHandle.html#a3ff1feaf5402de034221823e027ac600">More...</a><br /></td></tr>
 <tr class="separator:a3ff1feaf5402de034221823e027ac600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9bb1b8d99c4e8415d149b04e2e55dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a0a9bb1b8d99c4e8415d149b04e2e55dc">createSystem</a> (std::string name=&quot;&quot;, double value=0.0) override</td></tr>
+<tr class="memdesc:a0a9bb1b8d99c4e8415d149b04e2e55dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method to create a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> inside this model.  <a href="classModelHandle.html#a0a9bb1b8d99c4e8415d149b04e2e55dc">More...</a><br /></td></tr>
+<tr class="separator:a0a9bb1b8d99c4e8415d149b04e2e55dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a185f16e3ea9d6babdaf15390f2ac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a24a185f16e3ea9d6babdaf15390f2ac2">deleteSystem</a> (<a class="el" href="classSystem.html">System</a> *sys) override</td></tr>
+<tr class="memdesc:a24a185f16e3ea9d6babdaf15390f2ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method to delete a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> instance from this model.  <a href="classModelHandle.html#a24a185f16e3ea9d6babdaf15390f2ac2">More...</a><br /></td></tr>
+<tr class="separator:a24a185f16e3ea9d6babdaf15390f2ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244b50b8010daaca290e0290f03e9c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a244b50b8010daaca290e0290f03e9c1e">deleteFlow</a> (<a class="el" href="classFlow.html">Flow</a> *flow) override</td></tr>
+<tr class="memdesc:a244b50b8010daaca290e0290f03e9c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method to delete a <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> instance from this model.  <a href="classModelHandle.html#a244b50b8010daaca290e0290f03e9c1e">More...</a><br /></td></tr>
+<tr class="separator:a244b50b8010daaca290e0290f03e9c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classModel.html">Model</a></td></tr>
 <tr class="memitem:af032d8433c87a0a3a431faf6563a1f03 inherit pub_methods_classModel"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#af032d8433c87a0a3a431faf6563a1f03">~Model</a> ()</td></tr>
 <tr class="memdesc:af032d8433c87a0a3a431faf6563a1f03 inherit pub_methods_classModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default destructor for the <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a> Class.  <a href="classModel.html#af032d8433c87a0a3a431faf6563a1f03">More...</a><br /></td></tr>
@@ -159,18 +159,18 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a1520a0851eef3fd94b19f946a3e41ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a1520a0851eef3fd94b19f946a3e41ef8">add</a> (<a class="el" href="classSystem.html">System</a> *sys) override</td></tr>
-<tr class="memdesc:a1520a0851eef3fd94b19f946a3e41ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> pointer to the internal container of the model.  <a href="classModelHandle.html#a1520a0851eef3fd94b19f946a3e41ef8">More...</a><br /></td></tr>
-<tr class="separator:a1520a0851eef3fd94b19f946a3e41ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45c6d720aef9767633263bea1643aade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a45c6d720aef9767633263bea1643aade">add</a> (<a class="el" href="classFlow.html">Flow</a> *flow) override</td></tr>
-<tr class="memdesc:a45c6d720aef9767633263bea1643aade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> pointer to the internal container of the model.  <a href="classModelHandle.html#a45c6d720aef9767633263bea1643aade">More...</a><br /></td></tr>
-<tr class="separator:a45c6d720aef9767633263bea1643aade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c203c425e69e245ad1e3f65143fa69b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a1c203c425e69e245ad1e3f65143fa69b">ModelHandle</a> ()</td></tr>
 <tr class="memdesc:a1c203c425e69e245ad1e3f65143fa69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default constructor for <a class="el" href="classModelHandle.html" title="This class represents the Handle of a Model.">ModelHandle</a>.  <a href="classModelHandle.html#a1c203c425e69e245ad1e3f65143fa69b">More...</a><br /></td></tr>
 <tr class="separator:a1c203c425e69e245ad1e3f65143fa69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac378b21af06e02524c29a711000b72f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#ac378b21af06e02524c29a711000b72f3">ModelHandle</a> (std::string name, double time)</td></tr>
 <tr class="memdesc:ac378b21af06e02524c29a711000b72f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the parameterized constructor for <a class="el" href="classModelHandle.html" title="This class represents the Handle of a Model.">ModelHandle</a>.  <a href="classModelHandle.html#ac378b21af06e02524c29a711000b72f3">More...</a><br /></td></tr>
 <tr class="separator:ac378b21af06e02524c29a711000b72f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1520a0851eef3fd94b19f946a3e41ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a1520a0851eef3fd94b19f946a3e41ef8">add</a> (<a class="el" href="classSystem.html">System</a> *sys) override</td></tr>
+<tr class="memdesc:a1520a0851eef3fd94b19f946a3e41ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod...">System</a> pointer to the internal container of the model.  <a href="classModelHandle.html#a1520a0851eef3fd94b19f946a3e41ef8">More...</a><br /></td></tr>
+<tr class="separator:a1520a0851eef3fd94b19f946a3e41ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c6d720aef9767633263bea1643aade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModelHandle.html#a45c6d720aef9767633263bea1643aade">add</a> (<a class="el" href="classFlow.html">Flow</a> *flow) override</td></tr>
+<tr class="memdesc:a45c6d720aef9767633263bea1643aade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> pointer to the internal container of the model.  <a href="classModelHandle.html#a45c6d720aef9767633263bea1643aade">More...</a><br /></td></tr>
+<tr class="separator:a45c6d720aef9767633263bea1643aade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -196,7 +196,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents the <a class="el" href="classHandle.html" title="The classes Handle and Body implements the &quot;bridge&quot; design pattern (also known as &quot;handle/body idiom&quot;...">Handle</a> of a <a class="el" href="classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code...">Model</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8h_source.html#l00075">75</a> of file <a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8h_source.html#l00068">68</a> of file <a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1c203c425e69e245ad1e3f65143fa69b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c203c425e69e245ad1e3f65143fa69b">&#9670;&nbsp;</a></span>ModelHandle() <span class="overload">[1/2]</span></h2>
@@ -224,8 +224,7 @@ Additional Inherited Members</h2></td></tr>
 <p>This is the default constructor for <a class="el" href="classModelHandle.html" title="This class represents the Handle of a Model.">ModelHandle</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00148">148</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;: <a class="code" href="classHandle.html">Handle&lt;ModelBody&gt;</a>() {}</div>
-<div class="ttc" id="aclassHandle_html"><div class="ttname"><a href="classHandle.html">Handle&lt; ModelBody &gt;</a></div></div>
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -274,14 +273,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00150">150</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                                                    {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classBody.html#ad481d0c8368db318795c9a0a8fdd3717">detach</a>();</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a> = <span class="keyword">new</span> <a class="code" href="classModelBody.html">ModelBody</a>(name, time);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classBody.html#a5d53322c76a6952d096cb7564ac86db1">attach</a>();</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
-<div class="ttc" id="aclassBody_html_a5d53322c76a6952d096cb7564ac86db1"><div class="ttname"><a href="classBody.html#a5d53322c76a6952d096cb7564ac86db1">Body::attach</a></div><div class="ttdeci">void attach()</div><div class="ttdoc">Increases the number of references to this object.</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00068">handleBodySemDebug.h:68</a></div></div>
-<div class="ttc" id="aclassBody_html_ad481d0c8368db318795c9a0a8fdd3717"><div class="ttname"><a href="classBody.html#ad481d0c8368db318795c9a0a8fdd3717">Body::detach</a></div><div class="ttdeci">void detach()</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00072">handleBodySemDebug.h:72</a></div></div>
-<div class="ttc" id="aclassHandle_html_a16021e57596d7369dfa1a9fadc35c06f"><div class="ttname"><a href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">Handle&lt; ModelBody &gt;::pImpl_</a></div><div class="ttdeci">ModelBody * pImpl_</div><div class="ttdoc">referência para a implementação</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00050">handleBodySemDebug.h:50</a></div></div>
-<div class="ttc" id="aclassModelBody_html"><div class="ttname"><a href="classModelBody.html">ModelBody</a></div><div class="ttdoc">This class represents the concrete implementation of a Model.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8h_source.html#l00016">ModelImpl.h:16</a></div></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    this-&gt;<a class="code" href="classModelHandle.html#a6d23b6cb75d0fa828d2cb12e4cd2a524">setName</a>(name);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    this-&gt;<a class="code" href="classModelHandle.html#a591265eaecb8a2fe693a5b3d95e8c226">setTime</a>(time);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="ttc" id="aclassModelHandle_html_a591265eaecb8a2fe693a5b3d95e8c226"><div class="ttname"><a href="classModelHandle.html#a591265eaecb8a2fe693a5b3d95e8c226">ModelHandle::setTime</a></div><div class="ttdeci">void setTime(double time) override</div><div class="ttdoc">Sets the time attribute in the Model Class.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00193">ModelImpl.cpp:193</a></div></div>
+<div class="ttc" id="aclassModelHandle_html_a6d23b6cb75d0fa828d2cb12e4cd2a524"><div class="ttname"><a href="classModelHandle.html#a6d23b6cb75d0fa828d2cb12e4cd2a524">ModelHandle::setName</a></div><div class="ttdeci">void setName(std::string name) override</div><div class="ttdoc">Sets the name attribute in the Model Class.</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00185">ModelImpl.cpp:185</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,16 +306,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>This is the destructor for <a class="el" href="classModelHandle.html" title="This class represents the Handle of a Model.">ModelHandle</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00156">156</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                          {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a>.begin(); it != <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a>.end(); ++it) {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">if</span> (*it == <span class="keyword">this</span>) {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a>.erase(it);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">break</span>; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">//destrutor de modelBody é chamado </span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00155">155</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                          {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a>.begin(); it != <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a>.end(); ++it) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">if</span> (*it == <span class="keyword">this</span>) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <a class="code" href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a>.erase(it);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">break</span>; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">//destrutor de modelBody é chamado </span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
 <div class="ttc" id="aclassModel_html_a990c47d3aea3111f93164d6ad50ae3e4"><div class="ttname"><a href="classModel.html#a990c47d3aea3111f93164d6ad50ae3e4">Model::models</a></div><div class="ttdeci">static std::vector&lt; Model * &gt; models</div><div class="ttdoc">Static container for storing all models created by the factory.</div><div class="ttdef"><b>Definition:</b> <a href="Model_8h_source.html#l00018">Model.h:18</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -362,10 +358,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#ac1e19f5fcc4ced9defbfe2847a26ff33">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00174">174</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#abf9443cba27067cf76b083939eab0b44">add</a>(flow);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00173">173</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                                {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#abf9443cba27067cf76b083939eab0b44">add</a>(flow);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="ttc" id="aclassHandle_html_a16021e57596d7369dfa1a9fadc35c06f"><div class="ttname"><a href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">Handle&lt; ModelBody &gt;::pImpl_</a></div><div class="ttdeci">ModelBody * pImpl_</div><div class="ttdoc">referência para a implementação</div><div class="ttdef"><b>Definition:</b> <a href="handleBody_8h_source.html#l00071">handleBody.h:71</a></div></div>
 <div class="ttc" id="aclassModelBody_html_abf9443cba27067cf76b083939eab0b44"><div class="ttname"><a href="classModelBody.html#abf9443cba27067cf76b083939eab0b44">ModelBody::add</a></div><div class="ttdeci">void add(System *sys)</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00077">ModelImpl.cpp:77</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -407,10 +404,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a70362afdd9db6268b4adaedfeddb2935">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00170">170</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                                 {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#abf9443cba27067cf76b083939eab0b44">add</a>(sys);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00169">169</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                 {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#abf9443cba27067cf76b083939eab0b44">add</a>(sys);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -460,10 +457,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#adf9c63fb5e39bd2cb025255001907524">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00210">210</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                                              {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#a2a09c449522f93ecfbcfb498891c00f6">createSystem</a>(name, value);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00209">209</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                                                              {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#a2a09c449522f93ecfbcfb498891c00f6">createSystem</a>(name, value);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_a2a09c449522f93ecfbcfb498891c00f6"><div class="ttname"><a href="classModelBody.html#a2a09c449522f93ecfbcfb498891c00f6">ModelBody::createSystem</a></div><div class="ttdeci">System * createSystem(std::string name=&quot;&quot;, double value=0.0)</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00126">ModelImpl.cpp:126</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -505,10 +502,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#af88c1fa873e890ecabb8d32fc380c476">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00220">220</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                                       {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#a3fc54cad67d75dfb9683754701dbaf14">deleteFlow</a>(flow);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00219">219</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                       {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#a3fc54cad67d75dfb9683754701dbaf14">deleteFlow</a>(flow);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_a3fc54cad67d75dfb9683754701dbaf14"><div class="ttname"><a href="classModelBody.html#a3fc54cad67d75dfb9683754701dbaf14">ModelBody::deleteFlow</a></div><div class="ttdeci">void deleteFlow(Flow *flow)</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00140">ModelImpl.cpp:140</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -550,10 +547,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a8513437cddbde699020045bc56338ac3">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00216">216</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                                          {</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#adcfbe75032e850a470cb65fcf9f26426">deleteSystem</a>(sys);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00215">215</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                                          {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#adcfbe75032e850a470cb65fcf9f26426">deleteSystem</a>(sys);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_adcfbe75032e850a470cb65fcf9f26426"><div class="ttname"><a href="classModelBody.html#adcfbe75032e850a470cb65fcf9f26426">ModelBody::deleteSystem</a></div><div class="ttdeci">void deleteSystem(System *sys)</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00134">ModelImpl.cpp:134</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -613,10 +610,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a756ab116538d1c2f0bd9cd9487ac4f51">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00166">166</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                                                                    {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#aae0cdac76391bce3ef12b40d304b7bd1">execute</a>(start, end, increment);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00165">165</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#aae0cdac76391bce3ef12b40d304b7bd1">execute</a>(start, end, increment);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_aae0cdac76391bce3ef12b40d304b7bd1"><div class="ttname"><a href="classModelBody.html#aae0cdac76391bce3ef12b40d304b7bd1">ModelBody::execute</a></div><div class="ttdeci">void execute(double start, double end, double increment)</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00052">ModelImpl.cpp:52</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -652,10 +649,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a17e89ca8d15af46d074423a47d3c6802">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00190">190</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                                     {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#abc8878749ffac28158b810ee86df30e5">getName</a>();;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00189">189</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                                     {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#abc8878749ffac28158b810ee86df30e5">getName</a>();;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_abc8878749ffac28158b810ee86df30e5"><div class="ttname"><a href="classModelBody.html#abc8878749ffac28158b810ee86df30e5">ModelBody::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00108">ModelImpl.cpp:108</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -691,10 +688,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a41569269c162962571a791c0fe737bca">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00198">198</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                                  {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#ab6a894eb19ac75aea41e0680e2a5639c">getTime</a>();</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00197">197</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                                  {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#ab6a894eb19ac75aea41e0680e2a5639c">getTime</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_ab6a894eb19ac75aea41e0680e2a5639c"><div class="ttname"><a href="classModelBody.html#ab6a894eb19ac75aea41e0680e2a5639c">ModelBody::getTime</a></div><div class="ttdeci">double getTime() const</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00116">ModelImpl.cpp:116</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -736,10 +733,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#ad8f1c8d076bc82d40636a1ca0e581b92">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00202">202</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                                {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#a814f34d1e6d88a4c3f7ed215caa1f3e8">incrementTime</a>(increment);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00201">201</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                                                {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#a814f34d1e6d88a4c3f7ed215caa1f3e8">incrementTime</a>(increment);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_a814f34d1e6d88a4c3f7ed215caa1f3e8"><div class="ttname"><a href="classModelBody.html#a814f34d1e6d88a4c3f7ed215caa1f3e8">ModelBody::incrementTime</a></div><div class="ttdeci">void incrementTime(double increment)</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00120">ModelImpl.cpp:120</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -781,10 +778,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a9dfb3ab85127622aa9d9db591ee63454">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00182">182</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                                   {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#ab5a788d955640341c59102f6f4f5a81b">remove</a>(flow);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00181">181</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                                   {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#ab5a788d955640341c59102f6f4f5a81b">remove</a>(flow);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_ab5a788d955640341c59102f6f4f5a81b"><div class="ttname"><a href="classModelBody.html#ab5a788d955640341c59102f6f4f5a81b">ModelBody::remove</a></div><div class="ttdeci">void remove(System *sys)</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00085">ModelImpl.cpp:85</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -826,10 +823,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#ac1884d0df43bd3eaa98fb2493b1eadbd">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00178">178</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                    {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#ab5a788d955640341c59102f6f4f5a81b">remove</a>(sys);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00177">177</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                    {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#ab5a788d955640341c59102f6f4f5a81b">remove</a>(sys);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -870,10 +867,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a0418ba1c3f1016a13a2cbb4c1be5e43b">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00186">186</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                        {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#ac9f9fcb07b31e1626ce576743f98ad17">setName</a>(name); </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00185">185</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                                        {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#ac9f9fcb07b31e1626ce576743f98ad17">setName</a>(name); </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_ac9f9fcb07b31e1626ce576743f98ad17"><div class="ttname"><a href="classModelBody.html#ac9f9fcb07b31e1626ce576743f98ad17">ModelBody::setName</a></div><div class="ttdeci">void setName(std::string name)</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00104">ModelImpl.cpp:104</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -915,10 +912,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classModel.html#a210839e2d275d6821a8beac249470beb">Model</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00194">194</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                                     {</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#a5b840f74fa076dd896e1710be4bff448">setTime</a>(time);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8cpp_source.html#l00193">193</a> of file <a class="el" href="ModelImpl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                                     {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="classHandle.html#a16021e57596d7369dfa1a9fadc35c06f">pImpl_</a>-&gt;<a class="code" href="classModelBody.html#a5b840f74fa076dd896e1710be4bff448">setTime</a>(time);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
 <div class="ttc" id="aclassModelBody_html_a5b840f74fa076dd896e1710be4bff448"><div class="ttname"><a href="classModelBody.html#a5b840f74fa076dd896e1710be4bff448">ModelBody::setTime</a></div><div class="ttdeci">void setTime(double time)</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00112">ModelImpl.cpp:112</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -944,7 +941,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8h_source.html#l00114">114</a> of file <a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8h_source.html#l00108">108</a> of file <a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a>.</p>
 
 </div>
 </div>
@@ -968,7 +965,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModelImpl_8h_source.html#l00113">113</a> of file <a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModelImpl_8h_source.html#l00107">107</a> of file <a class="el" href="ModelImpl_8h_source.html">ModelImpl.h</a>.</p>
 
 </div>
 </div>

@@ -75,14 +75,14 @@ $(function() {
 <p>The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and Gilberto Câmara and founded in the geographic library TerraLib.  
  <a href="classBody.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="handleBody_8h_source.html">handleBody.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Body:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBody__inherit__graph.png" border="0" usemap="#aBody_inherit__map" alt="Inheritance graph"/></div>
 <map name="aBody_inherit__map" id="aBody_inherit__map">
 <area shape="rect" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="273,5,328,32"/>
-<area shape="rect" href="classFlowBody.html" title="This class represents the body (concrete implementation) of a Flow." alt="" coords="5,80,92,107"/>
+<area shape="rect" href="classFlowBody.html" title="This class represents the concrete implementation of a Flow." alt="" coords="5,80,92,107"/>
 <area shape="rect" href="classFlowTestBody.html" title="Class used exclusively to instantiate and test Flow (Body)." alt="" coords="117,80,229,107"/>
 <area shape="rect" href="classModelBody.html" title="This class represents the concrete implementation of a Model." alt="" coords="253,80,348,107"/>
 <area shape="rect" href="classSystemBody.html" title="This class represents the concrete implementation of a System." alt="" coords="373,80,477,107"/>
@@ -124,7 +124,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and Gilberto Câmara and founded in the geographic library TerraLib. </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00060">60</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00081">81</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7727b0d8c998bbc2942e4c802e31e2eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7727b0d8c998bbc2942e4c802e31e2eb">&#9670;&nbsp;</a></span>Body() <span class="overload">[1/2]</span></h2>
@@ -151,9 +151,14 @@ Private Attributes</h2></td></tr>
 
 <p>Constructor: zero references when the object is being built. </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00064">64</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;: <a class="code" href="classBody.html#a70b46681762de310d6a3fba89ba2d721">refCount_</a> ( 0 ){  }</div>
-<div class="ttc" id="aclassBody_html_a70b46681762de310d6a3fba89ba2d721"><div class="ttname"><a href="classBody.html#a70b46681762de310d6a3fba89ba2d721">Body::refCount_</a></div><div class="ttdeci">int refCount_</div><div class="ttdef"><b>Definition:</b> <a href="handleBodySemDebug_8h_source.html#l00092">handleBodySemDebug.h:92</a></div></div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00085">85</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          : <a class="code" href="classBody.html#a70b46681762de310d6a3fba89ba2d721">refCount_</a> ( 0 ){  </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#ifdef DEBUGING     </span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="handleBody_8h.html#ac1322042429ed9724fbef55908244f3b">numBodyCreated</a>++;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="ttc" id="aclassBody_html_a70b46681762de310d6a3fba89ba2d721"><div class="ttname"><a href="classBody.html#a70b46681762de310d6a3fba89ba2d721">Body::refCount_</a></div><div class="ttdeci">int refCount_</div><div class="ttdef"><b>Definition:</b> <a href="handleBody_8h_source.html#l00120">handleBody.h:120</a></div></div>
+<div class="ttc" id="ahandleBody_8h_html_ac1322042429ed9724fbef55908244f3b"><div class="ttname"><a href="handleBody_8h.html#ac1322042429ed9724fbef55908244f3b">numBodyCreated</a></div><div class="ttdeci">int numBodyCreated</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00228">ModelImpl.cpp:228</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -182,8 +187,8 @@ Private Attributes</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00082">82</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{}</div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00110">110</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -241,8 +246,8 @@ Private Attributes</h2></td></tr>
 
 <p>Increases the number of references to this object. </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00068">68</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{ <a class="code" href="classBody.html#a70b46681762de310d6a3fba89ba2d721">refCount_</a>++; }</div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00093">93</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{ <a class="code" href="classBody.html#a70b46681762de310d6a3fba89ba2d721">refCount_</a>++; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -270,12 +275,16 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Decreases the number of references to this object. Destroy it if there are no more references to it </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00072">72</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                  { </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> ( --<a class="code" href="classBody.html#a70b46681762de310d6a3fba89ba2d721">refCount_</a> == 0 ) { </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keyword">delete</span> <span class="keyword">this</span>; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00097">97</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                  { </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span> ( --<a class="code" href="classBody.html#a70b46681762de310d6a3fba89ba2d721">refCount_</a> == 0 ) { </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keyword">delete</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#ifdef DEBUGING</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="handleBody_8h.html#aba38ebae7f83ef57afab8c447dddb6cf">numBodyDeleted</a>++; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="ttc" id="ahandleBody_8h_html_aba38ebae7f83ef57afab8c447dddb6cf"><div class="ttname"><a href="handleBody_8h.html#aba38ebae7f83ef57afab8c447dddb6cf">numBodyDeleted</a></div><div class="ttdeci">int numBodyDeleted</div><div class="ttdef"><b>Definition:</b> <a href="ModelImpl_8cpp_source.html#l00229">ModelImpl.cpp:229</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -305,8 +314,8 @@ Private Attributes</h2></td></tr>
 
 <p>Implementation. </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00090">90</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{<span class="keywordflow">return</span> *<span class="keyword">this</span>;}</div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00118">118</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{<span class="keywordflow">return</span> *<span class="keyword">this</span>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -335,8 +344,8 @@ Private Attributes</h2></td></tr>
 
 <p>Returns the number of references to this object. </p>
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00079">79</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classBody.html#a70b46681762de310d6a3fba89ba2d721">refCount_</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00107">107</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classBody.html#a70b46681762de310d6a3fba89ba2d721">refCount_</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -361,12 +370,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handleBodySemDebug_8h_source.html#l00092">92</a> of file <a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handleBody_8h_source.html#l00120">120</a> of file <a class="el" href="handleBody_8h_source.html">handleBody.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="handleBodySemDebug_8h_source.html">handleBodySemDebug.h</a></li>
+<li>src/<a class="el" href="handleBody_8h_source.html">handleBody.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

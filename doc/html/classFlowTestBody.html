@@ -95,8 +95,18 @@ Collaboration diagram for FlowTestBody:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a31682a464c3f20b79456b84524fdbd96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlowTestBody.html#a31682a464c3f20b79456b84524fdbd96">FlowTestBody</a> (std::string n=&quot;&quot;, <a class="el" href="classSystem.html">System</a> *s=nullptr, <a class="el" href="classSystem.html">System</a> *t=nullptr)</td></tr>
-<tr class="separator:a31682a464c3f20b79456b84524fdbd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537059f4c919a71e191e6785906ee8d0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlowTestBody.html#a537059f4c919a71e191e6785906ee8d0">getName</a> () const</td></tr>
+<tr class="separator:a537059f4c919a71e191e6785906ee8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d017c7d240190f0518699a71cf142c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlowTestBody.html#a8d017c7d240190f0518699a71cf142c7">setName</a> (std::string n)</td></tr>
+<tr class="separator:a8d017c7d240190f0518699a71cf142c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a5cc39d73000112e304fcfa737d379"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlowTestBody.html#ad0a5cc39d73000112e304fcfa737d379">getSource</a> () const</td></tr>
+<tr class="separator:ad0a5cc39d73000112e304fcfa737d379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd0ade73bc9d873e734d13ef257d5911"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlowTestBody.html#afd0ade73bc9d873e734d13ef257d5911">setSource</a> (<a class="el" href="classSystem.html">System</a> *s)</td></tr>
+<tr class="separator:afd0ade73bc9d873e734d13ef257d5911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48277112d206c210787bf5ba2fa0cc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystem.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlowTestBody.html#ab48277112d206c210787bf5ba2fa0cc8">getTarget</a> () const</td></tr>
+<tr class="separator:ab48277112d206c210787bf5ba2fa0cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9de8214f36ea8a2c28de4e9a956a11f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlowTestBody.html#af9de8214f36ea8a2c28de4e9a956a11f">setTarget</a> (<a class="el" href="classSystem.html">System</a> *t)</td></tr>
+<tr class="separator:af9de8214f36ea8a2c28de4e9a956a11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afafa7a4bc1733619d048afd3e93af5e8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlowTestBody.html#afafa7a4bc1733619d048afd3e93af5e8">execute</a> ()</td></tr>
 <tr class="separator:afafa7a4bc1733619d048afd3e93af5e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classBody"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classBody')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBody.html">Body</a></td></tr>
@@ -127,57 +137,8 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used exclusively to instantiate and test <a class="el" href="classFlow.html" title="This class represents the interface of a flow in General Systems Theory as implemented in this code.">Flow</a> (<a class="el" href="classBody.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G...">Body</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00039">39</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a31682a464c3f20b79456b84524fdbd96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31682a464c3f20b79456b84524fdbd96">&#9670;&nbsp;</a></span>FlowTestBody()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">FlowTestBody::FlowTestBody </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>n</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
-          <td class="paramname"><em>s</em> = <code>nullptr</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
-          <td class="paramname"><em>t</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00043">43</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;: <a class="code" href="classFlowTestBody.html#a90b1ae92da4842c4255199893b223ee6">name</a>(n), <a class="code" href="classFlowTestBody.html#a573ba6a5e21f8af3ed6b8f5eaa4b8ad7">source</a>(s), <a class="code" href="classFlowTestBody.html#a209c7042cec8a6c03ab6f568c1b51687">target</a>(t) {}</div>
-<div class="ttc" id="aclassFlowTestBody_html_a209c7042cec8a6c03ab6f568c1b51687"><div class="ttname"><a href="classFlowTestBody.html#a209c7042cec8a6c03ab6f568c1b51687">FlowTestBody::target</a></div><div class="ttdeci">System * target</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00042">unit_Model.cpp:42</a></div></div>
-<div class="ttc" id="aclassFlowTestBody_html_a573ba6a5e21f8af3ed6b8f5eaa4b8ad7"><div class="ttname"><a href="classFlowTestBody.html#a573ba6a5e21f8af3ed6b8f5eaa4b8ad7">FlowTestBody::source</a></div><div class="ttdeci">System * source</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00042">unit_Model.cpp:42</a></div></div>
-<div class="ttc" id="aclassFlowTestBody_html_a90b1ae92da4842c4255199893b223ee6"><div class="ttname"><a href="classFlowTestBody.html#a90b1ae92da4842c4255199893b223ee6">FlowTestBody::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00041">unit_Model.cpp:41</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00050">50</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afafa7a4bc1733619d048afd3e93af5e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afafa7a4bc1733619d048afd3e93af5e8">&#9670;&nbsp;</a></span>execute()</h2>
 
@@ -201,9 +162,186 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00044">44</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classFlowTestBody.html#a573ba6a5e21f8af3ed6b8f5eaa4b8ad7">source</a> ? 0.01 * <a class="code" href="classFlowTestBody.html#a573ba6a5e21f8af3ed6b8f5eaa4b8ad7">source</a>-&gt;<a class="code" href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">getValue</a>() : 0.0; }</div>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00060">60</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classFlowTestBody.html#a573ba6a5e21f8af3ed6b8f5eaa4b8ad7">source</a> ? 0.01 * <a class="code" href="classFlowTestBody.html#a573ba6a5e21f8af3ed6b8f5eaa4b8ad7">source</a>-&gt;<a class="code" href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">getValue</a>() : 0.0; }</div>
+<div class="ttc" id="aclassFlowTestBody_html_a573ba6a5e21f8af3ed6b8f5eaa4b8ad7"><div class="ttname"><a href="classFlowTestBody.html#a573ba6a5e21f8af3ed6b8f5eaa4b8ad7">FlowTestBody::source</a></div><div class="ttdeci">System * source</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00053">unit_Model.cpp:53</a></div></div>
 <div class="ttc" id="aclassSystem_html_a41b673faa6c199eb8e4f204639fab4f2"><div class="ttname"><a href="classSystem.html#a41b673faa6c199eb8e4f204639fab4f2">System::getValue</a></div><div class="ttdeci">virtual double getValue() const =0</div><div class="ttdoc">Returns the value attribute in the System Class.</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a537059f4c919a71e191e6785906ee8d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537059f4c919a71e191e6785906ee8d0">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FlowTestBody::getName </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00054">54</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="classFlowTestBody.html#a90b1ae92da4842c4255199893b223ee6">name</a>; }</div>
+<div class="ttc" id="aclassFlowTestBody_html_a90b1ae92da4842c4255199893b223ee6"><div class="ttname"><a href="classFlowTestBody.html#a90b1ae92da4842c4255199893b223ee6">FlowTestBody::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00052">unit_Model.cpp:52</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad0a5cc39d73000112e304fcfa737d379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a5cc39d73000112e304fcfa737d379">&#9670;&nbsp;</a></span>getSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSystem.html">System</a>* FlowTestBody::getSource </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00056">56</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="classFlowTestBody.html#a573ba6a5e21f8af3ed6b8f5eaa4b8ad7">source</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab48277112d206c210787bf5ba2fa0cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48277112d206c210787bf5ba2fa0cc8">&#9670;&nbsp;</a></span>getTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSystem.html">System</a>* FlowTestBody::getTarget </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00058">58</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{ <span class="keywordflow">return</span> this-&gt;<a class="code" href="classFlowTestBody.html#a209c7042cec8a6c03ab6f568c1b51687">target</a>; }</div>
+<div class="ttc" id="aclassFlowTestBody_html_a209c7042cec8a6c03ab6f568c1b51687"><div class="ttname"><a href="classFlowTestBody.html#a209c7042cec8a6c03ab6f568c1b51687">FlowTestBody::target</a></div><div class="ttdeci">System * target</div><div class="ttdef"><b>Definition:</b> <a href="unit__Model_8cpp_source.html#l00053">unit_Model.cpp:53</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8d017c7d240190f0518699a71cf142c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d017c7d240190f0518699a71cf142c7">&#9670;&nbsp;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowTestBody::setName </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00055">55</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{ this-&gt;<a class="code" href="classFlowTestBody.html#a90b1ae92da4842c4255199893b223ee6">name</a> = n; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afd0ade73bc9d873e734d13ef257d5911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd0ade73bc9d873e734d13ef257d5911">&#9670;&nbsp;</a></span>setSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowTestBody::setSource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00057">57</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{ this-&gt;<a class="code" href="classFlowTestBody.html#a573ba6a5e21f8af3ed6b8f5eaa4b8ad7">source</a> = s; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af9de8214f36ea8a2c28de4e9a956a11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9de8214f36ea8a2c28de4e9a956a11f">&#9670;&nbsp;</a></span>setTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlowTestBody::setTarget </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSystem.html">System</a> *&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00059">59</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{ this-&gt;<a class="code" href="classFlowTestBody.html#a209c7042cec8a6c03ab6f568c1b51687">target</a> = t; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -220,7 +358,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00041">41</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00052">52</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +374,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00042">42</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00053">53</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +390,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00042">42</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unit__Model_8cpp_source.html#l00053">53</a> of file <a class="el" href="unit__Model_8cpp_source.html">unit_Model.cpp</a>.</p>
 
 </div>
 </div>

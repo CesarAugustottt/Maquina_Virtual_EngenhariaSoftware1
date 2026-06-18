@@ -11,8 +11,7 @@ This class represents the \mbox{\hyperlink{classHandle}{Handle}} of a \mbox{\hyp
 
 
 
-Inheritance diagram for Model\+Handle\+:
-\nopagebreak
+Inheritance diagram for Model\+Handle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Model\+Handle\+:
 \end{figure}
 
 
-Collaboration diagram for Model\+Handle\+:
-\nopagebreak
+Collaboration diagram for Model\+Handle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -40,12 +38,6 @@ void \mbox{\hyperlink{classModelHandle_a21ab99df27ce53760ed40555a6d0a85c}{remove
 \begin{DoxyCompactList}\small\item\em Removes a \mbox{\hyperlink{classSystem}{System}} pointer from the internal container of the model. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classModelHandle_a25f34d68f75ee24fccee30c4697ce10d}{remove}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow) override
 \begin{DoxyCompactList}\small\item\em Removes a \mbox{\hyperlink{classFlow}{Flow}} pointer from the internal container of the model. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classModelHandle_a0a9bb1b8d99c4e8415d149b04e2e55dc}{create\+System}} (std\+::string name=\char`\"{}\char`\"{}, double value=0.\+0) override
-\begin{DoxyCompactList}\small\item\em Factory method to create a \mbox{\hyperlink{classSystem}{System}} inside this model. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModelHandle_a24a185f16e3ea9d6babdaf15390f2ac2}{delete\+System}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys) override
-\begin{DoxyCompactList}\small\item\em Factory method to delete a \mbox{\hyperlink{classSystem}{System}} instance from this model. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModelHandle_a244b50b8010daaca290e0290f03e9c1e}{delete\+Flow}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow) override
-\begin{DoxyCompactList}\small\item\em Factory method to delete a \mbox{\hyperlink{classFlow}{Flow}} instance from this model. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classModelHandle_a6d23b6cb75d0fa828d2cb12e4cd2a524}{set\+Name}} (std\+::string name) override
 \begin{DoxyCompactList}\small\item\em Sets the name attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classModelHandle_a46c2e64955c7d0f2515a310155252962}{get\+Name}} () const override
@@ -55,18 +47,24 @@ void \mbox{\hyperlink{classModelHandle_a591265eaecb8a2fe693a5b3d95e8c226}{set\+T
 double \mbox{\hyperlink{classModelHandle_a6037ca68e12e2cbeff9e7a26cb72d6a9}{get\+Time}} () const override
 \begin{DoxyCompactList}\small\item\em Returns the time attribute in the \mbox{\hyperlink{classModel}{Model}} Class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classModelHandle_a3ff1feaf5402de034221823e027ac600}{increment\+Time}} (double increment) override
-\begin{DoxyCompactList}\small\item\em Increments the simulation time by a specific value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Increments the simulation time by a specific value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classModelHandle_a0a9bb1b8d99c4e8415d149b04e2e55dc}{create\+System}} (std\+::string name=\char`\"{}\char`\"{}, double value=0.\+0) override
+\begin{DoxyCompactList}\small\item\em Factory method to create a \mbox{\hyperlink{classSystem}{System}} inside this model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelHandle_a24a185f16e3ea9d6babdaf15390f2ac2}{delete\+System}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys) override
+\begin{DoxyCompactList}\small\item\em Factory method to delete a \mbox{\hyperlink{classSystem}{System}} instance from this model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelHandle_a244b50b8010daaca290e0290f03e9c1e}{delete\+Flow}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow) override
+\begin{DoxyCompactList}\small\item\em Factory method to delete a \mbox{\hyperlink{classFlow}{Flow}} instance from this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classModelHandle_a1520a0851eef3fd94b19f946a3e41ef8}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys) override
-\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classModelHandle_a45c6d720aef9767633263bea1643aade}{add}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow) override
-\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classModelHandle_a1c203c425e69e245ad1e3f65143fa69b}{Model\+Handle}} ()
 \begin{DoxyCompactList}\small\item\em This is the default constructor for \mbox{\hyperlink{classModelHandle}{Model\+Handle}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classModelHandle_ac378b21af06e02524c29a711000b72f3}{Model\+Handle}} (std\+::string name, double time)
-\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for \mbox{\hyperlink{classModelHandle}{Model\+Handle}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This is the parameterized constructor for \mbox{\hyperlink{classModelHandle}{Model\+Handle}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelHandle_a1520a0851eef3fd94b19f946a3e41ef8}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$sys) override
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classSystem}{System}} pointer to the internal container of the model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelHandle_a45c6d720aef9767633263bea1643aade}{add}} (\mbox{\hyperlink{classFlow}{Flow}} $\ast$flow) override
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classFlow}{Flow}} pointer to the internal container of the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -80,7 +78,7 @@ class \mbox{\hyperlink{classModelHandle_a2bf2a0e9b454c55aa5dcb5aa4698697b}{Model
 \doxysubsection{Detailed Description}
 This class represents the \mbox{\hyperlink{classHandle}{Handle}} of a \mbox{\hyperlink{classModel}{Model}}. 
 
-Definition at line 75 of file Model\+Impl.\+h.
+Definition at line 68 of file Model\+Impl.\+h.
 
 
 
@@ -101,7 +99,7 @@ Definition at line 148 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{148 : \mbox{\hyperlink{classHandle}{Handle<ModelBody>}}() \{\}}
+\DoxyCodeLine{148 \{\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_ac378b21af06e02524c29a711000b72f3}\label{classModelHandle_ac378b21af06e02524c29a711000b72f3}} 
@@ -128,10 +126,9 @@ Definition at line 150 of file Model\+Impl.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{150                                                     \{}
-\DoxyCodeLine{151     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classBody_ad481d0c8368db318795c9a0a8fdd3717}{detach}}();}
-\DoxyCodeLine{152     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}} = \textcolor{keyword}{new} \mbox{\hyperlink{classModelBody}{ModelBody}}(name, time);}
-\DoxyCodeLine{153     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classBody_a5d53322c76a6952d096cb7564ac86db1}{attach}}();}
-\DoxyCodeLine{154 \}}
+\DoxyCodeLine{151     this-\/>\mbox{\hyperlink{classModelHandle_a6d23b6cb75d0fa828d2cb12e4cd2a524}{setName}}(name);}
+\DoxyCodeLine{152     this-\/>\mbox{\hyperlink{classModelHandle_a591265eaecb8a2fe693a5b3d95e8c226}{setTime}}(time);}
+\DoxyCodeLine{153 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a095baeec8246278541118441388d7b60}\label{classModelHandle_a095baeec8246278541118441388d7b60}} 
@@ -146,19 +143,19 @@ This is the destructor for \mbox{\hyperlink{classModelHandle}{Model\+Handle}}.
 
 
 
-Definition at line 156 of file Model\+Impl.\+cpp.
+Definition at line 155 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{156                           \{}
-\DoxyCodeLine{157     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.begin(); it != \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.end(); ++it) \{}
-\DoxyCodeLine{158         \textcolor{keywordflow}{if} (*it == \textcolor{keyword}{this}) \{}
-\DoxyCodeLine{159             \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.erase(it);}
-\DoxyCodeLine{160             \textcolor{keywordflow}{break}; }
-\DoxyCodeLine{161         \}}
-\DoxyCodeLine{162     \}}
-\DoxyCodeLine{163     \textcolor{comment}{//destrutor de modelBody é chamado }}
-\DoxyCodeLine{164 \}}
+\DoxyCodeLine{155                           \{}
+\DoxyCodeLine{156     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.begin(); it != \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.end(); ++it) \{}
+\DoxyCodeLine{157         \textcolor{keywordflow}{if} (*it == \textcolor{keyword}{this}) \{}
+\DoxyCodeLine{158             \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.erase(it);}
+\DoxyCodeLine{159             \textcolor{keywordflow}{break}; }
+\DoxyCodeLine{160         \}}
+\DoxyCodeLine{161     \}}
+\DoxyCodeLine{162     \textcolor{comment}{//destrutor de modelBody é chamado }}
+\DoxyCodeLine{163 \}}
 
 \end{DoxyCode}
 
@@ -188,13 +185,13 @@ Implements \mbox{\hyperlink{classModel_ac1e19f5fcc4ced9defbfe2847a26ff33}{Model}
 
 
 
-Definition at line 174 of file Model\+Impl.\+cpp.
+Definition at line 173 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{174                                 \{}
-\DoxyCodeLine{175     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_abf9443cba27067cf76b083939eab0b44}{add}}(flow);}
-\DoxyCodeLine{176 \}}
+\DoxyCodeLine{173                                 \{}
+\DoxyCodeLine{174     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_abf9443cba27067cf76b083939eab0b44}{add}}(flow);}
+\DoxyCodeLine{175 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a1520a0851eef3fd94b19f946a3e41ef8}\label{classModelHandle_a1520a0851eef3fd94b19f946a3e41ef8}} 
@@ -221,13 +218,13 @@ Implements \mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{Model}
 
 
 
-Definition at line 170 of file Model\+Impl.\+cpp.
+Definition at line 169 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{170                                  \{}
-\DoxyCodeLine{171     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_abf9443cba27067cf76b083939eab0b44}{add}}(sys);}
-\DoxyCodeLine{172 \}}
+\DoxyCodeLine{169                                  \{}
+\DoxyCodeLine{170     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_abf9443cba27067cf76b083939eab0b44}{add}}(sys);}
+\DoxyCodeLine{171 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a0a9bb1b8d99c4e8415d149b04e2e55dc}\label{classModelHandle_a0a9bb1b8d99c4e8415d149b04e2e55dc}} 
@@ -256,13 +253,13 @@ Implements \mbox{\hyperlink{classModel_adf9c63fb5e39bd2cb025255001907524}{Model}
 
 
 
-Definition at line 210 of file Model\+Impl.\+cpp.
+Definition at line 209 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{210                                                               \{}
-\DoxyCodeLine{211     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_a2a09c449522f93ecfbcfb498891c00f6}{createSystem}}(name, value);}
-\DoxyCodeLine{212 \}}
+\DoxyCodeLine{209                                                               \{}
+\DoxyCodeLine{210     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_a2a09c449522f93ecfbcfb498891c00f6}{createSystem}}(name, value);}
+\DoxyCodeLine{211 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a244b50b8010daaca290e0290f03e9c1e}\label{classModelHandle_a244b50b8010daaca290e0290f03e9c1e}} 
@@ -289,13 +286,13 @@ Implements \mbox{\hyperlink{classModel_af88c1fa873e890ecabb8d32fc380c476}{Model}
 
 
 
-Definition at line 220 of file Model\+Impl.\+cpp.
+Definition at line 219 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{220                                        \{}
-\DoxyCodeLine{221     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_a3fc54cad67d75dfb9683754701dbaf14}{deleteFlow}}(flow);}
-\DoxyCodeLine{222 \}}
+\DoxyCodeLine{219                                        \{}
+\DoxyCodeLine{220     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_a3fc54cad67d75dfb9683754701dbaf14}{deleteFlow}}(flow);}
+\DoxyCodeLine{221 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a24a185f16e3ea9d6babdaf15390f2ac2}\label{classModelHandle_a24a185f16e3ea9d6babdaf15390f2ac2}} 
@@ -322,13 +319,13 @@ Implements \mbox{\hyperlink{classModel_a8513437cddbde699020045bc56338ac3}{Model}
 
 
 
-Definition at line 216 of file Model\+Impl.\+cpp.
+Definition at line 215 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{216                                           \{}
-\DoxyCodeLine{217     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_adcfbe75032e850a470cb65fcf9f26426}{deleteSystem}}(sys);}
-\DoxyCodeLine{218 \}}
+\DoxyCodeLine{215                                           \{}
+\DoxyCodeLine{216     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_adcfbe75032e850a470cb65fcf9f26426}{deleteSystem}}(sys);}
+\DoxyCodeLine{217 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_aa685a0d46d40284d571535f91ffb7d7d}\label{classModelHandle_aa685a0d46d40284d571535f91ffb7d7d}} 
@@ -359,13 +356,13 @@ Implements \mbox{\hyperlink{classModel_a756ab116538d1c2f0bd9cd9487ac4f51}{Model}
 
 
 
-Definition at line 166 of file Model\+Impl.\+cpp.
+Definition at line 165 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{166                                                                     \{}
-\DoxyCodeLine{167     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_aae0cdac76391bce3ef12b40d304b7bd1}{execute}}(start, end, increment);}
-\DoxyCodeLine{168 \}}
+\DoxyCodeLine{165                                                                     \{}
+\DoxyCodeLine{166     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_aae0cdac76391bce3ef12b40d304b7bd1}{execute}}(start, end, increment);}
+\DoxyCodeLine{167 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a46c2e64955c7d0f2515a310155252962}\label{classModelHandle_a46c2e64955c7d0f2515a310155252962}} 
@@ -390,13 +387,13 @@ Implements \mbox{\hyperlink{classModel_a17e89ca8d15af46d074423a47d3c6802}{Model}
 
 
 
-Definition at line 190 of file Model\+Impl.\+cpp.
+Definition at line 189 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{190                                      \{}
-\DoxyCodeLine{191     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_abc8878749ffac28158b810ee86df30e5}{getName}}();;}
-\DoxyCodeLine{192 \}}
+\DoxyCodeLine{189                                      \{}
+\DoxyCodeLine{190     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_abc8878749ffac28158b810ee86df30e5}{getName}}();;}
+\DoxyCodeLine{191 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a6037ca68e12e2cbeff9e7a26cb72d6a9}\label{classModelHandle_a6037ca68e12e2cbeff9e7a26cb72d6a9}} 
@@ -421,13 +418,13 @@ Implements \mbox{\hyperlink{classModel_a41569269c162962571a791c0fe737bca}{Model}
 
 
 
-Definition at line 198 of file Model\+Impl.\+cpp.
+Definition at line 197 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{198                                   \{}
-\DoxyCodeLine{199     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_ab6a894eb19ac75aea41e0680e2a5639c}{getTime}}();}
-\DoxyCodeLine{200 \}}
+\DoxyCodeLine{197                                   \{}
+\DoxyCodeLine{198     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_ab6a894eb19ac75aea41e0680e2a5639c}{getTime}}();}
+\DoxyCodeLine{199 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a3ff1feaf5402de034221823e027ac600}\label{classModelHandle_a3ff1feaf5402de034221823e027ac600}} 
@@ -454,13 +451,13 @@ Implements \mbox{\hyperlink{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}{Model}
 
 
 
-Definition at line 202 of file Model\+Impl.\+cpp.
+Definition at line 201 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{202                                                 \{}
-\DoxyCodeLine{203     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_a814f34d1e6d88a4c3f7ed215caa1f3e8}{incrementTime}}(increment);}
-\DoxyCodeLine{204 \}}
+\DoxyCodeLine{201                                                 \{}
+\DoxyCodeLine{202     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_a814f34d1e6d88a4c3f7ed215caa1f3e8}{incrementTime}}(increment);}
+\DoxyCodeLine{203 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a25f34d68f75ee24fccee30c4697ce10d}\label{classModelHandle_a25f34d68f75ee24fccee30c4697ce10d}} 
@@ -487,13 +484,13 @@ Implements \mbox{\hyperlink{classModel_a9dfb3ab85127622aa9d9db591ee63454}{Model}
 
 
 
-Definition at line 182 of file Model\+Impl.\+cpp.
+Definition at line 181 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{182                                    \{}
-\DoxyCodeLine{183     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_ab5a788d955640341c59102f6f4f5a81b}{remove}}(flow);}
-\DoxyCodeLine{184 \}}
+\DoxyCodeLine{181                                    \{}
+\DoxyCodeLine{182     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_ab5a788d955640341c59102f6f4f5a81b}{remove}}(flow);}
+\DoxyCodeLine{183 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a21ab99df27ce53760ed40555a6d0a85c}\label{classModelHandle_a21ab99df27ce53760ed40555a6d0a85c}} 
@@ -520,13 +517,13 @@ Implements \mbox{\hyperlink{classModel_ac1884d0df43bd3eaa98fb2493b1eadbd}{Model}
 
 
 
-Definition at line 178 of file Model\+Impl.\+cpp.
+Definition at line 177 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{178                                     \{}
-\DoxyCodeLine{179     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_ab5a788d955640341c59102f6f4f5a81b}{remove}}(sys);}
-\DoxyCodeLine{180 \}}
+\DoxyCodeLine{177                                     \{}
+\DoxyCodeLine{178     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_ab5a788d955640341c59102f6f4f5a81b}{remove}}(sys);}
+\DoxyCodeLine{179 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a6d23b6cb75d0fa828d2cb12e4cd2a524}\label{classModelHandle_a6d23b6cb75d0fa828d2cb12e4cd2a524}} 
@@ -553,13 +550,13 @@ Implements \mbox{\hyperlink{classModel_a0418ba1c3f1016a13a2cbb4c1be5e43b}{Model}
 
 
 
-Definition at line 186 of file Model\+Impl.\+cpp.
+Definition at line 185 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{186                                         \{}
-\DoxyCodeLine{187     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_ac9f9fcb07b31e1626ce576743f98ad17}{setName}}(name); }
-\DoxyCodeLine{188 \}}
+\DoxyCodeLine{185                                         \{}
+\DoxyCodeLine{186     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_ac9f9fcb07b31e1626ce576743f98ad17}{setName}}(name); }
+\DoxyCodeLine{187 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModelHandle_a591265eaecb8a2fe693a5b3d95e8c226}\label{classModelHandle_a591265eaecb8a2fe693a5b3d95e8c226}} 
@@ -586,13 +583,13 @@ Implements \mbox{\hyperlink{classModel_a210839e2d275d6821a8beac249470beb}{Model}
 
 
 
-Definition at line 194 of file Model\+Impl.\+cpp.
+Definition at line 193 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{194                                      \{}
-\DoxyCodeLine{195     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_a5b840f74fa076dd896e1710be4bff448}{setTime}}(time);}
-\DoxyCodeLine{196 \}}
+\DoxyCodeLine{193                                      \{}
+\DoxyCodeLine{194     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classModelBody_a5b840f74fa076dd896e1710be4bff448}{setTime}}(time);}
+\DoxyCodeLine{195 \}}
 
 \end{DoxyCode}
 
@@ -606,7 +603,7 @@ Definition at line 194 of file Model\+Impl.\+cpp.
 
 
 
-Definition at line 114 of file Model\+Impl.\+h.
+Definition at line 108 of file Model\+Impl.\+h.
 
 \mbox{\Hypertarget{classModelHandle_a686d152cfd45e63b5bc3db6f327fdaeb}\label{classModelHandle_a686d152cfd45e63b5bc3db6f327fdaeb}} 
 \index{ModelHandle@{ModelHandle}!Unit\_Model@{Unit\_Model}}
@@ -616,7 +613,7 @@ Definition at line 114 of file Model\+Impl.\+h.
 
 
 
-Definition at line 113 of file Model\+Impl.\+h.
+Definition at line 107 of file Model\+Impl.\+h.
 
 
 
