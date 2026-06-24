@@ -1,0 +1,354 @@
+\hypertarget{classCompositeSystemHandle}{}\doxysection{Composite\+System\+Handle Class Reference}
+\label{classCompositeSystemHandle}\index{CompositeSystemHandle@{CompositeSystemHandle}}
+
+
+\mbox{\hyperlink{classHandle}{Handle}} for \mbox{\hyperlink{classSystem}{System}}.  
+
+
+
+
+{\ttfamily \#include $<$Composite\+System.\+h$>$}
+
+
+
+Inheritance diagram for Composite\+System\+Handle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classCompositeSystemHandle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Composite\+System\+Handle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classCompositeSystemHandle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCompositeSystemHandle_a7e24bce120be88ba2b87c222b431a1ff}{$\sim$\+Composite\+System\+Handle}} ()
+\item 
+void \mbox{\hyperlink{classCompositeSystemHandle_ab6e432ad37bd96470ce3f8b5a49fce73}{set\+Name}} (std\+::string name) override
+\begin{DoxyCompactList}\small\item\em Sets the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCompositeSystemHandle_a1f2ea765fc122942d134cceaf99e161b}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompositeSystemHandle_a1c9e47240ea0137c12fcdd03f3467fa1}{set\+Value}} (double value) override
+\begin{DoxyCompactList}\small\item\em Sets the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classCompositeSystemHandle_aa3f6584cac692f23508237d0e636b7c5}{get\+Value}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompositeSystemHandle_a1ed28d52e6498653bbaa49c1cfc3796a}{add}} (\mbox{\hyperlink{classSystem}{System}} $\ast$system\+Children)
+\item 
+void \mbox{\hyperlink{classCompositeSystemHandle_ab954c1d3d58efb215b03ad7b3db8af16}{remove}} (\mbox{\hyperlink{classSystem}{System}} $\ast$system\+Children)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classSystem}{System}} $\ast$ $>$ \mbox{\hyperlink{classCompositeSystemHandle_a80117e317b7d9281a1de9adb981edb84}{get\+Children}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCompositeSystemHandle_a2e371305a8ab03c7baa807b24d600c3d}{Composite\+System\+Handle}} ()
+\item 
+\mbox{\hyperlink{classCompositeSystemHandle_a369bc748b66deb8aea1cdf7c5da80288}{Composite\+System\+Handle}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classCompositeSystemHandle_a570c37a257d6d888145dec2cfc309e4b}{Unit\+\_\+\+System}}
+\item 
+class \mbox{\hyperlink{classCompositeSystemHandle_adc2d6f6d1ec89a3cc5a899cd89018051}{Model\+Body}}
+\item 
+class \mbox{\hyperlink{classCompositeSystemHandle_a5532754c97911d8df1569a79c76b4057}{Model\+Handle}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classHandle}{Handle}} for \mbox{\hyperlink{classSystem}{System}}. 
+
+Definition at line 45 of file Composite\+System.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCompositeSystemHandle_a2e371305a8ab03c7baa807b24d600c3d}\label{classCompositeSystemHandle_a2e371305a8ab03c7baa807b24d600c3d}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!CompositeSystemHandle@{CompositeSystemHandle}}
+\index{CompositeSystemHandle@{CompositeSystemHandle}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{CompositeSystemHandle()}{CompositeSystemHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Composite\+System\+Handle\+::\+Composite\+System\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 73 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCompositeSystemHandle_a369bc748b66deb8aea1cdf7c5da80288}\label{classCompositeSystemHandle_a369bc748b66deb8aea1cdf7c5da80288}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!CompositeSystemHandle@{CompositeSystemHandle}}
+\index{CompositeSystemHandle@{CompositeSystemHandle}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{CompositeSystemHandle()}{CompositeSystemHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Composite\+System\+Handle\+::\+Composite\+System\+Handle (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Parameterized constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The label for this composite system. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                                            \{}
+\DoxyCodeLine{76     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classCompositeSystemBody_a37506a2bbbf0b2cbcd58504fe5bf2f76}{setName}}(name);}
+\DoxyCodeLine{77 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCompositeSystemHandle_a7e24bce120be88ba2b87c222b431a1ff}\label{classCompositeSystemHandle_a7e24bce120be88ba2b87c222b431a1ff}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!````~CompositeSystemHandle@{$\sim$CompositeSystemHandle}}
+\index{````~CompositeSystemHandle@{$\sim$CompositeSystemHandle}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{$\sim$CompositeSystemHandle()}{~CompositeSystemHandle()}}
+{\footnotesize\ttfamily Composite\+System\+Handle\+::$\sim$\+Composite\+System\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 79 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCompositeSystemHandle_a1ed28d52e6498653bbaa49c1cfc3796a}\label{classCompositeSystemHandle_a1ed28d52e6498653bbaa49c1cfc3796a}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!add@{add}}
+\index{add@{add}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Composite\+System\+Handle\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{system\+Children }\end{DoxyParamCaption})}
+
+
+
+Definition at line 97 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97                                                       \{}
+\DoxyCodeLine{98     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classCompositeSystemBody_acad5637da6d0744c7c95180f0fc06de6}{add}}(systemChildren);}
+\DoxyCodeLine{99 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCompositeSystemHandle_a80117e317b7d9281a1de9adb981edb84}\label{classCompositeSystemHandle_a80117e317b7d9281a1de9adb981edb84}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!getChildren@{getChildren}}
+\index{getChildren@{getChildren}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{getChildren()}{getChildren()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classSystem}{System}} $\ast$ $>$ Composite\+System\+Handle\+::get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 105 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{105                                                             \{}
+\DoxyCodeLine{106     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classCompositeSystemBody_aeeb9a15a2fbf2b83483dda732a0646b1}{getChildren}}();}
+\DoxyCodeLine{107 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCompositeSystemHandle_a1f2ea765fc122942d134cceaf99e161b}\label{classCompositeSystemHandle_a1f2ea765fc122942d134cceaf99e161b}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!getName@{getName}}
+\index{getName@{getName}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Composite\+System\+Handle\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+string -\/ the content name attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a3bc2509274e6c346e07b0bf1151378c5}{System}}.
+
+
+
+Definition at line 85 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                                                \{}
+\DoxyCodeLine{86     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classCompositeSystemBody_a1013c8c60fee5173c9279fb10311b3cc}{getName}}();}
+\DoxyCodeLine{87 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCompositeSystemHandle_aa3f6584cac692f23508237d0e636b7c5}\label{classCompositeSystemHandle_aa3f6584cac692f23508237d0e636b7c5}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!getValue@{getValue}}
+\index{getValue@{getValue}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily double Composite\+System\+Handle\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+double -\/ the content value attribute. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a41b673faa6c199eb8e4f204639fab4f2}{System}}.
+
+
+
+Definition at line 93 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                                              \{}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classCompositeSystemBody_ae96ebb70e3c0e28d892c024095633691}{getValue}}();}
+\DoxyCodeLine{95 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCompositeSystemHandle_ab954c1d3d58efb215b03ad7b3db8af16}\label{classCompositeSystemHandle_ab954c1d3d58efb215b03ad7b3db8af16}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!remove@{remove}}
+\index{remove@{remove}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Composite\+System\+Handle\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSystem}{System}} $\ast$}]{system\+Children }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101                                                          \{}
+\DoxyCodeLine{102     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classCompositeSystemBody_adaef566f7b5e589657d95b88c99d9332}{remove}}(systemChildren);}
+\DoxyCodeLine{103 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCompositeSystemHandle_ab6e432ad37bd96470ce3f8b5a49fce73}\label{classCompositeSystemHandle_ab6e432ad37bd96470ce3f8b5a49fce73}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!setName@{setName}}
+\index{setName@{setName}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Composite\+System\+Handle\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the name attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em name} & which will be set to the current system. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a9b91be893916f4cf8680ac56970950f1}{System}}.
+
+
+
+Definition at line 81 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81                                                   \{}
+\DoxyCodeLine{82     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classCompositeSystemBody_a37506a2bbbf0b2cbcd58504fe5bf2f76}{setName}}(name);}
+\DoxyCodeLine{83 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCompositeSystemHandle_a1c9e47240ea0137c12fcdd03f3467fa1}\label{classCompositeSystemHandle_a1c9e47240ea0137c12fcdd03f3467fa1}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!setValue@{setValue}}
+\index{setValue@{setValue}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Composite\+System\+Handle\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value attribute in the \mbox{\hyperlink{classSystem}{System}} Class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em value} & which will be set to the current system. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{classSystem_a95e6d4c1ce05b47b5fa743fd2401dd03}{System}}.
+
+
+
+Definition at line 89 of file Composite\+System.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                                  \{}
+\DoxyCodeLine{90     \mbox{\hyperlink{classHandle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{classCompositeSystemBody_a44f4452e3d900d0203961fc0b46c6aa2}{setValue}}(value);}
+\DoxyCodeLine{91 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classCompositeSystemHandle_adc2d6f6d1ec89a3cc5a899cd89018051}\label{classCompositeSystemHandle_adc2d6f6d1ec89a3cc5a899cd89018051}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!ModelBody@{ModelBody}}
+\index{ModelBody@{ModelBody}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{ModelBody}{ModelBody}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classModelBody}{Model\+Body}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 68 of file Composite\+System.\+h.
+
+\mbox{\Hypertarget{classCompositeSystemHandle_a5532754c97911d8df1569a79c76b4057}\label{classCompositeSystemHandle_a5532754c97911d8df1569a79c76b4057}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!ModelHandle@{ModelHandle}}
+\index{ModelHandle@{ModelHandle}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{ModelHandle}{ModelHandle}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classModelHandle}{Model\+Handle}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 69 of file Composite\+System.\+h.
+
+\mbox{\Hypertarget{classCompositeSystemHandle_a570c37a257d6d888145dec2cfc309e4b}\label{classCompositeSystemHandle_a570c37a257d6d888145dec2cfc309e4b}} 
+\index{CompositeSystemHandle@{CompositeSystemHandle}!Unit\_System@{Unit\_System}}
+\index{Unit\_System@{Unit\_System}!CompositeSystemHandle@{CompositeSystemHandle}}
+\doxysubsubsection{\texorpdfstring{Unit\_System}{Unit\_System}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classUnit__System}{Unit\+\_\+\+System}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 67 of file Composite\+System.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{CompositeSystem_8h}{Composite\+System.\+h}}\item 
+src/\mbox{\hyperlink{CompositeSystem_8cpp}{Composite\+System.\+cpp}}\end{DoxyCompactItemize}

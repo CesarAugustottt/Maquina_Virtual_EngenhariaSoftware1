@@ -1,5 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classHandle.html" title=" " alt="" coords="5,5,176,32"/>
-<area shape="rect" id="node2" href="$classModelHandle.html" title="This class represents the Handle of a Model." alt="" coords="224,31,332,57"/>
-<area shape="rect" id="node3" href="$classModel.html" title="This class represents the interface of a model in the General Systems Theory implemented in this code..." alt="" coords="59,56,122,83"/>
+<area shape="rect" id="node1" href="$classHandle.html" title=" " alt="" coords="5,5,256,32"/>
+<area shape="rect" id="node2" href="$classCompositeSystemHandle.html" title="Handle for System." alt="" coords="304,5,491,32"/>
+<area shape="rect" id="node3" href="$classHandle.html" title=" " alt="" coords="41,56,221,83"/>
+<area shape="rect" id="node4" href="$classSystemHandle.html" title="This class represents the handle of a system." alt="" coords="339,56,456,83"/>
+<area shape="rect" id="node5" href="$classHandle.html" title=" " alt="" coords="27,157,234,184"/>
+<area shape="rect" id="node6" href="$classSystemTestHandle.html" title="Class used exclusively to instantiate and test System (Handle)." alt="" coords="326,157,469,184"/>
+<area shape="rect" id="node7" href="$classSystem.html" title="This Class represents the interface of a system in the General Systems Theory implemented in this cod..." alt="" coords="95,107,166,133"/>
+<area shape="rect" id="node8" href="$classSystemMock.html" title=" " alt="" coords="344,107,451,133"/>
 </map>

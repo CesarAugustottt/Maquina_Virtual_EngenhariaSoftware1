@@ -73,21 +73,23 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="funcional__tests_8h_source.html">funcional_tests.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="funcional__compositeSystem__tests_8h_source.html">funcional_compositeSystem_tests.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_2funcional_2main_8cpp__incl.png" border="0" usemap="#atest_2funcional_2main_8cpp" alt=""/></div>
 <map name="atest_2funcional_2main_8cpp" id="atest_2funcional_2main_8cpp">
-<area shape="rect" title=" " alt="" coords="329,5,503,32"/>
-<area shape="rect" href="funcional__tests_8h.html" title=" " alt="" coords="349,80,483,107"/>
-<area shape="rect" href="Model_8h.html" title=" " alt="" coords="295,155,417,181"/>
-<area shape="rect" href="System_8h.html" title=" " alt="" coords="5,155,136,181"/>
-<area shape="rect" href="Flow_8h.html" title=" " alt="" coords="161,155,271,181"/>
-<area shape="rect" title=" " alt="" coords="441,155,511,181"/>
-<area shape="rect" title=" " alt="" coords="535,155,598,181"/>
-<area shape="rect" title=" " alt="" coords="623,155,703,181"/>
-<area shape="rect" title=" " alt="" coords="187,229,245,256"/>
-<area shape="rect" title=" " alt="" coords="325,229,387,256"/>
+<area shape="rect" title=" " alt="" coords="423,5,597,32"/>
+<area shape="rect" href="funcional__tests_8h.html" title=" " alt="" coords="346,87,479,114"/>
+<area shape="rect" href="funcional__compositeSystem__tests_8h.html" title=" " alt="" coords="504,80,711,121"/>
+<area shape="rect" href="Model_8h.html" title=" " alt="" coords="140,169,261,196"/>
+<area shape="rect" href="System_8h.html" title=" " alt="" coords="286,169,417,196"/>
+<area shape="rect" href="Flow_8h.html" title=" " alt="" coords="5,169,116,196"/>
+<area shape="rect" title=" " alt="" coords="441,169,510,196"/>
+<area shape="rect" title=" " alt="" coords="535,169,597,196"/>
+<area shape="rect" title=" " alt="" coords="622,169,702,196"/>
+<area shape="rect" title=" " alt="" coords="171,244,230,271"/>
+<area shape="rect" title=" " alt="" coords="287,244,349,271"/>
 </map>
 </div>
 </div>
@@ -114,22 +116,33 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test_2funcional_2main_8cpp_source.html#l00003">3</a> of file <a class="el" href="test_2funcional_2main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;          {</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    std::cout &lt;&lt;<span class="stringliteral">&quot;INICIANDO TESTES FUNCIONAIS&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="comment">//chamar função teste exponencial</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a>();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">//chamar função teste logistico</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29">logisticalFuncionalTest</a>();</div>
+<p class="definition">Definition at line <a class="el" href="test_2funcional_2main_8cpp_source.html#l00004">4</a> of file <a class="el" href="test_2funcional_2main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;          {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    std::cout &lt;&lt;<span class="stringliteral">&quot;INICIANDO TESTES FUNCIONAIS&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment">//chamar função teste exponencial</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    std::cout &lt;&lt;<span class="stringliteral">&quot;Função de teste do Fluxo Exponencial passou!&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//Chamr função complexa</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527">complexFuncionalTest</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//chamar função teste logistico</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29">logisticalFuncionalTest</a>();</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::cout &lt;&lt;<span class="stringliteral">&quot;TODOS OS TESTES PASSARAM!!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::cout &lt;&lt;<span class="stringliteral">&quot;Função de teste do Fluxo Logistico passou!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//Chamr função complexa</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527">complexFuncionalTest</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::cout &lt;&lt;<span class="stringliteral">&quot;Função de teste do Fluxo Complexo passou!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="funcional__compositeSystem__tests_8cpp.html#a3f091e789830682595b613eafa7563c3">compositeSystemFuncionalTest</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::cout &lt;&lt;<span class="stringliteral">&quot;Função de teste do Sistema Composto passou!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::cout &lt;&lt;<span class="stringliteral">&quot;TODOS OS TESTES PASSARAM!!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="ttc" id="afuncional__compositeSystem__tests_8cpp_html_a3f091e789830682595b613eafa7563c3"><div class="ttname"><a href="funcional__compositeSystem__tests_8cpp.html#a3f091e789830682595b613eafa7563c3">compositeSystemFuncionalTest</a></div><div class="ttdeci">void compositeSystemFuncionalTest()</div><div class="ttdef"><b>Definition:</b> <a href="funcional__compositeSystem__tests_8cpp_source.html#l00009">funcional_compositeSystem_tests.cpp:9</a></div></div>
 <div class="ttc" id="afuncional__tests_8cpp_html_a2c448ffaffdff4b03c825a01dffa6f27"><div class="ttname"><a href="funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a></div><div class="ttdeci">void exponentialFuncionalTest()</div><div class="ttdoc">Functional tests header.</div><div class="ttdef"><b>Definition:</b> <a href="funcional__tests_8cpp_source.html#l00007">funcional_tests.cpp:7</a></div></div>
 <div class="ttc" id="afuncional__tests_8cpp_html_a60914db64bde71b56d69320797266c29"><div class="ttname"><a href="funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29">logisticalFuncionalTest</a></div><div class="ttdeci">void logisticalFuncionalTest()</div><div class="ttdef"><b>Definition:</b> <a href="funcional__tests_8cpp_source.html#l00025">funcional_tests.cpp:25</a></div></div>
 <div class="ttc" id="afuncional__tests_8cpp_html_a943dfe0c597a01c9760c140715fed527"><div class="ttname"><a href="funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527">complexFuncionalTest</a></div><div class="ttdeci">void complexFuncionalTest()</div><div class="ttdef"><b>Definition:</b> <a href="funcional__tests_8cpp_source.html#l00045">funcional_tests.cpp:45</a></div></div>
