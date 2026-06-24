@@ -45,6 +45,9 @@ public:
 
     // metodos factory
     System* createSystem(std::string name = "", double value = 0.0);
+
+    System* createCompositeSystem(std::string name = ""); //composite
+
     void deleteSystem(System* sys);
     void deleteFlow(Flow* flow);
 
@@ -100,6 +103,7 @@ public:
     void incrementTime(double increment) override;
 
     System* createSystem(std::string name = "", double value = 0.0) override;
+    System* createCompositeSystem(std::string name = "") override; //copiosite
     void deleteSystem(System* sys) override;
     void deleteFlow(Flow* flow) override;
 

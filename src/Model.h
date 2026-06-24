@@ -102,6 +102,12 @@ public:
     */
     virtual System* createSystem(std::string name = "", double value = 0.0) = 0;
 
+    /*!
+    * @brief Factory method to create a Composite System.
+    * @param name the name of the system.
+    * @return System* - pointer to the created system.
+    */
+    virtual System* createCompositeSystem(std::string name = "") = 0;
 
     /*!
     * @brief Template factory method to create any type of Flow inside this model.
