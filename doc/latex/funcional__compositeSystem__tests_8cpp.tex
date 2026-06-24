@@ -1,0 +1,76 @@
+\hypertarget{funcional__compositeSystem__tests_8cpp}{}\doxysection{test/funcional/funcional\+\_\+composite\+System\+\_\+tests.cpp File Reference}
+\label{funcional__compositeSystem__tests_8cpp}\index{test/funcional/funcional\_compositeSystem\_tests.cpp@{test/funcional/funcional\_compositeSystem\_tests.cpp}}
+{\ttfamily \#include \char`\"{}funcional\+\_\+composite\+System\+\_\+tests.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include \char`\"{}../../src/\+Model.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../src/\+System.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../src/\+Composite\+System.\+h\char`\"{}}\newline
+Include dependency graph for funcional\+\_\+composite\+System\+\_\+tests.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcional__compositeSystem__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{funcional__compositeSystem__tests_8cpp_a3f091e789830682595b613eafa7563c3}{composite\+System\+Funcional\+Test}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{funcional__compositeSystem__tests_8cpp_a3f091e789830682595b613eafa7563c3}\label{funcional__compositeSystem__tests_8cpp_a3f091e789830682595b613eafa7563c3}} 
+\index{funcional\_compositeSystem\_tests.cpp@{funcional\_compositeSystem\_tests.cpp}!compositeSystemFuncionalTest@{compositeSystemFuncionalTest}}
+\index{compositeSystemFuncionalTest@{compositeSystemFuncionalTest}!funcional\_compositeSystem\_tests.cpp@{funcional\_compositeSystem\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{compositeSystemFuncionalTest()}{compositeSystemFuncionalTest()}}
+{\footnotesize\ttfamily void composite\+System\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function prototype for the Composite \mbox{\hyperlink{classSystem}{System}} functional tests. 
+
+Definition at line 9 of file funcional\+\_\+composite\+System\+\_\+tests.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                                    \{}
+\DoxyCodeLine{10     \mbox{\hyperlink{classModel}{Model}}* model = \mbox{\hyperlink{classModel_adf5cf7d33af8042c591725d2d41cafca}{Model::createModel}}(\textcolor{stringliteral}{"{}Modelo"{}}, 0.0);}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{comment}{// criar sistemas que representam "{}bairors"{}}}
+\DoxyCodeLine{13     \mbox{\hyperlink{classSystem}{System}}* A = model-\/>\mbox{\hyperlink{classModel_adf9c63fb5e39bd2cb025255001907524}{createSystem}}(\textcolor{stringliteral}{"{}A"{}}, 100.0);}
+\DoxyCodeLine{14     \mbox{\hyperlink{classSystem}{System}}* B = model-\/>\mbox{\hyperlink{classModel_adf9c63fb5e39bd2cb025255001907524}{createSystem}}(\textcolor{stringliteral}{"{}B"{}}, 200.0);}
+\DoxyCodeLine{15     \mbox{\hyperlink{classSystem}{System}}* C = model-\/>\mbox{\hyperlink{classModel_adf9c63fb5e39bd2cb025255001907524}{createSystem}}(\textcolor{stringliteral}{"{}C"{}},  50.0);}
+\DoxyCodeLine{16     \mbox{\hyperlink{classSystem}{System}}* D = model-\/>\mbox{\hyperlink{classModel_adf9c63fb5e39bd2cb025255001907524}{createSystem}}(\textcolor{stringliteral}{"{}D"{}}, 150.0);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{comment}{//criar sistemas composite (cidades)}}
+\DoxyCodeLine{19     \mbox{\hyperlink{classSystem}{System}}* cidade1 = model-\/>\mbox{\hyperlink{classModel_a0f6a5f19551eb15018d4a6e4f2e816d1}{createCompositeSystem}}(\textcolor{stringliteral}{"{}cidade1"{}});}
+\DoxyCodeLine{20     \mbox{\hyperlink{classCompositeSystemHandle}{CompositeSystemHandle}}* city1 = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classCompositeSystemHandle}{CompositeSystemHandle}}*\textcolor{keyword}{>}(cidade1); }
+\DoxyCodeLine{21     city1-\/>\mbox{\hyperlink{classCompositeSystemHandle_a1ed28d52e6498653bbaa49c1cfc3796a}{add}}(A);}
+\DoxyCodeLine{22     city1-\/>\mbox{\hyperlink{classCompositeSystemHandle_a1ed28d52e6498653bbaa49c1cfc3796a}{add}}(B);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \mbox{\hyperlink{classSystem}{System}}* cidade2 = model-\/>\mbox{\hyperlink{classModel_a0f6a5f19551eb15018d4a6e4f2e816d1}{createCompositeSystem}}(\textcolor{stringliteral}{"{}cidade2"{}});}
+\DoxyCodeLine{25     \mbox{\hyperlink{classCompositeSystemHandle}{CompositeSystemHandle}}* city2 = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classCompositeSystemHandle}{CompositeSystemHandle}}*\textcolor{keyword}{>}(cidade2); }
+\DoxyCodeLine{26     city2-\/>\mbox{\hyperlink{classCompositeSystemHandle_a1ed28d52e6498653bbaa49c1cfc3796a}{add}}(C);}
+\DoxyCodeLine{27     city2-\/>\mbox{\hyperlink{classCompositeSystemHandle_a1ed28d52e6498653bbaa49c1cfc3796a}{add}}(D);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{comment}{//criar um sistema país }}
+\DoxyCodeLine{30     \mbox{\hyperlink{classSystem}{System}}* pais = model-\/>\mbox{\hyperlink{classModel_a0f6a5f19551eb15018d4a6e4f2e816d1}{createCompositeSystem}}(\textcolor{stringliteral}{"{}pais"{}});}
+\DoxyCodeLine{31     \mbox{\hyperlink{classCompositeSystemHandle}{CompositeSystemHandle}}* country = \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classCompositeSystemHandle}{CompositeSystemHandle}}*\textcolor{keyword}{>}(pais); }
+\DoxyCodeLine{32     country-\/>\mbox{\hyperlink{classCompositeSystemHandle_a1ed28d52e6498653bbaa49c1cfc3796a}{add}}(city1);}
+\DoxyCodeLine{33     country-\/>\mbox{\hyperlink{classCompositeSystemHandle_a1ed28d52e6498653bbaa49c1cfc3796a}{add}}(city2);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     assert(city1-\/>\mbox{\hyperlink{classCompositeSystemHandle_aa3f6584cac692f23508237d0e636b7c5}{getValue}}()   == 300.0);}
+\DoxyCodeLine{36     assert(city2-\/>\mbox{\hyperlink{classCompositeSystemHandle_aa3f6584cac692f23508237d0e636b7c5}{getValue}}()   == 200.0);}
+\DoxyCodeLine{37     assert(country-\/>\mbox{\hyperlink{classCompositeSystemHandle_aa3f6584cac692f23508237d0e636b7c5}{getValue}}() == 500.0);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     city2-\/>\mbox{\hyperlink{classCompositeSystemHandle_ab954c1d3d58efb215b03ad7b3db8af16}{remove}}(C); \textcolor{comment}{//remover sistema de valor 50}}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{41     assert(city1-\/>\mbox{\hyperlink{classCompositeSystemHandle_aa3f6584cac692f23508237d0e636b7c5}{getValue}}()   == 300.0);}
+\DoxyCodeLine{42     assert(city2-\/>\mbox{\hyperlink{classCompositeSystemHandle_aa3f6584cac692f23508237d0e636b7c5}{getValue}}()   == 150.0);}
+\DoxyCodeLine{43     assert(country-\/>\mbox{\hyperlink{classCompositeSystemHandle_aa3f6584cac692f23508237d0e636b7c5}{getValue}}() == 450.0);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \mbox{\hyperlink{classModel_a56ad5995d561c6096c9c6560fbb512fd}{Model::deleteModel}}(model);}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
