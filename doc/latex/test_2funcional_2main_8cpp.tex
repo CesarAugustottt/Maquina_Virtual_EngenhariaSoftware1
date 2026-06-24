@@ -1,7 +1,9 @@
 \hypertarget{test_2funcional_2main_8cpp}{}\doxysection{test/funcional/main.cpp File Reference}
 \label{test_2funcional_2main_8cpp}\index{test/funcional/main.cpp@{test/funcional/main.cpp}}
 {\ttfamily \#include \char`\"{}funcional\+\_\+tests.\+h\char`\"{}}\newline
-Include dependency graph for main.\+cpp\+:\nopagebreak
+{\ttfamily \#include \char`\"{}funcional\+\_\+composite\+System\+\_\+tests.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,24 +26,34 @@ int \mbox{\hyperlink{test_2funcional_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d
 
 
 
-Definition at line 3 of file main.\+cpp.
+Definition at line 4 of file main.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{3           \{}
-\DoxyCodeLine{4     std::cout <<\textcolor{stringliteral}{"{}INICIANDO TESTES FUNCIONAIS"{}} << std::endl;}
-\DoxyCodeLine{5 }
-\DoxyCodeLine{6     \textcolor{comment}{//chamar função teste exponencial}}
-\DoxyCodeLine{7     \mbox{\hyperlink{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27}{exponentialFuncionalTest}}();}
-\DoxyCodeLine{8 }
-\DoxyCodeLine{9     \textcolor{comment}{//chamar função teste logistico}}
-\DoxyCodeLine{10     \mbox{\hyperlink{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29}{logisticalFuncionalTest}}();}
+\DoxyCodeLine{4           \{}
+\DoxyCodeLine{5     std::cout <<\textcolor{stringliteral}{"{}INICIANDO TESTES FUNCIONAIS"{}} << std::endl;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7     \textcolor{comment}{//chamar função teste exponencial}}
+\DoxyCodeLine{8     \mbox{\hyperlink{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27}{exponentialFuncionalTest}}();}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     std::cout <<\textcolor{stringliteral}{"{}Função de teste do Fluxo Exponencial passou!"{}} << std::endl;}
 \DoxyCodeLine{11 }
-\DoxyCodeLine{12     \textcolor{comment}{//Chamr função complexa}}
-\DoxyCodeLine{13     \mbox{\hyperlink{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527}{complexFuncionalTest}}();}
+\DoxyCodeLine{12     \textcolor{comment}{//chamar função teste logistico}}
+\DoxyCodeLine{13     \mbox{\hyperlink{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29}{logisticalFuncionalTest}}();}
 \DoxyCodeLine{14 }
-\DoxyCodeLine{15     std::cout <<\textcolor{stringliteral}{"{}TODOS OS TESTES PASSARAM!!"{}} << std::endl;}
-\DoxyCodeLine{16     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{17 \}}
+\DoxyCodeLine{15     std::cout <<\textcolor{stringliteral}{"{}Função de teste do Fluxo Logistico passou!"{}} << std::endl;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{comment}{//Chamr função complexa}}
+\DoxyCodeLine{18     \mbox{\hyperlink{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527}{complexFuncionalTest}}();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     std::cout <<\textcolor{stringliteral}{"{}Função de teste do Fluxo Complexo passou!"{}} << std::endl;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \mbox{\hyperlink{funcional__compositeSystem__tests_8cpp_a3f091e789830682595b613eafa7563c3}{compositeSystemFuncionalTest}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     std::cout <<\textcolor{stringliteral}{"{}Função de teste do Sistema Composto passou!"{}} << std::endl;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     std::cout <<\textcolor{stringliteral}{"{}TODOS OS TESTES PASSARAM!!"{}} << std::endl;}
+\DoxyCodeLine{27     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{28 \}}
 
 \end{DoxyCode}

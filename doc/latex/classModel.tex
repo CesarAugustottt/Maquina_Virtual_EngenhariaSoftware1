@@ -41,6 +41,8 @@ virtual void \mbox{\hyperlink{classModel_ad8f1c8d076bc82d40636a1ca0e581b92}{incr
 \begin{DoxyCompactList}\small\item\em Increments the simulation time by a specific value. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classModel_adf9c63fb5e39bd2cb025255001907524}{create\+System}} (std\+::string name=\char`\"{}\char`\"{}, double value=0.\+0)=0
 \begin{DoxyCompactList}\small\item\em Factory method to create a \mbox{\hyperlink{classSystem}{System}} inside this model. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSystem}{System}} $\ast$ \mbox{\hyperlink{classModel_a0f6a5f19551eb15018d4a6e4f2e816d1}{create\+Composite\+System}} (std\+::string name=\char`\"{}\char`\"{})=0
+\begin{DoxyCompactList}\small\item\em Factory method to create a Composite \mbox{\hyperlink{classSystem}{System}}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classFlow}{Flow}} $\ast$ \mbox{\hyperlink{classModel_a7aec304b6a80e8371e3ed915cde8148e}{create\+Flow}} (std\+::string name=\char`\"{}\char`\"{}, \mbox{\hyperlink{classSystem}{System}} $\ast$source=nullptr, \mbox{\hyperlink{classSystem}{System}} $\ast$target=nullptr)
 \begin{DoxyCompactList}\small\item\em Template factory method to create any type of \mbox{\hyperlink{classFlow}{Flow}} inside this model. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classModel_a8513437cddbde699020045bc56338ac3}{delete\+System}} (\mbox{\hyperlink{classSystem}{System}} $\ast$)=0
@@ -179,15 +181,37 @@ Adds a \mbox{\hyperlink{classModel}{Model}} instance within the static global ve
 
 \end{DoxyItemize}
 
-Definition at line 11 of file Model\+Impl.\+cpp.
+Definition at line 12 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11                                  \{}
-\DoxyCodeLine{12     \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.push\_back(model);}
-\DoxyCodeLine{13 \}}
+\DoxyCodeLine{12                                  \{}
+\DoxyCodeLine{13     \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{models}}.push\_back(model);}
+\DoxyCodeLine{14 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{classModel_a0f6a5f19551eb15018d4a6e4f2e816d1}\label{classModel_a0f6a5f19551eb15018d4a6e4f2e816d1}} 
+\index{Model@{Model}!createCompositeSystem@{createCompositeSystem}}
+\index{createCompositeSystem@{createCompositeSystem}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{createCompositeSystem()}{createCompositeSystem()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classSystem}{System}}$\ast$ Model\+::create\+Composite\+System (\begin{DoxyParamCaption}\item[{std\+::string}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Factory method to create a Composite \mbox{\hyperlink{classSystem}{System}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+System$\ast$ -\/ pointer to the created system. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classModelHandle_a9904725f48285bc89c1b176ea33770ae}{Model\+Handle}}.
+
 \mbox{\Hypertarget{classModel_a7aec304b6a80e8371e3ed915cde8148e}\label{classModel_a7aec304b6a80e8371e3ed915cde8148e}} 
 \index{Model@{Model}!createFlow@{createFlow}}
 \index{createFlow@{createFlow}!Model@{Model}}
@@ -218,15 +242,15 @@ Flow$\ast$ -\/ pointer to the created flow.
 \end{DoxyReturn}
 
 
-Definition at line 115 of file Model.\+h.
+Definition at line 121 of file Model.\+h.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{115                                                                                               \{ \textcolor{comment}{//metodo template não pode ser virtual}}
-\DoxyCodeLine{116         \mbox{\hyperlink{classFlow}{Flow}}* flow = \textcolor{keyword}{new} T(name, source, target);}
-\DoxyCodeLine{117         this-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(flow); \textcolor{comment}{// Já adiciona automaticamente ao modelo}}
-\DoxyCodeLine{118         \textcolor{keywordflow}{return} flow;}
-\DoxyCodeLine{119     \}}
+\DoxyCodeLine{121                                                                                               \{ \textcolor{comment}{//metodo template não pode ser virtual}}
+\DoxyCodeLine{122         \mbox{\hyperlink{classFlow}{Flow}}* flow = \textcolor{keyword}{new} T(name, source, target);}
+\DoxyCodeLine{123         this-\/>\mbox{\hyperlink{classModel_a70362afdd9db6268b4adaedfeddb2935}{add}}(flow); \textcolor{comment}{// Já adiciona automaticamente ao modelo}}
+\DoxyCodeLine{124         \textcolor{keywordflow}{return} flow;}
+\DoxyCodeLine{125     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_adf5cf7d33af8042c591725d2d41cafca}\label{classModel_adf5cf7d33af8042c591725d2d41cafca}} 
@@ -251,15 +275,15 @@ Model$\ast$ -\/ pointer to the created model interface.
 \end{DoxyReturn}
 
 
-Definition at line 17 of file Model\+Impl.\+cpp.
+Definition at line 18 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{17                                                      \{}
-\DoxyCodeLine{18     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModel_a5532754c97911d8df1569a79c76b4057}{ModelHandle}}(name, time);}
-\DoxyCodeLine{19     \mbox{\hyperlink{classModel_a8d34e397c313e0787181a2940a0f4fb5}{Model::addModel}}(m);}
-\DoxyCodeLine{20     \textcolor{keywordflow}{return} m;}
-\DoxyCodeLine{21 \}}
+\DoxyCodeLine{18                                                      \{}
+\DoxyCodeLine{19     \mbox{\hyperlink{classModel}{Model}}* m = \textcolor{keyword}{new} \mbox{\hyperlink{classModel_a5532754c97911d8df1569a79c76b4057}{ModelHandle}}(name, time);}
+\DoxyCodeLine{20     \mbox{\hyperlink{classModel_a8d34e397c313e0787181a2940a0f4fb5}{Model::addModel}}(m);}
+\DoxyCodeLine{21     \textcolor{keywordflow}{return} m;}
+\DoxyCodeLine{22 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_adf9c63fb5e39bd2cb025255001907524}\label{classModel_adf9c63fb5e39bd2cb025255001907524}} 
@@ -328,23 +352,23 @@ Static method that acts as a factory to delete a \mbox{\hyperlink{classModel}{Mo
 
 \end{DoxyItemize}
 
-Definition at line 23 of file Model\+Impl.\+cpp.
+Definition at line 24 of file Model\+Impl.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{23                                    \{}
-\DoxyCodeLine{24     \textcolor{keywordflow}{if}(!model)\{}
-\DoxyCodeLine{25         \textcolor{keywordflow}{return};}
-\DoxyCodeLine{26     \}}
-\DoxyCodeLine{27     \textcolor{comment}{//deleta do vetor e chama o destrutor}}
-\DoxyCodeLine{28     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.begin(); it != \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.end(); ++it) \{}
-\DoxyCodeLine{29         \textcolor{keywordflow}{if} (*it == model) \{}
-\DoxyCodeLine{30             \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.erase(it);}
-\DoxyCodeLine{31             \textcolor{keyword}{delete} model;}
-\DoxyCodeLine{32             \textcolor{keywordflow}{break}; }
-\DoxyCodeLine{33         \}}
-\DoxyCodeLine{34     \}}
-\DoxyCodeLine{35 \}}
+\DoxyCodeLine{24                                    \{}
+\DoxyCodeLine{25     \textcolor{keywordflow}{if}(!model)\{}
+\DoxyCodeLine{26         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28     \textcolor{comment}{//deleta do vetor e chama o destrutor}}
+\DoxyCodeLine{29     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.begin(); it != \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.end(); ++it) \{}
+\DoxyCodeLine{30         \textcolor{keywordflow}{if} (*it == model) \{}
+\DoxyCodeLine{31             \mbox{\hyperlink{classModel_a990c47d3aea3111f93164d6ad50ae3e4}{Model::models}}.erase(it);}
+\DoxyCodeLine{32             \textcolor{keyword}{delete} model;}
+\DoxyCodeLine{33             \textcolor{keywordflow}{break}; }
+\DoxyCodeLine{34         \}}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classModel_a8513437cddbde699020045bc56338ac3}\label{classModel_a8513437cddbde699020045bc56338ac3}} 
@@ -566,7 +590,7 @@ Definition at line 26 of file Model.\+h.
 
 
 
-Definition at line 139 of file Model.\+h.
+Definition at line 145 of file Model.\+h.
 
 
 

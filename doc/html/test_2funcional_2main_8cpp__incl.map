@@ -1,12 +1,13 @@
 <map id="test/funcional/main.cpp" name="test/funcional/main.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="329,5,503,32"/>
-<area shape="rect" id="node2" href="$funcional__tests_8h.html" title=" " alt="" coords="349,80,483,107"/>
-<area shape="rect" id="node3" href="$Model_8h.html" title=" " alt="" coords="295,155,417,181"/>
-<area shape="rect" id="node6" href="$System_8h.html" title=" " alt="" coords="5,155,136,181"/>
-<area shape="rect" id="node7" href="$Flow_8h.html" title=" " alt="" coords="161,155,271,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="441,155,511,181"/>
-<area shape="rect" id="node9" title=" " alt="" coords="535,155,598,181"/>
-<area shape="rect" id="node10" title=" " alt="" coords="623,155,703,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="187,229,245,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="325,229,387,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="423,5,597,32"/>
+<area shape="rect" id="node2" href="$funcional__tests_8h.html" title=" " alt="" coords="346,87,479,114"/>
+<area shape="rect" id="node11" href="$funcional__compositeSystem__tests_8h.html" title=" " alt="" coords="504,80,711,121"/>
+<area shape="rect" id="node3" href="$Model_8h.html" title=" " alt="" coords="140,169,261,196"/>
+<area shape="rect" id="node6" href="$System_8h.html" title=" " alt="" coords="286,169,417,196"/>
+<area shape="rect" id="node7" href="$Flow_8h.html" title=" " alt="" coords="5,169,116,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="441,169,510,196"/>
+<area shape="rect" id="node9" title=" " alt="" coords="535,169,597,196"/>
+<area shape="rect" id="node10" title=" " alt="" coords="622,169,702,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="171,244,230,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="287,244,349,271"/>
 </map>
