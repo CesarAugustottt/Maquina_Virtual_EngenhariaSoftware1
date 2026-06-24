@@ -1,7 +1,7 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 #include <string>
-
+#include <vector>
 /*!
  * @brief This Class represents the interface of a system in the General Systems Theory implemented in this code.
  */
@@ -33,6 +33,7 @@ public:
      * * @return double - the content value attribute.
      */
     virtual double getValue() const = 0;
+
 };
 
 #endif

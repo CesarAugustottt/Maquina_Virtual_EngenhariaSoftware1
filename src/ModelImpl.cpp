@@ -1,5 +1,6 @@
 #include "ModelImpl.h"
 #include "SystemImpl.h"
+#include "CompositeSystem.h"
 #include <algorithm>
 
 
@@ -138,6 +139,13 @@ System* ModelBody:: createSystem(std::string name, double value){
     return sys;
 }
 
+//composite
+System* ModelBody::createCompositeSystem(std::string name) {
+    System* composite = new CompositeSystemHandle(name);
+    this->add(composite);
+    return composite;
+}
+
 void ModelBody::deleteSystem(System* sys) {
     if (!sys) return;
     this->remove(sys); // Tira do vetor
@@ -210,6 +218,10 @@ void ModelHandle::incrementTime(double increment) {
 //Criar system
 System* ModelHandle:: createSystem(std::string name, double value){
     return pImpl_->createSystem(name, value);
+}
+
+System* ModelHandle::createCompositeSystem(std::string name) {
+    return pImpl_->createCompositeSystem(name);
 }
 
 //metodos delete
