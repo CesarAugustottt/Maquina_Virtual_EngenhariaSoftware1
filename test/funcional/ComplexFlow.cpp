@@ -1,46 +1,18 @@
 #include "ComplexFlow.h"
 
-// Invoca o construtor padrao da classe base
-ComplexFlow::ComplexFlow() {
-    this->name = "";
-    this->source = nullptr;
-    this->target = nullptr;
-}
+// Aciona o construtor padrão do invólucro para alocar o Body vazio
+ComplexFlow::ComplexFlow() : FlowHandle() {}
 
-// Repassa os parametros para inicializacao direta
+// Repassa os parâmetros diretamente para o construtor do invólucro pai
 ComplexFlow::ComplexFlow(std::string name, System* source, System* target) 
-    : name(name), source(source), target(target) {}
+    : FlowHandle(name, source, target) {}
 
 ComplexFlow::~ComplexFlow() {} 
 
-void ComplexFlow::setName(std::string name) {
-    this->name = name;
-}
-
-std::string ComplexFlow::getName() const {
-    return this->name;
-}
-
-void ComplexFlow::setSource(System* source) {
-    this->source = source;
-}
-
-System* ComplexFlow::getSource() const {
-    return this->source;
-}
-
-void ComplexFlow::setTarget(System* target) {
-    this->target = target;
-}
-
-System* ComplexFlow::getTarget() const {
-    return this->target;
-}
-
-// Implementacao do calculo
+// A amarração tardia acessa os dados através dos métodos da base
 double ComplexFlow::execute() {
-    if (this->source != nullptr) { 
-        return 0.01 * this->source->getValue(); 
+    if (this->getSource() != nullptr) { 
+        return 0.01 * this->getSource()->getValue(); 
     }
     return 0.0;
 }
