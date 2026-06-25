@@ -1,9 +1,9 @@
 <map id="Flow" name="Flow">
-<area shape="rect" id="node1" title="This class represents the interface of a flow in General Systems Theory as implemented in this code." alt="" coords="318,5,371,32"/>
-<area shape="rect" id="node2" href="$classComplexFlow.html" title="This Class represents a complex flow in the General Systems Theory implemented in this code." alt="" coords="5,80,116,107"/>
-<area shape="rect" id="node3" href="$classExponentialFlow.html" title="This Class represents an exponential flow in the General Systems Theory implemented in this code." alt="" coords="141,80,271,107"/>
-<area shape="rect" id="node4" href="$classFlowHandle.html" title="This class represents the handle of a Flow." alt="" coords="295,80,394,107"/>
-<area shape="rect" id="node6" href="$classFlowTestHandle.html" title="Class used exclusively to instantiate and test Flow (Handle)." alt="" coords="418,80,543,107"/>
-<area shape="rect" id="node7" href="$classLogisticFlow.html" title="This class represents a logistic flow in the General Systems Theory implemented in this code." alt="" coords="568,80,671,107"/>
-<area shape="rect" id="node5" href="$classFlowTest.html" title=" " alt="" coords="305,155,384,181"/>
+<area shape="rect" id="node1" title="This class represents the interface of a flow in General Systems Theory as implemented in this code." alt="" coords="311,5,365,32"/>
+<area shape="rect" id="node2" href="$classFlowHandle.html" title="This class represents the handle of a Flow." alt="" coords="221,80,319,107"/>
+<area shape="rect" id="node7" href="$classFlowTestHandle.html" title="Class used exclusively to instantiate and test Flow (Handle)." alt="" coords="343,80,469,107"/>
+<area shape="rect" id="node3" href="$classComplexFlow.html" title="This Class represents a complex flow in the General Systems Theory implemented in this code." alt="" coords="5,155,116,181"/>
+<area shape="rect" id="node4" href="$classExponentialFlow.html" title="This Class represents an exponential flow in the General Systems Theory implemented in this code." alt="" coords="141,155,271,181"/>
+<area shape="rect" id="node5" href="$classFlowTest.html" title=" " alt="" coords="296,155,375,181"/>
+<area shape="rect" id="node6" href="$classLogisticFlow.html" title="This class represents a logistic flow in the General Systems Theory implemented in this code." alt="" coords="399,155,501,181"/>
 </map>
