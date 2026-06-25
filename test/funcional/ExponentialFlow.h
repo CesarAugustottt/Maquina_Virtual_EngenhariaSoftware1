@@ -1,26 +1,17 @@
 #ifndef EXPONENTIALFLOW_H
 #define EXPONENTIALFLOW_H
 
-#include "../../src/Flow.h" 
+#include "../../src/FlowImpl.h" 
 #include "../../src/System.h"
 #include <string>
 
 /*!
  * @brief This Class represents an exponential flow in the General Systems Theory implemented in this code.
  */
-class ExponentialFlow : public Flow {
-protected:
-    /*! This attribute contains a name for the flow. */
-    std::string name;
-    /*! This pointer points to the source System of the flow. */
-    System* source;
-    /*! This pointer points to the target System of the flow. */
-    System* target;
-
+class ExponentialFlow : public FlowHandle {
 public:
     /*!
      * @brief This is the default constructor for the ExponentialFlow Class.
-     * @return ExponentialFlow - an ExponentialFlow Class object.
      */
     ExponentialFlow();
     
@@ -39,16 +30,8 @@ public:
     
     /*!
      * @brief Executes the exponential equation to calculate the flow's value.
-     * @return double - the calculated value for the transfer.
      */
     virtual double execute() override;
-
-    void setName(std::string name) override;
-    std::string getName() const override;
-    void setSource(System* source) override;
-    System* getSource() const override;
-    void setTarget(System* target) override;
-    System* getTarget() const override;
 };
 
 #endif
