@@ -31,7 +31,6 @@ public:
 
     void add (System* systemChildren);
     void remove(System* systemChildren);
-    std::vector<System*> getChildren() const;
 
     friend class CompositeSystemHandle;
     friend class Unit_System;
@@ -62,7 +61,6 @@ public:
 
     void add (System* systemChildren);
     void remove (System* systemChildren);
-    std::vector<System*> getChildren() const;
 
     friend class Unit_System;
     friend class ModelBody;

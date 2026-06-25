@@ -63,9 +63,7 @@ void CompositeSystemBody::remove(System* systemChildren) {
     this->value = total;
 }
 
-std::vector<System*> CompositeSystemBody::getChildren() const {
-    return systemChildrens;
-}
+
 
 
 //  CompositeSystemHandle
@@ -102,6 +100,4 @@ void CompositeSystemHandle::remove(System* systemChildren) {
     pImpl_->remove(systemChildren);
 }
 
-std::vector<System*> CompositeSystemHandle::getChildren() const {
-    return pImpl_->getChildren();
-}
+
